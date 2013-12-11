@@ -1,9 +1,7 @@
 <?php
-<<<<<<< HEAD
-	session_start(); //TEST GUI
-=======
-	session_start();//TEST JULES
->>>>>>> 1872f1879704c769c272425e1f2db46da35af025
+
+	session_start();
+
 	include_once('model/sql.php');
 
 	ob_start();
