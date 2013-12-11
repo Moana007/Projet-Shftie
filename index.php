@@ -30,6 +30,9 @@
 			include_once('controller/home/submit_recipe.php');
 			return;
 		}
+		else if($action =='preview'){
+			include_once('controller/home/preview');
+		}
 		else if ($action == 'add_recipe'){
 			include_once('controller/home/add_recipe.php');
 		}
