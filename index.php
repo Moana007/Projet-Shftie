@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	session_start(); //TEST GUI
 	include_once('model/sql.php');
 
 	ob_start();
