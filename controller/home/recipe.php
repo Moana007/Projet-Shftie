@@ -1,12 +1,6 @@
 <?php 
 	include_once('model/home/recipe.php');
-	if($_GET['preview']){
-		
-		$therecipe = recipe_prev();
 
-	}
-	else {
-	
 	$recipes = show_recipe();
 	
 	$tags =  show_tags();	
@@ -28,6 +22,6 @@
 	
 	include_once('view/home/recipe_page.php');
 	
-	}
+	
 
  ?>

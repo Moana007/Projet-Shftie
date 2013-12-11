@@ -1,13 +1,5 @@
 <?php 
-	function recipe_prev(){
-		global $connexion;
-
-		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE users_id = :id LIMIT 1');
-		$query->bindParam(':id', $_SESSION['users_id'], PDO::PARAM_INT);
-		$query->execute();
-		$therecipe = $query->fetchAll();
-		return $therecipe;
-	}
+	
 	function show_recipe(){
 		global $connexion;
 		
