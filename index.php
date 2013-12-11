@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	session_start();//TEST JULES
 	include_once('model/sql.php');
 
 	ob_start();
@@ -30,6 +30,7 @@
 			include_once('controller/home/submit_recipe.php');
 			return;
 		}
+
 		else if($action =='preview'){
 			include_once('controller/home/preview');
 		}
