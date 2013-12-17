@@ -13,15 +13,8 @@
 		$recipe_more = show_recipe_more($author['users_id']);	
 	}
 	
-	if(isset($_POST['com_texte'])){ 
-		add_comment($_POST['com_texte'], $_POST['id_rec']);
-	}
-
 	$show_comment = show_comment(); 
-
 	
 	include_once('view/home/recipe_page.php');
-	
-	
 
  ?>

@@ -81,7 +81,6 @@ function show_ingredients(){
 	function add_comment($com_texte, $com_id_recettes){
 			global $connexion;
 			
-			extract($_POST);
 
 
 			try{
@@ -99,13 +98,29 @@ function show_ingredients(){
 			}
 
 		}
+		
+	function delete_comment($com_id){
+		global $connexion;
+		
+		try{
+			$query = $connexion->prepare("DELETE FROM COMMENTAIRES WHERE com_id = :com_id AND com_id_users = :com_id_users");
+			$query->bindParam(':com_id', $com_id, PDO::PARAM_INT);
+			$query->bindParam(':com_id_users', $_SESSION['users_id'], PDO::PARAM_INT);
+			
+			$query->execute();
+		}
+		catch(Exception $e){
+				echo "Insertion impossible" ,$e->getMessage();
+				die();
+			}
+	}	
 
 	function show_comment(){
 		global $connexion;
 		
 		$id_rec = $_GET['id_rec'];
 		
-		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES, USERS WHERE com_id_recettes = '.$id_rec.' AND users_id = com_id_users');
+		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES, USERS WHERE com_id_recettes = '.$id_rec.' AND users_id = com_id_users ORDER BY com_id DESC');
 		$query->execute();
 		$show_comment = $query->fetchAll();
 

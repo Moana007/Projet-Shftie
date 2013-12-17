@@ -33,6 +33,16 @@
 		else if ($action == 'add_recipe'){
 			include_once('controller/home/add_recipe.php');
 		}
+		else if($action == 'add_comment'){
+			include_once('controller/home/recipe.php');
+			include_once('controller/home/add_comment.php');
+			header('location: index.php?appli=home&action=recipe&id_rec='.$_GET['id_rec'].'');
+		}
+		else if($action == 'delete_comment'){
+			include_once('controller/home/recipe.php');
+			include_once('controller/home/delete_comment.php');
+			header('location: index.php?appli=home&action=recipe&id_rec='.$_GET['id_rec'].'');
+		}
 		else if ($action == 'myrecipe'){
 			include_once('controller/home/myrecipe.php');
 		}

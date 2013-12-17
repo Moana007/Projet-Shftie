@@ -80,7 +80,19 @@
           <?php foreach($recipes as $recipe){ echo nl2br($recipe['preparation']); }?>
         </div>
 
-<!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - -  - - -->
+<!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - - - - - - - - - -  - - -->
+      	<?php if(isset($_SESSION['users_id'])) { ?>
+<!-- - - - - - - - - - - - - ICI L'AJOUT DE COMMENTAIRES  - - - - - - - - - - -  - - -->
+       <div>
+      	 <form action="?appli=home&action=add_comment&id_rec=<?php echo $_GET['id_rec']; ?>" method= "post" id="formMsg">
+      	 	<input type="text" name="com_texte" id="com_texte" placeholder="message"/>
+      	 	<input type="hidden" name="id_rec" value="<?php echo $_GET['id_rec']; ?>"/>
+      	 	<input type="submit" />
+      	 </form>
+       </div>
+       <?php } ?>
+<!-- - - - - - - - - - - - - FIN D'AJOUT DE COMMENTAIRES  - - - - - - - - - - -  - - -->  
+       <?php if($show_comment[0] != 0) { ?>
         <div class="commentaire">
           <div class="underscore_title">Comments</div>
           <div class="case_comment">
@@ -89,13 +101,18 @@
               <?php foreach($show_comment as $show_comments): ?>
                 <div class="pseudo"><a href="#"><?php echo "<p>".$show_comments['users_name']."</p>"; ?></a></div>
                 <div class="comment"><?php echo "<p>".$show_comments['com_texte']."</p>"; ?></div>
+                <?php if(isset($_SESSION['users_id']) && $_SESSION['users_id'] == $show_comments['com_id_users']) { ?>
+                <div class="delete"><?php echo "<a href='".$_server["PHP_SELF"]."?appli=home&action=delete_comment&id_rec=".$show_comments['com_id_recettes']."&com_id=".$show_comments['com_id']."'onclick='return confirm(\"Voulez vous vraiment supprimer votre commentaire ?\")'> X </a>"; ?></div>
+                <?php } ?>
                 <div class="time"><?php echo "<p>".$show_comments['com_date']."</p>"; ?></div>
               <?php endforeach; ?>
               </div>
-              <a class="delete" href="#">X</a>
+              
           </div>
         </div>
-<!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - -->
+        <?php } ?>
+        		
+<!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - - - - - - - -->
 
       </div
       ><div class="bloc_right">
