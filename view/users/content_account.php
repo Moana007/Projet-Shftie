@@ -1,7 +1,7 @@
   <div id="page_profil">
   
     <div class="profil_header">
-      <img src="assets/img/img_chef.png">
+      <img src="<?php foreach($author as $authors){ echo $authors['users_photo'];} ?>">
       <div class="info">
         <div class="pseudo">Doe Doe</div>
         <div class="nom"><?php foreach($author as $authors){ echo $authors['users_name']." ".$authors['users_firstname'];} ?></div>
