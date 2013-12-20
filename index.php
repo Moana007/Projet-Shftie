@@ -22,6 +22,12 @@
 	else {
 		$page = $_GET['page'];
 	}
+	if(!isset($_GET['filter'])){
+	 	$filter = 'rand';
+	}
+	else {
+		$filter = $_GET['filter'];
+	}
 	if($appli == 'home'){
 		if($action == 'index'){
 			include_once('controller/home/index.php');

@@ -32,7 +32,7 @@
 
       <div class="row_menu">
         <div class="menu">
-          <a href="?appli=home&action=index&page=catalogue" class="bloc_menu">Catalogue</a><span>•</span>
+          <a href="?appli=home&action=catalogue&page=catalogue" class="bloc_menu">Catalogue</a><span>•</span>
           <a href="?appli=home&action=index&page=submit_recipe" onClick="_gaq.push(['_trackEvent','create_recipe','step1']);" class="bloc_menu">Submit Recipe</a><span>•</span>
           <a href="?appli=home&action=myrecipe" class="bloc_menu">My Recipe</a><span>•</span>
           <a href="#" class="bloc_menu">Books</a><span>•</span>
