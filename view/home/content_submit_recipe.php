@@ -62,7 +62,7 @@
           <div class="row_time">
             <div class="form_title">Preparation time:
             <select id="time_prepa" class="time" name="time_prepa">           
-	            <option>-</option><option>5</option><option>10</option><option>15</option><option>5</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
+	            <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
 	            <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
 	            <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>                
             </select> minutes.</div>
@@ -70,7 +70,7 @@
           <div class="row_time">
             <div class="form_title">Cooking time:
             <select name="time_cuisson" class="time">
-            	<option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>5</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
+            	<option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
 	            <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
 	            <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>
 	            
@@ -79,7 +79,7 @@
           <div class="row_time">
             <div class="form_title">Rest time:
             <select name="time_repos" class="time">
-	            <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>5</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
+	            <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
 	            <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
 	            <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option><option>+180</option>
 

@@ -13,9 +13,9 @@
         <?php $var = 0; foreach ($recipes as $recipe):  
         		$var = $var + 1;  ?>  		      
         ><div class="bloc_recipe<?php echo $var; ?> bloc_<?php if($recipe['rec_validation'] == 1){ echo "validate";}else{ echo "moderate";} ?>">
-          <a href="<?php echo $_SERVER['PHP_SELF']."?appli=home&action=recipe&id_rec=".$recipe['recettes_id']; ?>"><img src="<?php echo $recipe['photo']; ?>">
+          <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><img src="<?php echo $recipe['photo']; ?>">
 	      	<div class="info<?php echo $var; ?>">
-              <a href="#"><?php echo $recipe['recette_name']; ?></a>
+              <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><?php echo $recipe['recette_name']; ?></a>
             </div>
           </a>
         </div
