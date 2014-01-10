@@ -31,7 +31,13 @@
 		
 		return($tags);
 	}
-
+	function vote($recipe_id){
+		global $connexion;
+		$query = $connexion->prepare('INSERT INTO VOTE (users_id_vote, recettes_id_vote) VALUES (:user_id , :recette_id)');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query->bindValue(':recette_id', $recipe_id, PDO::PARAM_INT);
+		$query->execute();
+	}
 
 	/*
 function show_ingredients(){
