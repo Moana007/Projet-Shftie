@@ -1,28 +1,35 @@
-<div id="myrecipe">
-      <div class="underscore_title">Catalogue</div>
+<div id="catalogue">
+
       <?php 
         if($_GET['filter'] == 'rand'){
       ?>
-           <a href="?appli=home&action=catalogue&filter=rand" id="rand" class="lien sort active">Random</a>
-           <a href="?appli=home&action=catalogue&filter=popular" class="lien sort">Sort by popularity</a>
-           <a href="?appli=home&action=catalogue&filter=new" id="new" class="lien sort">Sort by newest</a>
+          <div class="titre_1">Catalogue
+            <a href="?appli=home&action=catalogue&filter=new">Newest</a>
+            <a href="?appli=home&action=catalogue&filter=popular">Popular</a>
+            <a href="?appli=home&action=catalogue&filter=rand" class="actif">All</a>
+          </div>
       <?php 
         } else if($_GET['filter'] == 'popular'){?>
-         <a href="?appli=home&action=catalogue&filter=rand" id="rand" class="lien sort ">Random</a>
-         <a href="?appli=home&action=catalogue&filter=popular" class="lien sort active">Sort by popularity</a>
-         <a href="?appli=home&action=catalogue&filter=new" id="new" class="lien sort">Sort by newest</a>
+          <div class="titre_1">Catalogue
+            <a href="?appli=home&action=catalogue&filter=new">Newest</a>
+            <a href="?appli=home&action=catalogue&filter=popular" class="actif">Popular</a>
+            <a href="?appli=home&action=catalogue&filter=rand" >All</a>
+          </div>
       <?php } else if($_GET['filter'] == 'new'){ ?>
-      <a href="?appli=home&action=catalogue&filter=rand" id="rand" class="lien sort ">Random</a>
-      <a href="?appli=home&action=catalogue&filter=popular" class="lien sort">Sort by popularity</a>
-      <a href="?appli=home&action=catalogue&filter=new" id="new" class="lien sort active">Sort by newest</a>
+          <div class="titre_1">Catalogue
+            <a href="?appli=home&action=catalogue&filter=new" class="actif">Newest</a>
+            <a href="?appli=home&action=catalogue&filter=popular">Popular</a>
+            <a href="?appli=home&action=catalogue&filter=rand" >All</a>
+          </div>
       <?php } else { ?>
      
-           <a href="?appli=home&action=catalogue&filter=rand" id="rand" class="lien sort active">Random</a>
-           <a href="?appli=home&action=catalogue&filter=popular" class="lien sort">Sort by popularity</a>
-           <a href="?appli=home&action=catalogue&filter=new" id="new" class="lien sort">Sort by newest</a>
+           <div class="titre_1">Catalogue
+            <a href="?appli=home&action=catalogue&filter=new">Newest</a>
+            <a href="?appli=home&action=catalogue&filter=popular">Popular</a>
+            <a href="?appli=home&action=catalogue&filter=rand" class="actif">All</a>
+          </div>
       <?php } ?>
-      <div class="search"><input type="text" placeholder="Search into My Recipe"></input><a class="icon icon-search" href="#"></a></div>
-      <div class="tablerecipe">
+
        
        <?php  
   
@@ -43,8 +50,7 @@
           } 
         ?>
 
-      </div>
-    </div>
+  </div>
     <script type="text/javascript">
          // $(document).ready(function(){
            // $('.lien').click(function(){

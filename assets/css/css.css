@@ -1,44 +1,43 @@
-/*583+ 208 ligne modifié*/
 @font-face {
     font-family: 'new_ciclegordita';
-    src: url('../../assets/font/new_cicle_gordita-webfont.eot');
-    src: url('../../assets/font/new_cicle_gordita-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../assets/font/new_cicle_gordita-webfont.woff') format('woff'),
-         url('../../assets/font/new_cicle_gordita-webfont.ttf') format('truetype'),
-         url('../../assets/font/new_cicle_gordita-webfont.svg#new_ciclegordita') format('svg');
+    src: url('font/new_cicle_gordita-webfont.eot');
+    src: url('font/new_cicle_gordita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/new_cicle_gordita-webfont.woff') format('woff'),
+         url('font/new_cicle_gordita-webfont.ttf') format('truetype'),
+         url('font/new_cicle_gordita-webfont.svg#new_ciclegordita') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'new_ciclefina';
-    src: url('../../assets/font/New_Cicle_Fina-webfont.eot');
-    src: url('../../assets/font/New_Cicle_Fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../assets/font/New_Cicle_Fina-webfont.woff') format('woff'),
-         url('../../assets/font/New_Cicle_Fina-webfont.ttf') format('truetype'),
-         url('../../assets/font/New_Cicle_Fina-webfont.svg#new_ciclefina') format('svg');
+    src: url('font/New_Cicle_Fina-webfont.eot');
+    src: url('font/New_Cicle_Fina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/New_Cicle_Fina-webfont.woff') format('woff'),
+         url('font/New_Cicle_Fina-webfont.ttf') format('truetype'),
+         url('font/New_Cicle_Fina-webfont.svg#new_ciclefina') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'new_ciclefina_italic';
-    src: url('../../assets/font/New_Cicle_Fina_Italic-webfont.eot');
-    src: url('../../assets/font/New_Cicle_Fina_Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../assets/font/New_Cicle_Fina_Italic-webfont.woff') format('woff'),
-         url('../../assets/font/New_Cicle_Fina_Italic-webfont.ttf') format('truetype'),
-         url('../../assets/font/New_Cicle_Fina_Italic-webfont.svg#new_ciclefina_italic') format('svg');
+    src: url('font/New_Cicle_Fina_Italic-webfont.eot');
+    src: url('font/New_Cicle_Fina_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/New_Cicle_Fina_Italic-webfont.woff') format('woff'),
+         url('font/New_Cicle_Fina_Italic-webfont.ttf') format('truetype'),
+         url('font/New_Cicle_Fina_Italic-webfont.svg#new_ciclefina_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'fontello';
-  src: url('../../assets/font/fontello.eot?7840316');
-  src: url('../../assets/font/fontello.eot?7840316#iefix') format('embedded-opentype'),
-       url('../../assets/font/fontello.woff?7840316') format('woff'),
-       url('../../assets/font/fontello.ttf?7840316') format('truetype'),
-       url('../../assets/font/fontello.svg?7840316#fontello') format('svg');
+  src: url('font/fontello.eot?29973076');
+  src: url('font/fontello.eot?29973076#iefix') format('embedded-opentype'),
+       url('font/fontello.woff?29973076') format('woff'),
+       url('font/fontello.ttf?29973076') format('truetype'),
+       url('font/fontello.svg?29973076#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +47,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?7840316#fontello') format('svg');
+    src: url('../font/fontello.svg?29973076#fontello') format('svg');
   }
 }
 */
@@ -84,8 +83,10 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-comment-empty:before { content: '\e817'; } /* '' */
+.icon-tag:before { content: '\e81d'; } /* '' */
 .icon-fire:before { content: '\e818'; } /* '' */
+.icon-comment-empty:before { content: '\e817'; } /* '' */
+.icon-off:before { content: '\e812'; } /* '' */
 .icon-search:before { content: '\e80d'; } /* '' */
 .icon-heart:before { content: '\e80e'; } /* '' */
 .icon-heart-empty:before { content: '\e815'; } /* '' */
@@ -97,8 +98,8 @@
 .icon-cancel:before { content: '\e81a'; } /* '' */
 .icon-eye:before { content: '\e809'; } /* '' */
 .icon-pencil:before { content: '\e811'; } /* '' */
-.icon-attention:before { content: '\e810'; } /* '' */
-.icon-off:before { content: '\e812'; } /* '' */
+.icon-tags:before { content: '\e81e'; } /* '' */
+.icon-clock:before { content: '\e819'; } /* '' */
 .icon-left:before { content: '\e80c'; } /* '' */
 .icon-right:before { content: '\e80b'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
@@ -112,11 +113,11 @@
 .icon-pinterest-circled:before { content: '\e808'; } /* '' */
 .icon-tumblr:before { content: '\e814'; } /* '' */
 .icon-facebook-rect:before { content: '\e80a'; } /* '' */
-.icon-clock:before { content: '\e819'; } /* '' */
+.icon-attention:before { content: '\e810'; } /* '' */
 
 body {
 	margin: 0 auto;
-	background-image: url('../../assets/img/fond.jpg');
+	background-image: url('img/fond.jpg');
 	background-position: center;
 	font-family: 'new_ciclefina';
 }
@@ -210,7 +211,7 @@ a img{
 #header .bloc_menu {
 	float: left;
 
-	width: 680px;
+	width: 550px;
 	margin-left: 45px;
 	line-height: 70px;
 	vertical-align: middle;
@@ -385,6 +386,20 @@ a img{
 	float:right;
 }
 
+#slider .image_slider .info_slider a.bt.vote {
+	float: none;
+	padding-left: 30px;
+	padding-right: 35px;
+	margin-left: 10px;
+}
+
+#slider .image_slider .info_slider a.bt.fav {
+	float: none;
+	padding-left: 25px;
+	padding-right: 30px;
+	margin-left: 10px;
+}
+
 #footer {
 	width: 100%;
 	margin-top: 30px;
@@ -404,9 +419,9 @@ a img{
 }
 
 #footer .footer_middle {
-float: left;
-font-size: 20px;
-font-weight: bold;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
 }
 
 #footer .footer_middle a {
@@ -416,11 +431,13 @@ font-weight: bold;
 	font-size: 18px;
 	font-weight:normal;
 }
+
 #footer .footer_middle a:hover {
 	color: #89b929;
 }
 #footer .footer_middle span{
 	margin-left: 10px;
+	margin-right: 10px;
 	font-size: 18px;
 	font-weight:normal;
 }
@@ -561,11 +578,11 @@ padding-right: 10px;
 	width: 1280px;
 	height: 1500px;
 
-	margin: 0 auto;;
+	margin: 0 auto;
 }
 
 #page_profil .profil_header {
-	background-image: url(../../assets/img/header_profil.png);
+	background-image: url(../img/header_profil.png);
 	height: 207px;
 	padding-left: 50px;
 	padding-top: 16px;
@@ -581,7 +598,7 @@ padding-right: 10px;
 	border-radius: 30px;
 	color: #89b929;
 	margin-right: 10px;
-	margin-top: -30px; /*150*/
+	margin-top: 150px;
 }
 
 
@@ -733,11 +750,6 @@ padding-right: 10px;
 
 
 
-
-
-
-
-
 #page_profil .notif,
 #page_profil .votes,
 #page_profil .security {
@@ -764,4 +776,279 @@ padding-right: 10px;
 
 	border: 1px solid #89b929;
 	outline: 0px;
+}
+
+
+
+
+
+#page_recipe {
+	width: 1280px;
+	height: 1600px;
+
+	margin: 0 auto;
+
+	margin-top: 30px;
+}
+.titre_recette {
+	text-transform: uppercase;
+	font-size: 32px;
+}
+#page_recipe .texte_recette {
+	width: 920px;
+	margin-right: 30px;
+	background-image: url(img/paper_craft.png);
+	background-position: center;
+	padding-top:25px;
+	float: left;
+}
+
+#page_recipe .texte_recette .ingredient {
+	width: 370px;
+	margin-left: 25px;
+	float: left;
+}
+
+#page_recipe .texte_recette .ingredient .texte {
+	padding-left: 25px;
+	padding-top: 10px;
+	font-size: 15px;
+	line-height: 26px;
+}
+
+#page_recipe .texte_recette .conteneur_info {
+	width: 490px;
+	float: left; 
+}
+
+#page_recipe .texte_recette .conteneur_info .time {
+	width: 260px;
+	height: 100px;
+	text-align: right;
+	text-transform: uppercase;
+	font-family: 'new_ciclegordita';
+	line-height: 30px;
+	font-size: 22px;
+
+	float: left;
+}
+
+#page_recipe .texte_recette .conteneur_info .time .green_time {
+	color: #89b929;
+	margin-left: 10px;
+}
+
+#page_recipe .texte_recette .conteneur_info .time .min {
+	text-transform: none;
+}
+
+#page_recipe .texte_recette .conteneur_info .difficulty {
+	width: 180px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	margin-left: 40px;
+	font-size: 22px;
+	line-height: 30px;
+
+	text-transform: uppercase;
+	font-family: 'new_ciclegordita';
+}
+
+#page_recipe .texte_recette .conteneur_info .difficulty .green_info {
+	color: #89b929;
+	text-transform: none;
+}
+
+#page_recipe .texte_recette .conteneur_info .tags {
+	height: 200px;
+	float:left;
+	padding-top: 30px;
+	padding-left: 45px;
+	text-transform: uppercase;
+	font-family: 'new_ciclegordita';	
+	font-size: 22px;
+}
+
+
+#page_recipe .texte_recette .conteneur_info .tags .green_tags {
+	font-family: 'new_ciclefina';
+	font-size: 19px;
+	text-transform: none;
+	color: #89b929;
+}
+
+#page_recipe .texte_recette .process_recipe{
+	width: 920px;
+	padding:30px 25px 30px 25px; 
+
+}
+
+#page_recipe .texte_recette .process_recipe .texte {
+	font-size: 19px;
+	line-height: 21px;
+	display: block;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+#page_recipe .more_author {
+	width: 330px;
+	background-image: url(img/paper_craft.png);
+	background-position: center;
+
+	float: left;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+#page_recipe .more_author .avatar_author {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+#page_recipe .more_author .avatar_author img {
+	width: 150px;
+	height: 150px;
+	border-radius:150px; 
+
+	border: 3px solid #89b929
+}
+#page_recipe .more_author .texte {
+	font-size: 32px;
+	text-align: center;
+
+	margin-bottom: 10px;
+}
+
+#page_recipe .more_author a.case_recipe {
+	width: 305px;
+	height: 240px;
+
+	margin: 0 auto;
+
+	margin-bottom: 10px;
+	display: block;
+}
+
+#page_recipe .more_author a.case_recipe+a.case_recipe {
+	margin-bottom: 20px;
+}
+
+#page_recipe .more_author .case_recipe .views_bloc_recette {
+	width: 305px;
+	height: 40px;
+	
+	line-height: 40px;
+
+	background-color: #89b929;
+	color: #FFF;
+	text-align: center;
+	margin-top: -4px;
+}
+#page_recipe .more_author .case_recipe .views_bloc_recette .views{
+	display: inline-block;
+	padding:0px 10px 0px 10px;
+
+	font-family: 'new_ciclefina';
+}
+
+#page_recipe .more_author .case_recipe .views_bloc_recette .views_title {
+	text-align: left;
+	padding:0px 10px 0px 10px;
+
+	font-family: 'new_ciclegordita';
+	font-size: 18px;
+}
+
+#page_recipe .more_author .case_recipe .views_bloc_recette .views span {
+	margin-right: 5px;
+
+	font-size: 20px;
+	line-height: 20px;
+}
+
+#page_recipe .more_author a.bt {
+	margin-top: 10px;
+}
+
+#page_recipe .commentaire {
+	width: 920px;
+	margin-top: 30px;
+	background-image: url(img/paper_craft.png);
+	background-position: center;
+	float: left;
+}
+
+#page_recipe .commentaire {
+	padding: 20px;
+}
+#page_recipe .commentaire .titre_recette {
+	margin-bottom: 20px;
+}
+#page_recipe .commentaire .case_comment{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#page_recipe .commentaire .case_comment a.delete {
+	position: absolute;
+	top:0px;
+	right: 0px;
+	background-color: #FF9600;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#page_recipe .commentaire .case_comment img {
+	width: 85px;
+	height: 85px;
+	border-radius: 85px;
+	display: inline-block;
+}
+
+#page_recipe .commentaire .case_comment .comment_info {
+	display: inline-block;
+	width: 700px;
+	vertical-align: top;
+	padding-top: 15px;
+}
+
+#page_recipe .commentaire .case_comment .comment_info .pseudo {
+	font-size: 23px;
+	margin-bottom: 10px;
+}
+#page_recipe .commentaire .case_comment .comment_info .pseudo a{
+	color: #000;
+	border-bottom: 1px solid #89b929;
+}
+
+#page_recipe .commentaire .case_comment .comment_info .comment {
+	font-size: 18px;
+}
+
+#page_recipe .commentaire .case_comment .comment_info .time {
+	font-size: 12px;
+	color: #89b929;
+	text-align: right;
+}
+
+#page_recipe .commentaire .case_comment textarea {
+	width: 100%;
+	max-width: 100%;
+	height: 60px;
+	max-height: 60px;
+	border: 1px solid #89b929;
+	margin-bottom: 10px;
+	padding: none;
+}
+
+#page_recipe .commentaire .case_comment button {
+	float: right;
+	border: none;
 }
