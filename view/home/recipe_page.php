@@ -131,11 +131,12 @@
 
 
 <!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - - - - - - - - - -  - - -->
-      	<div class="commentaire">
-          <div class="titre_recette">Comments</div>
+      	<?php if($show_comment[0] != 0) { ?>
+          <div class="commentaire">
+            <div class="titre_recette">Comments</div>
 
-          <?php if($show_comment[0] != 0) { 
-                foreach($show_comment as $show_comments): ?>
+           
+                <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
                   <a href="#"><img src="assets/img/img_chef.png"></a>               
                     <div class="comment_info">
@@ -147,8 +148,8 @@
                       <a class="delete" href="?appli=home&action=delete_comment&id_rec=<?php echo $show_comments['com_id_recettes'].'&com_id='.$show_comments['com_id']; ?>" onclick='return confirm(\"Voulez vous vraiment supprimer votre commentaire ?\")' ><span class="icon icon-cancel"></span></a>
                     <?php } ?>
                 </div>
-         <?php    endforeach;
-              } ?>
+        <?php    endforeach;
+        } ?>
           
         <?php if(isset($_SESSION['users_id'])) { ?>  
           <div class="case_comment">
