@@ -1,7 +1,9 @@
-<div id="my_recipe">
+
+	<div id="my_recipe">
 	<div class="titre_1">My Recipe <a href="?appli=home&action=index&page=submit_recipe" class="add_recipe"><span>+</span> Add a new recipe</a></div>
 
 	<?php foreach ($recipes as $recipe):  ?>
+		<?php $idrecipe = $recipe['recettes_id'] ?>
 		<div class="bloc_recette">
 			<a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><img src="<?php echo $recipe['photo']; ?>"></a>
 			<div class="info_bloc_recette">
@@ -10,8 +12,23 @@
 			</div>
 			<div class="views_bloc_recette">
 				<div class="views"><span class="icon icon-star-empty"></span>30</div>
-				<div class="views"><span class="icon icon-heart-empty"></span>30</div>
-				<div class="views"><span class="icon icon-comment-empty"></span>30</div>
+				<div class="views"><span class="icon icon-heart-empty"></span>
+					<?php 
+					$like = like_recipe($idrecipe);
+								
+									
+									echo $like;
+									
+								?></div>
+				<div class="views"><span class="icon icon-comment-empty"></span>
+					<?php 
+					$comment = comment_recipe($idrecipe);
+								
+									
+									echo $comment;
+									
+								?>
+				</div>
 			</div>
 		</div>
 	<?php endforeach; ?>
