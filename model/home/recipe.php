@@ -87,7 +87,7 @@ function show_ingredients(){
 	function show_recipe_more($id_user){
 		global $connexion;
 			
-		$query5 = $connexion->prepare('SELECT photo,users_id,auteur FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id ORDER BY RAND() LIMIT 0, 2'); // ORDER BY RAND() 			
+		$query5 = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id,recette_name FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id ORDER BY RAND() LIMIT 0, 2'); // ORDER BY RAND() 			
 		$query5->bindParam(':id_user', $id_user, PDO::PARAM_INT); 
 		$query5->execute();	
 		$recipe_more = $query5->fetchAll();

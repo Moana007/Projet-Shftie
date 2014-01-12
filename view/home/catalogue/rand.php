@@ -4,7 +4,7 @@
       <div class="bloc_recette">
           <a href="?appli=home&action=recipe&id_rec=<?php echo $rand['recettes_id']; ?>"><img src="<?php echo $rand['photo']; ?>"></a>
           <div class="info_bloc_recette">
-              <a href="?appli=home&action=recipe&id_rec=<?php echo $rand['recettes_id']; ?>"><img src="<?php echo $rand['photo']; ?>"><?php echo $rand['recette_name']; ?></a>
+              <a href="?appli=home&action=recipe&id_rec=<?php echo $rand['recettes_id']; ?>"><?php echo $rand['recette_name']; ?></a>
               <?php echo $rand['description']; ?>
           </div>
           <div class="views_bloc_recette">

@@ -31,13 +31,12 @@
 		
 		//on execute la requete 
 		$query->execute();
-		
 		$recipes = $query->fetchAll();
 		//on retourne tous les articles selectionnés 
 		
 		return $recipes;
-		
 	}
+
 	function like_recipe($idrecipe){
 		global $connexion;
 
@@ -55,6 +54,6 @@
 		$query->execute();
 		$comment = $query->rowCount();
 		return $comment;
-	}
+ 	}
 
  ?>
