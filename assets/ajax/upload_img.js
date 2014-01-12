@@ -1,5 +1,4 @@
 
-
     $(document).ready(function ()
     {
       $('.fileUpload').liteUploader(
@@ -33,13 +32,15 @@
           //$('#input').append('<input type="text" name="photo" id="photo" value="'+ file.name + '">');
           $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
         },
+        var photo = $('#photo').val();
         success: function (response)
         {
           var response = $.parseJSON(response);
 
           $.each(response.urls, function(i, url)
           {
-            $('#previews').append($('<img>', {'src': url, 'width': 200}));
+            //$('#previews').append($('<img>', {'src': url, 'width': '100%'}));
+            $('#previews').css({ 'background' : 'url("http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name +'")'});
           });
 
           $('#response').html(response.message);

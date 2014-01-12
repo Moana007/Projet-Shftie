@@ -38,7 +38,18 @@
 		$query->bindValue(':recette_id', $recipe_id, PDO::PARAM_INT);
 		$query->execute();
 	}
+	
+	function button_vote($id_rec){
+		global $connexion;
+	
+		$query = $connexion->prepare('SELECT * FROM VOTE WHERE users_id_vote = :user_id AND recettes_id_vote = :recipe_id');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query->bindValue(':recipe_id', $id_rec, PDO::PARAM_INT);		
+		$query->execute();
+		$verif = $query->rowCount();
+		return $verif;	
 
+}
 	/*
 function show_ingredients(){
 		global $connexion;
@@ -84,16 +95,13 @@ function show_ingredients(){
 		return($recipe_more);
 	}
 	
-	function add_comment($com_texte, $com_id_recettes){
+	function add_comment($com_texte, $id_rec){
 			global $connexion;
-			
-
-
 			try{
 				$query = $connexion->prepare('INSERT INTO COMMENTAIRES (com_texte, com_id_users, com_id_recettes) VALUES (:com_texte, :com_id_users, :com_id_recettes)');
 				$query->bindParam(':com_texte', $com_texte, PDO::PARAM_STR);
 				$query->bindParam(':com_id_users', $_SESSION['users_id'], PDO::PARAM_INT);
-				$query->bindParam(':com_id_recettes', $com_id_recettes, PDO::PARAM_INT);
+				$query->bindParam(':com_id_recettes', $id_rec, PDO::PARAM_INT);
 
 				$query->execute();
 			}

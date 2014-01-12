@@ -26,11 +26,15 @@
               <span class="titre_hp"><?php foreach($recipes as $recipe){ echo $recipe['recette_name']; }?></span>
               <span class="author"><a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><?php foreach($authors as $author){ echo $author['users_name']." ".$author['users_firstname']; }?></a></span></br>
               <span class="texte"><?php foreach($recipes as $recipe){ echo $recipe['description']; }?></span>
+              <?php if($verif == 0){ ?>
               <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id" value="<?php echo $recipe['recettes_id'] ?>">
                  <button type="submit" class="bt_vote">Vote</button>
               </form>
-              
+              <?php }
+              else {
+                echo 'deja voté';
+              } ?>
               <?php echo $recipe['recettes_id'].' et user : '.$_SESSION['users_id']; ?>
             </div>
           </div>
