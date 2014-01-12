@@ -40,7 +40,10 @@
           $.each(response.urls, function(i, url)
           {
             //$('#previews').append($('<img>', {'src': url, 'width': '100%'}));
-            $('#previews').css({ 'background' : 'url("http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name +'")'});
+            $('#previews').css({ 
+              'background' : 'url(http://shiftie.org/autres/dev_product/assets/img/uploads/'+ url +')',
+              'background-size':'cover'
+            });
           });
 
           $('#response').html(response.message);

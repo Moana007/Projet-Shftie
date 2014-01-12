@@ -1,7 +1,7 @@
 <?php 
 	include_once('model/home/myrecipe.php');
 	
-	$nb_reponses = 7; //Nombre de recettes que l'on veut afficher
+	$nb_reponses = 8; //Nombre de recettes que l'on veut afficher
 
 	if (!isset($_GET['pagin']))					
 	{

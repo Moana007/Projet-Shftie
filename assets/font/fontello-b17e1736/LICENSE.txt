@@ -10,13 +10,13 @@ Font license info
    Homepage:  http://fortawesome.github.com/Font-Awesome/
 
 
-## Brandico
+## Elusive
 
-   (C) 2012 by Vitaly Puzrin
+   Copyright (C) 2013 by Aristeides Stathopoulos
 
-   Author:    Crowdsourced, for Fontello project
+   Author:    Aristeides Stathopoulos
    License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  
+   Homepage:  http://aristeides.com/
 
 
 ## Entypo
@@ -26,5 +26,14 @@ Font license info
    Author:    Daniel Bruce
    License:   CC BY-SA (http://creativecommons.org/licenses/by-sa/2.0/)
    Homepage:  http://www.entypo.com
+
+
+## Brandico
+
+   (C) 2012 by Vitaly Puzrin
+
+   Author:    Crowdsourced, for Fontello project
+   License:   SIL (http://scripts.sil.org/OFL)
+   Homepage:  
 
 

@@ -17,7 +17,7 @@ function show_recipe($id_user){ //users + recettes
 	
 	global $connexion;
 		
-		$req = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id ORDER BY RAND() LIMIT 0, 4'); 	
+		$req = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id,recette_name FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id ORDER BY RAND() LIMIT 0, 4'); 	
 		
 		$req->bindParam(':id_user', $id_user, PDO::PARAM_INT);
 		//on execute la requete 
