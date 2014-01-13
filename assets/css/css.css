@@ -1490,3 +1490,104 @@ padding-right: 10px;
 	font-family: 12px;
 	vertical-align: top;	
 }
+#create_recipe3 .step3 {
+	display: block;
+	width: 1280px;
+	height: 640px;
+	margin: 0 auto;
+	padding: 20px 20px;
+}
+
+#create_recipe3 .step3 .ingredient {
+	width: 350px;
+	height: 150px;
+	margin-bottom: 30px;
+
+	border-radius: 5px;
+	border: 1px solid #89b929;
+}
+
+#create_recipe3 .step3 .difficulty {
+	width: 350px;
+	border-radius: 5px;
+	border: 1px solid #89b929;
+
+	margin-bottom: 30px;
+}
+
+#create_recipe3 .step3 .row_time {
+	margin: 0 auto;
+	width: 400px;
+	margin-bottom: 20px;
+}
+
+#create_recipe3 .step3 .row_time .form_title select {
+	width: 50px;
+	height: 25px;
+	color: #89b929;
+	font-size: 18px;
+	font-family: 'new_ciclefina';
+	font-weight: bold;
+	margin: 0px 10px 0px 10px
+}
+
+#create_recipe4 .step4 {
+	display: block;
+	width: 1280px;
+	height: 590px;
+	margin: 0 auto;
+	padding: 20px 20px;
+}
+
+#create_recipe5 .step5 {
+	display: block;
+	width: 1280px;
+	height: 590px;
+	margin: 0 auto;
+	padding: 20px 20px;
+}
+
+#create_recipe4 .step4 .preparation {
+	width: 400px;
+	height: 300px;
+
+	margin-bottom: 30px;
+
+	border-radius: 5px;
+	border: 1px solid #89b929;
+}
+
+#create_recipe5 .step5 .bloc_tag {
+	width: 570px;
+	display: inline-block;
+}
+
+#create_recipe5 .step5 .bloc_tag2 {
+	width: 570px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left:40px; 
+}
+#create_recipe5 .step5 .row_tag {
+	margin-bottom: 30px;
+}
+
+#create_recipe5 .step5 .row_tag .tag_title {
+	font-size: 20px;
+	width: 570px;
+	padding-bottom: 5px;
+
+	border-bottom: 1px solid #89b929;
+}
+#create_recipe5 .step5 .row_tag .case_tag {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#create_recipe5 .step5 .row_tag .case_tag+.case_tag {
+	margin-left: 15px;
+}
+
+#create_recipe5 .step5 .row_tag .case_tag input {
+	margin-right: 5px;
+}

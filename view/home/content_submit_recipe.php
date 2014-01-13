@@ -1,4 +1,5 @@
-<div id="create_recipe" class="create_recipe">
+ <form method="post" action="?appli=home&action=submit_recipe" id="formRecipe">
+<div id="create_recipe" class="create_recipe_trigger">
    
      
       <div class="step step1">
@@ -10,14 +11,14 @@
 
           <!-- TITRE RECETTE -->
           <div class="form_title">Title of the recipe:</div>
-          <input class="case_remplir" type="text"></input>
+          <input class="case_remplir" name="recette_name" id="recette_name" type="text"/>
 
           <!-- DESCRIPTION -->
           <div class="form_title">Description:</div>
-          <textarea class="case_remplir" type="text" style="height:100px;"></textarea>
+         <textarea class="description" type="text" name="description" id="description"></textarea>
         
 
-        <div class="ligne_bt"><a href="#" class="bt gris">Previous step</a><a href="#" class="bt vert go_two">Next step</a></div>
+        <div class="ligne_bt"><a href="#" class="bt vert go_two">Next step</a></div>
 
 
           <div class="etape">
@@ -29,22 +30,21 @@
           </div>
     </div>
     </div>
-    <div id="create_recipe2" class="create_recipe">
+    <div id="create_recipe2" class="create_recipe_trigger">
       <div class="step step2">
         <div class="titre_recette"><span>•</span> Step 2</div>
       
         <div class="expl"></br> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
-
+          <div id="details"></div>
           <!-- BT UPLOAD -->
-          <a href="#" class="bt vert">Upload your photo</a>
-          <input type="file" class="bt vert">
+            <input type="file" name="fileUpload1" id="fileUpload1" class="fileUpload bt vert" />
+            <input type="hidden" id="photo" name="photo" value="">
           <div class="images">
             <!-- IMG NORMALE -->
           <div class="previews"></div>
           <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. </br>
           You can zoom and postion it whatever you like.</div>
-          <div id="details"></div>
-          <div id="response"></div>
+
           <!-- IMG WIDE -->
           <div class="img_wide">
             <div class="ui-widget-content">
@@ -58,7 +58,7 @@
           
         </div>
       
-        <div class="ligne_bt"><a href="#" class="bt gris">Previous step</a><a href="#" class="bt vert">Next step</a></div>
+        <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" class="bt vert go_three">Next step</a></div>
 
       <div class="etape">
         <span class="undone done">1</span>
@@ -70,83 +70,95 @@
       </div>
     </div>
 
-    <div class="step step3">
-          <div class="titre"><span>•</span>Step 3</div>
-            
-          <div class="expl">Now you have to give me all the ingredients needed for that recipe, and try to tell me how difficult is your recipe</div>
-            
-             <!-- INGREDIENTS -->
-               <div class="form_title">Ingredients</div>
-          <textarea name="ingredient" id="ingredient" class="ingredient" type="text"></textarea>
+   <div id="create_recipe3" class="create_recipe_trigger">
+      <div class="step step3">
+      <div class="titre_recette"><span>•</span> Step 3</div>
+        
+      <div class="expl">Now you have to give me all the ingredients needed for that recipe, and try to tell me how difficult is your recipe</div>
+      
+        <div class="center">
+        
+         <!-- INGREDIENTS -->
+          <div class="form_title">Ingredients</div>
+          <textarea class="ingredient" type="text"></textarea>
           <!-- TEMPS -->
-          <div class="row_time">
+           <div class="row_time">
             <div class="form_title">Preparation time:
             <select id="time_prepa" class="time" name="time_prepa">           
-	            <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
-	            <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
-	            <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>                
+              <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
+              <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
+              <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>                
             </select> minutes.</div>
           </div>
           <div class="row_time">
             <div class="form_title">Cooking time:
             <select name="time_cuisson" class="time">
-            	<option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
-	            <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
-	            <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>
-	            
+              <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
+              <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
+              <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>
+              
             </select>minutes.</div>
           </div>
           <div class="row_time">
             <div class="form_title">Rest time:
             <select name="time_repos" class="time">
-	            <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
-	            <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
-	            <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option><option>+180</option>
+              <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
+              <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
+              <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option><option>+180</option>
 
             </select>minutes.</div>
           </div>
-              <!-- DIIFCULTE -->
-              <div class="form_title">How difficult is it to cook?</div>
-              <select class="difficulty" id="level" name="level" type="text"><option>Easy</option><option>Medium</option><option>Hard</option></select>
-              <a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step4']);" class="go_four bt">Next Step</a>
-              <a href="#" class="go_two bt">Previous Step</a> 
-              
-              <div class="steps">
-		        <span class="go_one undone done">1</span>
-		        <span class="go_two undone done">2</span>
-		        <span class="undone done">3</span>         
-		        <span class="undone">4</span>
-		        <span class="undone">5</span>
-		      </div>                    
-           </div>
-           
-    <div class="step step4">
-    <div class="titre"><span>•</span>Step 4</div>
+          <!-- DIIFCULTE -->
+          <div class="form_title">How difficult is it to cook?</div>
+           <select class="difficulty" id="level" name="level" type="text"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+
+      </div>
+        
+        <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" class="bt vert go_four">Next step</a></div>
+      </form>
+      
+      <div class="etape">
+        <span class="undone done">1</span>
+        <span class="undone done">2</span>
+        <span class="undone done">3</span>         
+        <span class="undone">4</span>
+        <span class="undone">5</span>
+      </div>
+  </div>
+    </div>
+    <div id="create_recipe4" class="create_recipe_trigger">
+      <div class="step step4">
+      <div class="titre_recette"><span>•</span> Step 4</div>
         
       <div class="expl">It's time to tell me how you do this nice recipe, tell us all about the preparation</div>
       
-     
+        <div class="center">
           <div class="form_title">Preparation</div>
           <textarea class="preparation" id="preparation" name="preparation" type="text"></textarea>
-        <a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step5']);" class="go_five bt">Next Step</a>
-        <a href="#" class="go_three bt">Previous Step</a>
-        <div class="steps">
-	        <span class="go_one undone done">1</span>
-	        <span class="go_two undone done">2</span>
-	        <span class="go_three undone done">3</span>         
-	        <span class="undone done">4</span>
-	        <span class="undone">5</span>
-		</div>
-    </div>
+        
+        <div class="ligne_bt"><a href="#" class="bt gris go_three">Previous step</a><a href="#" class="bt vert go_five">Next step</a></div>
+      </div>
+
     
-    <div class="step step5">
-      <div class="titre"><span>•</span>Step 5</div>    
-        <div class="expl">Okay this our final goal, tag your recipe with those tags we propose you down there!</div>
       
-        <div id="tag">
-        	
-        </div>
-          <div class="bloc_tag">
+      <div class="etape">
+        <span class="undone done">1</span>
+        <span class="undone done">2</span>
+        <span class="undone done">3</span>         
+        <span class="undone done">4</span>
+        <span class="undone">5</span>
+      </div>
+
+    </div>
+</div>
+     <div id="create_recipe5" class="create_recipe_trigger">
+      <div class="step step5">
+      <div class="titre_recette"><span>•</span> Step 5</div>
+        
+      <div class="expl">Okay this our final goal, tag your recipe with those tags we propose you down there!</div>
+      
+       
+           <div class="bloc_tag">
           
           
           <div class="row_tag">
@@ -217,18 +229,22 @@
           
         </div>
         
-        <a href="#" class="go_four bt">Previous Step</a>
-        <button type="submit" id="submit" onClick="_gaq.push(['_trackEvent','create_recipe','validation']);">Envoyer la recette</button>
-        
-        <div class="steps">
-	        <span class="go_one undone done">1</span>
-	        <span class="go_two undone done">2</span>
-	        <span class="go_three undone done">3</span>         
-	        <span class="go_four undone done">4</span>
-	        <span class="undone done">5</span>
-		</div>
+        <div class="ligne_bt"><a href="#" class="bt gris go_four">Previous step</a><button type="submit" id="submit" class="bt vert">Upload!</button></div>
+      
+    
+      
+      <div class="etape">
+        <span class="undone done">1</span>
+        <span class="undone done">2</span>
+        <span class="undone done">3</span>         
+        <span class="undone done">4</span>
+        <span class="undone done">5</span>
+      </div>
+  </div>
+    </div>
+   
  
     </div>
      </form>
-    </div>
+   
 
