@@ -7,8 +7,18 @@
           </div>
           <div class="views_bloc_recette">
               <div class="views"><span class="icon icon-star-empty"></span>30</div>
-              <div class="views"><span class="icon icon-heart-empty"></span>30</div>
-              <div class="views"><span class="icon icon-comment-empty"></span>30</div>
+              <div class="views"><span class="icon icon-heart-empty"></span>
+                <?php 
+                  $like = like_recipe($idrecipe);
+                  echo $like;
+                ?>
+              </div>
+              <div class="views"><span class="icon icon-comment-empty"></span>
+                 <?php 
+                  $comment = like_recipe($idrecipe);
+                  echo $comment;
+                ?>
+              </div>
           </div>
       </div>
 
