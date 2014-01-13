@@ -30,7 +30,7 @@
       <?php if($verif == 0){ ?>
               <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id" value="<?php echo $recipe['recettes_id'] ?>">
-        <button type="submit" class="bt_vote"><a href="#" class="bt vert vote"><span class="icon icon-heart-empty"><span>Vote</a></button>
+        <button class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>
         </form>
              <?php }
               else {
@@ -39,7 +39,7 @@
 
               <?php //echo $recipe['recettes_id'].' et user : '.$_SESSION['users_id']; ?>
 
-      <a href="#" class="bt gris fav"><span class="icon icon-star-empty"><span>Favoris</a>
+      <button class="bt gris fav"><span class="icon icon-star-empty"><span>Favoris</button>
 
     </div>
   </div>
@@ -131,11 +131,12 @@
 
 
 <!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - - - - - - - - - -  - - -->
-      	<?php if($show_comment[0] != 0) { ?>
+      	
           <div class="commentaire">
+
             <div class="titre_recette">Comments</div>
 
-           
+           <?php if($show_comment[0] != 0) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
                   <a href="#"><img src="assets/img/img_chef.png"></a>               
