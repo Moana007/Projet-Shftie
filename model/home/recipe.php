@@ -31,6 +31,17 @@
 		
 		return($tags);
 	}
+
+	function verif_vote($recipe_id){
+		global $connexion;
+		$query = $connexion->prepare('SELECT * FROM VOTE WHERE users_id_vote = :user_id AND recettes_id_vote = :recette_id');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query->bindValue(':recette_id', $recipe_id, PDO::PARAM_INT);
+		$query->execute();
+		$verif_vote = $query->rowCount();
+
+		return $verif_vote;
+	}
 	function vote($recipe_id){
 		global $connexion;
 		$query = $connexion->prepare('INSERT INTO VOTE (users_id_vote, recettes_id_vote) VALUES (:user_id , :recette_id)');
@@ -47,7 +58,36 @@
 		$query->bindValue(':recipe_id', $id_rec, PDO::PARAM_INT);		
 		$query->execute();
 		$verif = $query->rowCount();
-		return $verif;	
+		return $bt_vote;	
+
+}
+function verif_fav($fav_button){
+		global $connexion;
+		$query = $connexion->prepare('SELECT * FROM VOTE WHERE fav_id_users = :user_id AND fav_id_recettes = :recette_id');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query->bindValue(':recette_id', $recipe_id, PDO::PARAM_INT);
+		$query->execute();
+		$verif_vote = $query->rowCount();
+
+		return $verif_fav;
+	}
+	function fav($recipe_id){
+		global $connexion;
+		$query = $connexion->prepare('INSERT INTO VOTE (fav_id_users, fav_id_recettes) VALUES (:user_id , :recette_id)');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query->bindValue(':recette_id', $recipe_id, PDO::PARAM_INT);
+		$query->execute();
+	}
+	
+	function button_fav($id_rec){
+		global $connexion;
+	
+		$query = $connexion->prepare('SELECT * FROM VOTE WHERE fav_id_users = :user_id AND fav_id_recettes = :recipe_id');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query->bindValue(':recipe_id', $id_rec, PDO::PARAM_INT);		
+		$query->execute();
+		$verif = $query->rowCount();
+		return $bt_fav;	
 
 }
 	/*

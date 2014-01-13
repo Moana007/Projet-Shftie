@@ -1,5 +1,6 @@
 <?php 
 	include_once('model/home/myrecipe.php');
+	include_once('model/home/count.php');
 	
 	$nb_reponses = 8; //Nombre de recettes que l'on veut afficher
 
