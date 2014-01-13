@@ -8,17 +8,17 @@
 		
 		
 	}
-	if(isset($_POST['fav_button'])){
-		$verif_fav = verif_fav($_POST['recipe_id']);
+	// if(isset($_POST['fav_button'])){
+	// 	$verif_fav = verif_fav($_POST['recipe_id']);
 	
-		if($verif_fav == 0)
-			fav($_POST['recipe_id']);	
+	// 	if($verif_fav == 0)
+	// 		fav($_POST['recipe_id']);	
 		
 		
-	}
+	// }
 	
-	$bt_vote = button_vote($_GET['id_rec']);
-	$bt_fav = button_fav($_GET['id_rec']);
+	// $bt_vote = button_vote($_GET['id_rec']);
+	// $bt_fav = button_fav($_GET['id_rec']);
 
 	$recipes = show_recipe();
 	

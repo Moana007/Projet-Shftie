@@ -1,0 +1,114 @@
+$('.aaa1').hide();
+$('.bbb1').hide();
+$('.ccc1').hide();
+$('.ddd1').hide();
+$('.aaa2').hide();
+$('.bbb2').hide();
+$('.ccc2').hide();
+$('.ddd2').hide();
+$('.aaa3').hide();
+$('.bbb3').hide();
+$('.signup').hide();
+$('.register').hide();
+
+$('.a1').mouseenter(function(){
+	$('.aaa1').fadeIn(100);
+	$('.aa1').hide();
+})
+$('.a1').mouseleave(function(){
+	$('.aaa1').hide();
+	$('.aa1').fadeIn(100);
+})
+
+$('.b1').mouseenter(function(){
+	$('.bbb1').fadeIn(100);
+	$('.bb1').hide();
+})
+$('.b1').mouseleave(function(){
+	$('.bbb1').hide();
+	$('.bb1').fadeIn(100);
+})
+
+$('.c1').mouseenter(function(){
+	$('.ccc1').fadeIn(100);
+	$('.cc1').hide();
+})
+$('.c1').mouseleave(function(){
+	$('.ccc1').hide();
+	$('.cc1').fadeIn(100);
+})
+
+$('.d1').mouseenter(function(){
+	$('.ddd1').fadeIn(100);
+	$('.dd1').hide();
+})
+$('.d1').mouseleave(function(){
+	$('.ddd1').hide();
+	$('.dd1').fadeIn(100);
+})
+
+$('.a2').mouseenter(function(){
+	$('.aaa2').fadeIn(100);
+	$('.aa2').hide();
+})
+$('.a2').mouseleave(function(){
+	$('.aaa2').hide();
+	$('.aa2').fadeIn(100);
+})
+
+$('.b2').mouseenter(function(){
+	$('.bbb2').fadeIn(100);
+	$('.bb2').hide();
+})
+$('.b2').mouseleave(function(){
+	$('.bbb2').hide();
+	$('.bb2').fadeIn(100);
+})
+
+$('.c2').mouseenter(function(){
+	$('.ccc2').fadeIn(100);
+	$('.cc2').hide();
+})
+$('.c2').mouseleave(function(){
+	$('.ccc2').hide();
+	$('.cc2').fadeIn(100);
+})
+
+$('.d2').mouseenter(function(){
+	$('.ddd2').fadeIn(100);
+	$('.dd2').hide();
+})
+$('.d2').mouseleave(function(){
+	$('.ddd2').hide();
+	$('.dd2').fadeIn(100);
+})
+
+$('.a3').mouseenter(function(){
+	$('.aaa3').fadeIn(100);
+	$('.aa3').hide();
+})
+$('.a3').mouseleave(function(){
+	$('.aaa3').hide();
+	$('.aa3').fadeIn(100);
+})
+$('.b3').mouseenter(function(){
+	$('.bbb3').fadeIn(100);
+	$('.bb3').hide();
+})
+$('.b3').mouseleave(function(){
+	$('.bbb3').hide();
+	$('.bb3').fadeIn(100);
+})
+
+$('.trigger_register').click(function(){
+	$('.register').fadeIn(200);
+	$('.signup').fadeOut(200);
+	})
+$('.trigger_sign').click(function(){
+	$('.signup').fadeIn(200);
+	$('.register').fadeOut(200);
+	})
+$('.icon-cancel').click(function(){
+	$('.signup').fadeOut(200);
+	$('.register').fadeOut(200);
+	})
