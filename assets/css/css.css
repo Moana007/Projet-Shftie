@@ -328,7 +328,7 @@ a.bt.gris:hover {
 #header .bloc_user {
 	float: right;
 	padding: 0px 50px 0px 0px;
-	display: none;
+	/*display: none;*/
 }
 
 #header .bloc_user img {
