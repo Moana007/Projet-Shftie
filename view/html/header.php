@@ -20,13 +20,32 @@
     <div id="header">
       <div class="bloc_logo"><a href="?appli=home&action=index"><img src="assets/img/logo.png"></a></div>
 
-      <div class="bloc_menu">
-          <a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Catalogue</a>
-          <a href="?appli=home&action=index&page=submit_recipe" class="menu"><span>•</span>Submit Recipe</a>
-          <a href="?appli=home&action=myrecipe" class="menu"><span>•</span>Myrecipe</a>
-          <a href="?appli=home&action=myrecipe" class="menu"><span>•</span>Books</a>
-          <!-- <a href="?appli=home&action=index&page=contact" class="menu"><span>•</span>Contact</a> -->
-      </div>
+      <ul class="bloc_menu">
+        <li>
+                <a href="#" class="menu"><span>•</span>Menu</a>
+                <ul>
+                        <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
+                        <li><a href="">Books</a></li>
+                </ul>
+        </li>
+        <li><a href="#" class="menu"><span>•</span>Submit recipe</a>
+                <ul>
+                        <li><a href="#">Create Books</a></li>
+                </ul>
+        </li>
+        <li><a href="#" class="menu"><span>•</span>My recipe</a>
+                <ul>
+                        <li><a href="?appli=home&action=index&page=submit_recipe">Create</a></li>
+                        <li><a href="?appli=home&action=myrecipe">Favorite</a></li>
+                </ul>
+        </li>
+        <li><a href="#" class="menu"><span>•</span>My books</a>
+                <ul>
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">Favorite</a></li>
+                </ul>
+        </li>
+      </ul>
 
     <?php if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){ ?>
       
