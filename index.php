@@ -60,8 +60,8 @@
 		}
 	}
 	else if($appli == 'users'){
-		if($action == 'index'){
-			include_once('controller/users/index.php');
+		if ($action == 'account'){
+			include_once('controller/users/account.php');
 		}
 		else if ($action == 'connect'){
 			include_once('controller/users/connect.php');
@@ -78,9 +78,6 @@
 		}
 		else if ($action == 'logout'){ 
 			include_once('model/users/logout.php');
-		}
-		else if ($action == 'account'){
-			include_once('controller/users/account.php');
 		}
 		else if ($action == 'modif_users'){
 			include_once('controller/users/modif_users.php');

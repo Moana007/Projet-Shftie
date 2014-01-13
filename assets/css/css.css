@@ -1,43 +1,43 @@
 @font-face {
     font-family: 'new_ciclegordita';
-    src: url('../../assets/font/new_cicle_gordita-webfont.eot');
-    src: url('../../assets/font/new_cicle_gordita-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../assets/font/new_cicle_gordita-webfont.woff') format('woff'),
-         url('../../assets/font/new_cicle_gordita-webfont.ttf') format('truetype'),
-         url('../../assets/font/new_cicle_gordita-webfont.svg#new_ciclegordita') format('svg');
+    src: url('../font/new_cicle_gordita-webfont.eot');
+    src: url('../font/new_cicle_gordita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/new_cicle_gordita-webfont.woff') format('woff'),
+         url('../font/new_cicle_gordita-webfont.ttf') format('truetype'),
+         url('../font/new_cicle_gordita-webfont.svg#new_ciclegordita') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'new_ciclefina';
-    src: url('../../assets/font/New_Cicle_Fina-webfont.eot');
-    src: url('../../assets/font/New_Cicle_Fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../assets/font/New_Cicle_Fina-webfont.woff') format('woff'),
-         url('../../assets/font/New_Cicle_Fina-webfont.ttf') format('truetype'),
-         url('../../assets/font/New_Cicle_Fina-webfont.svg#new_ciclefina') format('svg');
+    src: url('../font/New_Cicle_Fina-webfont.eot');
+    src: url('../font/New_Cicle_Fina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/New_Cicle_Fina-webfont.woff') format('woff'),
+         url('../font/New_Cicle_Fina-webfont.ttf') format('truetype'),
+         url('../font/New_Cicle_Fina-webfont.svg#new_ciclefina') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'new_ciclefina_italic';
-    src: url('../../assets/font/New_Cicle_Fina_Italic-webfont.eot');
-    src: url('../../assets/font/New_Cicle_Fina_Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../assets/font/New_Cicle_Fina_Italic-webfont.woff') format('woff'),
-         url('../../assets/font/New_Cicle_Fina_Italic-webfont.ttf') format('truetype'),
-         url('../../assets/font/New_Cicle_Fina_Italic-webfont.svg#new_ciclefina_italic') format('svg');
+    src: url('../font/New_Cicle_Fina_Italic-webfont.eot');
+    src: url('../font/New_Cicle_Fina_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/New_Cicle_Fina_Italic-webfont.woff') format('woff'),
+         url('../font/New_Cicle_Fina_Italic-webfont.ttf') format('truetype'),
+         url('../font/New_Cicle_Fina_Italic-webfont.svg#new_ciclefina_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'fontello';
-  src: url('../../assets/font/fontello.eot?29973076');
-  src: url('../../assets/font/fontello.eot?29973076#iefix') format('embedded-opentype'),
-       url('../../assets/font/fontello.woff?29973076') format('woff'),
-       url('../../assets/font/fontello.ttf?29973076') format('truetype'),
-       url('../../assets/font/fontello.svg?29973076#fontello') format('svg');
+  src: url('../font/fontello.eot?29973076');
+  src: url('../font/fontello.eot?29973076#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?29973076') format('woff'),
+       url('../font/fontello.ttf?29973076') format('truetype'),
+       url('../font/fontello.svg?29973076#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -117,7 +117,7 @@
 
 body {
 	margin: 0 auto;
-	background-image: url('../../assets/img/fond.jpg');
+	background-image: url('../img/fond.jpg');
 	background-position: center;
 	font-family: 'new_ciclefina';
 }
@@ -215,39 +215,108 @@ a.bt.gris:hover {
 #header .bloc_logo a img {
 	width: 100%;
 }
-
-#header .bloc_menu {
-	float: left;
-
-	width: 550px;
-	margin-left: 45px;
-	line-height: 70px;
-	vertical-align: middle;
-	
-	font-family: 'new_ciclegordita';
+.bloc_menu{
+    float: left;
+    width: 700px;
+    margin-left: 45px;
+    line-height: 70px;
+    vertical-align: middle;
 }
-
-#header .bloc_menu .menu {
-	margin-right: 40px;
-	text-transform: uppercase;
-	color: #000;
-	font-size: 16px;
+.bloc_menu li{
+        float: left;
+        padding: 0 0 10px 0;
+        position: relative;
+        list-style:none;
 }
-
-#header .bloc_menu .menu .lol {
-	margin-right: 40px;
-	text-transform: uppercase;
-	color: #000;
-	font-size: 16px;
-		font-family: 'new_ciclegordita';
+.bloc_menu a{
+        float: left;
+        margin-right: 40px;
+        text-transform: uppercase;
+        color: #000;
+        font-size: 18px;
+        text-decoration:none;
+}   
+.bloc_menu span{
+    font-family: none;
+    margin-right: 15px;
+    color: #89b929;
+    font-size: 18px;
 }
-
-#header .bloc_menu span {
-	font-family: none;
-	margin-right: 15px;
-	color: #89b929;
-	font-size: 18px;
+.bloc_menu li:hover > ul{
+        display: block;
 }
+/* Sous-menu */
+.bloc_menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99999;
+    background-color: #fff;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.bloc_menu ul li{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.bloc_menu ul li:last-child{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bloc_menu ul a{
+    padding: 15px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+*html .bloc_menu ul a{ /* IE6 */
+        height: 10px;
+        width: 150px;
+}
+*:first-child+html .bloc_menu ul a{ /* IE7 */
+        height: 10px;
+        width: 150px;
+}
+.bloc_menu ul li:first-child a{
+        text-transform: uppercase;
+        color: #000;
+        font-size: 18px;
+        text-decoration:none;
+        margin-right:20px;
+}
+.bloc_menu ul li:first-child a:hover{
+    color:#92B929;
+}
+.bloc_menu ul li:last-child a{
+    text-transform: uppercase;
+        color: #000;
+        font-size: 16px;
+        text-decoration:none;
+}
+.bloc_menu ul li:last-child a:hover{
+    color:#92B929;
+}
+/* Rétablissement du flottement */
+.bloc_menu:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+}
+* html .bloc_menu             { zoom: 1; } /* IE6 */
+*:first-child+html .bloc_menu { zoom: 1; } /* IE7 */
 
 #header .bloc_login {
 	float: right;
@@ -259,7 +328,7 @@ a.bt.gris:hover {
 #header .bloc_user {
 	float: right;
 	padding: 0px 50px 0px 0px;
-	/*display: none;*/
+	display: none;
 }
 
 #header .bloc_user img {
@@ -622,7 +691,7 @@ padding-right: 10px;
 }
 
 #page_profil .profil_header {
-	background-image: url(../../assets/img/header_profil.png);
+	background-image: url(../img/header_profil.png);
 	height: 207px;
 	padding-left: 50px;
 	padding-top: 16px;
@@ -837,7 +906,7 @@ padding-right: 10px;
 #page_recipe .texte_recette {
 	width: 920px;
 	margin-right: 30px;
-	background-image: url(../../assets/img/paper_craft.png);
+	background-image: url(../img/paper_craft.png);
 	background-position: center;
 	padding-top:25px;
 	float: left;
@@ -934,7 +1003,7 @@ padding-right: 10px;
 
 #page_recipe .more_author {
 	width: 330px;
-	background-image: url(../../assets/img/paper_craft.png);
+	background-image: url(../img/paper_craft.png);
 	background-position: center;
 
 	float: left;
@@ -1017,7 +1086,7 @@ padding-right: 10px;
 #page_recipe .commentaire {
 	width: 920px;
 	margin-top: 30px;
-	background-image: url(../../assets/img/paper_craft.png);
+	background-image: url(../img/paper_craft.png);
 	background-position: center;
 	float: left;
 }
@@ -1289,4 +1358,135 @@ padding-right: 10px;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius:0px; 
 	margin-bottom: 20px;
+}
+
+
+
+
+#create_recipe  {
+	width: 1280px;
+	height: 800px;
+
+	margin: 0 auto;
+
+	margin-top: 30px;
+}
+#create_recipe2{
+	width: 1280px;
+	height: 1000px;
+
+	margin: 0 auto;
+
+	margin-top: 30px;
+}
+.step {
+	width: 1280px;
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+}
+
+#create_recipe .step1 {
+	display: block;
+	width: 1050px;
+	height: 460px;
+	margin: 0 auto;
+	padding: 20px 20px;
+}
+
+.titre_recette {
+	margin-bottom: 30px;
+}
+
+.titre_recette span {
+	color: #89b929;
+}
+
+#create_recipe .step .form_title {
+	font-size: 20px;
+	display:block;
+	margin-bottom: 20px;
+}
+
+#create_recipe .step .case_remplir {
+	margin-bottom: 20px;
+	width: 1000px;
+	display: block;
+	border: 1px solid #89b929;
+}
+.ligne_bt {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+
+}
+
+.ligne_bt a+a {
+	margin-left: 20px;
+}
+
+.expl {
+	margin-bottom: 30px;
+	font-size: 22px;
+}
+
+.etape {
+	text-align: center;
+	margin-top: 50px;
+	display: block;
+	width: 100%;
+
+}
+
+.etape span {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+	background-color: red;
+	margin-right: 15px;
+	padding-top: 10px;
+	color: #FFF;
+}
+
+.etape span.undone {
+	background-color: #d7e6ba;
+}
+
+.etape span.done {
+	background-color: #89b929;
+	cursor: pointer;
+}
+
+#create_recipe2 .step2 {
+	display: block;
+	width: 1280px;
+	height: 920px;
+	margin: 0 auto;
+	padding: 20px 20px;
+}
+
+#create_recipe2 .step2 .images {
+	margin-top:30px;
+}
+#create_recipe2 .step2 .images .img_wide {
+	display: inline-block;
+	width: 1280px;
+	height: 380px;
+	margin-left:-18px;
+	background-color: #000;
+}
+
+#create_recipe2 .step2 .images .previews {
+	display: inline-block;
+	width: 300px;
+	height: 198px;
+	text-align: center;
+	background-color: #000;
+}
+
+#create_recipe2 .step2 .images .text_img {
+	display: inline-block;
+	margin-left: 50px;
+	font-family: 12px;
+	vertical-align: top;	
 }

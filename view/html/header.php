@@ -45,11 +45,12 @@
     <div class="signup">
         <div class="titre_2">Sign In</div>
         <div class="sous_titre">Log into your account and start sharing!</div>
-        <form class="log">
-          <div class="ligne_log">Username <input type="text"></input></div>
-          <div class="ligne_log"> Password <input type="password"></input></div>
+        <form class="log" id="formu_co" name="login">
+          <div class="ligne_log"> Mail <input type="text" name="login" id="login" ></input></div>
+          <div class="ligne_log"> Password <input type="password" name="pwd" id="pwd"></input></div>
           <input type="submit" class="bt vert">
-          <input type="checkbox"> Remember me </input>
+          <input type="checkbox" name="box" id="checkbox"> Remember me </input>
+          <br/><br/><span id="message_error" id="submit"></span>
         </form>   
         <a href="#" class="icon icon-cancel"></a>
       </div>
@@ -57,12 +58,13 @@
       <div class="register">
         <div class="titre_2">Register Now</div>
         <div class="sous_titre">Register and start sharing!</div>
-        <form class="log">
-          <div class="ligne_log">Username <input type="text"></input></div>
-          <div class="ligne_log">Email <input type="text"></input></div>
-          <div class="ligne_log"> Password <input type="password"></input></div>
-          <div class="ligne_log"> Confirm password <input type="password"></input></div>
-          <input type="submit" class="bt vert">
+        <form class="log" method="post" action="?appli=users&action=add_user">
+          <div class="ligne_log">Name <input type="text" name="name"></input></div>
+          <div class="ligne_log">Firstname <input type="text" name="firstname"></input></div>
+          <div class="ligne_log">Email <input type="text" name="mail"></input></div>
+          <div class="ligne_log"> Password <input type="password" name="pwd1" ></input></div>
+          <div class="ligne_log"> Confirm password <input type="password" name="pwd2"></input></div>
+          <input type="submit" id="submit" class="bt vert">
         </form>
         <a href="#" class="icon icon-cancel"></a>
       </div>
