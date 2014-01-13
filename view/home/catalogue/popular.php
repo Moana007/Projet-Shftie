@@ -1,4 +1,9 @@
-<?php foreach ($popular as $popular): ?>
+      <?php $idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
+      
+      <?php $order_vote = order_vote($idrecipe);?>
+      <?php 
+      $popopular = pop_recipe($order_vote);
+      foreach($popopular as $popular): ?>
       <div class="bloc_recette">
           <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><img src="<?php echo $popular['photo']; ?>"></a>
           <div class="info_bloc_recette">

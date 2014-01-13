@@ -4,8 +4,6 @@
 	$rand = catalogue_rand();
 	$new = catalogue_new();
 
-	$like = catalogue_popular_like();
-
-	$popular = catalogue_popular($like);
+	$pop_recipe = catalogue_popular();
 	include_once('view/home/content_catalogue.php');
  ?>

@@ -32,21 +32,26 @@
           //$('#input').append('<input type="text" name="photo" id="photo" value="'+ file.name + '">');
           $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
         },
-        var photo = $('#photo').val();
+        
         success: function (response)
         {
           var response = $.parseJSON(response);
 
           $.each(response.urls, function(i, url)
           {
+            //var urlimage = $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
             //$('#previews').append($('<img>', {'src': url, 'width': '100%'}));
-            $('#previews').css({ 
-              'background' : 'url(http://shiftie.org/autres/dev_product/assets/img/uploads/'+ url +')',
-              'background-size':'cover'
-            });
+        //  var urlimage = $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
+          //$('.previews').css('backgroundImage' ,  "url('" +urlimage+ "')");
+
+           //var imagesource = $(this).val('#photo');
+          //console.log(imagesource);
+          //$('.previews').css('backgroundImage' ,  "url('" +imagesource+ "')"); 
+            
           });
 
           $('#response').html(response.message);
+          
         }
       });
     });

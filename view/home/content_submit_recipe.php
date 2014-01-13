@@ -1,55 +1,75 @@
-<div id="create_recipe">
-  <form method="post" action="?appli=home&action=submit_recipe" id="formRecipe">
-    <div class="step step1">
-      <div class="titre"><span>•</span>Step 1</div>      
+<div id="create_recipe" class="create_recipe">
+   
+     
+      <div class="step step1">
+        <div class="titre_recette"><span>•</span> Step 1</div>
+        
         <div class="expl">First you have to enter the name of your recipe, choose what type it is and some description.</div>
-              <!-- TITRE RECETTE -->
-            <div class="form_title">Title of the recipe:</div>
-            <input class="titre_recette" name="recette_name" id="recette_name" type="text"></input>
 
-            <!-- DESCRIPTION -->
-            <div class="form_title">Description:</div>
-            <textarea class="description" type="text" name="description" id="description"></textarea>
-             <a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step2']);" class="go_two bt">Next step</a>
-    
-			 <div class="steps">
-		        <span class="undone done">1</span>
-		        <span class="undone">2</span>
-		        <span class="undone">3</span>         
-		        <span class="undone">4</span>
-		        <span class="undone">5</span>
-		      </div>
-    
+        <form>
+
+          <!-- TITRE RECETTE -->
+          <div class="form_title">Title of the recipe:</div>
+          <input class="case_remplir" type="text"></input>
+
+          <!-- DESCRIPTION -->
+          <div class="form_title">Description:</div>
+          <textarea class="case_remplir" type="text" style="height:100px;"></textarea>
+        
+
+        <div class="ligne_bt"><a href="#" class="bt gris">Previous step</a><a href="#" class="bt vert go_two">Next step</a></div>
+
+
+          <div class="etape">
+            <span class="undone done">1</span>
+            <span class="undone">2</span>
+            <span class="undone">3</span>         
+            <span class="undone">4</span>
+            <span class="undone">5</span>
+          </div>
     </div>
-    <div class="step step2">
-      <div class="titre"><span>•</span>Step 2</div>
-          <div class="expl"></br> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
-            <div class="images">
-              <!-- IMG WIDE -->
-              <div id="previews" class="img_wide"></div>
-              <!-- IMG NORMALE -->
-              <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. </br>
-              You can zoom and postion it whatever you like.</div>
-              <!-- BT UPLOAD -->
-              <input type="file" name="fileUpload1" id="fileUpload1" class="fileUpload" />
-             <!-- <div id="details"></div>-->
-              <input type="hidden" id="photo" name="photo" value="">
-  <div id="response"></div>
-  <?php echo $uploadedUrl;?>
-  			  <a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step3']);" class="go_three bt">Next Step</a>
-              <a href="#" class="go_one bt">Previous Step</a>
-              
-            </div>
-            
-              <div class="steps">
-		        <span class="go_one undone done">1</span>
-		        <span class="undone done">2</span>
-		        <span class="undone">3</span>         
-		        <span class="undone">4</span>
-		        <span class="undone">5</span>
-		      </div>
+    </div>
+    <div id="create_recipe2" class="create_recipe">
+      <div class="step step2">
+        <div class="titre_recette"><span>•</span> Step 2</div>
       
+        <div class="expl"></br> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
+
+          <!-- BT UPLOAD -->
+          <a href="#" class="bt vert">Upload your photo</a>
+          <input type="file" class="bt vert">
+          <div class="images">
+            <!-- IMG NORMALE -->
+          <div class="previews"></div>
+          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. </br>
+          You can zoom and postion it whatever you like.</div>
+          <div id="details"></div>
+          <div id="response"></div>
+          <!-- IMG WIDE -->
+          <div class="img_wide">
+            <div class="ui-widget-content">
+
+              <div class="picturecontainer" style="overflow: hidden; position: relative; width: 1280px; height: 380px;">
+                <img style="position: absolute;" class="headerimage ui-corner-all" src="http://us.cdn282.fansshare.com/photos/chicken/popcorn-chicken-food-874173611.jpg" />
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      
+        <div class="ligne_bt"><a href="#" class="bt gris">Previous step</a><a href="#" class="bt vert">Next step</a></div>
+
+      <div class="etape">
+        <span class="undone done">1</span>
+        <span class="undone done">2</span>
+        <span class="undone">3</span>         
+        <span class="undone">4</span>
+        <span class="undone">5</span>
+      </div>
+      </div>
     </div>
+
     <div class="step step3">
           <div class="titre"><span>•</span>Step 3</div>
             
