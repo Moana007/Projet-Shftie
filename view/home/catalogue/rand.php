@@ -1,6 +1,6 @@
       <?php foreach ($rand as $rand): ?>
 
-
+<?php $idrecipe = $rand['recettes_id'] ?>
       <div class="bloc_recette">
           <a href="?appli=home&action=recipe&id_rec=<?php echo $rand['recettes_id']; ?>"><img src="<?php echo $rand['photo']; ?>"></a>
           <div class="info_bloc_recette">
