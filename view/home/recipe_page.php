@@ -139,7 +139,7 @@
            <?php if($show_comment[0] != 0) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
-                  <a href="#"><img src="assets/img/img_chef.png"></a>               
+                  <a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><img src="<?php echo $show_comments['users_photo']; ?>"></a>               
                     <div class="comment_info">
                       <div class="pseudo"><a href="#"><?php echo $show_comments['users_name']; ?></a></div>
                       <div class="comment"><?php echo $show_comments['com_texte']; ?></div>
@@ -154,7 +154,7 @@
           
         <?php if(isset($_SESSION['users_id'])) { ?>  
           <div class="case_comment">
-           <a href="#"><img src="assets/img/img_chef.png"></a>
+           <a href="#"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
               <div class="comment_info">
                 <form action="?appli=home&action=add_comment&id_rec=<?php echo $_GET['id_rec']; ?>" method= "post" id="formMsg">
                   <input type="hidden" name="id_rec" value="<?php echo $_GET['id_rec']; ?>"/>
