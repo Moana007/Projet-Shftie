@@ -56,9 +56,6 @@
 		else if($action == 'catalogue'){
 			include_once('controller/home/catalogue.php');
 		}
-		elseif($action == 'book'){
-			include_once('controller/home/book.php');
-		}
 	}
 	else if($appli == 'users'){
 		if ($action == 'account'){
