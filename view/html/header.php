@@ -22,27 +22,25 @@
 
       <ul class="bloc_menu">
         <li>
-                <a href="#" class="menu"><span>•</span>Menu</a>
+                <a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Menu</a>
                 <ul>
                         <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
                         <li><a href="">Books</a></li>
                 </ul>
         </li>
-        <li><a href="#" class="menu"><span>•</span>Submit recipe</a>
+        <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span>•</span>Submit recipe</a>
                 <ul>
                         <li><a href="#">Create Books</a></li>
                 </ul>
         </li>
-        <li><a href="#" class="menu"><span>•</span>My recipe</a>
+        <li><a href="?appli=home&action=myrecipe" class="menu"><span>•</span>My recipe</a>
                 <ul>
-                        <li><a href="?appli=home&action=index&page=submit_recipe">Create</a></li>
                         <li><a href="?appli=home&action=myrecipe">Favorite</a></li>
                 </ul>
         </li>
         <li><a href="#" class="menu"><span>•</span>My books</a>
                 <ul>
-                        <li><a href="#">Create</a></li>
-                        <li><a href="?appli=home&action=book&page=book">Favorite</a></li>
+                        <li><a href="#">Favorite</a></li>
                 </ul>
         </li>
       </ul>
@@ -56,8 +54,8 @@
 
     <?php } else { ?>
 
-      <div class="bloc_user"><a href="?appli=users&action=account" class="user_name"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></br><span>View Profil</span></a><a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a></div>
-      <a href='<?php echo "?appli=users&action=logout" ?>' class="icon icon-off logout"></a>
+      <div class="bloc_user"><a href="?appli=users&action=account" class="user_name"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></br><span>View Profil</span></a><a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
+      <a href='<?php echo "?appli=users&action=logout" ?>' class="icon icon-off logout"></a></div>
     <?php } ?>
 
 <!-- Zone de pop-up connect/register -->

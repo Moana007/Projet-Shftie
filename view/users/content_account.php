@@ -13,11 +13,11 @@
     <div class="books">
       <div class="titre_1">Books</div>
       <div class="row_books">
-        <a href="#" class="case_book"><img src="assets/img/cover_book.png"></a>
-        <a href="#" class="case_book"><img src="assets/img/cover_book.png"></a>
-        <a href="#" class="case_book"><img src="assets/img/cover_book.png"></a>
-        <a href="#" class="case_book"><img src="assets/img/cover_book.png"></a>
-        <a href="#" class="case_book"><img src="assets/img/cover_book.png"></a>
+        <a href="#" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
+        <a href="#" class="case_book"><img src="assets/img/covercookbook2.jpg"></a>
+        <a href="#" class="case_book"><img src="assets/img/covercookbook3.jpg"></a>
+        <a href="#" class="case_book"><img src="assets/img/covercookbook4.jpg"></a>
+        <a href="#" class="case_book"><img src="assets/img/covercookbook5.jpg"></a>
       </div>
       <a href="#" class="bt vert">View More</a>
     </div>
@@ -39,32 +39,32 @@
                 <div class="views aaa1"><span class="icon icon-comment-empty"></span>30</div>
               </div>
             </a>
-            <a href="#" class="case_recipe b1">
+            <a href="#" class="case_recipe a2">
               <img src="assets/img/305x200_recette.png">
               <div class="views_bloc_recette">
-                <div class="views_title bb1">Bruschetta</div>
-                <div class="views bbb1"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views bbb1"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views bbb1"><span class="icon icon-comment-empty"></span>30</div>
+                <div class="views_title aa2">Bruschetta</div>
+                <div class="views aaa2"><span class="icon icon-star-empty"></span>30</div>
+                <div class="views aaa2"><span class="icon icon-heart-empty"></span>30</div>
+                <div class="views aaa2"><span class="icon icon-comment-empty"></span>30</div>
               </div>
             </a>
 
-            <a href="#" class="case_recipe c1">
+            <a href="#" class="case_recipe a3">
               <img src="assets/img/305x200_recette.png">
               <div class="views_bloc_recette">
-                <div class="views_title cc1">Bruschetta</div>
-                <div class="views ccc1"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views ccc1"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views ccc1"><span class="icon icon-comment-empty"></span>30</div>
+                <div class="views_title aa3">Bruschetta</div>
+                <div class="views aaa3"><span class="icon icon-star-empty"></span>30</div>
+                <div class="views aaa3"><span class="icon icon-heart-empty"></span>30</div>
+                <div class="views aaa3"><span class="icon icon-comment-empty"></span>30</div>
               </div>
             </a>
-            <a href="#" class="case_recipe d1">
+            <a href="#" class="case_recipe a4">
               <img src="assets/img/305x200_recette.png">
               <div class="views_bloc_recette">
-                <div class="views_title dd1">Bruschetta</div>
-                <div class="views ddd1"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views ddd1"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views ddd1"><span class="icon icon-comment-empty"></span>30</div>
+                <div class="views_title aa4">Bruschetta</div>
+                <div class="views aaa4"><span class="icon icon-star-empty"></span>30</div>
+                <div class="views aaa4"><span class="icon icon-heart-empty"></span>30</div>
+                <div class="views aaa4"><span class="icon icon-comment-empty"></span>30</div>
               </div>
             </a>    
 
@@ -79,14 +79,15 @@
         <div class="titre_1">Recipes</div>
         <div class="bloc_profil">
         
-          <?php foreach($recipe as $recipes): ?>
-            <a href="?appli=home&action=recipe&id_rec=<?php echo $recipes['recettes_id']; ?>" class="case_recipe">
+          <?php $var = 0; foreach ($recipe as $recipes):  
+        		$var = $var + 1;  ?>
+            <a href="?appli=home&action=recipe&id_rec=<?php echo $recipes['recettes_id']; ?>" class="case_recipe b<?php echo $var; ?>">
               <img style="width:305px; height:200px;"src="<?php echo $recipes['photo'] ?>">
               <div class="views_bloc_recette">
-                <div class="views_title aa2"><?php echo $recipes['recette_name'] ?></div>
-                <div class="views aaa2"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views aaa2"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views aaa2"><span class="icon icon-comment-empty"></span>30</div>
+                <div class="views_title bb<?php echo $var; ?>"><?php echo $recipes['recette_name'] ?></div>
+                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-star-empty"></span>30</div>
+                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>30</div>
+                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>30</div>
               </div>
             </a>
           <?php endforeach; ?>  

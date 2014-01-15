@@ -1,6 +1,5 @@
-      <?php foreach($pop_recipe as $pop_recipe):
-      <?php $idrecipe = $pop_recipe['recettes_id']; ?>
-      <?php endforeach;?>
+      <?php $idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
+      
       <?php $order_vote = order_vote($idrecipe);?>
       <?php 
       $popopular = pop_recipe($order_vote);
@@ -9,7 +8,7 @@
           <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><img src="<?php echo $popular['photo']; ?>"></a>
           <div class="info_bloc_recette">
               <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><?php echo $popular['recette_name']; ?></a>
-              <?php echo $popular['description']; ?>
+              <?php echo substr(htmlentities($popular['description']),0, 230); ?>
           </div>
           <div class="views_bloc_recette">
               <div class="views"><span class="icon icon-star-empty"></span>30</div>

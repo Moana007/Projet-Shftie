@@ -101,14 +101,15 @@
   <?php endforeach; ?>
 
     <div class="texte">More of him:</div>
-      <?php foreach($recipe_more as $recipe_mores){  ?> 
-        <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a3">
+      <?php $var = 0; foreach($recipe_more as $recipe_mores){
+      		$var = $var + 1;  ?>
+        <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img style="width:305px; height:200px;" src="<?php echo $recipe_mores['photo']; ?>">
               <div class="views_bloc_recette">
-                  <div class="views_title aa3"><?php echo $recipe_mores['recette_name']; ?></div>
-                  <div class="views aaa3"><span class="icon icon-star-empty"></span>30</div>
-                  <div class="views aaa3"><span class="icon icon-heart-empty"></span>30</div>
-                  <div class="views aaa3"><span class="icon icon-comment-empty"></span>30</div>
+                  <div class="views_title aa<?php echo $var; ?>"><?php echo $recipe_mores['recette_name']; ?></div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>30</div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>30</div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>30</div>
               </div>
         </a>
       <?php } ?>
@@ -139,7 +140,7 @@
            <?php if($show_comment[0] != 0) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
-                  <a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><img src="<?php echo $show_comments['users_photo']; ?>"></a>               
+                  <a href="#"><img src="assets/img/img_chef.png"></a>               
                     <div class="comment_info">
                       <div class="pseudo"><a href="#"><?php echo $show_comments['users_name']; ?></a></div>
                       <div class="comment"><?php echo $show_comments['com_texte']; ?></div>
@@ -154,7 +155,7 @@
           
         <?php if(isset($_SESSION['users_id'])) { ?>  
           <div class="case_comment">
-           <a href="#"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
+           <a href="#"><img src="assets/img/img_chef.png"></a>
               <div class="comment_info">
                 <form action="?appli=home&action=add_comment&id_rec=<?php echo $_GET['id_rec']; ?>" method= "post" id="formMsg">
                   <input type="hidden" name="id_rec" value="<?php echo $_GET['id_rec']; ?>"/>

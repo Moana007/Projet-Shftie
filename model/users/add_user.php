@@ -10,7 +10,7 @@
 
 			$cle = md5(uniqid(mt_rand()));
 			$admin = 0;
-			$photo = 'http://shiftie.org/autres/dev_product/assets/img/img_chef.png';
+			$photo = 'http://shiftie.org/assets/img/img_chef.png';
 			$validation = 0;
 
 			$query = $connexion->prepare("INSERT INTO USERS 
@@ -42,7 +42,7 @@
 				$message = 'Bienvenue sur Shiftie '.$name.' '.$firstname.',
 				
 				Pour activer votre compte, veuillez cliquer sur le lien ci dessous:
-				http://shiftie.org/autres/dev_product/?appli=users&action=activation&id='.urlencode($id_user).'&cle='.urlencode($cle).'
+				http://shiftie.org/?appli=users&action=activation&id='.urlencode($id_user).'&cle='.urlencode($cle).'
 				
 				---------------
 				Ceci est un mail automatique, Merci de ne pas y répondre.';
