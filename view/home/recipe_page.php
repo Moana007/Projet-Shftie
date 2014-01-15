@@ -133,7 +133,7 @@
 
 <!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - - - - - - - - - -  - - -->
       	
-          <div class="commentaire">
+          <div id="get_com" class="commentaire">
 
             <div class="titre_recette">Comments</div>
 
@@ -147,10 +147,16 @@
                       <div class="time"><?php echo $show_comments['com_date']; ?></div>
                     </div>
                     <?php if(isset($_SESSION['users_id']) && $_SESSION['users_id'] == $show_comments['com_id_users']) { ?>
-                      <a class="delete" href="?appli=home&action=delete_comment&id_rec=<?php echo $show_comments['com_id_recettes'].'&com_id='.$show_comments['com_id']; ?>" onclick='return confirm(\"Voulez vous vraiment supprimer votre commentaire ?\")' ><span class="icon icon-cancel"></span></a>
+                      <a id="supp_com" class="delete" href="?appli=home&action=delete_comment&id_rec=<?php echo $show_comments['com_id_recettes'].'&com_id='.$show_comments['com_id']; ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce commentaire ?'));" > <span class="icon icon-cancel"></span></a>
                     <?php } ?>
                 </div>
-        <?php    endforeach;
+        <?php    endforeach; } 
+        else { 
+        	echo 'There is no comment'; 
+        } 
+        if(!isset($_SESSION['users_id'])) 
+        { 
+        	echo ' <a href="#" class="trigger_sign">Sign in</a> for comment'; 
         } ?>
           
         <?php if(isset($_SESSION['users_id'])) { ?>  
@@ -171,5 +177,3 @@
 <!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - - - - - - - -->
 
 </div>
-
-  
