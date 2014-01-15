@@ -28,22 +28,21 @@
       <div class="step step2">
         <div class="titre_recette"><span>•</span> Step 2</div>
       
-        <div class="expl"><br/> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
+        <div class="expl"></br> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
           <div id="details"></div>
-          <div id="response"></div>
           <!-- BT UPLOAD -->
-            <input type="file" name="fileUpload1" id="fileUpload1" class="fileUpload bt vert"/>
-            <input type="hidden" id="photo" name="photo" value=""/>
+            <input type="file" name="fileUpload1" id="fileUpload1" class="fileUpload bt vert" />
+            <input type="hidden" id="photo" name="photo" value="">
           <div class="images">
             <!-- IMG NORMALE -->
           <div class="previews"></div>
-          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
+          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. </br>
           You can zoom and postion it whatever you like.</div>
           <!-- IMG WIDE -->
           <div class="img_wide">
             <div class="ui-widget-content">
               <div class="picturecontainer" style="overflow: hidden; position: relative; width: 1280px; height: 380px;">
-                <img style="position: absolute;" class="headerimage ui-corner-all" src="http://us.cdn282.fansshare.com/photos/chicken/popcorn-chicken-food-874173611.jpg">
+                <img style="position: absolute;" class="headerimage ui-corner-all" src="http://us.cdn282.fansshare.com/photos/chicken/popcorn-chicken-food-874173611.jpg" />
               </div>
             </div>
           </div>
@@ -70,7 +69,7 @@
         
          <!-- INGREDIENTS -->
           <div class="form_title">Ingredients</div>
-          <textarea class="ingredient" id="ingredient" name="ingredient" type="text"></textarea>
+          <textarea class="ingredient" type="text"></textarea>
           <!-- TEMPS -->
            <div class="row_time">
             <div class="form_title">Preparation time:
@@ -103,7 +102,7 @@
       </div>
         
         <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" class="bt vert go_four">Next step</a></div>
-     </div>
+  
       
       <div class="etape">
         <span class="undone done">1</span>
@@ -112,7 +111,8 @@
         <span class="undone">4</span>
         <span class="undone">5</span>
       </div>
- 
+      </div>
+  </div>
     </div>
     <div id="create_recipe4" class="create_recipe_trigger">
       <div class="step step4">
@@ -228,4 +228,11 @@
     </div>
    
  
+<<<<<<< HEAD
      </form>
+=======
+    </div>
+     </form>
+   
+
+>>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27

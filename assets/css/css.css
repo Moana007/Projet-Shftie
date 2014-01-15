@@ -1567,7 +1567,10 @@ background-color: #FFF;
 	height: 198px;
 	text-align: center;
 	background-color: #000;
+<<<<<<< HEAD
 	background-size: cover;
+=======
+>>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27
 }
 
 #create_recipe2 .step2 .images .text_img {

@@ -24,7 +24,12 @@ $(document).ready(function ()
               errorsDisp += '<br/><span class="error">' + error.type + ' error - Rule: ' + error.rule + '</span>';
             });
           }
+<<<<<<< HEAD
         // $('#details').append('<p>name: ' + file.name + ', type: ' + file.type + ', size:' + file.size + errorsDisp + '</p>');
+=======
+
+         $('#details').append('<p>name: ' + file.name + ', type: ' + file.type + ', size:' + file.size + errorsDisp + '</p>');
+>>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27
           //$('#input').append('<input type="text" name="photo" id="photo" value="'+ file.name + '">');
           $('#photo').val('http://shiftie.org/assets/img/uploads/'+ file.name);
         },
@@ -36,11 +41,20 @@ $(document).ready(function ()
           {
             //var urlimage = $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
             //$('#previews').append($('<img>', {'src': url, 'width': '100%'}));
+<<<<<<< HEAD
             //var urlimage = $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
             //$('.previews').css('backgroundImage' ,  "url('" +urlimage+ "')");
           // var imagesource = $(this).val('#photo');
           ///console.log(imagesource);
           $('.previews').css('backgroundImage' ,  "url('" +url+ "')"); 
+=======
+        //  var urlimage = $('#photo').val('http://shiftie.org/autres/dev_product/assets/img/uploads/'+ file.name);
+          //$('.previews').css('backgroundImage' ,  "url('" +urlimage+ "')");
+
+           //var imagesource = $(this).val('#photo');
+          //console.log(imagesource);
+          //$('.previews').css('backgroundImage' ,  "url('" +imagesource+ "')"); 
+>>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27
             
           });
           $('#response').html(response.message);
