@@ -1,10 +1,10 @@
 <?php foreach ($new as $new): ?>
-  <?php $idrecipe = $new['recettes_id'] ?>
+<?php $idrecipe = $new['recettes_id']; ?>
       <div class="bloc_recette">
           <a href="?appli=home&action=recipe&id_rec=<?php echo $new['recettes_id']; ?>"><img src="<?php echo $new['photo']; ?>"></a>
           <div class="info_bloc_recette">
               <a href="?appli=home&action=recipe&id_rec=<?php echo $new['recettes_id']; ?>"><?php echo $new['recette_name']; ?></a>
-              <?php echo $new['description']; ?>
+              <?php echo substr(htmlentities($new['description']),0, 230); ?>
           </div>
           <div class="views_bloc_recette">
               <div class="views"><span class="icon icon-star-empty"></span>30</div>

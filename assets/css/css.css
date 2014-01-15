@@ -52,6 +52,7 @@
 }
 */
  
+ 
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -121,6 +122,11 @@ body {
 	background-position: center;
 	font-family: 'new_ciclefina';
 }
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
 a {
 	text-decoration: none;
 }
@@ -181,6 +187,7 @@ a.bt.gris:hover {
 
 .pagination {
 	display: block;	
+	width: 100%;
 	text-align: center;
 }
 
@@ -215,6 +222,7 @@ a.bt.gris:hover {
 #header .bloc_logo a img {
 	width: 100%;
 }
+
 .bloc_menu{
     float: left;
     width: 700px;
@@ -245,7 +253,7 @@ a.bt.gris:hover {
 .bloc_menu li:hover > ul{
         display: block;
 }
-/* Sous-menu */
+ /*Sous-menu*/ 
 .bloc_menu ul{
     list-style: none;
     margin: 0;
@@ -279,7 +287,7 @@ a.bt.gris:hover {
     float: none;
     text-transform: none;
 }
-*html .bloc_menu ul a{ /* IE6 */
+*html .bloc_menu ul a{ /* IE6*/ 
         height: 10px;
         width: 150px;
 }
@@ -306,7 +314,7 @@ a.bt.gris:hover {
 .bloc_menu ul li:last-child a:hover{
     color:#92B929;
 }
-/* Rétablissement du flottement */
+/* Rétablissement du flottement*/ 
 .bloc_menu:after{
         visibility: hidden;
         display: block;
@@ -328,6 +336,7 @@ a.bt.gris:hover {
 #header .bloc_user {
 	float: right;
 	padding: 0px 50px 0px 0px;
+	position: relative;
 	/*display: none;*/
 }
 
@@ -358,6 +367,13 @@ a.bt.gris:hover {
 	float: right;
 
 	font-size: 12px;
+	color: #89b929;
+}
+
+#header .bloc_user a.icon {
+	position: absolute;
+	top:5px;
+	right:5px;
 	color: #89b929;
 }
 
@@ -477,10 +493,11 @@ a.bt.gris:hover {
 	font-size: 38px;
 }
 
-#slider .image_slider .info_slider .slider_auteur {
+#slider .image_slider .info_slider .slider_auteur a{
 	display: block;
 	float: right;
-
+	
+	color: #FFF;
 	font-size: 14px;
 	font-family:'new_ciclefina_italic';
 }
@@ -500,14 +517,14 @@ a.bt.gris:hover {
 }
 
 #slider .image_slider .info_slider button.bt.vote {
-	float: none;
+	float: left;
 	padding-left: 30px;
 	padding-right: 35px;
 	margin-left: 10px;
 }
 
 #slider .image_slider .info_slider button.bt.fav {
-	float: none;
+	float: left;
 	padding-left: 25px;
 	padding-right: 30px;
 	margin-left: 10px;
@@ -515,12 +532,15 @@ a.bt.gris:hover {
 
 #footer {
 	width: 100%;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	height: 50px;
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
 	border-top: 3px #89b929 solid;
 	font-family: 'new_ciclegordita';
-	color: #FFF;
-	padding-top: 10px;
+	color: #000;
+	background-color: #FFF;
 }
 
 #footer .footer_left {
@@ -529,15 +549,17 @@ a.bt.gris:hover {
 	text-transform: uppercase;
 	margin-right: 38%;
 	padding-left: 10px;
+	background-color: #FFF;
 }
 
 #footer .footer_middle {
 	float: left;
 	margin-left: 70px;
+	background-color: #FFF;
 }
 
 #footer .footer_middle a {
-	color: #FFF;
+	color: #000;
 	text-decoration: underline;
 }
 
@@ -556,6 +578,7 @@ float: right;
 font-size: 18px;
 text-transform: uppercase;
 padding-right: 10px;
+background-color: #FFF;
 }
 
 #my_recipe {
@@ -575,7 +598,9 @@ padding-right: 10px;
 	color: #FFF;
 	vertical-align: baseline;
 }
-
+#my_recipe .titre_1 a:hover {
+	color: #89b929
+}
 #my_recipe .titre_1 a span {
 	font-size: 22px;
 
@@ -609,6 +634,9 @@ padding-right: 10px;
 	color: #89b929;
 }
 
+#catalogue .titre_1 a:hover {
+	color: #89b929;
+}
 
 .bloc_recette {
 	width: 290px;
@@ -646,6 +674,9 @@ padding-right: 10px;
 
 .bloc_recette .info_bloc_recette {
 	padding: 10px 20px 10px 20px;
+	min-height: 105px;
+	max-height: 105px;
+	height: 105px;
 
 	font-family: 'new_ciclefina';
 	font-size:13px;
@@ -804,6 +835,11 @@ padding-right: 10px;
 	float: left;
 }
 
+#page_profil .bloc_wide .favorite .bloc_profil a.case_recipe img {
+	width: 305px;
+	height: 200px;
+}
+
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe+a.case_recipe {
 	margin-left: 10px;
 }
@@ -923,6 +959,8 @@ padding-right: 10px;
 	padding-top: 10px;
 	font-size: 15px;
 	line-height: 26px;
+	max-height:200px;
+	overflow-y: scroll;
 }
 
 #page_recipe .texte_recette .conteneur_info {
@@ -999,6 +1037,7 @@ padding-right: 10px;
 	display: block;
 	padding-left: 25px;
 	padding-top: 20px;
+	word-wrap:break-word;
 }
 
 #page_recipe .more_author {
@@ -1164,7 +1203,7 @@ padding-right: 10px;
 
 #homepage {
 	width: 1280px;
-	height: 800px;
+	height: 850px;
 
 	margin: 0 auto;
 
@@ -1208,6 +1247,26 @@ padding-right: 10px;
 	text-align: center;
 }
 
+#homepage .col1 .home2 .content {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+}
+
+#homepage .col1 .home2 .content img{
+	width: 175px;
+	height: 175px;
+	display: block;
+	margin: 0 auto;
+}
+
+#homepage .col1 .home2 span {
+	font-size: 18px;
+	color: #FFF;
+}
+
 #homepage .col2{
 	width: 305px;
 	margin-left: 20px;
@@ -1230,7 +1289,7 @@ padding-right: 10px;
 
 #homepage .col2 .home4 {
 	width: 305px;
-	height: 400px;
+	height: 320px;
 	text-align: center;
 }
 
@@ -1265,6 +1324,7 @@ padding-right: 10px;
 
 #homepage .col3 .home6 .news{
 	font-size: 18px;
+	padding: 20px;
 }
 
 #homepage .col4{
@@ -1379,6 +1439,31 @@ padding-right: 10px;
 
 	margin-top: 30px;
 }
+#create_recipe3  {
+	width: 1280px;
+	height: 800px;
+
+	margin: 0 auto;
+
+	margin-top: 30px;
+}
+#create_recipe4{
+	width: 1280px;
+	height: 1000px;
+
+	margin: 0 auto;
+
+	margin-top: 30px;
+}
+}
+#create_recipe5{
+	width: 1280px;
+	height: 1000px;
+
+	margin: 0 auto;
+
+	margin-top: 30px;
+}
 .step {
 	width: 1280px;
 	background-image: url(../img/paper_craft_step.png);
@@ -1388,7 +1473,7 @@ padding-right: 10px;
 #create_recipe .step1 {
 	display: block;
 	width: 1050px;
-	height: 460px;
+	height: 390px;
 	margin: 0 auto;
 	padding: 20px 20px;
 }
@@ -1460,7 +1545,7 @@ padding-right: 10px;
 #create_recipe2 .step2 {
 	display: block;
 	width: 1280px;
-	height: 920px;
+	height: 950px;
 	margin: 0 auto;
 	padding: 20px 20px;
 }
@@ -1481,9 +1566,8 @@ padding-right: 10px;
 	width: 300px;
 	height: 198px;
 	text-align: center;
-	background: #000;
-	background-size:cover;
-	
+	background-color: #000;
+	background-size: cover;
 }
 
 #create_recipe2 .step2 .images .text_img {
@@ -1495,7 +1579,7 @@ padding-right: 10px;
 #create_recipe3 .step3 {
 	display: block;
 	width: 1280px;
-	height: 640px;
+	height: 645px;
 	margin: 0 auto;
 	padding: 20px 20px;
 }
@@ -1544,7 +1628,7 @@ padding-right: 10px;
 #create_recipe5 .step5 {
 	display: block;
 	width: 1280px;
-	height: 590px;
+	height: 950px;
 	margin: 0 auto;
 	padding: 20px 20px;
 }
@@ -1592,4 +1676,18 @@ padding-right: 10px;
 
 #create_recipe5 .step5 .row_tag .case_tag input {
 	margin-right: 5px;
+}
+
+#create_recipe5 .step5 .ligne_bt button{
+	margin-left: 20px;
+}
+
+#fond_secours {
+	width: 1280px;
+	margin: 0 auto;
+	
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+	
+	padding: 20px:
 }

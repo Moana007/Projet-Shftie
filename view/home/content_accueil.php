@@ -21,7 +21,11 @@
 			</div>
 		</div>
 		<div class="home2 bg_home bg_black">
-			<div class="home_title bg_green">Faut trouver</div>
+			<div class="home_title bg_green">Partner's product</div>
+			<div class="content">
+				<img src="assets/img/products.png">
+				<span>Oil and Spice Kit</span>
+			</div>
 		</div>
 	</div>
 	<div class="col2">
@@ -34,7 +38,10 @@
 			</div>
 		</div>
 		<div class="home4 bg_home bg_black">
-			<div class="home_title bg_grey">Quoi mettre</div>
+			<div class="home_title bg_grey">Like us!</div>
+			<div class="center">
+				<img src="assets/img/like_panel.png">
+			</div>
 		</div>
 	</div>
 	<div class="col3">
@@ -45,7 +52,7 @@
 		</div>
 		<div class="home6 bg_home bg_orange">
 			<div class="home_title bg_orange">Shiftie News</div>
-			<span class="news">Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. Mangez mon pénis. </span>
+			<span class="news">This is the place where whe are going to display some of our news, or some random posts. Everyday this news will be changer by another one from our team.</span>
 		</div>
 	</div>
 	<div class="col4">
@@ -57,7 +64,7 @@
 		</div>
 		<div class="home8 bg_home">
 			<div class="home_title bg_white">Partners</div>
-			<img href="#" src='assets/img/partners.png'>
+			<img href="#" src='assets/img/partner.png'>
 		</div>
 	</div>
 

@@ -1,10 +1,12 @@
 <?php 
 	include_once('model/home/recipe.php');
+	
 	if(isset($_POST['recipe_id'])){
 		$verif_vote = verif_vote($_POST['recipe_id']);
 	
-		if($verif_vote == 0)
+		if($verif_vote == 0){
 			vote($_POST['recipe_id']);	
+		}
 		
 		
 	}

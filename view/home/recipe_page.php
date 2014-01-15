@@ -27,14 +27,14 @@
       <span class="slider_auteur"><a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><?php foreach($authors as $author){ echo $author['users_name']." ".$author['users_firstname']; }?></a></span>
       <span class="slider_texte"><?php echo $recipe['description']; ?></span>
 
-      <?php if($verif == 0){ ?>
+      <?php if($verif_vote == 0){ ?>  
               <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id" value="<?php echo $recipe['recettes_id'] ?>">
         <button class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>
         </form>
              <?php }
               else {
-                echo 'deja voté';
+                   echo' <button class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>';
               } ?>
 
               <?php //echo $recipe['recettes_id'].' et user : '.$_SESSION['users_id']; ?>
@@ -101,14 +101,15 @@
   <?php endforeach; ?>
 
     <div class="texte">More of him:</div>
-      <?php foreach($recipe_more as $recipe_mores){  ?> 
-        <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a3">
+      <?php $var = 0; foreach($recipe_more as $recipe_mores){
+      		$var = $var + 1;  ?>
+        <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img style="width:305px; height:200px;" src="<?php echo $recipe_mores['photo']; ?>">
               <div class="views_bloc_recette">
-                  <div class="views_title aa3"><?php echo $recipe_mores['recette_name']; ?></div>
-                  <div class="views aaa3"><span class="icon icon-star-empty"></span>30</div>
-                  <div class="views aaa3"><span class="icon icon-heart-empty"></span>30</div>
-                  <div class="views aaa3"><span class="icon icon-comment-empty"></span>30</div>
+                  <div class="views_title aa<?php echo $var; ?>"><?php echo $recipe_mores['recette_name']; ?></div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>30</div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>30</div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>30</div>
               </div>
         </a>
       <?php } ?>
@@ -133,9 +134,7 @@
 <!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - - - - - - - - - -  - - -->
       	
           <div id="get_com" class="commentaire">
-
             <div class="titre_recette">Comments</div>
-
            <?php if($show_comment[0] != 0) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
@@ -171,8 +170,9 @@
           </div>
         <?php } ?>
     
-    </div>
-        		
+    </div>        		
 <!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - - - - - - - -->
 
 </div>
+
+  
