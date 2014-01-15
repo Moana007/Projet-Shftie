@@ -1,5 +1,6 @@
-      <?php $idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
-      
+      <?php foreach($pop_recipe as $pop_recipe):
+      <?php $idrecipe = $pop_recipe['recettes_id']; ?>
+      <?php endforeach;?>
       <?php $order_vote = order_vote($idrecipe);?>
       <?php 
       $popopular = pop_recipe($order_vote);

@@ -2,7 +2,7 @@
 include_once('model/home/index.php');
 
 
-if(isset($_POST['recette_name']) && isset($_POST['description']) && isset($_POST['option'])) {
+if(isset($_POST['recette_name']) && isset($_POST['description'])) {
     if(($_POST['recette_name'] != '') && ($_POST['description'] != '')) {
     	
         	
@@ -13,17 +13,21 @@ if(isset($_POST['recette_name']) && isset($_POST['description']) && isset($_POST
 			add_tags($valeur, $id_recette);
 			
 		}
-	$reponse = 'ok';
+	//$reponse = 'ok';
+        header('location:?appli=home&action=myrecipe');
+   
+       
 	}
 	else {
-        $reponse = 'Les champs sont vides';
+        echo ' Tous les champs ne sont pas remplis';
+       //$reponse = 'Les champs sont vides';
     }
     
 } 
 else {
-    $reponse = 'Tous les champs ne sont pas parvenus';
+  // $reponse = 'Tous les champs ne sont pas parvenus';
 }
 
-$array['reponse'] = $reponse;
-echo json_encode($array);
+//$array['reponse'] = $reponse;
+//echo json_encode($array);
 ?>

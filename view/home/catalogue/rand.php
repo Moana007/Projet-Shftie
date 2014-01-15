@@ -17,7 +17,7 @@
               </div>
               <div class="views"><span class="icon icon-comment-empty"></span>
                  <?php 
-                  $comment = like_recipe($idrecipe);
+                  $comment = comment_recipe($idrecipe);
                   echo $comment;
                 ?>
               </div>

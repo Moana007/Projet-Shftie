@@ -1481,7 +1481,9 @@ padding-right: 10px;
 	width: 300px;
 	height: 198px;
 	text-align: center;
-	background-color: #000;
+	background: #000;
+	background-size:cover;
+	
 }
 
 #create_recipe2 .step2 .images .text_img {
