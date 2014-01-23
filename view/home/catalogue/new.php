@@ -1,9 +1,7 @@
 <?php foreach ($new as $new): ?>
-<<<<<<< HEAD
-<?php $idrecipe = $new['recettes_id']; ?>
-=======
 
->>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27
+<?php $idrecipe = $new['recettes_id']; ?>
+
       <div class="bloc_recette">
           <a href="?appli=home&action=recipe&id_rec=<?php echo $new['recettes_id']; ?>"><img src="<?php echo $new['photo']; ?>"></a>
           <div class="info_bloc_recette">
@@ -20,7 +18,7 @@
               </div>
               <div class="views"><span class="icon icon-comment-empty"></span>
                  <?php 
-                  $comment = like_recipe($idrecipe);
+                  $comment = comment_recipe($idrecipe);
                   echo $comment;
                 ?>
               </div>

@@ -28,7 +28,7 @@
       <div class="step step2">
         <div class="titre_recette"><span>•</span> Step 2</div>
       
-        <div class="expl"></br> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
+        <div class="expl"><br/> Now you have to upload your recipe picture, and position it. Try to make it as beautiful as you can, who knows, this recipe might be on our homepage someday!</div>
           <div id="details"></div>
           <!-- BT UPLOAD -->
             <input type="file" name="fileUpload1" id="fileUpload1" class="fileUpload bt vert" />
@@ -36,7 +36,7 @@
           <div class="images">
             <!-- IMG NORMALE -->
           <div class="previews"></div>
-          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. </br>
+          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
           You can zoom and postion it whatever you like.</div>
           <!-- IMG WIDE -->
           <div class="img_wide">
@@ -69,7 +69,7 @@
         
          <!-- INGREDIENTS -->
           <div class="form_title">Ingredients</div>
-          <textarea class="ingredient" type="text"></textarea>
+          <textarea class="ingredient" name="ingredient" id="ingredient" type="text"></textarea>
           <!-- TEMPS -->
            <div class="row_time">
             <div class="form_title">Preparation time:
@@ -111,7 +111,7 @@
         <span class="undone">4</span>
         <span class="undone">5</span>
       </div>
-      </div>
+    </div>
   </div>
     </div>
     <div id="create_recipe4" class="create_recipe_trigger">
@@ -227,12 +227,6 @@
   </div>
     </div>
    
- 
-<<<<<<< HEAD
-     </form>
-=======
     </div>
      </form>
    
-
->>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27

@@ -30,8 +30,8 @@
       <?php if($verif_vote == 0){ ?>  
               <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id" value="<?php echo $recipe['recettes_id'] ?>">
-        <button class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>
-        </form>
+               <button type="submit" class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>
+              </form>
              <?php }
               else {
                    echo' <button class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>';
@@ -39,7 +39,15 @@
 
               <?php //echo $recipe['recettes_id'].' et user : '.$_SESSION['users_id']; ?>
 
-      <button class="bt gris fav"><span class="icon icon-star-empty"><span>Favoris</button>
+       <?php if($verif_fav == 0){ ?>  
+              <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" name="recipe_id_fav" value="<?php echo $recipe['recettes_id'] ?>">
+               <button type="submit" class="bt vert fav"><span class="icon icon-fav-empty"></span>Favoris</button>
+                </form>
+             <?php }
+              else {
+                   echo' <button class="bt gris fav"><span class="icon icon-fav-empty"></span>Favoris</button>';
+              } ?>
 
     </div>
   </div>
@@ -138,7 +146,7 @@
            <?php if($show_comment[0] != 0) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
-                  <a href="#"><img src="assets/img/img_chef.png"></a>               
+                  <a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>               
                     <div class="comment_info">
                       <div class="pseudo"><a href="#"><?php echo $show_comments['users_name']; ?></a></div>
                       <div class="comment"><?php echo $show_comments['com_texte']; ?></div>
@@ -174,8 +182,4 @@
 <!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - - - - - - - -->
 
 </div>
-<<<<<<< HEAD
 
-  
-=======
->>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27

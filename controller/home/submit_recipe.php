@@ -24,12 +24,8 @@ else {
     $reponse = 'Tous les champs ne sont pas parvenus';
 }
 
-<<<<<<< HEAD
-//$array['reponse'] = $reponse;
-//echo json_encode($array);
-?>
-=======
+
 $array['reponse'] = $reponse;
 echo json_encode($array);
 ?>
->>>>>>> dca68296b8f7dfc5906c21a685bf5b1b16414a27
+
