@@ -42,12 +42,10 @@
 		else if($action == 'add_comment'){
 			include_once('controller/home/recipe.php');
 			include_once('controller/home/add_comment.php');
-			header('location: index.php?appli=home&action=recipe&id_rec='.$_GET['id_rec'].'');
 		}
 		else if($action == 'delete_comment'){
 			include_once('controller/home/recipe.php');
 			include_once('controller/home/delete_comment.php');
-			header('location: index.php?appli=home&action=recipe&id_rec='.$_GET['id_rec'].'');
 		}
 		else if ($action == 'myrecipe'){
 			include_once('controller/home/myrecipe.php');
@@ -57,6 +55,9 @@
 		}
 		else if($action == 'catalogue'){
 			include_once('controller/home/catalogue.php');
+		}
+		elseif($action == 'book'){
+			include_once('controller/home/book.php');
 		}
 	}
 	else if($appli == 'users'){

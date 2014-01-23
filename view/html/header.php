@@ -40,7 +40,7 @@
         </li>
         <li><a href="#" class="menu"><span>•</span>My books</a>
                 <ul>
-                        <li><a href="#">Favorite</a></li>
+                        <li><a href="?appli=home&action=book&page=book">Favorite</a></li>
                 </ul>
         </li>
       </ul>
