@@ -195,7 +195,7 @@
                       <div class="time"><?php echo $show_comments['com_date']; ?></div>
                     </div>
                     <?php if(isset($_SESSION['users_id']) && $_SESSION['users_id'] == $show_comments['com_id_users']) { ?>
-                      <a id="supp_com" class="delete" href="?appli=home&action=delete_comment&id_rec=<?php echo $show_comments['com_id_recettes'].'&com_id='.$show_comments['com_id']; ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce commentaire ?'));" > <span class="icon icon-cancel"></span></a>
+                      <a id="supp_com" class="delete" href="?appli=home&action=delete_comment&id_rec=<?php echo $show_comments['com_id_recettes'].'&com_id='.$show_comments['com_id']; ?>" onclick="return(confirm('Etes-vous sur de vouloir supprimer ce commentaire ?'));" > <span class="icon icon-cancel"></span></a>
                     <?php } ?>
                 </div>
         <?php    endforeach; } 
