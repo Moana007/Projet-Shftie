@@ -74,7 +74,8 @@
         <div class="bloc_profil">
         
           <?php $var = 0; foreach ($recipe as $recipes):  
-        		$var = $var + 1;  ?>
+        		$var = $var + 1;  
+            $idrecipe = $recipe['recettes_id'];?>
             <a href="?appli=home&action=recipe&id_rec=<?php echo $recipes['recettes_id']; ?>" class="case_recipe b<?php echo $var; ?>">
               <img src="<?php echo $recipes['photo'] ?>">
               <div class="views_bloc_recette">
