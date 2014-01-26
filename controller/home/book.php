@@ -9,7 +9,6 @@
 		include_once('view/home/book_content.php');		
 	}
 
-	define("PAGE_TITLE", "Shiftie 2.0 - My Books");
 
 	
 	else {
@@ -31,4 +30,5 @@
 		
 		include_once('view/home/book.php');
 	}
+	define("PAGE_TITLE", "Shiftie 2.0 - My Books");
 ?> 

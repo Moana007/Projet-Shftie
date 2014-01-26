@@ -13,7 +13,7 @@
 		<h1 style="color:#89B929;">My book</h1>
 				<?php foreach($show_book as $show_books) { ?>
 				<div>
-					<a style="color:white;" href="?appli=home&action=book_content&id_books=<?php echo $show_books['books_id']; ?>"><?php echo $show_books['books_name'].'<br/>'; ?></a>
+					<a style="color:white;" href="?appli=home&action=book&id_books=<?php echo $show_books['books_id']; ?>"><?php echo $show_books['books_name'].'<br/>'; ?></a>
 				
 		            <?php if(isset($_SESSION['users_id']) && $_SESSION['users_id'] == $show_books['books_id_users']) { ?>
 					 	<a style="color:white;" href="?appli=home&action=book&page=book&books_id=<?php echo $show_books['books_id']; ?>" onclick="return(confirm('Etes-vous sur de vouloir supprimer ce livre ?'));">X</a>
