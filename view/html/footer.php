@@ -6,7 +6,7 @@
 
 		
 
-		<script type="text/javascript" src="assets/jquery_/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="assets/jquery_/jquery.js"></script>
 
 		<script type="text/javascript" src="assets/ajax/submit_recipe_ajax.js"></script>
 		<script type="text/javascript" src="assets/ajax/jquery.liteuploader.min.js"></script>

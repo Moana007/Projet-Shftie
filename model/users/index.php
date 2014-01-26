@@ -69,12 +69,12 @@ function connect_user($login, $pwd, $box){
 		$verif = $sql->rowCount();
 		$rows = $sql->fetchAll();
 
-		if ($box == on){
+		if (isset($box)){
 	       setcookie("c_box", "box_check", time()+60*60);
 	       setcookie("c_login", $login, time()+60*60);
 		}
 
-		session_start();
+		//session_start();
 		foreach($rows as $row) {
 			$_SESSION['users_id'] = $row['users_id'];
 			$_SESSION['users_name'] = $row['users_name'];
