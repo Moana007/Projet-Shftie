@@ -7,7 +7,14 @@
         <div class="nom"><?php foreach($author as $authors){ echo $authors['users_name']." ".$authors['users_firstname'];} ?></div>
         <div class="age">28 ans - Male</div>
       </div>
-      <a href="?appli=users&action=modif_users" class="icon icon-user"></a>
+      <?php   foreach($author as $authors){
+                if(!isset($_SESSION['users_id']) || $_SESSION['users_id'] == '' || $authors['users_id'] != $_SESSION['users_id'] ){ ?>
+                    <!-- RIEN, le visiteur n'est pas sur son compte -->
+      <?php     }else { ?>
+        <?php echo $authors['users_id']; echo $_SESSION['users_id']; ?>
+              <a href="?appli=users&action=modif_users" class="icon icon-user"></a>
+      <?php     }
+              } ?>
     </div>
     
     <div class="books">

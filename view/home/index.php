@@ -6,9 +6,14 @@
 			define("PAGE_TITLE", "Shiftie 2.0 - Home");
 			require_once("view/home/content_accueil.php");
 			break;
-		case "submit_recipe": 
-			define("PAGE_TITLE", "Shiftie 2.0 - Submit Recipe");
-			require_once("view/home/content_submit_recipe.php");
+		case "submit_recipe":
+			if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){
+				define("PAGE_TITLE", "Shiftie 2.0 - Home");
+    			require_once("view/home/content_accueil.php");}
+			else{ 
+				define("PAGE_TITLE", "Shiftie 2.0 - Submit Recipe");
+				require_once("view/home/content_submit_recipe.php");
+			}
 			break;
 		case "contact":
 			define("PAGE_TITLE", "Shiftie 2.0 - Contact"); 

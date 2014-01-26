@@ -1,4 +1,9 @@
 <?php 
+if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){
+    include_once('controller/home/index.php');}
+else{
+
+
 	include_once('model/home/myrecipe.php');
 	include_once('model/home/count.php');
 	
@@ -38,5 +43,5 @@
 	define("PAGE_TITLE", "Shiftie 2.0 - Myrecipe");
 
 	include_once('view/home/myrecipe.php');
-
+}
  ?>

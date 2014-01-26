@@ -1,4 +1,9 @@
 <?php 
+if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){
+    include_once('controller/home/index.php');}
+else{
+
+
 	include_once('model/home/book.php');
 	
 	if(isset($_GET['id_books'])){
@@ -31,4 +36,6 @@
 		include_once('view/home/book.php');
 	}
 	define("PAGE_TITLE", "Shiftie 2.0 - My Books");
+
+}
 ?> 

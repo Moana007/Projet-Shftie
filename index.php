@@ -44,9 +44,6 @@
 			include_once('controller/home/fav.php');
 			return;
 		}
-		else if ($action == 'add_recipe'){
-			include_once('controller/home/add_recipe.php');
-		}
 		else if($action == 'add_comment'){
 			include_once('controller/home/recipe.php');
 			include_once('controller/home/add_comment.php');
@@ -64,10 +61,10 @@
 		else if($action == 'catalogue'){
 			include_once('controller/home/catalogue.php');
 		}
-		elseif($action == 'book'){
+		else if($action == 'book'){
 			include_once('controller/home/book.php');
 		}
-		elseif($action == 'book_add'){
+		else if($action == 'book_add'){
 			include_once('controller/home/add_recipe_book.php');
 		}
 	}

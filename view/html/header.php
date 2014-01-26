@@ -17,34 +17,64 @@
   </head>
   <body>
 
+
     <div id="header">
       <div class="bloc_logo"><a href="?appli=home&action=index"><img src="assets/img/logo.png"></a></div>
 
-      <ul class="bloc_menu">
-        <li>
-                <a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Menu</a>
+      <?php if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){ ?>
+   <!-- Bloc menu quand users NON connecté -->
+          <ul class="bloc_menu">
+            <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Menu</a>
                 <ul>
-                        <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
-                        <li><a href="">Books</a></li>
+                    <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
+                    <li><a href="#">Books</a></li>
                 </ul>
-        </li>
-        <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span>•</span>Submit recipe</a>
+            </li>
+            <li><a href="#" class="menu trigger_sign"><span>•</span>Submit recipe</a>
+              <ul>
+                  <li><a href="#">Create Books</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="menu trigger_sign"><span>•</span>My recipe</a>
                 <ul>
-                        <li><a href="#">Create Books</a></li>
+                  <li><a href="" class="trigger_sign">Favorite</a></li>
                 </ul>
-        </li>
-        <li><a href="?appli=home&action=myrecipe" class="menu"><span>•</span>My recipe</a>
+            </li>
+            <li><a href="#" class="menu "><span>•</span>My books</a>
                 <ul>
-                        <li><a href="?appli=home&action=myrecipe">Favorite</a></li>
+                  <li><a href="#" class="trigger_sign">Favorite</a></li>
                 </ul>
-        </li>
-        <li><a href="#" class="menu"><span>•</span>My books</a>
-                <ul>
-                        <li><a href="?appli=home&action=book&page=book">Favorite</a></li>
-                </ul>
-        </li>
-      </ul>
+            </li>
+          </ul>
 
+      <?php } else { ?>
+   <!-- Bloc menu quand users EST connecté -->
+          <ul class="bloc_menu">
+            <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Menu</a>
+                <ul>
+                    <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
+                    <li><a href="">Books</a></li>
+                </ul>
+            </li>
+            <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span>•</span>Submit recipe</a>
+              <ul>
+                  <li><a href="#">Create Books</a></li>
+              </ul>
+            </li>
+            <li><a href="?appli=home&action=myrecipe" class="menu"><span>•</span>My recipe</a>
+                <ul>
+                  <li><a href="?appli=home&action=myrecipe">Favorite</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu"><span>•</span>My books</a>
+                <ul>
+                  <li><a href="?appli=home&action=book&page=book">Favorite</a></li>
+                </ul>
+            </li>
+          </ul>
+      <?php } ?>
+
+  <!-- Zone users -->
     <?php if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){ ?>
       
       <div class="bloc_login">
