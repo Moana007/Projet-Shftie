@@ -27,6 +27,8 @@
 	}
 	else if($cle == $clebdd){	
    		activation_bdd();
+
+   		define("PAGE_TITLE", "Shiftie 2.0 - Activation");
         include_once('view/users/activation_mail.php');								
           // La requête qui va passer notre champ actif de 0 à 1
 	        
