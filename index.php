@@ -60,7 +60,6 @@
 		}
 		else if($action == 'recipe'){
 			include_once('controller/home/recipe.php');
-		
 		}
 		else if($action == 'catalogue'){
 			include_once('controller/home/catalogue.php');

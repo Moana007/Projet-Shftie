@@ -137,7 +137,8 @@
 
     <div class="texte">More of him:</div>
       <?php $var = 0; foreach($recipe_more as $recipe_mores){
-      		$var = $var + 1;  ?>
+      		$var = $var + 1;  
+          $idrecipe = $recipe_mores['recettes_id'];?>
         <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img style="width:305px; height:200px;" src="<?php echo $recipe_mores['photo']; ?>">
               <div class="views_bloc_recette">

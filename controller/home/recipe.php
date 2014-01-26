@@ -1,6 +1,7 @@
 <?php 
 	include_once('model/home/recipe.php');
 	include_once('model/home/vote.fav.php');
+	include_once('model/home/count.php');
 	$id_rec = $_GET['id_rec'];
 	$bt_vote = button_vote($id_rec); 
     $bt_fav = button_fav($id_rec); 
