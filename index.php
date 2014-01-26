@@ -98,9 +98,11 @@
 		else if ($action == 'activation')
 		{ 
 			include_once('controller/users/activation.php');
-			
 		}
-		
+		else if ($action == 'confirm_mail')
+		{ 
+			include_once('controller/users/confirm_mail.php');
+		}
 
 	}
 

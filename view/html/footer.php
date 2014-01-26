@@ -7,11 +7,12 @@
 		<script type="text/javascript" src="../../assets/jquery_/jquery.js"></script>
 		<script type="text/javascript" src="../../assets/ajax/submit_recipe_ajax.js"></script>
 		<script type="text/javascript" src="../../assets/ajax/vote.js"></script>
-			<script type="text/javascript" src="../../assets/ajax/fav.js"></script>
+		<script type="text/javascript" src="../../assets/ajax/fav.js"></script>
 		<script type="text/javascript" src="../../assets/ajax/jquery.liteuploader.min.js"></script>
   		<script type="text/javascript" src="../../assets/ajax/upload_img.js"></script>
 		<script type="text/javascript" src="../../assets/ajax/create_step_effect.js"></script>
-		
+		<script type="text/javascript" src="../../assets/ajax/submit_register_ajax.js"></script>
+
 		<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
 		
 		<!-- verification sur le formulaire de connexion utilisateur -->

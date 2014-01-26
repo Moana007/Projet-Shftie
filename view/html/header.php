@@ -67,7 +67,7 @@
           <div class="ligne_log"> Password <input type="password" name="pwd" id="pwd"></input></div>
           <input type="submit" class="bt vert">
           <input type="checkbox" name="box" id="checkbox"> Remember me </input>
-          <br/><br/><span id="message_error" id="submit"></span>
+          <br/><br/><span id="message_error" ></span>
         </form>   
         <a href="#" class="icon icon-cancel"></a>
       </div>
@@ -75,13 +75,14 @@
       <div class="register">
         <div class="titre_2">Register Now</div>
         <div class="sous_titre">Register and start sharing!</div>
-        <form class="log" method="post" action="?appli=users&action=add_user">
-          <div class="ligne_log">Name <input type="text" name="name"></input></div>
-          <div class="ligne_log">Firstname <input type="text" name="firstname"></input></div>
-          <div class="ligne_log">Email <input type="text" name="mail"></input></div>
-          <div class="ligne_log"> Password <input type="password" name="pwd1" ></input></div>
-          <div class="ligne_log"> Confirm password <input type="password" name="pwd2"></input></div>
+        <form class="log" method="post" id="formu_register" action="?appli=users&action=add_user">
+          <div class="ligne_log">Name <input type="text" name="name" id="name"></input></div>
+          <div class="ligne_log">Firstname <input type="text" name="firstname" id="firstname"></input></div>
+          <div class="ligne_log">Email <input type="text" name="mail" id="mail"></input></div>
+          <div class="ligne_log">Password <input type="password" name="pwd1" id="pwd1" ></input></div>
+          <div class="ligne_log">Confirm password <input type="password" name="pwd2" id="pwd2"></input></div>
           <input type="submit" id="submit" class="bt vert">
+          <br/><br/><span id="message_error2" ></span>
         </form>
         <a href="#" class="icon icon-cancel"></a>
       </div>
