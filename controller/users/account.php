@@ -14,7 +14,7 @@ include_once('model/home/count.php');
 	$fav_nb = count($fav);
 	$author = show_author($id_account);
 	$recipe = show_recipe($id_account); //users + recettes
-
+	//ok
 	$recipe_nb = count($recipe);	
 
 include_once('view/users/content_account.php')
