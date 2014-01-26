@@ -36,6 +36,14 @@
 			include_once('controller/home/submit_recipe.php');
 			return;
 		}
+		else if($action == 'vote'){
+			include_once('controller/home/vote.php');
+			return;
+		}
+		else if($action == 'fav'){
+			include_once('controller/home/fav.php');
+			return;
+		}
 		else if ($action == 'add_recipe'){
 			include_once('controller/home/add_recipe.php');
 		}
@@ -49,11 +57,12 @@
 			include_once('controller/home/delete_comment.php');
 			header('location: index.php?appli=home&action=recipe&id_rec='.$_GET['id_rec'].'');
 		}
-		else if ($action == 'myrecipe'){
+		else if($action == 'myrecipe'){
 			include_once('controller/home/myrecipe.php');
 		}
-		else if ($action == 'recipe'){
+		else if($action == 'recipe'){
 			include_once('controller/home/recipe.php');
+		
 		}
 		else if($action == 'catalogue'){
 			include_once('controller/home/catalogue.php');

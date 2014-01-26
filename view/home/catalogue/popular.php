@@ -1,4 +1,4 @@
-      <?php $idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
+      <?php //$idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
       
       <?php $order_vote = order_vote($idrecipe);?>
       <?php 

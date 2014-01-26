@@ -19,6 +19,8 @@
 	
 <!--FIN HEADER DEBUT SLIDER -->
 <?php foreach($recipes as $recipe): ?>
+  <?php $recipe_id = $recipe['recettes_id'] ?>
+
 <div id="slider">
   <!-- <div class="image_slider"><img src="<?php echo $recipe['photo']; ?>"> -->
   <div style="width:1280px; height:350px; background: url('<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>') center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;" class="image_slider">
@@ -26,28 +28,47 @@
       <span class="slider_titre"><?php echo $recipe['recette_name']; ?></span>
       <span class="slider_auteur"><a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><?php foreach($authors as $author){ echo $author['users_name']." ".$author['users_firstname']; }?></a></span>
       <span class="slider_texte"><?php echo $recipe['description']; ?></span>
-
-      <?php if($verif_vote == 0){ ?>  
-              <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
-                <input type="hidden" name="recipe_id" value="<?php echo $recipe['recettes_id'] ?>">
-               <button type="submit" class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>
+    <?php if(isset($_SESSION['users_id'])){ 
+            if($bt_vote == 0){ ?>
+              <form method="post" id="formVote" action="?appli=home&action=vote">
+                <input type="hidden" id="url_location" value="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" name="recipe_id_vote" id="recipe_id_vote" value="<?php echo $recipe_id; ?>">
+               <button type="submit" class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>
               </form>
-             <?php }
-              else {
-                   echo' <button class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>';
-              } ?>
+      
+      <?php  } else {
+                  echo' <button class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>';
+            } ?>
+      <?php if($bt_fav == 0){ ?>
+              <form method="post" id="formFav" action="?appli=home&action=fav">
+                <input type="hidden" id="url_location" value="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" name="recipe_id_fav" id="recipe_id_fav" value="<?php echo $recipe_id ?>">
+                <button type="submit" class="bt gris fav"><span class="icon icon-fav-empty"></span>Favoris</button>
+              </form>
+       <?php  }
+            else { ?>
 
-              <?php //echo $recipe['recettes_id'].' et user : '.$_SESSION['users_id']; ?>
-
-       <?php if($verif_fav == 0){ ?>  
-              <form method="post" action="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
-                <input type="hidden" name="recipe_id_fav" value="<?php echo $recipe['recettes_id'] ?>">
-               <button type="submit" class="bt vert fav"><span class="icon icon-fav-empty"></span>Favoris</button>
-                </form>
-             <?php }
-              else {
-                   echo' <button class="bt gris fav"><span class="icon icon-fav-empty"></span>Favoris</button>';
+                   <form method="post" id="formUnfav" action="?appli=home&action=fav">
+                <input type="hidden" id="url_location" value="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" name="recipe_id_unfav" id="recipe_id_fav" value="<?php echo $recipe_id ?>">
+                <button type="submit" class="bt vert fav"><span class="icon icon-fav-empty"></span>Favoris</button>
+              </form>
+          <?php  }
+          }
+          else {
+            if($bt_vote == 0){
+                 echo '<button class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>';
+           } else {
+                    echo' <button class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>';
               } ?>
+        <?php if($bt_fav == 0){ 
+                  echo '<button class="bt gris fav"><span class="icon icon-fav-empty"></span>Favoris</button>';
+              }
+              else {
+
+                     echo' <button class="bt vert fav"><span class="icon icon-fav-empty"></span>Favoris</button>';
+              }
+          } ?>
 
     </div>
   </div>
