@@ -29,47 +29,41 @@
 
         <div class="titre_1">Favorites</div>
 
-        <div class="bloc_profil">
-            <a href="#" class="case_recipe a1">
-              <img src="assets/img/305x200_recette.png">
+         <div class="bloc_profil">
+        
+          <?php $var = 0; foreach ($fav as $fav):  
+            $var = $var + 1;  
+            $idrecipe = $fav['recettes_id']; ?>
+            <a href="?appli=home&action=recipe&id_rec=<?php echo $fav['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
+              <img src="<?php echo $fav['photo'] ?>">
               <div class="views_bloc_recette">
-                <div class="views_title aa1">Bruschetta</div>
-                <div class="views aaa1"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views aaa1"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views aaa1"><span class="icon icon-comment-empty"></span>30</div>
+                <div class="views_title aa<?php echo $var; ?>"><?php echo $fav['recette_name'] ?></div>
+                <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
+                  <?php 
+                    $fav = fav_recipe($idrecipe);
+                    echo $fav;
+                  ?>
+                </div>
+                <div class="views aaa<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>
+                  <?php 
+                     $like = like_recipe($idrecipe);
+                     echo $like;
+                  ?>
+                </div>
+                <div class="views aaa<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>
+                  <?php 
+                    $comment = comment_recipe($idrecipe);
+                      echo $comment;
+                   ?>
+                </div>
               </div>
             </a>
-            <a href="#" class="case_recipe a2">
-              <img src="assets/img/305x200_recette.png">
-              <div class="views_bloc_recette">
-                <div class="views_title aa2">Bruschetta</div>
-                <div class="views aaa2"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views aaa2"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views aaa2"><span class="icon icon-comment-empty"></span>30</div>
-              </div>
-            </a>
+          <?php endforeach; ?> 
 
-            <a href="#" class="case_recipe a3">
-              <img src="assets/img/305x200_recette.png">
-              <div class="views_bloc_recette">
-                <div class="views_title aa3">Bruschetta</div>
-                <div class="views aaa3"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views aaa3"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views aaa3"><span class="icon icon-comment-empty"></span>30</div>
-              </div>
-            </a>
-            <a href="#" class="case_recipe a4">
-              <img src="assets/img/305x200_recette.png">
-              <div class="views_bloc_recette">
-                <div class="views_title aa4">Bruschetta</div>
-                <div class="views aaa4"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views aaa4"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views aaa4"><span class="icon icon-comment-empty"></span>30</div>
-              </div>
-            </a>    
-
-          <a href="#" class="bt vert">View More</a>
-
+          <?php if($fav_nb > 4){ 
+             echo '<a href="#" class="bt vert">View More</a>';
+                 }
+              ?>
         </div>
 
       </div>
@@ -82,16 +76,34 @@
           <?php $var = 0; foreach ($recipe as $recipes):  
         		$var = $var + 1;  ?>
             <a href="?appli=home&action=recipe&id_rec=<?php echo $recipes['recettes_id']; ?>" class="case_recipe b<?php echo $var; ?>">
-              <img style="width:305px; height:200px;"src="<?php echo $recipes['photo'] ?>">
+              <img src="<?php echo $recipes['photo'] ?>">
               <div class="views_bloc_recette">
                 <div class="views_title bb<?php echo $var; ?>"><?php echo $recipes['recette_name'] ?></div>
-                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-star-empty"></span>30</div>
-                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>30</div>
-                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>30</div>
+                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
+                  <?php 
+                    $fav = fav_recipe($idrecipe);
+                    echo $fav;
+                  ?>
+                </div>
+                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>
+                  <?php 
+                     $like = like_recipe($idrecipe);
+                     echo $like;
+                  ?>
+                </div>
+                <div class="views bbb<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>
+                  <?php 
+                    $comment = comment_recipe($idrecipe);
+                      echo $comment;
+                   ?>
+                </div>
               </div>
             </a>
           <?php endforeach; ?>  
-          <a href="#" class="bt vert">View More</a>
+         <?php if($recipe_nb > 4){ 
+             echo '<a href="#" class="bt vert">View More</a>';
+                 }
+              ?>
         </div>
       </div>
 

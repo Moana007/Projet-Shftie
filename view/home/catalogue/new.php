@@ -9,7 +9,12 @@
               <?php echo substr(htmlentities($new['description']),0, 230); ?>
           </div>
           <div class="views_bloc_recette">
-              <div class="views"><span class="icon icon-star-empty"></span>30</div>
+              <div class="views"><span class="icon icon-star-empty"></span>
+                 <?php 
+                  $fav = fav_recipe($idrecipe);
+                  echo $fav;
+                ?>
+              </div>
               <div class="views"><span class="icon icon-heart-empty"></span>
                 <?php 
                   $like = like_recipe($idrecipe);

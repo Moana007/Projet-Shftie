@@ -3,8 +3,9 @@
 	include_once('model/home/count.php');
 	$rand = catalogue_rand();
 	$new = catalogue_new();
+	$popular = catalogue_popular();
+	
 
-	$pop_recipe = catalogue_popular();
 	
 	define("PAGE_TITLE", "Shiftie 2.0 - Catalogue");
 

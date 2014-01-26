@@ -142,9 +142,24 @@
               <img style="width:305px; height:200px;" src="<?php echo $recipe_mores['photo']; ?>">
               <div class="views_bloc_recette">
                   <div class="views_title aa<?php echo $var; ?>"><?php echo $recipe_mores['recette_name']; ?></div>
-                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>30</div>
-                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>30</div>
-                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>30</div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
+                     <?php 
+                       $fav = fav_recipe($idrecipe);
+                       echo $fav;
+                     ?>
+                  </div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-heart-empty"></span>
+                     <?php 
+                        $like = like_recipe($idrecipe);
+                        echo $like;
+                      ?>
+                  </div>
+                  <div class="views aaa<?php echo $var; ?>"><span class="icon icon-comment-empty"></span>
+                     <?php 
+                      $comment = comment_recipe($idrecipe);
+                      echo $comment;
+                    ?>
+                  </div>
               </div>
         </a>
       <?php } ?>

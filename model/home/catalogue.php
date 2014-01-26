@@ -21,10 +21,10 @@
 	
 	function catalogue_popular(){
 		global $connexion;
-		$query = $connexion->prepare('SELECT * FROM RECETTES LIMIT 8');
+		$query = $connexion->prepare('SELECT * FROM RECETTES');
 		$query->execute();
 		$popular = $query->fetch();
-		return $pop_recipe;
+		return $popular;
 	}
 	function order_vote($idrecipe){
 		global $connexion;
@@ -32,16 +32,16 @@
 		$query = $connexion->prepare('SELECT * FROM VOTE WHERE recettes_id_vote = :idrecipe');
 		$query->bindValue(':idrecipe', $idrecipe, PDO::PARAM_INT);
 		$query->execute();
-		$order_vote = $query->rowCount();
-		return $order_vote;
+		$vote = $query->fetchAll();
+		return $vote;
 	}
-	/*function pop_recipe($order_vote){
+	function pop_recipe($vote){
 		global $connexion;
 
 		$query = $connexion->prepare('SELECT * FROM RECETTES ORDER by :order_vote');
-		$query->bindValue(':order_vote', $order_vote, PDO::PARAM_INT);
+		$query->bindValue(':vote', $vote, PDO::PARAM_INT);
 		$query->execute();
-		$popular = $query->fetchAll();
-		return $popular;
-	} */
+		$pop_recipe = $query->fetchAll();
+		return $pop_recipe;
+	} 
  ?>

@@ -26,6 +26,15 @@ function show_recipe($id_user){ //users + recettes
 		//on retourne tous les articles selectionnés 
 		return($recipe_more);
 }
+function show_fav($id_account){
+	global $connexion;
+	$query = $connexion->prepare('SELECT * FROM FAVORIS A, RECETTES B WHERE A.fav_id_recettes = B.recettes_id AND A.fav_id_users = :user ORDER BY RAND() LIMIT 0, 4');
+	$query->bindValue(':user', $id_account, PDO::PARAM_INT);
+	$query->execute();
+	$fav = $query->fetchAll();
+	
+	return $fav;
+}
 
 function activation_verif(){
 	$id_u = $_GET['id'];

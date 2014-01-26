@@ -1,4 +1,4 @@
-      <?php //$idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
+      <?php $idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
       
       <?php $order_vote = order_vote($idrecipe);?>
       <?php 
@@ -11,7 +11,12 @@
               <?php echo substr(htmlentities($popular['description']),0, 230); ?>
           </div>
           <div class="views_bloc_recette">
-              <div class="views"><span class="icon icon-star-empty"></span>30</div>
+              <div class="views"><span class="icon icon-star-empty"></span>
+                 <?php 
+                  $fav = fav_recipe($idrecipe);
+                  echo $fav;
+                ?>
+              </div>
               <div class="views"><span class="icon icon-heart-empty"></span>
                 <?php 
                   $like = like_recipe($idrecipe);
