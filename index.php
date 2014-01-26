@@ -66,7 +66,7 @@
 		}
 		else if ($action == 'connect'){
 			include_once('controller/users/connect.php');
-			return;
+			//return;
 		}
 		else if ($action == 'register'){
 			include_once('controller/users/register.php');
