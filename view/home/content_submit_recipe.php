@@ -1,7 +1,5 @@
 <form method="post" action="?appli=home&action=submit_recipe" id="formRecipe">
 <div id="create_recipe" class="create_recipe_trigger">
-   
-     
       <div class="step step1">
         <div class="titre_recette"><span>•</span> Step 1</div>
         

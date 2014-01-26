@@ -35,7 +35,7 @@
 		$order_vote = $query->rowCount();
 		return $order_vote;
 	}
-	function pop_recipe($order_vote){
+	/*function pop_recipe($order_vote){
 		global $connexion;
 
 		$query = $connexion->prepare('SELECT * FROM RECETTES ORDER by :order_vote');
@@ -43,5 +43,5 @@
 		$query->execute();
 		$popular = $query->fetchAll();
 		return $popular;
-	} 
+	} */
  ?>
