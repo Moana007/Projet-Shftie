@@ -1,3 +1,4 @@
+<?php if(isset($_SESSION['users_id'])) { ?>
 <div>
 
 	<h1 align="center" style="color:#89B929;"><?php echo $show_book2['books_name']; ?></h1>
@@ -29,3 +30,4 @@
 		
 </div>
 
+<?php } else {	echo '<p align="center" style="background-color:white;">You have be registered for access this page</p>';	} ?>

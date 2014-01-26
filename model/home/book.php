@@ -14,7 +14,9 @@
 		global $connexion;
 		
 
-		$query = $connexion->prepare('INSERT INTO RECETTES_BOOKS (books_id, recettes_id) VALUES (:books_id, :books_id_recettes)');
+		$query = $connexion->prepare('INSERT INTO RECETTES_BOOKS 
+		(books_id, recettes_id) 
+		VALUES (:books_id, :books_id_recettes)');
 		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
 		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
 		$query->execute();
@@ -37,7 +39,10 @@
 	function show_recipe_book($id_books){
 		global $connexion;
 		
-		$query = $connexion->prepare('SELECT * FROM RECETTES_BOOKS, RECETTES WHERE RECETTES_BOOKS.recettes_id = RECETTES.recettes_id AND RECETTES_BOOKS.books_id = :id_books');
+		$query = $connexion->prepare('SELECT * FROM 
+		RECETTES_BOOKS, RECETTES 
+		WHERE RECETTES_BOOKS.recettes_id = RECETTES.recettes_id 
+		AND RECETTES_BOOKS.books_id = :id_books');
 		$query->bindParam(':id_books', $id_books, PDO::PARAM_INT);		
 		$query->execute();
 		
@@ -51,7 +56,9 @@
 		
 		$id_users = $_SESSION['users_id'];
 
-		$query = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users AND books_id = :id_books');
+		$query = $connexion->prepare('SELECT * FROM BOOKS 
+		WHERE books_id_users = :id_users 
+		AND books_id = :id_books');
 		$query->bindParam(':id_users', $id_users, PDO::PARAM_INT);
 		$query->bindParam(':id_books', $id_books, PDO::PARAM_INT);
 		$query->execute();
@@ -76,11 +83,20 @@
 		global $connexion;
 		
 		try{
-			$query = $connexion->prepare('DELETE FROM BOOKS WHERE books_id = :books_id AND books_id_users = :books_id_users');
+			$query = $connexion->prepare('DELETE FROM 
+			BOOKS WHERE books_id = :books_id 
+			AND books_id_users = :books_id_users');
 			$query->bindParam(':books_id', $books_id, PDO::PARAM_INT);
 			$query->bindParam(':books_id_users', $_SESSION['users_id'], PDO::PARAM_INT);
 			
 			$query->execute();
+			
+			if($query){
+				$query = $connexion->prepare('DELETE FROM 
+				RECETTES_BOOKS WHERE books_id = :books_id');
+				$query->bindParam(':books_id', $books_id, PDO::PARAM_INT);
+				$query->execute();
+			}
 		}
 		catch(Exception $e){
 				echo "Suppression impossible" ,$e->getMessage();
