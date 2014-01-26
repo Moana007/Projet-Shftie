@@ -9,7 +9,6 @@
 	$data6 = tags_show6();
 	$data7 = tags_show7();
 
-
 	include_once('view/home/index.php');
 
  ?>

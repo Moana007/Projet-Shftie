@@ -55,6 +55,12 @@
 <?php endforeach; ?> 
 <!--FIN SLIDER DEBUT CONTENT -->
 
+
+<!-- BOUTON DE PARTAGE  -->
+  <!-- <div data-href="<?php echo $_SERVER['SCRIPT_URI']."?".$_SERVER['QUERY_STRING']; ?>" class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="ShiftieCooking" data-lang="en">Tweet</a>
+ -->
+
 <div id="page_recipe">
   <div class="texte_recette">
     <div class="ingredient">

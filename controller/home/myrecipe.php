@@ -35,6 +35,8 @@
 			$suiv = $_GET['pagin']+1;	
 	}		
 	
+	define("PAGE_TITLE", "Shiftie 2.0 - Myrecipe");
+
 	include_once('view/home/myrecipe.php');
 
  ?>

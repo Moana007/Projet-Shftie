@@ -43,7 +43,8 @@
 	if(isset($_GET['delete_comm'])){
 		delete_comment($_POST['com_id']);
 	}*/
-	
+
+
 	include_once('view/home/recipe_page.php');
 
  ?>

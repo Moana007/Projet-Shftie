@@ -3,11 +3,11 @@
   <head>
       <meta charset="utf-8">
       <?php if ($_GET['appli'] == 'home' && $_GET['action'] == 'recipe'  && $_GET['id_rec'] != '' ) { ?>
-        <title><?php foreach($recipes as $recipe){ echo $recipe['recette_name']; }?></title>
+        <title><?php foreach($recipes as $recipe){ echo "Shiftie 2.0 - ".$recipe['recette_name']; }?></title>
         <meta name="description" content="<?php foreach($recipes as $recipe){ echo $recipe['description']; }?>">
         <meta name="og:image" content="<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>" />
       <?php } else { ?>
-        <title>Shiftie 2.0</title>
+        <title><?php echo PAGE_TITLE ?></title>
         <meta name="description" content="Shiftie is a new site who's proposing to users to post their recipes and to vote for others users' recipes, all that to promote the most voted recipe on the homepage for 24h!">
       <?php } ?>
       <meta name="author" content="">

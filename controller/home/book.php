@@ -8,6 +8,9 @@
 	if(isset($_SESSION['users_id'])){
 	$show_book = show_book();
 	}
+
+	define("PAGE_TITLE", "Shiftie 2.0 - My Books");
+
 	
 	include_once('view/home/book.php');
 ?> 
