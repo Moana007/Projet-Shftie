@@ -188,7 +188,7 @@
           
         <?php if(isset($_SESSION['users_id'])) { ?>  
           <div class="case_comment">
-           <a href="#"><img src="assets/img/img_chef.png"></a>
+           <a href="#"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
               <div class="comment_info">
                 <form action="?appli=home&action=add_comment&id_rec=<?php echo $_GET['id_rec']; ?>" method= "post" id="formMsg">
                   <input type="hidden" name="id_rec" value="<?php echo $_GET['id_rec']; ?>"/>
