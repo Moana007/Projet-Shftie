@@ -1,0 +1,25 @@
+body {
+	font-weight: 300;
+	font-style: Helvetica Neue;
+}
+header{
+	font-size: 20px;
+	text-align: center;
+}
+
+
+#formLogin {
+	width:400px;
+	margin:0 auto;
+}
+#left_content{
+	width:300px;
+	float:left;
+}
+#right_content{
+	width:700px;
+	float:left;
+}
+p {
+	text-align: center;
+}
