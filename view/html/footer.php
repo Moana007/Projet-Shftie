@@ -4,22 +4,22 @@
 		<div class="footer_right">SHIFTIE.ORG</div>
 	</div>
 
-		<script type="text/javascript" src="../../assets/jquery_/jquery.js"></script>
-		<script type="text/javascript" src="../../assets/ajax/submit_recipe_ajax.js"></script>
-		<script type="text/javascript" src="../../assets/ajax/vote.js"></script>
-		<script type="text/javascript" src="../../assets/ajax/fav.js"></script>
-		<script type="text/javascript" src="../../assets/ajax/jquery.liteuploader.min.js"></script>
-  		<script type="text/javascript" src="../../assets/ajax/upload_img.js"></script>
-		<script type="text/javascript" src="../../assets/ajax/create_step_effect.js"></script>
-		<script type="text/javascript" src="../../assets/ajax/submit_register_ajax.js"></script>
+		<script type="text/javascript" src="assets/jquery_/jquery.js"></script>
+		<script type="text/javascript" src="assets/ajax/submit_recipe_ajax.js"></script>
+		<script type="text/javascript" src="assets/ajax/vote.js"></script>
+		<script type="text/javascript" src="assets/ajax/fav.js"></script>
+		<script type="text/javascript" src="assets/ajax/jquery.liteuploader.min.js"></script>
+  		<script type="text/javascript" src="assets/ajax/upload_img.js"></script>
+		<script type="text/javascript" src="assets/ajax/create_step_effect.js"></script>
+		<script type="text/javascript" src="assets/ajax/submit_register_ajax.js"></script>
 
 		<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
 		
 		<!-- verification sur le formulaire de connexion utilisateur -->
-		<script type="text/javascript" src="../../assets/ajax/verif_login.js"></script>
+		<script type="text/javascript" src="assets/ajax/verif_login.js"></script>
 
 		<!-- Page myrecipe -->
-  		<script type="text/javascript" src="../../assets/jquery_/jshiftie.js"></script>
+  		<script type="text/javascript" src="assets/jquery_/jshiftie.js"></script>
 		
 
 

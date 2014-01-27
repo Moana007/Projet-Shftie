@@ -24,53 +24,17 @@
       <?php if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){ ?>
    <!-- Bloc menu quand users NON connecté -->
           <ul class="bloc_menu">
-            <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Menu</a>
-                <ul>
-                    <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
-                    <li><a href="#">Books</a></li>
-                </ul>
-            </li>
-            <li><a href="#" class="menu trigger_sign"><span>•</span>Submit recipe</a>
-              <ul>
-                  <li><a href="#">Create Books</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="menu trigger_sign"><span>•</span>My recipe</a>
-                <ul>
-                  <li><a href="" class="trigger_sign">Favorite</a></li>
-                </ul>
-            </li>
-            <li><a href="#" class="menu "><span>•</span>My books</a>
-                <ul>
-                  <li><a href="#" class="trigger_sign">Favorite</a></li>
-                </ul>
-            </li>
+            <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
+            <li><a href="#" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
+            <li><a href="?appli=home&action=index&page=submit_recipe" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
 
       <?php } else { ?>
    <!-- Bloc menu quand users EST connecté -->
           <ul class="bloc_menu">
-            <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span>•</span>Menu</a>
-                <ul>
-                    <li><a href="?appli=home&action=catalogue&page=catalogue">Recipes</a></li>
-                    <li><a href="">Books</a></li>
-                </ul>
-            </li>
-            <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span>•</span>Submit recipe</a>
-              <ul>
-                  <li><a href="#">Create Books</a></li>
-              </ul>
-            </li>
-            <li><a href="?appli=home&action=myrecipe" class="menu"><span>•</span>My recipe</a>
-                <ul>
-                  <li><a href="?appli=home&action=myrecipe">Favorite</a></li>
-                </ul>
-            </li>
-            <li><a href="#" class="menu"><span>•</span>My books</a>
-                <ul>
-                  <li><a href="?appli=home&action=book&page=book">Favorite</a></li>
-                </ul>
-            </li>
+            <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
+            <li><a href="#" class="menu"><span class="icon icon-book"></span>Books</a></li>
+            <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
       <?php } ?>
 
@@ -84,9 +48,36 @@
 
     <?php } else { ?>
 
-      <div class="bloc_user"><a href="?appli=users&action=account" class="user_name"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></br><span>View Profil</span></a><a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
-      <a href='<?php echo "?appli=users&action=logout" ?>' class="icon icon-off logout"></a></div>
+      <!--<div class="bloc_user">
+        <a href="?appli=users&action=account" class="user_name"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></br><span>View Profil</span></a>
+        <a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
+        <a href='<?php echo "?appli=users&action=logout"; ?>' class="icon icon-off logout"></a>
+      </div> -->
+    <div class="bloc_user">
+      <ul class="user_bloc">
+          <li>
+            <a href="?appli=users&action=account" class="menu"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></a>         
+            <ul>
+              <li><a href="?appli=users&action=account">Profil</a></li>
+              <li><a href="?appli=users&action=account">My recipes</a></li>
+              <li><a href="?appli=users&action=account">My books</a></li>
+            </ul>
+          </li>   
+      </ul>
+    
+      <a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
+      <a href='<?php echo "?appli=users&action=logout"; ?>' class="icon icon-off logout"></a>
+    </div>
+    
+    <div class="search_field">
+    
+    <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
+        <input type="image" src="assets/img/loupe.png" id="loupe">
+    
+    </div>
     <?php } ?>
+
+    
 
 <!-- Zone de pop-up connect/register -->
     <div class="signup">
