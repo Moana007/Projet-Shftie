@@ -26,7 +26,7 @@
 		$users_id = $_SESSION['users_id'];			
 		$debut = ($page-1) * $nb_reponses;
 		
-		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE auteur = :users_id ORDER BY  date DESC LIMIT '.$debut.', '.$nb_reponses);
+		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE auteur = :users_id ORDER BY  date_crea DESC LIMIT '.$debut.', '.$nb_reponses);
 		$query->bindParam(':users_id', $users_id,  PDO::PARAM_INT);
 		
 		//on execute la requete 

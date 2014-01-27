@@ -59,14 +59,14 @@
             <a href="?appli=users&action=account" class="menu"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></a>         
             <ul>
               <li><a href="?appli=users&action=account">Profil</a></li>
-              <li><a href="?appli=users&action=account">My recipes</a></li>
-              <li><a href="?appli=users&action=account">My books</a></li>
+              <li><a href="?appli=home&action=myrecipe">My recipes</a></li>
+              <li><a href="?appli=home&action=book">My books</a></li>
             </ul>
           </li>   
       </ul>
     
       <a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
-      <a href='<?php echo "?appli=users&action=logout"; ?>' class="icon icon-off logout"></a>
+      <a href="?appli=users&action=logout" class="icon icon-off logout"></a>
     </div>
     
     <div class="search_field">

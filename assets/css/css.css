@@ -230,7 +230,7 @@ a.bt.gris:hover {
 
 .bloc_menu{
     float: left;
-    width: 700px;
+    width: 470px;
     margin-left: 45px;
     line-height: 70px;
     vertical-align: middle;
@@ -351,7 +351,7 @@ a.bt.gris:hover {
     top:8px;
 }
 #header .bloc_user {
-    width:300px;
+    width:308px;
 	float: right;
 	padding: 0px 50px 0px 0px;
 }

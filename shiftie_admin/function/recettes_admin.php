@@ -31,8 +31,10 @@
 			$id = $_POST['id_recette_valide'];
 			global $connexion;
 			
-			$query = $connexion->prepare("UPDATE RECETTES SET admin = 1 WHERE users_id='".$id."'");
-			
+			$query = $connexion->prepare("UPDATE RECETTES SET rec_validate = 1 WHERE recettes_id = :id ");
+			$query->bindParam(':id', $id, PDO::PARAM_STR);
+
+
 			$query->execute();
 			//header("location: ../index_admin.php?page=comptes_admin");
 		}
@@ -45,7 +47,8 @@
 			$id = $_POST['id_recette_invalide'];
 			global $connexion;
 			
-			$query = $connexion->prepare("UPDATE USERS SET admin = 0 WHERE users_id='".$id."'");
+			$query = $connexion->prepare("UPDATE RECETTES SET admin = 0 WHERE users_id = :id ");
+			$query->bindParam(':id', $id, PDO::PARAM_STR);
 			
 			$query->execute();
 			//header("location: ../index_admin.php?page=comptes_admin");
