@@ -76,9 +76,9 @@
 			include_once('controller/users/connect.php');
 			return;
 		}
-		else if ($action == 'register'){
-			include_once('controller/users/register.php');
-		}
+		// else if ($action == 'register'){
+		// 	include_once('controller/users/register.php');
+		// }
 		else if ($action == 'add_user'){
 			include_once('controller/users/add_user.php');
 		}

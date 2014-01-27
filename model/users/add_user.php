@@ -1,7 +1,7 @@
 <?php 
 
 
-	function create_user($name, $firstname, $pwd, $mail){
+	function create_user($name, $firstname, $pwd1, $mail){
 
 		
 		
@@ -12,6 +12,7 @@
 			$admin = 0;
 			$photo = 'http://shiftie.org/assets/img/img_chef.png';
 			$validation = 0;
+			$pwd = md5($pwd1);
 
 			$query = $connexion->prepare("INSERT INTO USERS 
 					   (users_name, users_firstname, password, mail, admin, key_validation, users_photo, validation) 
@@ -20,7 +21,7 @@
 			
 			$query->bindParam(':name', $name, PDO::PARAM_STR);
 			$query->bindParam(':firstname', $firstname, PDO::PARAM_STR);	
-			$query->bindParam(':pwd', md5($pwd), PDO::PARAM_STR);
+			$query->bindParam(':pwd', $pwd, PDO::PARAM_STR);
 			$query->bindParam(':mail', $mail, PDO::PARAM_STR);	
 			$query->bindParam(':admin', $admin, PDO::PARAM_INT);
 			$query->bindParam(':cle', $cle, PDO::PARAM_STR);

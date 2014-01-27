@@ -9,6 +9,8 @@ $(document).ready(function() {
         
 
 
+
+
         if(name == '' || firstname == '' || mail == '' || pwd1 == '' || pwd2 == '' ) {
             $('.error-msg').remove();
             $("#message_error2").append("<span class='error-msg' style='color:red;' >Veuillez renseigner tous les champs</span>");
@@ -30,10 +32,17 @@ $(document).ready(function() {
         //     $('#pwd1, #pwd2').val("");
         // }
         else {
-            alert('Recette Ajoutée avec Success, Congrats Man !');
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                data: $(this).serialize()
+            });
+
             window.setTimeout("location=('?appli=users&action=confirm_mail');",1000);
 
         }
+
+
         return false;
     });
 });
