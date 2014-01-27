@@ -1,6 +1,7 @@
 <?php
 include_once('model/users/index.php');
 include_once('model/home/count.php');
+include_once('model/home/book.php');
 
 
 	if(!isset($_GET['user'])){
@@ -9,7 +10,8 @@ include_once('model/home/count.php');
 	else {
 		$id_account = $_GET['user'];
 	}
-
+	
+	$show_book = show_book();
 	$fav = show_fav($id_account);
 	$fav_nb = count($fav);
 	$author = show_author($id_account);

@@ -9,7 +9,7 @@
       </div>
       <?php   foreach($author as $authors){
                 if(!isset($_SESSION['users_id']) || $_SESSION['users_id'] == '' || $authors['users_id'] != $_SESSION['users_id'] ){ ?>
-                    <!-- RIEN, le visiteur n'est pas sur son compte -->
+                    <!-- RIEN, le visiteur nest pas sur son compte -->
       <?php     }else { ?>
         <?php echo $authors['users_id']; echo $_SESSION['users_id']; ?>
               <a href="?appli=users&action=modif_users" class="icon icon-user"></a>
@@ -20,15 +20,12 @@
     <div class="books">
       <div class="titre_1">Books</div>
       <div class="row_books">
-        <a href="#" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
-        <a href="#" class="case_book"><img src="assets/img/covercookbook2.jpg"></a>
-        <a href="#" class="case_book"><img src="assets/img/covercookbook3.jpg"></a>
-        <a href="#" class="case_book"><img src="assets/img/covercookbook4.jpg"></a>
-        <a href="#" class="case_book"><img src="assets/img/covercookbook5.jpg"></a>
+      <?php foreach($show_book as $show_books) { ?>
+        <a href="?appli=home&action=book&id_books=<?php echo $show_books['books_id']; ?>" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
+      <?php } ?>     
       </div>
       <a href="#" class="bt vert">View More</a>
     </div>
-    
 
 
     <div class="bloc_wide">
