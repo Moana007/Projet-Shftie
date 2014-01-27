@@ -12,7 +12,7 @@
 	function catalogue_new(){
 		global $connexion;
 
-		$query = $connexion->prepare('SELECT * FROM RECETTES ORDER BY date DESC LIMIT 8');
+		$query = $connexion->prepare('SELECT * FROM RECETTES ORDER BY date_crea DESC LIMIT 8');
 		$query->execute();
 
 		$new = $query->fetchAll();
