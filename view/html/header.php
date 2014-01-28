@@ -46,6 +46,13 @@
         <a href="#" class="bt gris trigger_sign">Sign In</a>
       </div>
 
+       <div class="search_field search2">
+    
+    <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
+        <input type="image" src="assets/img/loupe.png" id="loupe">
+    
+    </div>
+
     <?php } else { ?>
 
       <!--<div class="bloc_user">
