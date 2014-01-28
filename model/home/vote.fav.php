@@ -3,8 +3,8 @@
 	function button_vote($id_rec){
 		global $connexion;
 	
-		$query = $connexion->prepare('SELECT * FROM VOTE WHERE recettes_id_vote = :recipe_id');
-		//$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+		$query = $connexion->prepare('SELECT * FROM VOTE WHERE users_id_vote = :user_id AND recettes_id_vote = :recipe_id');
+		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
 		$query->bindValue(':recipe_id', $id_rec, PDO::PARAM_INT);		
 		$query->execute();
 		$bt_vote = $query->rowCount();
@@ -14,8 +14,8 @@
 function button_fav($id_rec){
  	 		global $connexion;
 	
- 		$query = $connexion->prepare('SELECT * FROM FAVORIS WHERE fav_id_recettes = :recipe_id');
- 		//$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+ 		$query = $connexion->prepare('SELECT * FROM FAVORIS WHERE fav_id_users = :user_id AND fav_id_recettes = :recipe_id');
+ 		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
  		$query->bindValue(':recipe_id', $id_rec, PDO::PARAM_INT);		
  		$query->execute();
  		$bt_fav = $query->rowCount();
