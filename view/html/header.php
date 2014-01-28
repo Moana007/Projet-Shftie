@@ -26,7 +26,7 @@
           <ul class="bloc_menu">
             <li><a href="?appli=home&action=catalogue&page=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
             <li><a href="#" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
-            <li><a href="?appli=home&action=index&page=submit_recipe" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
+            <li><a href="#" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
 
       <?php } else { ?>
