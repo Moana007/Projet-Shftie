@@ -113,7 +113,7 @@
           <span class="green_tags">
             <a href="#" class="green_tags"><?php echo $tag["tags_name"].", "; ?></a>
           </span>
-        <? } ?>  
+        <?php } ?>  
       </div>
     </div>
 
