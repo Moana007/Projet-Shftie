@@ -71,7 +71,8 @@
 	function show_all_recipes(){
 		global $connexion;
 		
-		$query = $connexion->prepare('SELECT * FROM RECETTES');
+		$query = $connexion->prepare('SELECT * FROM RECETTES, FAVORIS WHERE 
+			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND FAVORIS.fav_id_users = '.$_SESSION['users_id'].'');
 		$query->execute();
 		
 		$all_recipe = $query->fetchAll();
