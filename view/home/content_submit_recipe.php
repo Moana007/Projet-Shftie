@@ -40,17 +40,18 @@
             <input type="hidden" id="photo" name="photo" value="">
           <div class="images">
             <!-- IMG NORMALE -->
+
+
+        <div id="cover-container">
+
+          <div id="cover-image" style="background-image"></div>
           <div class="previews"></div>
-          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
-          You can zoom and postion it whatever you like.</div>
-          <!-- IMG WIDE -->
-          <div class="img_wide">
-            <div class="ui-widget-content">
-              <div class="picturecontainer" style="overflow: hidden; position: relative; width: 1024px; height: 280px; margin-bottom:30px;">
-                <img style="position: absolute;" class="headerimage ui-corner-all" src="http://us.cdn282.fansshare.com/photos/chicken/popcorn-chicken-food-874173611.jpg" />
-              </div>
-            </div>
-          </div>
+
+        </div>
+
+            <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
+            You can zoom and postion it whatever you like.</div>
+
           
         </div>
           <div class="row_tag" id="ifsucre">
