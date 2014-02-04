@@ -10,7 +10,7 @@
 </div>
 
 <!--FIN SLIDER DEBUT CONTENT -->
-<div id="homepage">
+<div id="homepage" class="reso_1024">
 	<div class="col1">
 		<div class="home1 bg_home bg_black">
 			<div class="home_title bg_white">Chef of the week</div>
@@ -52,7 +52,7 @@
 		</div>
 		<div class="home6 bg_home bg_orange">
 			<div class="home_title bg_orange">Shiftie News</div>
-			<span class="news">This is the place where whe are going to display some of our news, or some random posts. Everyday this news will be changer by another one from our team.</span>
+			<div class="news">This is the place where whe are going to display some of our news, or some random posts. Everyday this news will be changer by another one from our team.</div>
 		</div>
 	</div>
 	<div class="col4">

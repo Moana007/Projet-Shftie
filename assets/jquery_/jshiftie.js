@@ -14,6 +14,12 @@ $('.ccc2').hide();
 $('.signup').hide();
 $('.register').hide();
 
+$('#ifsucre').hide();
+$('#ifsale').hide();
+$('#ifvege').hide();
+$('#ifviande').hide();
+$('#ifmer').hide();
+
 $('.a1').mouseenter(function(){
 	$('.aaa1').fadeIn(100);
 	$('.aa1').hide();
@@ -115,3 +121,42 @@ $('.icon-cancel').click(function(){
 	$('.signup').fadeOut(200);
 	$('.register').fadeOut(200);
 	})
+
+$('#sucre').click(function(){
+	$('#ifsucre').show();
+	$('#ifsale').hide();
+	$('#ifvege').hide();
+	$('#tag4').hide();
+})
+
+$('#sale').click(function(){
+	$('#ifsale').show();
+	$('#ifsucre').hide();
+	$('#ifvege').hide();
+	$('#tag4').show();
+})
+
+$('#vege').click(function(){
+	$('#ifvege').show();
+	$('#ifsale').hide();
+	$('#ifsucre').hide();
+	$('#tag4').show();
+})
+
+$('#viande').click(function(){
+	$('#ifviande').show();
+	$('#ifmer').hide();
+	$('#tag4').show();
+})
+
+$('#mer').click(function(){
+	$('#ifmer').show();
+	$('#ifviande').hide();
+	$('#tag4').show();
+})
+
+$('#mer2').click(function(){
+	$('#ifmer2').show();
+	$('#ifviande').hide();
+	$('#tag4').show();
+})

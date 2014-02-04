@@ -68,12 +68,12 @@
               <li><a href="?appli=users&action=account">Profil</a></li>
               <li><a href="?appli=home&action=myrecipe">My recipes</a></li>
               <li><a href="?appli=home&action=book">My books</a></li>
+              <li><a href="?appli=users&action=logout">Log Out</a></li>
             </ul>
           </li>   
       </ul>
     
       <a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
-      <a href="?appli=users&action=logout" class="icon icon-off logout"></a>
     </div>
     
     <div class="search_field">
@@ -87,7 +87,7 @@
     
 
 <!-- Zone de pop-up connect/register -->
-    <div class="signup">
+    <div class="signup" style="display:none;">
         <div class="titre_2">Sign In</div>
         <div class="sous_titre">Log into your account and start sharing!</div>
         <form class="log" id="formu_co" name="login">
@@ -100,7 +100,7 @@
         <a href="#" class="icon icon-cancel"></a>
       </div>
 
-      <div class="register">
+      <div class="register" style="display:none;">
         <div class="titre_2">Register Now</div>
         <div class="sous_titre">Register and start sharing!</div>
         <form class="log" method="post" id="formu_register" action="?appli=users&action=add_user">

@@ -23,10 +23,10 @@
 
 <div id="slider">
   <!-- <div class="image_slider"><img src="<?php echo $recipe['photo']; ?>"> -->
-  <div style="width:1280px; height:350px; background: url('<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>') center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;" class="image_slider">
+  <div style="width:1024px; height:280px; background: url('<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>') center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;" class="image_slider">
     <div class="info_slider">
       <span class="slider_titre"><?php echo $recipe['recette_name']; ?></span>
-      <span class="slider_auteur"><a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><?php foreach($authors as $author){ echo $author['users_name']." ".$author['users_firstname']; }?></a></span>
+      <!--<span class="slider_auteur"><a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><?php foreach($authors as $author){ echo $author['users_name']." ".$author['users_firstname']; }?></a></span>-->
       <span class="slider_texte"><?php echo $recipe['description']; ?></span>
     <?php if(isset($_SESSION['users_id'])){ 
             if($bt_vote == 0){ ?>
@@ -140,7 +140,7 @@
       		$var = $var + 1;  
           $idrecipe = $recipe_mores['recettes_id'];?>
         <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
-              <img style="width:305px; height:200px;" src="<?php echo $recipe_mores['photo']; ?>">
+              <img src="<?php echo $recipe_mores['photo']; ?>">
               <div class="views_bloc_recette">
                   <div class="views_title aa<?php echo $var; ?>"><?php echo $recipe_mores['recette_name']; ?></div>
                   <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
