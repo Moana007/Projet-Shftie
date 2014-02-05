@@ -19,7 +19,7 @@
             <div class="case_tag"><input type="radio" name="group1" value="ve" id="vege">Végétarien</div>
           </div>
         
-        <div class="ligne_bt"><a href="#" class="bt vert go_two">Next step</a></div>
+        <div class="ligne_bt"><a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step2']);" class="bt vert go_two">Next step</a></div>
           <div class="etape">
             <span class="undone done">1</span>
             <span class="undone">2</span>
@@ -77,7 +77,7 @@
             <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"> <?php echo $dataj['tags_name']; ?></div>
             <?php endforeach; ?>
           </div>
-        <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" class="bt vert go_three">Next step</a></div>
+        <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step3']);" class="bt vert go_three">Next step</a></div>
       <div class="etape">
         <span class="undone done">1</span>
         <span class="undone done">2</span>
@@ -148,7 +148,7 @@
         <?php endforeach; ?>
       </div>
 
-      <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" class="bt vert go_four">Next step</a></div>
+      <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step4']);" class="bt vert go_four">Next step</a></div>
   
       
       <div class="etape">
