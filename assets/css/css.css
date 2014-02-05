@@ -1631,22 +1631,32 @@ background-color: #FFF;
 #create_recipe2 .step2 .images {
 	margin-top:30px;
 }
-#create_recipe2 .step2 .images .img_wide {
-	display: inline-block;
+#create_recipe2 .step2 .images #cover-container {
 	width: 1024px;
-	height: 280px;
-	margin-left: -20px;
-	background-color: #000;
+	height:280px;
+	position:relative;
+	margin-left:-20px;
+	overflow:hidden;
+
 }
 
-#create_recipe2 .step2 .images .previews {
-	display: inline-block;
-	width: 984px;
-	height: 350px;
-	text-align: center;
-	background-color: #000;
+#create_recipe2 .step2 .images #cover-image {
+	width: 1024px;
+	position:absolute;
+	margin-left:-20px;
 
+}
+
+
+#create_recipe2 .step2 .images .previews {
+	position:absolute;
 	background-size: cover;
+	width: 1024px;
+
+}
+
+#create_recipe2 .step2 .images .previews img{
+	width: 100%;
 
 }
 

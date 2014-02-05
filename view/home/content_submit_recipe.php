@@ -44,8 +44,8 @@
 
         <div id="cover-container">
 
-          <div id="cover-image" style="background-image"></div>
-          <div class="previews"></div>
+          <div id="cover-image" style="background-image; background-size: cover; background-position:center"></div>
+          <div class="previews"><img src="assets/img/uploads/Thief-Clocktower-topview.jpg" alt=""></div>
 
         </div>
 

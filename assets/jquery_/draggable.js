@@ -1,16 +1,7 @@
-$(document).on( 'ready', function() {
+$(function() {
+
 	
-	var url = $('#cover-image').css('background-image').replace('url(', '').replace(')', '').replace("'", '').replace('"', '');
-	var bgImg = $('<img />');
-	bgImg.hide();
-	bgImg.bind('load', function(){
-	    var imgheight = $(this).height();
-		$('#cover').css('height',imgheight);
-	});
-	$('#cover').append(bgImg);
-	bgImg.attr('src', url);
-	
-	$('#cover').draggable({
+	$('.previews').draggable({
 		
 	    drag: function(event, ui)
 	    {
@@ -28,11 +19,11 @@ $(document).on( 'ready', function() {
 	        if ( ui.position.left < maxleft) {
 	            ui.position.left = maxleft;
 	        }
-			var postop = $('#cover').css('top');
+			var postop = $('.previews').css('top');
 			$('#cover-image').css('backgroundPosition','center '+postop);
 	    },
 	    stop: function(event, ui){
-				var p = $('#cover');
+				var p = $('.previews');
 				var position = p.position();
 				var positiontop = position.top;
 				console.log("top:" + positiontop);
