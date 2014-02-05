@@ -23,7 +23,8 @@
 
 <div id="slider">
   <!-- <div class="image_slider"><img src="<?php echo $recipe['photo']; ?>"> -->
-  <div style="width:1024px; height:280px; background: url('<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>') center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;" class="image_slider">
+  <div style="width:1024px; height:280px; overflow:hidden; " class="image_slider">
+    <img style="position:absolute; top:0px;" src='<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>' atl='' />
     <div class="info_slider">
       <span class="slider_titre"><?php echo $recipe['recette_name']; ?></span>
       <!--<span class="slider_auteur"><a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><?php foreach($authors as $author){ echo $author['users_name']." ".$author['users_firstname']; }?></a></span>-->
