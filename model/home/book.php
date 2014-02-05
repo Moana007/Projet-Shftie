@@ -13,13 +13,12 @@
 	function add_recipe_book($books_id, $books_id_recettes){
 		global $connexion;
 		
-
 		$query = $connexion->prepare('INSERT INTO RECETTES_BOOKS 
-		(books_id, recettes_id) 
-		VALUES (:books_id, :books_id_recettes)');
-		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
-		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
-		$query->execute();
+-		(books_id, recettes_id) 
+-		VALUES (:books_id, :books_id_recettes)');
+-		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
+-		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
+-		$query->execute();
 	}
 	
 	function show_book(){
