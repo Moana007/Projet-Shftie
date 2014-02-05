@@ -13,18 +13,21 @@
 		<script type="text/javascript" src="assets/ajax/create_step_effect.js"></script>
 		<script type="text/javascript" src="assets/ajax/submit_register_ajax.js"></script>
 
-		<script type="text/javascript" src="assets/jquery_/draggable.js"></script>
+		<!-- verification sur le formulaire de connexion utilisateur -->
+		<script type="text/javascript" src="assets/ajax/verif_login.js"></script>
+		<!-- Page myrecipe -->
+  		<script type="text/javascript" src="assets/jquery_/jshiftie.js"></script>
+
 		<script src="assets/jquery_/jquery-ui.custom.min.js"></script>
+		<script type="text/javascript" src="assets/jquery_/draggable.js"></script>
 
 		<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
 		
-		<!-- verification sur le formulaire de connexion utilisateur -->
-		<script type="text/javascript" src="assets/ajax/verif_login.js"></script>
-
-		<!-- Page myrecipe -->
-  		<script type="text/javascript" src="assets/jquery_/jshiftie.js"></script>
+	
 		
-		 Google Analytics Content Experiment code 
+<!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
+<!--- - - - - - - - -  Google Analytics Content Experiment code - - - - - - - - --> 
+<!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='78884588-1',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;

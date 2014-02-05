@@ -42,7 +42,7 @@ $(document).ready(function ()
             //$('.previews').css('backgroundImage' ,  "url('" +urlimage+ "')");
           // var imagesource = $(this).val('#photo');
           ///console.log(imagesource);
-          $('.previews').css('backgroundImage' ,  "url('" +url+ "')"); 
+          $('.previews').attr('src', url);
 
             
           });
