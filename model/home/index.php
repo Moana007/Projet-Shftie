@@ -106,15 +106,6 @@
 		return $data5;
 	}
 	
-		function tags_show6(){
-		global $connexion;
-			
-		$query6 = $connexion->prepare("SELECT * FROM TAGS WHERE tags_categ_id = :id");
-		$query6->bindValue(':id', '6', PDO::PARAM_INT);
-		$query6->execute();
-		$data6 = $query6->fetchAll();
-		return $data6;
-	}
 	
 		function tags_show7(){
 		global $connexion;

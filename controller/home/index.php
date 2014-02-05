@@ -6,7 +6,6 @@
 	$data3 = tags_show3();
 	$data4 = tags_show4();
 	$data5 = tags_show5();
-	$data6 = tags_show6();
 	$data7 = tags_show7();
 
 	include_once('view/home/index.php');

@@ -67,6 +67,12 @@
 		else if($action == 'book_add'){
 			include_once('controller/home/add_recipe_book.php');
 		}
+		else if($action == 'achievement'){
+			include_once('controller/home/achievement.php');
+		}
+		else if($action == 'achievement2'){
+			include_once('controller/home/achievement2.php');
+		}
 	}
 	else if($appli == 'users'){
 		if ($action == 'account'){

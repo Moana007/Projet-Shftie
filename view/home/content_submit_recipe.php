@@ -14,9 +14,9 @@
 
          <div class="row_tag">
             <div class="tag_title">Tags</div>
-            <div class="case_tag"><input type="radio" name="group1" value="" id="sucre">Sucré</div>
-            <div class="case_tag"><input type="radio" name="group1" value="" id="sale">Salé</div>
-            <div class="case_tag"><input type="radio" name="group1" value="" id="vege">Végétarien</div>
+            <div class="case_tag"><input type="radio" name="group1" value="su" id="sucre">Sucré</div>
+            <div class="case_tag"><input type="radio" name="group1" value="sa" id="sale">Salé</div>
+            <div class="case_tag"><input type="radio" name="group1" value="ve" id="vege">Végétarien</div>
           </div>
         
         <div class="ligne_bt"><a href="#" class="bt vert go_two">Next step</a></div>
@@ -56,34 +56,26 @@
         </div>
           <div class="row_tag" id="ifsucre">
             <div class="tag_title">Tags if Sucré</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Chocolat</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Gateau</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Patisserie</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Fruit</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Glace</div>
+            <?php foreach($data4 as $datam): ?>
+            <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datam['tags_id']; ?>"> <?php echo $datam['tags_name']; ?></div>
+            <?php endforeach; ?>
           </div>
 
            <div class="row_tag" id="ifsale">
             <div class="tag_title">Tags if Salé</div>
             <div class="case_tag"><input type="radio" name="group2" value="" id="viande">Viande</div>
             <div class="case_tag"><input type="radio" name="group2" value="" id="mer">Produit de la mer</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Soupe</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Pate</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Pizza</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Salade</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Sandwich</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Fromage</div>
+            <?php foreach($data5 as $dataj): ?>
+            <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"> <?php echo $dataj['tags_name']; ?></div>
+            <?php endforeach; ?>
           </div>
 
           <div class="row_tag" id="ifvege">
             <div class="tag_title">Tags if Végétarien</div>
             <div class="case_tag"><input type="radio" name="group3" value="" id="mer2">Produit de la mer</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Soupe</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Pate</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Pizza</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Salade</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Sandwich</div>
-            <div class="case_tag"><input type="checkbox" name="option1" value="">Fromage</div>
+            <?php foreach($data5 as $dataj): ?>
+            <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"> <?php echo $dataj['tags_name']; ?></div>
+            <?php endforeach; ?>
           </div>
         <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" class="bt vert go_three">Next step</a></div>
       <div class="etape">
@@ -139,21 +131,21 @@
         
      <div class="row_tag" id="ifviande">
         <div class="tag_title">Tags if Viande</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Canard</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Poulet</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Boeuf</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Hallal</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Casher</div>
+        <?php foreach($data1 as $datas): ?>
+        <div class="case_tag"><input type="checkbox" name="option[]" value="<?php $datas['tags_id']; ?>"> <?php echo $datas['tags_name']; ?></div>
+        <?php endforeach; ?>
       </div>
       <div class="row_tag" id="ifmer">
         <div class="tag_title">Tags if Prod.De la mer</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Poisson</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Crustacé</div>
+        <?php foreach($data2 as $datass): ?>
+        <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datass['tags_id']; ?>"> <?php echo $datass['tags_name']; ?></div>
+        <?php endforeach; ?>
       </div>
       <div class="row_tag" id="ifmer2">
         <div class="tag_title">Tags if Prod.De la mer</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Poisson</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Crustacé</div>
+        <?php foreach($data2 as $datass): ?>
+        <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datass['tags_id']; ?>"> <?php echo $datass['tags_name']; ?></div>
+        <?php endforeach; ?>
       </div>
 
       <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" class="bt vert go_four">Next step</a></div>
@@ -181,15 +173,9 @@
 
       <div class="row_tag" id="tag4">
         <div class="tag_title">Tags 4</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Grillé</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Frit</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Barbecue</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Vapeur</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Légume</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Pain</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Epice</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Herbe</div>
-        <div class="case_tag"><input type="checkbox" name="option1" value="">Sauce</div>
+        <?php foreach($data7 as $datak): ?>
+        <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datak['tags_id']; ?>"> <?php echo $datak['tags_name']; ?></div>
+        <?php endforeach; ?> 
       </div>
 
         
