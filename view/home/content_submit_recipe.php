@@ -11,6 +11,13 @@
           <!-- DESCRIPTION -->
           <div class="form_title">Description:</div>
          <textarea class="case_remplir" type="text" name="description" id="description"></textarea>
+
+         <div class="row_tag">
+            <div class="tag_title">Tags</div>
+            <div class="case_tag"><input type="radio" name="group1" value="" id="sucre">Sucré</div>
+            <div class="case_tag"><input type="radio" name="group1" value="" id="sale">Salé</div>
+            <div class="case_tag"><input type="radio" name="group1" value="" id="vege">Végétarien</div>
+          </div>
         
         <div class="ligne_bt"><a href="#" class="bt vert go_two">Next step</a></div>
           <div class="etape">
@@ -33,20 +40,51 @@
             <input type="hidden" id="photo" name="photo" value="">
           <div class="images">
             <!-- IMG NORMALE -->
+
+
+        <div id="cover-container">
+
+          <div id="cover-image" style="background-image"></div>
           <div class="previews"></div>
-          <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
-          You can zoom and postion it whatever you like.</div>
-          <!-- IMG WIDE -->
-          <div class="img_wide">
-            <div class="ui-widget-content">
-              <div class="picturecontainer" style="overflow: hidden; position: relative; width: 1280px; height: 380px;">
-                <img style="position: absolute;" class="headerimage ui-corner-all" src="http://us.cdn282.fansshare.com/photos/chicken/popcorn-chicken-food-874173611.jpg" />
-              </div>
-            </div>
-          </div>
+
+        </div>
+
+            <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
+            You can zoom and postion it whatever you like.</div>
+
           
         </div>
-      
+          <div class="row_tag" id="ifsucre">
+            <div class="tag_title">Tags if Sucré</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Chocolat</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Gateau</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Patisserie</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Fruit</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Glace</div>
+          </div>
+
+           <div class="row_tag" id="ifsale">
+            <div class="tag_title">Tags if Salé</div>
+            <div class="case_tag"><input type="radio" name="group2" value="" id="viande">Viande</div>
+            <div class="case_tag"><input type="radio" name="group2" value="" id="mer">Produit de la mer</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Soupe</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Pate</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Pizza</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Salade</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Sandwich</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Fromage</div>
+          </div>
+
+          <div class="row_tag" id="ifvege">
+            <div class="tag_title">Tags if Végétarien</div>
+            <div class="case_tag"><input type="radio" name="group3" value="" id="mer2">Produit de la mer</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Soupe</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Pate</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Pizza</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Salade</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Sandwich</div>
+            <div class="case_tag"><input type="checkbox" name="option1" value="">Fromage</div>
+          </div>
         <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" class="bt vert go_three">Next step</a></div>
       <div class="etape">
         <span class="undone done">1</span>
@@ -99,7 +137,26 @@
            <select class="difficulty" id="level" name="level" type="text"><option>Easy</option><option>Medium</option><option>Hard</option></select>
       </div>
         
-        <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" class="bt vert go_four">Next step</a></div>
+     <div class="row_tag" id="ifviande">
+        <div class="tag_title">Tags if Viande</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Canard</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Poulet</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Boeuf</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Hallal</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Casher</div>
+      </div>
+      <div class="row_tag" id="ifmer">
+        <div class="tag_title">Tags if Prod.De la mer</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Poisson</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Crustacé</div>
+      </div>
+      <div class="row_tag" id="ifmer2">
+        <div class="tag_title">Tags if Prod.De la mer</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Poisson</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Crustacé</div>
+      </div>
+
+      <div class="ligne_bt"><a href="#" class="bt gris go_two">Previous step</a><a href="#" class="bt vert go_four">Next step</a></div>
   
       
       <div class="etape">
@@ -121,8 +178,22 @@
         <div class="center">
           <div class="form_title">Preparation</div>
           <textarea class="preparation" id="preparation" name="preparation" type="text"></textarea>
+
+      <div class="row_tag" id="tag4">
+        <div class="tag_title">Tags 4</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Grillé</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Frit</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Barbecue</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Vapeur</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Légume</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Pain</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Epice</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Herbe</div>
+        <div class="case_tag"><input type="checkbox" name="option1" value="">Sauce</div>
+      </div>
+
         
-        <div class="ligne_bt"><a href="#" class="bt gris go_three">Previous step</a><a href="#" class="bt vert go_five">Next step</a></div>
+        <div class="ligne_bt"><a href="#" class="bt gris go_three">Previous step</a><button type="submit" id="submit" class="bt vert">Upload!</button></div>
       </div>
     
       
@@ -135,95 +206,7 @@
       </div>
     </div>
 </div>
-     <div id="create_recipe5" class="create_recipe_trigger">
-      <div class="step step5">
-      <div class="titre_recette"><span>•</span> Step 5</div>
-        
-      <div class="expl">Okay this our final goal, tag your recipe with those tags we propose you down there!</div>
-      
-       
-           <div class="bloc_tag">
-          
-          
-          <div class="row_tag">
-            <div class="tag_title">Viande</div>
-<?php foreach($data1 as $datas): ?>            
-            <div class="case_tag"><input id="option1" type="checkbox" name="option[]" value="<?php echo $datas['tags_id']; ?>"><?php echo $datas['tags_name'];  ?></div>
-<?php endforeach; ?>            
-          </div>
-       
-       
-       
-          <div class="row_tag">
-            <div class="tag_title">Produit de la mer</div>
-<?php foreach($data2 as $datass): ?>            
-            <div class="case_tag"><input id="option2" type="checkbox" name="option[]" value="<?php echo $datass['tags_id']; ?>"><?php echo $datass['tags_name']; ?></div>
- <?php endforeach; ?>            
-          </div>
-       
-       
-       
-          <div class="row_tag">
-            <div class="tag_title">Condiment & Accompagnement</div>
-<?php foreach($data3 as $datab): ?>            
-            <div class="case_tag"><input id="option3" type="checkbox" name="option[]" value="<?php echo $datab['tags_id']; ?>"><?php echo $datab['tags_name']; ?></div>
-<?php endforeach; ?>            
-          </div>
-        
-        
-        
-          <div class="row_tag">
-            <div class="tag_title">Sucré</div>
-<?php foreach($data4 as $datam): ?>            
-            <div class="case_tag"><input id="option4" type="checkbox" name="option[]" value="<?php echo $datam['tags_id']; ?>"><?php echo $datam['tags_name']; ?></div>
-<?php endforeach; ?>
-          </div>
-      
-      
-        </div>
-        <div class="bloc_tag2">
-        
-        
-          <div class="row_tag">
-            <div class="tag_title">Salé</div>
-<?php foreach($data5 as $dataj): ?>            
-            <div class="case_tag"><input id="option5" type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"><?php echo $dataj['tags_name']; ?></div>
-<?php endforeach; ?>
-          </div>
-        
-            
-          <div class="row_tag">
-            <div class="tag_title">Cuisson</div>
-                        
-<?php foreach($data6 as $datag): ?>
-            <div class="case_tag"><input id="option6" type="checkbox" name="option[]" value="<?php echo $datag['tags_id']; ?>"><?php echo $datag['tags_name']; ?></div>
-<?php endforeach; ?> 
-          </div>
-          
-          
-          <div class="row_tag">
-            <div class="tag_title">Spécifité</div>
-<?php foreach($data7 as $datak): ?>            
-            <div class="case_tag"><input id="option7" type="checkbox" name="option[]" value="<?php echo $datak['tags_id']; ?>"><?php echo $datak['tags_name']; ?></div>
-<?php endforeach; ?>            
-          </div>
-          
-          
-        </div>
-        
-        <div class="ligne_bt"><a href="#" class="bt gris go_four">Previous step</a><button type="submit" id="submit" class="bt vert">Upload!</button></div>
-      
-    
-      
-      <div class="etape">
-        <span class="undone done">1</span>
-        <span class="undone done">2</span>
-        <span class="undone done">3</span>         
-        <span class="undone done">4</span>
-        <span class="undone done">5</span>
-      </div>
-  </div>
-    </div>
+     
    
     </div>
      </form>
