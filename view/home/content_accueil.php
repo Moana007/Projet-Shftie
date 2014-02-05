@@ -21,10 +21,9 @@
 			</div>
 		</div>
 		<div class="home2 bg_home bg_black">
-			<div class="home_title bg_green">Partner's product</div>
+			<div class="home_title bg_green">Find us on Facebook</div>
 			<div class="content">
-				<img src="assets/img/products.png">
-				<span>Oil and Spice Kit</span>
+				<span></span>
 			</div>
 		</div>
 	</div>
@@ -38,7 +37,7 @@
 			</div>
 		</div>
 		<div class="home4 bg_home bg_black">
-			<div class="home_title bg_grey">Like us!</div>
+			<div class="home_title bg_white">Our Google+ Page</div>
 			<div class="center">
 				<img src="assets/img/like_panel.png">
 			</div>

@@ -19,6 +19,7 @@ $('#ifsale').hide();
 $('#ifvege').hide();
 $('#ifviande').hide();
 $('#ifmer').hide();
+$('#ifmer2').hide();
 
 $('.a1').mouseenter(function(){
 	$('.aaa1').fadeIn(100);
@@ -145,6 +146,7 @@ $('#vege').click(function(){
 
 $('#viande').click(function(){
 	$('#ifviande').show();
+	$('#ifmer2').hide();
 	$('#ifmer').hide();
 	$('#tag4').show();
 })
