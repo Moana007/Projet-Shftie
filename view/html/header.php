@@ -104,7 +104,7 @@
         <div class="titre_2">Register Now</div>
         <div class="sous_titre">Register and start sharing!</div>
         <form class="log" method="post" id="formu_register" action="?appli=users&action=add_user">
-          <div class="ligne_log">Login<input type="text" name="" id=""></input></div>
+          <div class="ligne_log">Login <input type="text" name="login" id="pseudo"></input></div>
           <div class="ligne_log">Name <input type="text" name="name" id="name"></input></div>
           <div class="ligne_log">Firstname <input type="text" name="firstname" id="firstname"></input></div>
           <div class="ligne_log">Email <input type="text" name="mail" id="mail"></input></div>

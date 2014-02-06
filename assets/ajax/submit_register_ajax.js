@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#formu_register').on('submit', function() {
  
+        var pseudo = $('#pseudo').val();
         var name = $('#name').val();
         var firstname = $('#firstname').val();
         var mail = $('#mail').val();
@@ -11,7 +12,7 @@ $(document).ready(function() {
 
 
 
-        if(name == '' || firstname == '' || mail == '' || pwd1 == '' || pwd2 == '' ) {
+        if(pseudo === '' || name === '' || firstname === '' || mail === '' || pwd1 === '' || pwd2 === '' ) {
             $('.error-msg').remove();
             $("#message_error2").append("<span class='error-msg' style='color:red;' >Veuillez renseigner tous les champs</span>");
             $('#pwd1, #pwd2').val("");
@@ -21,12 +22,12 @@ $(document).ready(function() {
             $("#message_error2").append("<span class='error-msg' style='color:red;' >Passwords don't match</span>");
             $('#pwd1, #pwd2').val("");
         }
-        else if(isEmail(mail) == false){
+        else if(isEmail(mail) === false){
             $('.error-msg').remove();
             $("#message_error2").append("<span class='error-msg' style='color:red;' >Invalid Email</span>");
             $('#pwd1, #pwd2').val("");
         }
-        // else if(isPwd(pwd1) == false){
+               // else if(isPwd(pwd1) == false){
         //     $('.error-msg').remove();
         //     $("#message_error2").append("<span class='error-msg' style='color:red;' >Invalid Email</span>");
         //     $('#pwd1, #pwd2').val("");

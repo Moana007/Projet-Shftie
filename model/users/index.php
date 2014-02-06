@@ -103,7 +103,47 @@ function connect_user($login, $pwd, $box){
 	}
 }
 
+function update_pwd($new_pwd){
 
+			$pwd = md5($new_pwd);
+			$user_id = $_SESSION['users_id'];
+
+			global $connexion;
+
+			$query = $connexion->prepare("UPDATE USERS SET password = :pwd WHERE users_id = :id ");
+			$query->bindParam(':id', $user_id, PDO::PARAM_INT);						
+			$query->bindParam(':pwd', $pwd, PDO::PARAM_STR); 
+			$query->execute();
+
+}
+
+function update_user($age, $city, $favorite_plate, $users_desc, $pref, $sex){
+	
+		try{
+			global $connexion;
+
+			$user_id = $_SESSION['users_id'];
+
+			$query = $connexion->prepare("UPDATE USERS SET 
+					   age=:age, city=:city, favorite_plate=:f_p,
+					   users_description=:users_d, users_favorite=:pref, sexe=:sex 
+				WHERE users_id = :id ");
+				
+			$query->bindParam(':age', $age, PDO::PARAM_INT);
+			$query->bindParam(':city', $city, PDO::PARAM_STR);	
+			$query->bindParam(':f_p', $favorite_plate, PDO::PARAM_STR);
+			$query->bindParam(':users_d', $users_desc, PDO::PARAM_INT);
+			$query->bindParam(':pref', $pref, PDO::PARAM_STR);
+			$query->bindParam(':sex', $sex, PDO::PARAM_STR);
+			$query->bindParam(':id', $user_id, PDO::PARAM_INT);						
+			$query->execute();
+
+		}
+		catch(Exception $e){
+			echo "Connexion SQL impossible; " ,$e->getMessage();
+			die();
+		}
+	}
 
 
 ?>

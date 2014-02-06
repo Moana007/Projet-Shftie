@@ -1,7 +1,7 @@
 <?php 
 
 
-	function create_user($name, $firstname, $pwd1, $mail){
+	function create_user($login, $name, $firstname, $pwd1, $mail){
 
 		
 		
@@ -15,10 +15,10 @@
 			$pwd = md5($pwd1);
 
 			$query = $connexion->prepare("INSERT INTO USERS 
-					   (users_name, users_firstname, password, mail, admin, key_validation, users_photo, validation) 
-				VALUES (:name, :firstname, :pwd, :mail, :admin, :cle, :photo, :validation)");
+					   (pseudo, users_name, users_firstname, password, mail, admin, key_validation, users_photo, validation) 
+				VALUES (:login, :name, :firstname, :pwd, :mail, :admin, :cle, :photo, :validation)");
 				
-			
+			$query->bindParam(':login', $login, PDO::PARAM_STR);
 			$query->bindParam(':name', $name, PDO::PARAM_STR);
 			$query->bindParam(':firstname', $firstname, PDO::PARAM_STR);	
 			$query->bindParam(':pwd', $pwd, PDO::PARAM_STR);

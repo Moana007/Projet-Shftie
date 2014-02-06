@@ -105,6 +105,10 @@
 		{ 
 			include_once('controller/users/confirm_mail.php');
 		}
+		else if ($action == 'udpate_user')
+		{ 
+			include_once('controller/users/update_user.php');
+		}
 
 	}
 
