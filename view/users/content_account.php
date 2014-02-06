@@ -20,9 +20,11 @@
     <div class="books">
       <div class="titre_1">Books</div>
       <div class="row_books">
+      <?php if(!empty($show_book)) { ?>
       <?php foreach($show_book as $show_books) { ?>
         <a href="?appli=home&action=book&id_books=<?php echo $show_books['books_id']; ?>" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
-      <?php } ?>     
+      <?php } ?>
+      <?php } else { echo "<p style='color:#6E902A;'>You have no Book for the moment</p>"; } ?>     
       </div>
       <a href="#" class="bt vert">View More</a>
     </div>
@@ -34,7 +36,7 @@
         <div class="titre_1">Favorites</div>
 
          <div class="bloc_profil">
-        
+          <?php if(!empty($fav)) { ?>
           <?php $var = 0; foreach ($fav as $fav):  
             $var = $var + 1;  
             $idrecipe = $fav['recettes_id']; ?>
@@ -63,6 +65,7 @@
               </div>
             </a>
           <?php endforeach; ?> 
+          <?php } else { echo "<p style='color:#6E902A;'>You have no Favorite for the moment</p>"; } ?>
 
           <?php if($fav_nb > 4){ 
              echo '<a href="#" class="bt vert">View More</a>';
@@ -76,7 +79,7 @@
       <div class="favorite">
         <div class="titre_1">Recipes</div>
         <div class="bloc_profil">
-        
+          <?php if(!empty($recipe)) { ?>
           <?php $var = 0; foreach ($recipe as $recipes):  
         		$var = $var + 1;  
             $idrecipe = $recipes['recettes_id'];?>
@@ -104,7 +107,8 @@
                 </div>
               </div>
             </a>
-          <?php endforeach; ?>  
+          <?php endforeach; ?> 
+          <?php } else { echo "<p style='color:#6E902A;'>You have no Recipe for the moment</p>"; } ?> 
          <?php if($recipe_nb > 4){ 
              echo '<a href="#" class="bt vert">View More</a>';
                  }
