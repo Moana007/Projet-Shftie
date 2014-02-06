@@ -22,7 +22,7 @@
 
 
       <!-- FORMULAIRE DE CHANGEMENT DE MDP -->
-      <form class="" method="post" id="pwd_udpate" action="?appli=users&action=modif_users">
+      <form class="" method="post" id="pwd_udpate" action="?appli=users&action=update_user">
 
           <p>Actual password <input type="password" name="pwd"></p>
           <br/>
@@ -36,18 +36,18 @@
       <br/><br/><br/>
 
       <!-- FORMULAIRE DE CHANGEMENT D'INFORMATION UTILISATEUR -->
-      <form class="" method="post" id="users_udpate" action="?appli=users&action=modif_users">
+      <form class="" method="post" id="users_udpate" action="?appli=users&action=update_user">
         <?php foreach($authors as $authors): ?>
 
-          <p>Age<input type="text" name="age" value='<?php echo $authors["age"]; ?>' ></p>
+          <p>Age<input type="text" name="age" value="<?php echo $authors['age']; ?>" ></p>
           <br/>
-          <p>City<input type="text" name="city" value='<?php echo $authors["city"]; ?>' ></p>
+          <p>City<input type="text" name="city" value="<?php echo $authors['city']; ?>" ></p>
           <br/>
-          <p>Favorite plate<input type="text" name="favorite_plate" value='<?php echo $authors["favorite_plate"]; ?>' ></p>
+          <p>Favorite plate<input type="text" name="favorite_plate" value="<?php echo $authors['favorite_plate']; ?>" ></p>
           <br/>
-          <p>Description of you<input type="text" name="users_desc" value='<?php echo $authors["users_description"]; ?>' ></p>
+          <p>Description of you<input type="text" name="users_desc" value="<?php echo $authors['users_description']; ?>" ></p>
           <br/>
-          <p>Your preference <input type="text" name="pref" value='<?php echo $authors["users_favorite"]; ?>' ></p>
+          <p>Your preference <input type="text" name="pref" value="<?php echo $authors['users_favorite']; ?>" ></p>
           <br/>
 
           <!-- Bouton radio pour choix du sexe, affichage en fonction de son état -->
