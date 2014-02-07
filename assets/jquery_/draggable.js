@@ -21,6 +21,9 @@ $(function() {
 	        }
 			var postop = $('.previews').css('top');
 			$('#cover-image').css('backgroundPosition','center '+postop);
+			//$('#cover-image').css('backgroundPosition','center '+postop);
+			$("#img_top").attr("value", postop);
+
 	    },
 	    stop: function(event, ui){
 				var p = $('.previews');

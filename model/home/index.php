@@ -1,5 +1,5 @@
 <?php 
-	function add_recipe($recette_name, $description, $photo, $preparation, $ingredient, $level, $time_prepa, $time_cuisson, $time_repos){
+	function add_recipe($recette_name, $description, $photo, $img_top, $preparation, $ingredient, $level, $time_prepa, $time_cuisson, $time_repos){
 			
 		global $connexion;
 		//echo $tags." == tags";
@@ -7,11 +7,12 @@
 		try {
 			$req_valid = 0;
 		
-			$query = $connexion->prepare('INSERT INTO RECETTES (recette_name, description, photo, preparation, ingredient, level, time_prepa, time_cuisson, time_repos, rec_validation, auteur)
-										  VALUES (:recette_name , :description, :photo, :preparation, :ingredient, :level, :time_prepa, :time_cuisson, :time_repos, :rec_validation, :auteur)');
+			$query = $connexion->prepare('INSERT INTO RECETTES (recette_name, description, photo, img_top, preparation, ingredient, level, time_prepa, time_cuisson, time_repos, rec_validation, auteur)
+										  VALUES (:recette_name , :description, :photo, :top, :preparation, :ingredient, :level, :time_prepa, :time_cuisson, :time_repos, :rec_validation, :auteur)');
 			$query->bindParam(':recette_name', $recette_name, PDO::PARAM_STR);
 			$query->bindParam(':description', $description,  PDO::PARAM_STR);
 			$query->bindParam(':photo', $photo,  PDO::PARAM_STR);
+			$query->bindParam(':top', $img_top,  PDO::PARAM_INT);
 			$query->bindParam(':preparation', $preparation,  PDO::PARAM_STR);
 			$query->bindParam(':ingredient', $ingredient,  PDO::PARAM_STR);
 			$query->bindParam(':level', $level,  PDO::PARAM_STR);

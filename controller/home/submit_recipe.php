@@ -10,7 +10,7 @@ else{
         if(($_POST['recette_name'] != '') && ($_POST['description'] != '')) {
         	
             	
-        	$id_recette = add_recipe($_POST['recette_name'], $_POST['description'], $_POST['photo'], $_POST['preparation'], $_POST['ingredient'], $_POST['level'],$_POST['time_prepa'], $_POST['time_cuisson'], $_POST['time_repos']);
+        	$id_recette = add_recipe($_POST['recette_name'], $_POST['description'], $_POST['photo'], $_POST['img_top'], $_POST['preparation'], $_POST['ingredient'], $_POST['level'],$_POST['time_prepa'], $_POST['time_cuisson'], $_POST['time_repos']);
 
 
         	foreach($_POST['option'] as $valeur){
