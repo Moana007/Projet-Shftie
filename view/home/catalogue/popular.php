@@ -1,10 +1,6 @@
-      <?php $idrecipe = $pop_recipe['recettes_id']; echo $idrecipe; ?>
-      
-      <?php $order_vote = order_vote($idrecipe);?>
-      <?php 
-      $popopular = pop_recipe($order_vote);
-      foreach($popopular as $popular): ?>
-      <div class="bloc_recette">
+      <?php foreach($popular as $popular): ?>
+       <?php $idrecipe = $popular['recettes_id']; ?>
+         <div class="bloc_recette">
           <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><img src="<?php echo $popular['photo']; ?>"></a>
           <div class="info_bloc_recette">
               <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><?php echo $popular['recette_name']; ?></a>
@@ -25,13 +21,12 @@
               </div>
               <div class="views"><span class="icon icon-comment-empty"></span>
                  <?php 
-                  $comment = like_recipe($idrecipe);
+                  $comment = comment_recipe($idrecipe);
                   echo $comment;
                 ?>
               </div>
           </div>
       </div>
-
 
       <?php endforeach; ?>
         <div class="pagination">

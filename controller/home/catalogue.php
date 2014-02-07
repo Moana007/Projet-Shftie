@@ -3,7 +3,7 @@
 	include_once('model/home/count.php');
 	$rand = catalogue_rand();
 	$new = catalogue_new();
-	$popular = catalogue_popular();
+	$popular = catalogue_pop();
 	
 
 	

@@ -19,29 +19,12 @@
 		return $new;
 	}
 	
-	function catalogue_popular(){
+	function catalogue_pop(){
 		global $connexion;
-		$query = $connexion->prepare('SELECT * FROM RECETTES');
+		$query = $connexion->prepare('SELECT * FROM RECETTES ORDER BY nb_like DESC LIMIT 8');
 		$query->execute();
-		$popular = $query->fetch();
+		$popular = $query->fetchAll();
 		return $popular;
 	}
-	function order_vote($idrecipe){
-		global $connexion;
 
-		$query = $connexion->prepare('SELECT * FROM VOTE WHERE recettes_id_vote = :idrecipe');
-		$query->bindValue(':idrecipe', $idrecipe, PDO::PARAM_INT);
-		$query->execute();
-		$vote = $query->fetchAll();
-		return $vote;
-	}
-	function pop_recipe($vote){
-		global $connexion;
-
-		$query = $connexion->prepare('SELECT * FROM RECETTES ORDER by :order_vote');
-		$query->bindValue(':vote', $vote, PDO::PARAM_INT);
-		$query->execute();
-		$pop_recipe = $query->fetchAll();
-		return $pop_recipe;
-	} 
- ?>
+?>

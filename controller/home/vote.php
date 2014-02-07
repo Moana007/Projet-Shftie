@@ -11,6 +11,7 @@ else{
 		
 		if($verif_vote == 0){
 			vote($_POST['recipe_id_vote']);	
+			vote_nb($_POST['recipe_id_vote']);	
 			$reponse = 'ok';
 		}
 		else {

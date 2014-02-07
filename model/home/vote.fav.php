@@ -41,6 +41,12 @@ function verif_vote($id_rec){
 		$query->bindValue(':recette_id', $recipe_id_vote, PDO::PARAM_INT);
 		$query->execute();
 	}
+	function vote_nb($recipe_id_vote){
+		global $connexion;
+		$query = $connexion->prepare('UPDATE RECETTES SET nb_like = nb_like + 1 WHERE recettes_id = :idrecipe ');
+		$query->bindValue(':idrecipe', $recipe_id_vote, PDO::PARAM_INT);
+		$query->execute();
+	}
 // FIN VOTE
 	
 function verif_fav($recipe_id_fav){
