@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <?php if ($_GET['appli'] == 'home' && $_GET['action'] == 'recipe'  && $_GET['id_rec'] != '' ) { ?>
+      <?php if ($appli == 'home' && $action == 'recipe'  && $_GET['id_rec'] != '' ) { ?>
         <title><?php foreach($recipes as $recipe){ echo "Shiftie 2.0 - ".$recipe['recette_name']; }?></title>
         <meta name="description" content="<?php foreach($recipes as $recipe){ echo $recipe['description']; }?>">
         <meta name="og:image" content="<?php foreach($recipes as $recipe){ echo $recipe['photo']; }?>" />
@@ -73,7 +73,7 @@
           </li>   
       </ul>
     
-      <a href="?appli=users&action=account" class="image"><img src="assets/img/img_chef.png"></a>
+      <a href="?appli=users&action=account" class="image"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
     </div>
     
     <div class="search_field">

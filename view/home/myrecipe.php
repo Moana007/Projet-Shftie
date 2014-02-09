@@ -6,8 +6,8 @@
 		<div class="bloc_recette">
 			<a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><img src="<?php echo $recipe['photo']; ?>"></a>
 			<div class="info_bloc_recette">
-				<a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><?php echo $recipe['recette_name']; ?></a>
-				<?php echo substr(htmlentities($recipe['description']),0, 230); ?>
+				<a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><?php echo substr(htmlentities($recipe['recette_name']),0, 27); ?>..</a>
+				<?php echo substr(htmlentities($recipe['description']),0, 200); ?>
 			</div>
 			<div class="views_bloc_recette">
 				<div class="views"><span class="icon icon-star-empty"></span>

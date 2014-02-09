@@ -3,9 +3,11 @@
     <div class="profil_header">
       <img src="<?php foreach($author as $authors){ echo $authors['users_photo'];} ?>">
       <div class="info">
-        <div class="pseudo">Doe Doe</div>
-        <div class="nom"><?php foreach($author as $authors){ echo $authors['users_name']." ".$authors['users_firstname'];} ?></div>
-        <div class="age">28 ans - Male</div>
+        <?php foreach($author as $authors){ ?>
+          <div class="pseudo"><?php echo $authors['pseudo']; ?></div>
+          <div class="nom"><?php echo $authors['users_name']." ".$authors['users_firstname']; ?></div>
+          <div class="age"><?php echo $authors['age']." ans, ".$authors['sexe']; ?></div>
+        <?php } ?>
       </div>
       <?php   foreach($author as $authors){
                 if(!isset($_SESSION['users_id']) || $_SESSION['users_id'] == '' || $authors['users_id'] != $_SESSION['users_id'] ){ ?>

@@ -32,7 +32,7 @@ function onSubmit(event){
 		}
 		else{			
 			$('.error-msg').remove();
-			$("#message_error").append("<span class='error-msg' style='color:red;' >Attention, le mot de passe ou l'email est incorrect</span>");
+			$("#message_error").append("<span class='error-msg' style='color:red;' >Attention, le mot de passe ou l'email est incorrect<br/>(Ou nous n'avez pas encore validé votre compte)</span>");
 			$('#login, #pwd').val("");
 			
 			return false;

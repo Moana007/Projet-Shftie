@@ -1,5 +1,9 @@
 <form method="post" action="?appli=home&action=submit_recipe" id="formRecipe">
 <div id="create_recipe" class="create_recipe_trigger">
+
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
+        <!-- - - - - - - - - -  STEP 1  - - - - - - - - - - -->
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
       <div class="step step1">
         <div class="titre_recette"><span>•</span> Step 1</div>
         
@@ -7,10 +11,10 @@
         <form>
           <!-- TITRE RECETTE -->
           <div class="form_title">Title of the recipe:</div>
-          <input class="case_remplir" name="recette_name" id="recette_name" type="text"/>
+          <input class="case_remplir" name="recette_name" id="recette_name" type="text" maxlength="55"/>
           <!-- DESCRIPTION -->
           <div class="form_title">Description:</div>
-         <textarea class="case_remplir" type="text" name="description" id="description"></textarea>
+         <textarea class="case_remplir" type="text" name="description" id="description" maxlength="120" /></textarea>
 
          <div class="row_tag">
             <div class="tag_title">Tags</div>
@@ -25,10 +29,14 @@
             <span class="undone">2</span>
             <span class="undone">3</span>         
             <span class="undone">4</span>
-            <span class="undone">5</span>
+  
           </div>
     </div>
     </div>
+
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
+        <!-- - - - - - - - - -  STEP 2  - - - - - - - - - - -->
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
     <div id="create_recipe2" class="create_recipe_trigger">
       <div class="step step2">
         <div class="titre_recette"><span>•</span> Step 2</div>
@@ -79,14 +87,19 @@
           </div>
         <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step3']);" class="bt vert go_three">Next step</a></div>
       <div class="etape">
-        <span class="undone done">1</span>
+        <span class="undone done go_one">1</span>
         <span class="undone done">2</span>
         <span class="undone">3</span>         
         <span class="undone">4</span>
-        <span class="undone">5</span>
       </div>
       </div>
     </div>
+
+
+
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
+        <!-- - - - - - - - - -  STEP 3  - - - - - - - - - - -->
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->  
    <div id="create_recipe3" class="create_recipe_trigger">
       <div class="step step3">
       <div class="titre_recette"><span>•</span> Step 3</div>
@@ -109,7 +122,7 @@
           </div>
           <div class="row_time">
             <div class="form_title">Cooking time:
-            <select name="time_cuisson" class="time">
+            <select name="time_cuisson"  id="time_cuisson" class="time">
               <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
               <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
               <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option>
@@ -118,7 +131,7 @@
           </div>
           <div class="row_time">
             <div class="form_title">Rest time:
-            <select name="time_repos" class="time">
+            <select name="time_repos" id="time_repos" class="time">
               <option>-</option><option>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option><option>35</option><option>40</option>
               <option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option>
               <option>85</option><option>90</option><option>100</option><option>120</option><option>150</option><option>180</option><option>+180</option>
@@ -126,7 +139,7 @@
           </div>
           <!-- DIIFCULTE -->
           <div class="form_title">How difficult is it to cook?</div>
-           <select class="difficulty" id="level" name="level" type="text"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+           <select class="difficulty" id="level" name="level" type="text"><option>-</option><option>Easy</option><option>Medium</option><option>Hard</option></select>
       </div>
         
      <div class="row_tag" id="ifviande">
@@ -152,15 +165,20 @@
   
       
       <div class="etape">
-        <span class="undone done">1</span>
-        <span class="undone done">2</span>
-        <span class="undone done">3</span>         
+        <span class="undone done go_one">1</span>
+        <span class="undone done go_two">2</span>
+        <span class="undone done go_three">3</span>         
         <span class="undone">4</span>
-        <span class="undone">5</span>
       </div>
     </div>
   </div>
     </div>
+
+
+
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
+        <!-- - - - - - - - - -  STEP 4  - - - - - - - - - - -->
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
     <div id="create_recipe4" class="create_recipe_trigger">
       <div class="step step4">
       <div class="titre_recette"><span>•</span> Step 4</div>
@@ -184,11 +202,10 @@
     
       
       <div class="etape">
-        <span class="undone done">1</span>
-        <span class="undone done">2</span>
-        <span class="undone done">3</span>         
+        <span class="undone done go_one">1</span>
+        <span class="undone done go_two">2</span>
+        <span class="undone done go_three">3</span>         
         <span class="undone done">4</span>
-        <span class="undone">5</span>
       </div>
     </div>
 </div>

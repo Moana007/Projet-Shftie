@@ -1,11 +1,14 @@
 <div id="page_profil">
     <div class="profil_header">
-      <img src="assets/img/img_chef.png">
+
+    <?php foreach($authors as $authors): ?>
+      <img src="<?php echo $authors['users_photo']; ?>">
       <div class="info">
-        <div class="pseudo">DoeDoe</div>
-        <div class="nom">John Doe</div>
-        <div class="age">28 ans - Male</div>
+          <div class="pseudo"><?php echo $authors['pseudo']; ?></div>
+          <div class="nom"><?php echo $authors['users_name']." ".$authors['users_firstname']; ?></div>
+          <div class="age"><?php echo $authors['age']." ans, ".$authors['sexe']; ?></div>
       </div>
+      <a href="?appli=users&action=account" class="icon icon-user"></a>
     </div>
     <div class="notif">
       <div class="underscore_title">Notifications</div>
@@ -37,7 +40,7 @@
 
       <!-- FORMULAIRE DE CHANGEMENT D'INFORMATION UTILISATEUR -->
       <form class="" method="post" id="users_udpate" action="?appli=users&action=update_user">
-        <?php foreach($authors as $authors): ?>
+        
 
           <p>Age<input type="text" name="age" value="<?php echo $authors['age']; ?>" ></p>
           <br/>
@@ -65,7 +68,7 @@
             <p><input type="radio" name="sex" value="Female" checked>Female</p>
           <?php } ?>
 
-        <?php endforeach; ?>
+  <?php endforeach; ?>
         <input type="submit" class="" name="submit_info" value="Save information">
       </form>
     </div>
