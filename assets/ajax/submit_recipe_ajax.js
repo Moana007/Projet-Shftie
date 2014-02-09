@@ -14,31 +14,64 @@ $(document).ready(function() {
 
 
         if(recette_name === '') {
-            alert('Le champ -Titre de la recette- doit êtres remplis');
+             $('.error-msg').remove();
+                $('#pop_up_js').css( 'background','red');
+                $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Le champ -Titre de la recette- doit êtres remplis<br/></p>");
+                $('#pop_up_js').fadeToggle();
+            
         }
         else if(description === '') {
-            alert('Le champ -Description- doit êtres remplis');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Le champ -Description- doit êtres remplis<br/></p>");
+            $('#pop_up_js').fadeToggle();
         }
         else if(photo === '') {
-            alert('Le champ -Photo- doit êtres remplis');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Le champ -Photo- doit êtres remplis<br/></p>");
+            $('#pop_up_js').fadeToggle();
+            
         }
         else if(ingredient === '') {
-            alert('Le champ -Ingrédient- doit êtres remplis');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Le champ -Ingrédient- doit êtres remplis<br/></p>");
+            $('#pop_up_js').fadeToggle();
         }
         else if(preparation === ''){
-            alert('Le champ -Preparation- doit êtres remplis');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Le champ -Preparation- doit êtres remplis<br/></p>");
+            $('#pop_up_js').fadeToggle();
+            
         }
         else if(level === '-' || level === '' ) {
-            alert('Veuillez choisir une difficulté');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Veuillez choisir une difficulté<br/></p>");
+            $('#pop_up_js').fadeToggle();
+            
         }
         else if(tps_prepa === '-' || tps_prepa === '') {
-            alert('Veuillez choisir un temps de preparation');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Veuillez choisir un temps de preparation<br/></p>");
+            $('#pop_up_js').fadeToggle();
         }
         else if(tps_cuiss === '-' || tps_cuiss === '') {
-            alert('Veuillez choisir un temps de cuisson');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Veuillez choisir un temps de cuisson<br/></p>");
+            $('#pop_up_js').fadeToggle();
+           
         }
         else if(tps_repos === '-' || tps_repos === '') {
-            alert('Veuillez choisir un temps de repos');
+            $('.error-msg').remove();
+            $('#pop_up_js').css( 'background','red');
+            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Veuillez choisir un temps de repos<br/></p>");
+            $('#pop_up_js').fadeToggle();
+            
         }
 
         // else if(option.is(':checked')) {                     // A Debuger si possible
@@ -53,9 +86,16 @@ $(document).ready(function() {
                 dataType: 'json',
                 success: function(json) {
                     if(json.reponse == 'ok') {
-                        alert('Recette Ajoutée avec Succés');
+                        $('.error-msg').remove();
+                        $('#pop_up_js').css( 'background','green');
+                        $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Recette ajoutée avec succes<br/></p>");
+                        $('#pop_up_js').fadeToggle();
                         window.setTimeout("location=('?appli=home&action=myrecipe');",1000);
                     } else {
+                        $('.error-msg').remove();
+                        $('#pop_up_js').css( 'background','red');
+                        $("#pop_up_js").append("<p class='error-msg' style='color:white;' >"+ json.reponse +"<br/></p>");
+                        $('#pop_up_js').fadeToggle();
                         alert('Erreur : '+ json.reponse);
                     }
                 }

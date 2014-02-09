@@ -20,9 +20,9 @@
 		
 		try {
 			$req_valid = 0;
-		
-			$query = $connexion->prepare('INSERT INTO RECETTES (recette_name, description, photo, img_top, preparation, ingredient, level, time_prepa, time_cuisson, time_repos, rec_validation, auteur)
-										  VALUES (:recette_name , :description, :photo, :top, :preparation, :ingredient, :level, :time_prepa, :time_cuisson, :time_repos, :rec_validation, :auteur)');
+			$time = date('Y/m/d');
+			$query = $connexion->prepare('INSERT INTO RECETTES (recette_name, description, photo, img_top, preparation, ingredient, level, time_prepa, time_cuisson, time_repos, rec_validation,date_crea, auteur)
+										  VALUES (:recette_name , :description, :photo, :top, :preparation, :ingredient, :level, :time_prepa, :time_cuisson, :time_repos, :rec_validation,:date_crea, :auteur)');
 			$query->bindParam(':recette_name', $recette_name, PDO::PARAM_STR);
 			$query->bindParam(':description', $description,  PDO::PARAM_STR);
 			$query->bindParam(':photo', $photo,  PDO::PARAM_STR);
@@ -34,6 +34,7 @@
 			$query->bindParam(':time_cuisson', $time_cuisson, PDO::PARAM_STR);
 			$query->bindParam(':time_repos', $time_repos, PDO::PARAM_STR);
 			$query->bindParam(':rec_validation', $req_valid, PDO::PARAM_INT);
+			$query->bindParam(':date_crea', $time, PDO::PARAM_STR);
 			$query->bindParam(':auteur', $_SESSION['users_id'],  PDO::PARAM_INT);
 			//on execute la requete 
 			$query->execute();	
