@@ -3,7 +3,7 @@
 		global $connexion;
 		$query = $connexion->prepare('SELECT * FROM BOOKS, USERS WHERE books_id_users = users_id AND ofzemonth = 1');
 		$query->execute();
-		$ofzemonth = $query->fetchAll();
+		$ofzemonth = $query->fetch();
 		return $ofzemonth;
 	} 
 	function top_recipe(){
