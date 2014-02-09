@@ -7,7 +7,9 @@
 	$data4 = tags_show4();
 	$data5 = tags_show5();
 	$data7 = tags_show7();
-
+ 
+ 	$ofzemonth = book_ofzemonth();
+ 	$top_recipe = top_recipe();
 	include_once('view/home/index.php');
 
  ?>

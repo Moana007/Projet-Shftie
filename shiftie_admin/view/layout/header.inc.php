@@ -3,6 +3,13 @@
 	if(!isset($_SESSION['id_admin']) or $_SESSION['id_admin'] == '' or $_SESSION['admin'] != 1 ){
     	header('location:index.php');
 	}
+   
+if(!isset($_GET['filter'])){
+	 	$filter = 'tocheck';
+	}
+	else {
+		$filter = $_GET['filter'];
+	}
  ?>
 <html>
 <head>
@@ -23,7 +30,9 @@
 		<div id="left_content">
 			<ul class="nav nav-pills nav-stacked">
  			 	<li class="active"><a href="#">Welcome <?php echo $_SESSION['name_admin']." ".$_SESSION['firstname_admin']; ?></a></li>
-  				<li><a href="index.user.php">Gestion Admins</a></li>
-  				<li><a href="index.recette.php">Gestion Recettes</a></li>
+  				<li><a href="?appli=admin">Gestion Admins</a></li>
+  				<li><a href="?appli=recettes">Gestion Recettes</a></li>
+                <li><a href="?appli=book">Books du mois</a></li>
+                <li><a href="?appli=user">Cooker du mois</a></li>
 		</ul>
 		</div>

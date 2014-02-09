@@ -41,7 +41,7 @@
 		$query = $connexion->prepare('SELECT * FROM 
 		RECETTES_BOOKS, RECETTES 
 		WHERE RECETTES_BOOKS.recettes_id = RECETTES.recettes_id 
-		AND RECETTES_BOOKS.books_id = :id_books');
+		AND RECETTES_BOOKS.books_id = :id_books AND rec_validation = 1');
 		$query->bindParam(':id_books', $id_books, PDO::PARAM_INT);		
 		$query->execute();
 		
@@ -71,7 +71,7 @@
 		global $connexion;
 		
 		$query = $connexion->prepare('SELECT * FROM RECETTES, FAVORIS WHERE 
-			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND FAVORIS.fav_id_users = '.$_SESSION['users_id'].'');
+			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND rec_validation = 1 AND FAVORIS.fav_id_users = '.$_SESSION['users_id'].'');
 		$query->execute();
 		
 		$all_recipe = $query->fetchAll();

@@ -2,7 +2,7 @@
 function like_recipe($idrecipe){
 		global $connexion;
 
-		$query = $connexion->prepare('SELECT * FROM VOTE WHERE recettes_id_vote = :idrecipe ');
+		$query = $connexion->prepare('SELECT * FROM VOTE WHERE recettes_id_vote = :idrecipe');
 		$query->bindValue(':idrecipe', $idrecipe, PDO::PARAM_INT);
 		$query->execute();
 		$like = $query->rowCount();

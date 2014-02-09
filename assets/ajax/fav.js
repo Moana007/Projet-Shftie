@@ -8,7 +8,10 @@ $(document).ready(function(){
             dataType: 'json',
                 success: function(json) {
                     if(json.reponse == 'ok') { 
-                        alert('Favoris pris en compte !');
+                        $('.error-msg').remove();
+                        $('#pop_up_js').css( 'background','green');
+                        $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Favoris ajouté ! <br/></p>");
+                        $('#pop_up_js').fadeToggle();
                         window.setTimeout("location=('"+url+"');");
                     } else {
                         alert('Erreur : '+ json.reponse);
@@ -29,7 +32,10 @@ $(document).ready(function(){
             dataType: 'json',
                 success: function(json) {
                     if(json.reponse == 'ok') { 
-                        alert('Favoris retiré !');
+                        $('.error-msg').remove();
+                        $('#pop_up_js').css( 'background','green');
+                        $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Favoris retiré<br/></p>");
+                        $('#pop_up_js').fadeToggle();
                         window.setTimeout("location=('"+url+"');");
                     } else {
                         alert('Erreur : '+ json.reponse);

@@ -1,5 +1,4 @@
-<?php include_once('layout/header.inc.php');
-include_once('function/gestion_admin.php') ?>
+
 
 	<div id="right_content">
 	
@@ -21,8 +20,7 @@ include_once('function/gestion_admin.php') ?>
  			</tr>
  		</thead>
  		<tbody>
- 	<?php
-		$compte_admin = afficher_comptes_admin();	
+ 	<?php	
 		foreach($compte_admin as $compte_admins){
  	?>
  			<tr>
@@ -64,7 +62,7 @@ include_once('function/gestion_admin.php') ?>
  		</thead>
  		<tbody>
 	<?php
-		$compte = afficher_compte_non_admin();
+		
 		foreach($compte as $comptes){ ?>
 
  			<tr>
@@ -90,6 +88,6 @@ include_once('function/gestion_admin.php') ?>
 	</table>
 	
 </div>
-<?php include_once('layout/footer.inc.php'); ?>
+
 
 

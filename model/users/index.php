@@ -83,7 +83,7 @@ function connect_user($login, $pwd, $box){
 	       setcookie("c_login", $login, time()+60*60);
 		}
 
-		//session_start();
+		
 		foreach($rows as $row) {
 			$_SESSION['users_id'] = $row['users_id'];
 			$_SESSION['users_name'] = $row['users_name'];
@@ -91,6 +91,7 @@ function connect_user($login, $pwd, $box){
 			$_SESSION['users_photo'] = $row['users_photo'];
 			$_SESSION['password'] = $row['password'];
 			$_SESSION['mail'] = $row['mail'];
+			$_SESSION['admin'] = $row['admin'];
 		}
 		//echo $verif;
 		return $verif;	

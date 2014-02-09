@@ -1,10 +1,9 @@
 <?php
-	include_once('../model/sql.php');
 	
 	function afficher_compte_non_admin(){
 
 		global $connexion;
-		$sql = $connexion->prepare("SELECT users_id, users_name, users_firstname, mail FROM USERS WHERE admin!=1 ORDER BY users_name");
+		$sql = $connexion->prepare("SELECT users_id, users_name, users_firstname, mail FROM USERS WHERE admin !=1 ORDER BY users_name");
 		
 		$sql->execute();
 		$compte = $sql->fetchAll();
@@ -24,9 +23,7 @@
 			
 	}
 
-//Promouvoir
-	if(isset($_POST['id_compte_up']) && !empty($_POST['id_compte_up']))
-		{
+	function comppte_up(){
 			$id = $_POST['id_compte_up'];
 			global $connexion;
 			
@@ -39,8 +36,8 @@
 
 
 	//Retrograder
-		if(isset($_POST['id_compte_down']) && !empty($_POST['id_compte_down']))
-		{
+
+		function compte_down(){
 			$id = $_POST['id_compte_down'];
 			global $connexion;
 			

@@ -1,4 +1,18 @@
-<?php 
+<?php
+	function book_ofzemonth(){
+		global $connexion;
+		$query = $connexion->prepare('SELECT * FROM BOOKS, USERS WHERE books_id_users = users_id AND ofzemonth = 1');
+		$query->execute();
+		$ofzemonth = $query->fetchAll();
+		return $ofzemonth;
+	} 
+	function top_recipe(){
+		global $connexion;
+		$query = $connexion->prepare('SELECT * FROM RECETTES, USERS WHERE auteur = users_id AND recette_top = 1');
+		$query->execute();
+		$top_recipe = $query->fetch();
+		return $top_recipe;
+	} 
 	function add_recipe($recette_name, $description, $photo, $img_top, $preparation, $ingredient, $level, $time_prepa, $time_cuisson, $time_repos){
 			
 		global $connexion;

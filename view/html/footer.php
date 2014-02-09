@@ -24,7 +24,11 @@
 		<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
 		
 	
-		
+		<script type="text/javascript">
+		$('#close_pop_up').on('click', function(){
+			$('#pop_up_js').fadeToggle();
+		})
+		</script>
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
 <!--- - - - - - - - -  Google Analytics Content Experiment code - - - - - - - - --> 
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 

@@ -1,5 +1,5 @@
 <?php
-include_once('../../model/sql.php');
+
 
 if (isset($_POST['mail_admin']) && isset($_POST['pwd_admin']))
 {
@@ -30,13 +30,13 @@ if (isset($_POST['mail_admin']) && isset($_POST['pwd_admin']))
 					$_SESSION["firstname_admin"] = $rows['users_firstname'];
 					$_SESSION["admin"] = $rows['admin'];
 				}
-				header('location:../index.home.php');
+				header('location:?appli=home');
 		
 			}
 			else
 			{
 				echo "Erreur dans votre mot de passe, ou vous n'avez pas accés a la partie Administrateur";
-				echo "<a href='../index.php'>Retour</a>";
+				echo "<a href='?appli=login'>Retour</a>";
 			}
 			
 	}

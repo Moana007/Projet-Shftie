@@ -1,20 +1,38 @@
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Administration</title>
-	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="dist/css/style.css">
-</head>
-<body>
-	<header>
-		<p>Shiftie Administraion</p>
-	</header>
-	<form id="formLogin" method="post" action="function/admin_connect.php"> 
-		<input type="text" class="form-control" name="mail_admin" placeholder="Login"><br/>
-		<input type="password" class="form-control" name="pwd_admin" placeholder="Password"><br/>
-		<input type="submit" class="btn btn-primary">
-	</form>
+<?php 
 
-<script src="dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+	//session_start();
+	//Connexion à la BD 
+	include_once('../model/sql.php');
+
+	if(!isset($_GET['page'])){
+	 	$page = 'afficher';
+	}
+	else {
+		$page = $_GET['page'];
+	}
+	//Appel du controleur du modele demandé
+	if (!isset($_GET['appli']))
+	{
+		$appli = 'login';
+	}
+	else 
+	{
+		$appli = $_GET['appli'];
+	}
+	if (!isset($_GET['action']))
+	{
+		$action= 'index';
+	}
+	else {
+		$action = $_GET['action'];
+	}
+	$url = 'controller/'.$appli.'/'.$action.'.php';
+
+	// Dispatching vers controleur/action ou bien redirection 404
+	if (file_exists($url)) {
+		include_once($url);
+	}
+	else {
+		echo 'error';
+	}
+ ?>

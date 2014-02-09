@@ -1,9 +1,9 @@
 <div id="slider">
 	<div class="image_slider"><img src="assets/img/slider.png">
 		<div class="info_slider">
-			<span class="slider_titre">Noodles</span>
-			<span class="slider_auteur">by John Doe</span>
-			<span class="slider_texte">Bruschetta is an antipasto from Italy whose origin dates to  garlic and onion or mozzarella </span>
+			<span class="slider_titre"><?php echo $top_recipe['recette_name'] ?></span>
+			<span class="slider_auteur">by <?php echo $top_recipe['users_name'] ?></span>
+			<span class="slider_texte"><?php echo $top_recipe['description'] ?> </span>
 			<a href="#" class="bt gris">See More</a>
 		</div>
 	</div>
@@ -44,15 +44,17 @@
 		</div>
 	</div>
 	<div class="col3">
+		<?php foreach($ofzemonth as $ofzemonth): ?>
 		<div class="home5 bg_home bg_black">
 			<div class="home_title bg_white">Book of the week</div>
 			<img href="#" src="assets/img/cover_book.png"></br>
-			<span>by John DoeMarlboro</span>
+			<span>by <?php echo $ofzemonth['users_name'].''.$ofzemonth['users_firstname']; ?></span>
 		</div>
 		<div class="home6 bg_home bg_orange">
 			<div class="home_title bg_orange">Shiftie News</div>
 			<div class="news">This is the place where whe are going to display some of our news, or some random posts. Everyday this news will be changer by another one from our team.</div>
 		</div>
+	<?php endforeach; ?>
 	</div>
 	<div class="col4">
 		<div class="home7 bg_home bg_grey">

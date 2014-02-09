@@ -5,7 +5,7 @@
 		
 		$id_rec = $_GET['id_rec'];
 		
-		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE recettes_id = :id_recette');	
+		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE recettes_id = :id_recette AND rec_validation = 1');	
 		$query->bindParam(':id_recette', $id_rec, PDO::PARAM_INT);
 		//on execute la requete 
 		$query->execute();	
@@ -22,7 +22,7 @@
 		
 		$id_rec_tag	= $_GET['id_rec'];
 		
-		$query2 = $connexion->prepare('SELECT * FROM TAGS, RECETTES_TAGS WHERE tags_id = tags_ids AND recettes_ids = :id_rec_tag' );	
+		$query2 = $connexion->prepare('SELECT * FROM TAGS, RECETTES_TAGS WHERE tags_id = tags_ids AND recettes_ids = :id_rec_tag ' );	
 		$query2->bindParam(':id_rec_tag', $id_rec_tag, PDO::PARAM_INT);
 		//on execute la requete 
 		$query2->execute();	
@@ -54,7 +54,7 @@ function show_ingredients(){
 		
 		$id_rec_aut	= $_GET['id_rec'];
 		
-		$query4 = $connexion->prepare('SELECT recettes_id,auteur,users_name,users_firstname,users_photo,photo,users_id FROM USERS,RECETTES WHERE users_id = auteur AND recettes_id = :id_rec_aut ' );	
+		$query4 = $connexion->prepare('SELECT recettes_id,auteur,users_name,users_firstname,users_photo,photo,users_id FROM USERS,RECETTES WHERE users_id = auteur AND recettes_id = :id_rec_aut AND rec_validation = 1' );	
 		$query4->bindParam(':id_rec_aut', $id_rec_aut, PDO::PARAM_INT); 
 		$query4->execute();	
 		$authors = $query4->fetchAll();
@@ -69,7 +69,7 @@ function show_ingredients(){
 	function show_recipe_more($id_user){
 		global $connexion;
 			
-		$query5 = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id,recette_name FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id ORDER BY RAND() LIMIT 0, 2'); // ORDER BY RAND() 			
+		$query5 = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id,recette_name FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id AND rec_validation = 1 ORDER BY RAND() LIMIT 0, 2'); // ORDER BY RAND() 			
 		$query5->bindParam(':id_user', $id_user, PDO::PARAM_INT); 
 		$query5->execute();	
 		$recipe_more = $query5->fetchAll();
@@ -101,7 +101,12 @@ function show_ingredients(){
 		try{
 			$query = $connexion->prepare("DELETE FROM COMMENTAIRES WHERE com_id = :com_id AND com_id_users = :com_id_users");
 			$query->bindParam(':com_id', $com_id, PDO::PARAM_INT);
-			$query->bindParam(':com_id_users', $_SESSION['users_id'], PDO::PARAM_INT);
+			if($_SESSION['admin'] === 1){
+				$query->bindParam(':com_id_users', $_SESSION['users_id'], PDO::PARAM_INT);
+			}
+			else {
+				$query->bindParam(':com_id_users', $_SESSION['users_id'], PDO::PARAM_INT);
+			}
 			
 			$query->execute();
 		}
