@@ -16,7 +16,10 @@
 
   </head>
   <body>
-
+    <div id="pop_up_js">
+      
+      <p id="close_pop_up">Close</p>
+    </div>
 
     <div id="header">
       <div class="bloc_logo"><a href="?appli=home&action=index"><img src="assets/img/logo.png"></a></div>

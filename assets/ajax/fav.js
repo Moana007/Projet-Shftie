@@ -12,7 +12,7 @@ $(document).ready(function(){
                         $('#pop_up_js').css( 'background','green');
                         $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Favoris ajouté ! <br/></p>");
                         $('#pop_up_js').fadeToggle();
-                        window.setTimeout("location=('"+url+"');");
+                        window.setTimeout("location=('"+url+"');", 2000);
                     } else {
                         alert('Erreur : '+ json.reponse);
                     }
@@ -36,7 +36,7 @@ $(document).ready(function(){
                         $('#pop_up_js').css( 'background','green');
                         $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Favoris retiré<br/></p>");
                         $('#pop_up_js').fadeToggle();
-                        window.setTimeout("location=('"+url+"');");
+                        window.setTimeout("location=('"+url+"');", 2000);
                     } else {
                         alert('Erreur : '+ json.reponse);
                     }

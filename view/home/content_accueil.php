@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<div class="col3">
-		<?php foreach($ofzemonth as $ofzemonth): ?>
+		<?php ?>
 		<div class="home5 bg_home bg_black">
 			<div class="home_title bg_white">Book of the week</div>
 			<img href="#" src="assets/img/cover_book.png"></br>
@@ -54,7 +54,7 @@
 			<div class="home_title bg_orange">Shiftie News</div>
 			<div class="news">This is the place where whe are going to display some of our news, or some random posts. Everyday this news will be changer by another one from our team.</div>
 		</div>
-	<?php endforeach; ?>
+	
 	</div>
 	<div class="col4">
 		<div class="home7 bg_home bg_grey">
