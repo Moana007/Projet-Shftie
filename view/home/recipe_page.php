@@ -120,9 +120,12 @@
 
       <div class="tags">
         <span class="icon icon-tags"><span>Tags:
-        <?php foreach($tags as $tag){ ?>
+        <?php $vi = 1; foreach($tags as $tag){ ?>
           <span class="green_tags">
-            <a href="#" class="green_tags"><?php echo $tag["tags_name"].", "; ?></a>
+            <a href="#" class="green_tags"><?php 
+              if($vi == 1){ echo $tag["tags_name"]; $vi++; }
+             else { echo "- ".$tag["tags_name"]; }
+            ?></a>
           </span>
         <?php } ?>  
       </div>
