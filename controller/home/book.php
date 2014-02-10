@@ -25,7 +25,7 @@ else{
 		}
 		
 		if(isset($_SESSION['users_id'])){
-		$show_book = show_book();
+		$show_book = show_book($_SESSION['users_id']);
 		}
 		
 		if(isset($_SESSION['users_id']) && isset($_GET['books_id'])){
