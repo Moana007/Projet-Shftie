@@ -76,9 +76,17 @@
     </div>
   </div>
 </div>
-<?php endforeach; ?> 
+
 <!--FIN SLIDER DEBUT CONTENT -->
 
+
+<?php
+  if ($recipe["rec_validation"] == 0) {
+    echo "<div class='texte' style='color:orange; text-align:center;' >Votre recette n'a pas encore été validée par nos administrateurs.</div>";
+  }
+
+  endforeach;
+?>
 
 <!-- BOUTON DE PARTAGE  -->
   <!-- <div data-href="<?php echo $_SERVER['SCRIPT_URI']."?".$_SERVER['QUERY_STRING']; ?>" class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>

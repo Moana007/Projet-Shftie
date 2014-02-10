@@ -14,17 +14,15 @@
 		global $connexion;
 		
 		$query = $connexion->prepare('INSERT INTO RECETTES_BOOKS 
--		(books_id, recettes_id) 
--		VALUES (:books_id, :books_id_recettes)');
--		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
--		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
--		$query->execute();
+		(books_id, recettes_id) 
+		VALUES (:books_id, :books_id_recettes)');
+		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
+		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
+		$query->execute();
 	}
 	
-	function show_book(){
+	function show_book($id_users){
 		global $connexion;
-		
-		$id_users = $_SESSION['users_id'];
 
 		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users');
 		$query2->bindParam(':id_users', $id_users, PDO::PARAM_INT);
