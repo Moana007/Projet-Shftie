@@ -90,6 +90,8 @@
     
 
 <!-- Zone de pop-up connect/register -->
+
+      <!-- CONNECT -->
     <div class="signup" style="display:none;">
         <div class="titre_2">Sign In</div>
         <div class="sous_titre">Log into your account and start sharing!</div>
@@ -103,13 +105,14 @@
         <a href="#" class="icon icon-cancel"></a>
       </div>
 
+ <!-- REGISTER -->
       <div class="register" style="display:none;">
         <div class="titre_2">Register Now</div>
         <div class="sous_titre">Register and start sharing!</div>
         <form class="log" method="post" id="formu_register" action="?appli=users&action=add_user">
-          <div class="ligne_log">Login <input type="text" name="login" id="pseudo"></input></div>
-          <div class="ligne_log">Name <input type="text" name="name" id="name"></input></div>
-          <div class="ligne_log">Firstname <input type="text" name="firstname" id="firstname"></input></div>
+          <div class="ligne_log">Login <input type="text" name="login" id="pseudo" maxlength="20"></input></div>
+          <div class="ligne_log">Name <input type="text" name="name" id="name" maxlength="7"></input></div>
+          <div class="ligne_log">Firstname <input type="text" name="firstname" id="firstname" maxlength="8"></input></div>
           <div class="ligne_log">Email <input type="text" name="mail" id="mail"></input></div>
           <div class="ligne_log">Password <input type="password" name="pwd1" id="pwd1" ></input></div>
           <div class="ligne_log">Confirm password <input type="password" name="pwd2" id="pwd2"></input></div>
