@@ -1,22 +1,22 @@
 
   <div id="fb-root"></div>
-	<script>
-	  (function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));
-	 </script>
+  <script>
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+   </script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))
   {js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
   }(document,"script","twitter-wjs");
   </script>
 
   <!-- BOUTON DE PARTAGE  -->
-  	
-	
+    
+  
 <!--FIN HEADER DEBUT SLIDER -->
 <?php foreach($recipes as $recipe): ?>
   <?php $recipe_id = $recipe['recettes_id'] ?>
@@ -114,7 +114,14 @@
         <span class="icon icon-tags"><span>Tags:
         <?php foreach($tags as $tag){ ?>
           <span class="green_tags">
-            <a href="#" class="green_tags"><?php echo $tag["tags_name"].", "; ?></a>
+            <a href="#" class="green_tags"><?php 
+            if($tag[0]){ 
+              echo $tag['tags_name']; 
+            } 
+            else{ 
+              echo ",".$tag["tags_name"]; 
+            }
+              ?></a>
           </span>
         <?php } ?>  
       </div>
@@ -140,7 +147,7 @@
 
     <div class="texte">More of him:</div>
       <?php $var = 0; foreach($recipe_more as $recipe_mores){
-      		$var = $var + 1;  
+          $var = $var + 1;  
           $idrecipe = $recipe_mores['recettes_id'];?>
         <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img src="<?php echo $recipe_mores['photo']; ?>">
@@ -186,7 +193,7 @@
 
 
 <!-- - - - - - - - - - - - - COMMENTAIRE  - - - - - - - - - - - - - - - - - - -  - - -->
-      	
+        
           <div id="get_com" class="commentaire">
             <div class="titre_recette">Comments</div>
            <?php if($show_comment != false) { ?>
@@ -204,11 +211,11 @@
                 </div>
         <?php    endforeach; } 
         else { 
-        	echo 'There is no comment'; 
+          echo 'There is no comment'; 
         } 
         if(!isset($_SESSION['users_id'])) 
         { 
-        	echo ' <a href="#" class="trigger_sign">Sign in</a> for comment'; 
+          echo ' <a href="#" class="trigger_sign">Sign in</a> for comment'; 
         } ?>
           
         <?php if(isset($_SESSION['users_id'])) { ?>  
@@ -224,7 +231,7 @@
           </div>
         <?php } ?>
     
-    </div>        		
+    </div>            
 <!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - - - - - - - -->
 
 </div>

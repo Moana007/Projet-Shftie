@@ -7,13 +7,17 @@
 		<div align="center">
 			<h2 style="color:white;">Add a recipe to my book</h2>
 			<form id="ajout" action="?appli=home&action=book_add&id_books=<?php echo $_GET['id_books']; ?>" method='post'>
+				<?php if(!empty($show_all_recipe)) { ?>
 				<select style="margin:5px;" name="books_id_recettes">
-				<?php foreach($all_recipe as $all_recipes) { ?>
-					<option value="<?php echo $all_recipes['recettes_id']; ?>">
-					<?php echo $all_recipes['recette_name']; ?>
-					</option>  
-				<?php } ?>	
+					<?php foreach($show_all_recipe as $show_all_recipes) : ?>
+							<option value="<?php echo $show_all_recipes['recettes_id']; ?>">
+							<?php echo $show_all_recipes['recette_name']; ?>
+							</option>  
+				<?php endforeach; ?> 
 				</select><br/>
+				<?php } else {
+					echo "<p style='color:#89B929;'>You have no favorite !</p>";
+					} ?>
 				<button type='submit' class="bt vert">Add</button>
 			</form>
 		</div>
