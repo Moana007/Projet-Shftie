@@ -67,7 +67,7 @@
               </div>
             </a>
           <?php endforeach; ?> 
-          <?php } else { echo "<p style='color:#6E902A;'>You have no Favorite for the moment</p>"; } ?>
+          <?php } else { echo "<p style='color:#6E902A;'>You have no Favorite for the moment or your favorite recettes are not yet validate !</p>"; } ?>
 
           <?php if($fav_nb > 4){ 
              echo '<a href="#" class="bt vert">View More</a>';
@@ -110,7 +110,7 @@
               </div>
             </a>
           <?php endforeach; ?> 
-          <?php } else { echo "<p style='color:#6E902A;'>You have no Recipe for the moment</p>"; } ?> 
+          <?php } else { echo "<p style='color:#6E902A;'>You have no Recipe for the moment or your recipe are not yet validate !</p>"; } ?> 
          <?php if($recipe_nb > 4){ 
              echo '<a href="#" class="bt vert">View More</a>';
                  }

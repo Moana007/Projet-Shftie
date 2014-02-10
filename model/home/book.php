@@ -12,13 +12,11 @@
 	
 	function add_recipe_book($books_id, $books_id_recettes){
 		global $connexion;
-		
-		$query = $connexion->prepare('INSERT INTO RECETTES_BOOKS 
-		(books_id, recettes_id) 
-		VALUES (:books_id, :books_id_recettes)');
-		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
-		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
-		$query->execute();
+
+		$query = $connexion->prepare('INSERT INTO RECETTES_BOOKS (books_id, recettes_id) VALUES (:books_id, :books_id_recettes)');
+-		$query->bindParam(':books_id', $books_id,  PDO::PARAM_STR);
+-		$query->bindParam(':books_id_recettes', $books_id_recettes,  PDO::PARAM_INT);
+-		$query->execute();
 	}
 	
 	function show_book($id_users){
@@ -72,9 +70,9 @@
 			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND rec_validation = 1 AND FAVORIS.fav_id_users = '.$_SESSION['users_id'].'');
 		$query->execute();
 		
-		$all_recipe = $query->fetchAll();
+		$show_all_recipe = $query->fetchAll();
 		
-		return($all_recipe);
+		return($show_all_recipe);
 	}
 	
 	function delete_book($books_id){
