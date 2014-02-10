@@ -189,7 +189,7 @@
       	
           <div id="get_com" class="commentaire">
             <div class="titre_recette">Comments</div>
-           <?php if($show_comment[0] != 0) { ?>
+           <?php if($show_comment != false) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
                   <a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>               

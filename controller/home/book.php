@@ -1,6 +1,7 @@
 <?php 
 if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){
-    include_once('controller/home/index.php');}
+    include_once('controller/home/index.php');
+}
 else{
 
 
@@ -32,9 +33,9 @@ else{
 		header('location:?appli=home&action=book&page=book');
 		}
 		
-		define("PAGE_TITLE", "Shiftie 2.0 - My Books");
 		include_once('view/home/book.php');
 	}
+
 	define("PAGE_TITLE", "Shiftie 2.0 - My Books");
 
 }

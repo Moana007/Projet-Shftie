@@ -121,9 +121,12 @@ function show_ingredients(){
 		
 		$id_rec = $_GET['id_rec'];
 		
-		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES, USERS WHERE com_id_recettes = '.$id_rec.' AND users_id = com_id_users ORDER BY com_id DESC');
+		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES, USERS 
+		WHERE com_id_recettes = '.$id_rec.' AND 
+		users_id = com_id_users ORDER BY com_id DESC');
 		$query->execute();
 		$show_comment = $query->fetchAll();
+		
 
 		return $show_comment;
 	}	
