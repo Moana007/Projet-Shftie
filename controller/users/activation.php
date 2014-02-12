@@ -16,14 +16,7 @@
 	//echo  $clebdd ;
 	 
 	if($valide == '1'){
-		if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] != $id_use){
-			//echo "REDIRIGER VERS LA PAGE DE CONNEXION (utilisateur pas encore co) ";
-			header('Location: ?appli=users&action=index');
-		}
-		else {
-			//echo "REDIRIGER VERS LA PAGE d'acceuil (utilisateur déja co) ";
-			header('Location: ?appli=home&action=index');
-		}
+		header('Location: ?appli=home&action=index');
 	}
 	else if($cle == $clebdd){	
    		activation_bdd();
