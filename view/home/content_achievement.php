@@ -1,4 +1,4 @@
-<div id="about">
+<!-- <div id="about">
 	<div class="titre">About Us</div>
 	<div class="texte"><span>What is Shiftie?</span><br/>
 Shiftie is a new site who's proposing to users to post their recipes and to vote for others users' recipes, all that to promote the most voted recipe on the homepage for 24H.
@@ -11,9 +11,13 @@ You can also log in to post your first recipe, let's go!</div>
 		and this is our beta, propulsed online for some feedback, so feel free ton contact our team for some commentaries.<br/>
 		The Shiftie team is composed of: Attali Benjamin, Vinet Antoine, Venturini Marine, Elodie Perrault and Thibault Audren De Kerdrel.
 	</div>
+<<<<<<< HEAD
 	<div class="image_about">
 		<img src="assets/img/uploads/img_about.png" alt="" />
 </div>
+=======
+</div> -->
+>>>>>>> 516d3c8ca2a906534f6b4f2b34be42bf3d91a0b2
 
 <!--
  Si il s’agit d’une page qui n’existe pas, pour la créer :

@@ -1,6 +1,6 @@
 	<div id="footer">
 		<div class="footer_left">2013/2014</div>
-		<div class="footer_middle"><a href="#">FAQ</a><span>•</span><a href="?appli=home&action=index&page=contact">Contact</a></div>
+		<div class="footer_middle"><a href="?appli=home&action=about">About</a><span>•</span><a href="?appli=home&action=index&page=contact">Contact</a></div>
 		<div class="footer_right">SHIFTIE.ORG</div>
 	</div>
 
