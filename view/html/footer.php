@@ -12,6 +12,7 @@
   		<script type="text/javascript" src="assets/ajax/upload_img.js"></script>
 		<script type="text/javascript" src="assets/ajax/create_step_effect.js"></script>
 		<script type="text/javascript" src="assets/ajax/submit_register_ajax.js"></script>
+		<script type="text/javascript" src="assets/ajax/submit_mail.js"></script>
 
 		<!-- verification sur le formulaire de connexion utilisateur -->
 		<script type="text/javascript" src="assets/ajax/verif_login.js"></script>

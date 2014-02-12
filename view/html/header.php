@@ -98,6 +98,7 @@
         <form class="log" id="formu_co" name="login">
           <div class="ligne_log"> Mail <input type="text" name="login" id="login" ></input></div>
           <div class="ligne_log"> Password <input type="password" name="pwd" id="pwd"></input></div>
+          <input type="hidden" name="url_c" id="url_c" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
           <input type="submit" class="bt vert">
           <input type="checkbox" name="box" id="checkbox"> Remember me </input>
           <br/><br/><span id="message_error" ></span>

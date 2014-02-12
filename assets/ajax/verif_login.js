@@ -19,6 +19,7 @@ function onSubmit(event){
 	var login = $('#login').val();
 	var password = $('#pwd').val();
 	var box = $('#checkbox').val();
+	var url_courante = $('#url_c').val();
 
 	var errorCallback = function(response){
 		console.log(response);
@@ -27,7 +28,7 @@ function onSubmit(event){
 
 	var successCallback = function(response){
 		if(response.success){
-			window.location='?appli=home&action=index';
+			window.location=url_courante;
 
 		}
 		else{			

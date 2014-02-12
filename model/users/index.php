@@ -89,6 +89,7 @@ function connect_user($login, $pwd, $box){
 		
 		foreach($rows as $row) {
 			$_SESSION['users_id'] = $row['users_id'];
+			$_SESSION['pseudo'] = $row['pseudo'];
 			$_SESSION['users_name'] = $row['users_name'];
 			$_SESSION['users_firstname'] = $row['users_firstname'];
 			$_SESSION['users_photo'] = $row['users_photo'];

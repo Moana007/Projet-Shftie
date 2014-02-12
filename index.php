@@ -73,6 +73,10 @@
 		else if($action == 'book_page'){
 			include_once('controller/home/book.php');
 		}
+		else if ($action == 'mail_contact'){ 
+			include_once('controller/home/mail_contact.php');
+		}
+
 		else if($action == 'achievement'){
 			include_once('controller/home/achievement.php');
 		}
@@ -111,10 +115,10 @@
 		{ 
 			include_once('controller/users/confirm_mail.php');
 		}
-		else if ($action == 'update_user')
-		{ 
+		else if ($action == 'update_user'){ 
 			include_once('controller/users/update_user.php');
 		}
+		
 
 	}
 
