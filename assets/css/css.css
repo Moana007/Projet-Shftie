@@ -1524,6 +1524,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
+
 #create_recipe2{
 	width: 1024px;
 	height: 1000px;
@@ -1532,6 +1533,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
+
 #create_recipe3  {
 	width: 1024px;
 	height: 800px;
@@ -1540,6 +1542,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
+
 #create_recipe4{
 	width: 1024px;
 	height: 1000px;
@@ -1548,7 +1551,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
-}
+
 #create_recipe5{
 	width: 1024px;
 	height: 1000px;
@@ -1588,9 +1591,11 @@ background-color: #FFF;
 #create_recipe .step .case_remplir {
 	margin-bottom: 20px;
 	width: 700px;
+	height: 30px;
 	display: block;
 	border: 1px solid #89b929;
 }
+
 .ligne_bt {
 	width: 100%;
 	text-align: center;

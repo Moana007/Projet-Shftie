@@ -17,10 +17,10 @@
          <textarea class="case_remplir" type="text" name="description" id="description" maxlength="120" /></textarea>
 
          <div class="row_tag">
-            <div class="tag_title">Tags</div>
-            <div class="case_tag"><input type="radio" name="group1" value="su" id="sucre"> Sucré</div>
-            <div class="case_tag"><input type="radio" name="group1" value="sa" id="sale"> Salé</div>
-            <div class="case_tag"><input type="radio" name="group1" value="ve" id="vege"> Végétarien</div>
+            <div class="tag_title">What kind of recipe this is?</div>
+            <div class="case_tag"><input type="radio" name="group1" value="su" id="sucre"> Sweet</div>
+            <div class="case_tag"><input type="radio" name="group1" value="sa" id="sale"> Salty</div>
+            <div class="case_tag"><input type="radio" name="group1" value="ve" id="vege"> Vegan</div>
           </div>
         
         <div class="ligne_bt"><a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step2']);" class="bt vert go_two">Next step</a></div>
@@ -63,24 +63,24 @@
           
         </div>
           <div class="row_tag" id="ifsucre">
-            <div class="tag_title">Tags if Sucré</div>
+            <div class="tag_title">Oh, Sweet, i love sweet food, tell me more!</div>
             <?php foreach($data4 as $datam): ?>
             <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datam['tags_id']; ?>"> <?php echo $datam['tags_name']; ?></div>
             <?php endforeach; ?>
           </div>
 
            <div class="row_tag" id="ifsale">
-            <div class="tag_title">Tags if Salé</div>
-            <div class="case_tag"><input type="radio" name="group2" value="" id="viande"> Viande</div>
-            <div class="case_tag"><input type="radio" name="group2" value="" id="mer"> Produit de la mer</div>
+            <div class="tag_title">Yay, Salty, i like that, i'm getting hungry, tell me more!</div>
+            <div class="case_tag"><input type="radio" name="group2" value="" id="viande"> Meat</div>
+            <div class="case_tag"><input type="radio" name="group2" value="" id="mer"> Shellfish</div>
             <?php foreach($data5 as $dataj): ?>
             <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"> <?php echo $dataj['tags_name']; ?></div>
             <?php endforeach; ?>
           </div>
 
           <div class="row_tag" id="ifvege">
-            <div class="tag_title">Tags if Végétarien</div>
-            <div class="case_tag"><input type="radio" name="group3" value="" id="mer2"> Produit de la mer</div>
+            <div class="tag_title">Oh, Vegan food? I'm curious, what's inside?</div>
+            <div class="case_tag"><input type="radio" name="group3" value="" id="mer2"> Shellfish</div>
             <?php foreach($data5 as $dataj): ?>
             <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"> <?php echo $dataj['tags_name']; ?></div>
             <?php endforeach; ?>
@@ -143,19 +143,19 @@
       </div>
         
      <div class="row_tag" id="ifviande">
-        <div class="tag_title">Tags if Viande</div>
+        <div class="tag_title">Who doesn't love a good meat? Whick kind of meat you'll propose?</div>
         <?php foreach($data1 as $datas): ?>
         <div class="case_tag"><input type="checkbox" name="option[]" value="<?php $datas['tags_id']; ?>"> <?php echo $datas['tags_name']; ?></div>
         <?php endforeach; ?>
       </div>
       <div class="row_tag" id="ifmer">
-        <div class="tag_title">Tags if Prod.De la mer</div>
+        <div class="tag_title">Shellfish? Never tried that, finish that recipe so i can see it!</div>
         <?php foreach($data2 as $datass): ?>
         <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datass['tags_id']; ?>"> <?php echo $datass['tags_name']; ?></div>
         <?php endforeach; ?>
       </div>
       <div class="row_tag" id="ifmer2">
-        <div class="tag_title">Tags if Prod.De la mer</div>
+        <div class="tag_title">Shellfish? Never tried that, finish that recipe so i can see it!</div>
         <?php foreach($data2 as $datass): ?>
         <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datass['tags_id']; ?>"> <?php echo $datass['tags_name']; ?></div>
         <?php endforeach; ?>
@@ -190,7 +190,7 @@
           <textarea class="preparation" id="preparation" name="preparation" type="text"></textarea>
 
       <div class="row_tag" id="tag4">
-        <div class="tag_title">Tags 4</div>
+        <div class="tag_title">It's time to finish, do you want to add something more?</div>
         <?php foreach($data7 as $datak): ?>
         <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $datak['tags_id']; ?>"> <?php echo $datak['tags_name']; ?></div>
         <?php endforeach; ?> 
