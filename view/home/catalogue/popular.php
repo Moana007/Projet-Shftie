@@ -35,10 +35,28 @@
       </div>
 
       <?php endforeach; ?>
-        <div class="pagination">
-          <a href="#" class="bt vert"><span class="icon icon-left"></span></a>
-          <a href="#" class="bt vert"><span>1</span></a>
-          <a href="#" class="bt gris"><span>2</span></a>
-          <a href="#" class="bt gris"><span>3</span></a>
-          <a href="#" class="bt vert"><span class="icon icon-right"></span></a>
-        </div>
+        
+      <?php   
+  //Reglage du nombre de recette à afficher dans controler/home/catalogue.php
+      echo "<div class='pagination'>";                      
+        if ($_GET['pagin'] == 1 or !isset($_GET['pagin'])){
+          //on affiche pas le lien
+        }
+        else{
+          echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=catalogue&filter=popular&pagin=".$prec."' ><span class='icon icon-left'></span></a>";
+        }
+        
+        for ($i=1; $i<=$nb_pages; $i++){
+          if ($_GET['pagin'] == $i){
+            $style = "class='bt vert'"; 
+          }
+          else{
+            $style = "class='bt gris'";
+          }
+          echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=catalogue&filter=popular&pagin=".$i."'><span>".$i."</span></a>";
+        }
+        if ($_GET['pagin'] != $nb_pages){
+          echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=catalogue&filter=popular&pagin=".$suiv."' ><span class='icon icon-right'></span></a>";
+        }     
+      echo "</div>";  
+    ?>
