@@ -1800,3 +1800,46 @@ background-color: #FFF;
 	
 	padding: 20px;
 }
+
+#about {
+	width: 1024px;
+	height: 450px;
+	margin: 0 auto;
+	padding: 20px 20px;
+	background-color: #FFF;
+	margin-bottom: 30px;
+}
+
+#about .titre {
+	text-align: center;
+	font-weight: bold;
+	color: #89B929;
+	font-size:26px;
+	margin-bottom: 50px;
+}
+
+#about .texte {
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+#about .texte span {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+
+#about .texte2 {
+	margin-top: 50px;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+#about .texte2 span {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
