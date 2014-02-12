@@ -1,0 +1,3 @@
+ICI LA PAGE QUI AFFICHE LE CONTENU D'UN BOOK (ACCESSIBLE CONNECTE OU DECONNECTE)
+
+lien d'acce ?appli=home&action=book_page

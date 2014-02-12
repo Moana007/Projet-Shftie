@@ -70,6 +70,9 @@
 		else if($action == 'about'){
 			include_once('controller/home/about.php');
 		}
+		else if($action == 'book_page'){
+			include_once('controller/home/book.php');
+		}
 		else if($action == 'achievement'){
 			include_once('controller/home/achievement.php');
 		}

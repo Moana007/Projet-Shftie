@@ -15,7 +15,12 @@ else{
 		include_once('view/home/book_content.php');		
 	}
 
+	else if($_GET['action'] == 'book_page'){
 
+		//fonction pour afficher le contenu d'un book (accessible a tout le monde)
+		include_once('view/home/book_page.php');
+
+	}
 	
 	else {
 	
