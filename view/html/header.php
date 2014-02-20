@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
       <meta charset="utf-8">
       <?php if ($appli == 'home' && $action == 'recipe'  && $_GET['id_rec'] != '' ) { ?>
@@ -28,7 +28,7 @@
    <!-- Bloc menu quand users NON connecté -->
           <ul class="bloc_menu">
             <li><a href="?appli=home&action=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
-            <li><a href="#" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
+            <li><a href="?appli=home&action=book_page" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
             <li><a href="#" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
 
@@ -49,13 +49,24 @@
         <a href="#" class="bt gris trigger_sign">Sign In</a>
       </div>
 
-       <div class="search_field search2">
-    
-    <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
-        <input type="image" src="assets/img/loupe.png" id="loupe">
-    
-    </div>
+       <div class="search_field" ng-controller="SearchCtrl">
 
+       <div class="search_field search2">
+           <form action="" method="post" ng-submit="search()">
+              <label>Search:</label>
+              <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
+              <input type="submit" class="btn" value="search">              
+           </form>   
+       </div>
+
+       <div class="resultat" style="display: none; background-color: #89B929;">
+            <div>{{result}}</div>
+       </div>
+
+      </div>
+
+      
+  
     <?php } else { ?>
 
       <!--<div class="bloc_user">
@@ -79,12 +90,22 @@
       <a href="?appli=users&action=account" class="image"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
     </div>
     
-    <div class="search_field">
-    
-    <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
-        <input type="image" src="assets/img/loupe.png" id="loupe">
-    
-    </div>
+    <div class="search_field" ng-controller="SearchCtrl">
+
+       <div class="search_field search2">
+           <form action="" method="post" ng-submit="search()">
+              <label>Search:</label>
+              <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
+              <input type="submit" class="btn" value="search">              
+           </form>   
+       </div>
+
+       <div class="resultat" style="display: none; background-color: #89B929;">
+            {{result}}
+       </div>
+
+      </div>
+
     <?php } ?>
 
     

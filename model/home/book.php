@@ -30,6 +30,39 @@
 		
 		return($show_book);
 	}
+
+	function show_book_all(){
+		global $connexion;
+
+		try {
+			$query = $connexion->prepare('SELECT * FROM BOOKS');
+			$query->execute();
+			$show_book_all = $query->fetchAll();
+
+			return($show_book_all);
+		} 
+		catch (Exception $e) {
+			echo "Affichage impossible" ,$e->getMessage();
+				die();
+		}
+	}
+
+	function show_recipe_book_all(){
+		global $connexion;
+
+		try {
+			$query = $connexion->prepare('SELECT * FROM RECETTES_BOOKS, RECETTES, BOOKS WHERE BOOKS.books_id = RECETTES_BOOKS.books_id AND RECETTES_BOOKS.recettes_id = RECETTES.recettes_id');
+			$query->execute();
+			$show_recipe_book_all = $query->fetchAll();
+
+			return $show_recipe_book_all;
+			
+			
+		} 
+		catch (Exception $e) {
+			echo "Affichage impossible", $e->getMessage();	
+		}
+	}
 	
 	function show_recipe_book($id_books){
 		global $connexion;

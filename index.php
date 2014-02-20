@@ -76,13 +76,13 @@
 		else if ($action == 'mail_contact'){ 
 			include_once('controller/home/mail_contact.php');
 		}
-
 		else if($action == 'achievement'){
 			include_once('controller/home/achievement.php');
 		}
 		else if($action == 'achievement2'){
 			include_once('controller/home/achievement2.php');
 		}
+		
 	}
 	else if($appli == 'users'){
 		if ($action == 'account'){
