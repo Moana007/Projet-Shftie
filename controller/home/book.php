@@ -1,6 +1,11 @@
 <?php 
 
-
+	if(!isset($_GET['show'])){
+		$show = '';
+	}
+	else {
+		$show = $_GET['show'];
+	}
 
 	include_once('model/home/book.php');
 	
@@ -20,11 +25,11 @@
 		include_once('view/home/book_page.php');
 
 	}
-	else if($_GET['show'] == 'book'){
+	else if($show == 'book'){
 
 		include_once('view/home/book_display.php');
 	}
-	else if($_GET['show'] == 'catalogue'){
+	else if($show == 'catalogue'){
 
 		include_once('view/home/book_catalogue.php');
 	}

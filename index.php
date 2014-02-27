@@ -76,6 +76,9 @@
 		else if ($action == 'mail_contact'){ 
 			include_once('controller/home/mail_contact.php');
 		}
+		else if ($action == 'show_recipe'){ 
+			include_once('controller/home/show_recipe.php');
+		}
 		else if($action == 'achievement'){
 			include_once('controller/home/achievement.php');
 		}

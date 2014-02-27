@@ -40,9 +40,9 @@
 
     <div class="bloc_wide">
        <div class="favorite">
-
-        <div class="titre_1"><a href="#">Favorites</a></div>
-
+        <?php foreach($author as $authors){ ?>
+        <div class="titre_1"><a href="?appli=home&action=show_recipe&showr=fav&user=<?php echo $authors['users_id']; ?>">Favorites</a></div>
+        <?php } ?>
          <div class="bloc_profil">
           <?php if(!empty($fav)) { ?>
           <?php $var = 0; foreach ($fav as $fav):  
@@ -91,7 +91,12 @@
   
      
       <div class="favorite">
-        <div class="titre_1"><a href="#">Recipes</a></div>
+      <?php   foreach($author as $authors){
+                if(!isset($_SESSION['users_id']) || $_SESSION['users_id'] == '' || $authors['users_id'] != $_SESSION['users_id'] ){ ?>
+                  <div class="titre_1"><a href="?appli=home&action=show_recipe&showr=user&user=<?php echo $authors['users_id']; ?>">Recipes</a></div>
+      <?php     }else{ ?>
+                  <div class="titre_1"><a href="?appli=home&action=myrecipe">Recipes</a></div>                  
+      <?php     }} ?>
         <div class="bloc_profil">
           <?php if(!empty($recipe)) { ?>
           <?php $var = 0; foreach ($recipe as $recipes):  

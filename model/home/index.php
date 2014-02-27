@@ -132,6 +132,73 @@
 		$data7 = $query7->fetchAll();
 		return $data7;
 	}
+
+
+	function show_recipe_user_pagin($users_id){
+		
+		global $connexion;
+		$rec_valid = 1;	
+			
+		$query2 = $connexion->prepare('SELECT COUNT(*) AS contenu FROM RECETTES WHERE auteur = :users_id AND rec_validation = :valid ');
+		$query2->bindParam(':users_id', $users_id,  PDO::PARAM_INT);
+		$query2->bindParam(':valid', $rec_valid,  PDO::PARAM_INT);
+		$query2->execute();
+		
+		$nbs_recipe = $query2->fetch();
+		$nb_recipe = $nbs_recipe['contenu']; //défini dans la requete
+ 
+		return $nb_recipe;	
+		
+	}
+	function show_recipe_user($page, $nb_reponses, $users_id){
+		global $connexion;
+				
+		$rec_valid = 1;			
+		$debut = ($page-1) * $nb_reponses;
+		
+		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE auteur = :users_id AND rec_validation = :valid ORDER BY  date_crea DESC LIMIT '.$debut.', '.$nb_reponses);
+		$query->bindParam(':users_id', $users_id,  PDO::PARAM_INT);
+		$query->bindParam(':valid', $rec_valid,  PDO::PARAM_INT);
+
+		//on execute la requete 
+		$query->execute();
+		$recipes = $query->fetchAll();
+		//on retourne tous les articles selectionnés 
+		
+		return $recipes;
+	}
+
+	function show_recipe_fav_pagin($id_account){
+		
+		global $connexion;
+					
+			
+		$query2 = $connexion->prepare('SELECT COUNT(*) AS contenu FROM FAVORIS A, RECETTES B WHERE A.fav_id_recettes = B.recettes_id AND A.fav_id_users = :user AND B.rec_validation = 1');
+		$query2->bindValue(':user', $id_account, PDO::PARAM_INT);
+		$query2->execute();
+		
+		$nbs_recipe = $query2->fetch();
+		$nb_recipe = $nbs_recipe['contenu']; //défini dans la requete
+ 
+		return $nb_recipe;	
+		
+	}
+	function show_recipe_fav($page, $nb_reponses, $id_account){
+		global $connexion;
+				
+				
+		$debut = ($page-1) * $nb_reponses;
+		
+		$query = $connexion->prepare('SELECT * FROM FAVORIS A, RECETTES B WHERE A.fav_id_recettes = B.recettes_id AND A.fav_id_users = :user AND B.rec_validation = 1 ORDER BY date_crea DESC LIMIT '.$debut.', '.$nb_reponses);
+		$query->bindValue(':user', $id_account, PDO::PARAM_INT);
+
+		$query->execute();
+		$recipes = $query->fetchAll();
+		
+		return $recipes;
+	}
+
+	
 	
 	
 
