@@ -11,7 +11,7 @@ function like_recipe($idrecipe){
 	function comment_recipe($idrecipe){
 		global $connexion;
 
-		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES WHERE com_id_recettes = :idrecipe ');
+		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES WHERE com_id_recettes = :idrecipe');
 		$query->bindValue(':idrecipe', $idrecipe, PDO::PARAM_INT);
 		$query->execute();
 		$comment = $query->rowCount();
@@ -20,7 +20,7 @@ function like_recipe($idrecipe){
  	function fav_recipe($idrecipe){
 		global $connexion;
 
-		$query = $connexion->prepare('SELECT * FROM FAVORIS WHERE fav_id_recettes = :idrecipe ');
+		$query = $connexion->prepare('SELECT * FROM FAVORIS WHERE fav_id_recettes = :idrecipe');
 		$query->bindValue(':idrecipe', $idrecipe, PDO::PARAM_INT);
 		$query->execute();
 		$fav = $query->rowCount();

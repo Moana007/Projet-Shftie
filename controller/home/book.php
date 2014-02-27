@@ -5,9 +5,8 @@
 	include_once('model/home/book.php');
 	
 	if(isset($_GET['id_books'])) {
- 	
+ 		$show_all_recipe = show_all_recipes();
 		$show_book2 = show_book2($_GET['id_books']);
-		$show_all_recipe = show_all_recipes();	
 		$show_recipe_book = show_recipe_book($_GET['id_books']);	
 		include_once('view/home/book_content.php');		
 	}
@@ -22,10 +21,11 @@
 	}
 	
 	else {
+		$show_all_recipe = show_all_recipes();	
 	
-		if(isset($_POST['book_name'])) {
-		create_book($_POST['book_name']);
-		header('location: ?appli=home&action=book&page=book');
+		if(isset($_POST['book_name']) && isset($_POST['group1'])) {
+		$id_books = create_book($_POST['book_name'], $_POST['group1']);
+		header('location: ?appli=home&action=book&id_books='.$id_books.'');
 		}
 		
 		if(isset($_SESSION['users_id'])) {

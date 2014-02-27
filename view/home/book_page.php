@@ -7,9 +7,10 @@
 			
 			    <div class="info_bloc_recette">
 			        <a href="?appli=home&action=book&id_books=<?php echo $show_book_all['books_id']; ?>"><?php echo $show_book_all['books_name']; ?></a>
-			        <?php foreach ($show_recipe_book_all as $key => $value) : ?>
-
-			        <span><?php 
+			        <span>Recipes :</span><br/>
+			        <?php foreach ($show_recipe_book_all as $key => $value) : ?>					
+			        <span>
+			        		<?php 
 			        			echo $value['recette_name'];
 			        			echo "<br/>"; 
 			        		?>

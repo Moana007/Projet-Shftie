@@ -23,7 +23,8 @@ function SearchCtrl($scope, $http) {
     $('.resultat').fadeIn(800);
 
     
-})
+    })
+
 }
 
 

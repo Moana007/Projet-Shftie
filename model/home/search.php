@@ -13,8 +13,12 @@
 
 			global $connexion;
 
-			$query = $connexion->prepare('SELECT * FROM RECETTES WHERE recette_name LIKE  "%'.$objData->data.'%" AND rec_validation = 1');
+			$query = $connexion->prepare('SELECT * FROM 
+				RECETTES 
+				WHERE recette_name LIKE  "%'.$objData->data.'%" 
+				AND rec_validation = 1');
 			$query->execute();
+
 
 			$search_result = $query->fetchAll();
 
