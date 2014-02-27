@@ -53,7 +53,6 @@
 
        <div class="search_field search2">
            <form action="" method="post" ng-submit="search()">
-              <label>Search:</label>
               <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
               <input type="submit" class="btn" value="search">              
            </form>   
@@ -94,7 +93,6 @@
 
        <div class="search_field search2">
            <form action="" method="post" ng-submit="search()">
-              <label>Search:</label>
               <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
               <input type="submit" class="btn" value="search">              
            </form>   
