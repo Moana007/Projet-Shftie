@@ -1,5 +1,5 @@
 <div id="my_recipe">
-	<div class="titre_1">My Recipe <a href="?appli=home&action=index&page=submit_recipe" class="add_recipe"><span>+</span> Add a new recipe</a></div>
+	<div class="titre_1">His Favorite's Recipes</div>
 
 	<?php foreach ($recipes as $recipe): 
 		  $idrecipe = $recipe['recettes_id'] ?>
@@ -53,7 +53,7 @@
 				//on affiche pas le lien
 			}
 			else{
-				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=myrecipe&pagin=".$prec."' ><span class='icon icon-left'></span></a>";
+				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=show_recipe&showr=fav&pagin=".$prec."' ><span class='icon icon-left'></span></a>";
 			}
 			
 			for ($i=1; $i<=$nb_pages; $i++){
@@ -63,14 +63,13 @@
 				else{
 					$style = "class='bt gris'";
 				}
-				echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=myrecipe&pagin=".$i."'><span>".$i."</span></a>";
+				echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=show_recipe&showr=fav&pagin=".$i."'><span>".$i."</span></a>";
 			}
 			if ($_GET['pagin'] != $nb_pages){
-				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=myrecipe&pagin=".$suiv."' ><span class='icon icon-right'></span></a>";
+				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=show_recipe&showr=fav&pagin=".$suiv."' ><span class='icon icon-right'></span></a>";
 			}			
 		echo "</div>";	
 	?>
 
 
 </div>
-   

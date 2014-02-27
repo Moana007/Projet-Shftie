@@ -174,6 +174,14 @@ button {
 	text-align: left;
 }
 
+.titre_1 a {
+	font-family: 'new_ciclegordita';
+	font-size: 28px;
+	line-height: 45px;
+	color: #FFF;
+	text-align: left;
+}
+
 .titre_2 {
 	font-family: 'new_ciclegordita';
 	font-size: 32px;
@@ -182,6 +190,9 @@ button {
 	color: #89b929;
 }
 
+.underscore_title {
+	text-decoration: underline;
+}
 .bt {
 	padding: 10px 15px 10px 15px;
 	border-radius: 10px;
@@ -352,7 +363,6 @@ a.bt.gris:hover {
 .search_field{
     position:relative;
     float:right;
-    margin-top:15px;
 }
 
 .search2 {
@@ -360,7 +370,7 @@ a.bt.gris:hover {
 	margin-right: 15px;
 }
 #inp_search{
-    width:190px;
+    width:185px;
     border-radius:7px;
     padding:8px;
     border:none;
@@ -373,7 +383,6 @@ a.bt.gris:hover {
     top:8px;
 }
 #header .bloc_user {
-    width:270px;
 	float: right;
 	padding: 0px 50px 0px 0px;
 }
@@ -399,7 +408,9 @@ a.bt.gris:hover {
 	font-size: 12px;
 	color: #89b929;
 }
-
+.search_field input.bt {
+	border: none;
+}
 #header .bloc_login {
 	float: right;
 	padding: 23px 10px 0px 0px;
@@ -795,7 +806,7 @@ background-color: #FFF;
 }
 
 #page_profil {
-	width: 1280px;
+	width: 1024px;
 	height: 1500px;
 
 	margin: 0 auto;
@@ -806,6 +817,7 @@ background-color: #FFF;
 	height: 207px;
 	padding-left: 50px;
 	padding-top: 16px;
+	position: relative;
 }
 
 #page_profil .profil_header a.icon {
@@ -817,8 +829,9 @@ background-color: #FFF;
 	background-color: #FFF;
 	border-radius: 30px;
 	color: #89b929;
-	margin-right: 10px;
-	margin-top: 150px;
+	right: 10px;
+	top: 150px;
+	position: absolute;
 }
 
 
@@ -862,40 +875,42 @@ background-color: #FFF;
 }
 
 #page_profil .books .row_books {
-	width: 1280px;
-	height: 350px;
+	width: 1024px;
+	height: 320px;
 	padding-top: 15px;
 }
 
 #page_profil .books .row_books .case_book {
-	width: 225px;
-	height: 316px;
+	width: 198px;
+	height: 278px;
 	display: block;
 	float: left;
+
+	background-color: red;
 }
 
 #page_profil .books .row_books .case_book img {
-	width: 225px;
-	height: 316px;
+	width: 198px;
+	height: 278px;
 }
 
 #page_profil .books .row_books .case_book+.case_book {
-	margin-left:38px; 
+	margin-left:8px; 
 }
 
 #page_profil .bloc_wide {
-	width: 1280px;
+	width: 1024px;
 	height: 600px;
 }
 
 #page_profil .bloc_wide .favorite {
-	width: 620px;
+	width: 500px;
 	height: 600px;
 	float: left;
 } 
 
 #page_profil .bloc_wide .favorite+.favorite{
-	margin-left: 40px;
+	margin-left: 24px;
 }
 
 #page_profil .bloc_wide .favorite .titre_1,
@@ -907,8 +922,8 @@ background-color: #FFF;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe {
-	width: 305px;
-	height: 240px;
+	width: 245px;
+	height: 195px;
 
 	margin-bottom: 10px;
 
@@ -916,8 +931,8 @@ background-color: #FFF;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe img {
-	width: 305px;
-	height: 200px;
+	width: 245px;
+	height: 165px;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe+a.case_recipe {
@@ -931,10 +946,10 @@ background-color: #FFF;
 	margin-left: 10px;
 }
 #page_profil .bloc_wide .favorite .bloc_profil .case_recipe .views_bloc_recette {
-	width: 305px;
-	height: 40px;
+	width: 245px;
+	height: 30px;
 	
-	line-height: 40px;
+	line-height: 30px;
 
 	background-color: #89b929;
 	color: #FFF;
@@ -953,7 +968,7 @@ background-color: #FFF;
 	padding:0px 10px 0px 10px;
 
 	font-family: 'new_ciclegordita';
-	font-size: 18px;
+	font-size: 16px;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil .case_recipe .views_bloc_recette .views span {
@@ -997,14 +1012,16 @@ background-color: #FFF;
 	padding-left: 10px;
 	font-size: 12px;
 
-	color: #89b929;
-
-	border: 1px solid #89b929;
-	outline: 0px;
+	color: #000;
 }
 
 
+#page_profil .security input.bt {
+	border: none;
+	margin-top: 20px;
 
+	float: right;
+}
 
 
 #page_recipe {
@@ -1014,12 +1031,33 @@ background-color: #FFF;
 	margin: 0 auto;
 
 	padding-left: 20px;
-	margin-top: 30px;
+	margin-top: 7px;
 }
 .titre_recette {
 	text-transform: uppercase;
 	font-size: 28px;
 }
+
+#page_recipe .sharing {
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+	height: 20px;
+	margin-bottom:5px; 
+	margin-left: -20px;
+	display: block;
+}
+
+#page_recipe .sharing .fbdown {
+	position: absolute;
+	right: 20px;
+
+}
+
+#page_recipe .sharing .fbdown+.fbdown{
+	right: 100px;
+}
+
 #page_recipe .texte_recette {
 	width: 710px;
 	margin-right: 17px;
@@ -1801,9 +1839,11 @@ background-color: #FFF;
 }
 
 #fond_valid {
-	width: 60%;
+	width: 1024px;
+	height: 710px;
 	margin: 0 auto;
 	margin-bottom: 600px;
+	margin-top: 30px;
 	
 	background-image: url(../img/paper_craft_step.png);
 	background-position: center;
@@ -2027,4 +2067,60 @@ margin-top: 5px;
 	float: right;
 	margin-top:30px;
 	margin-right: 100px;
+}
+
+.bloc_menu li:hover > ul{
+        display: block;
+}
+
+/* Sous-menu */
+.bloc_menu ul{
+    list-style: none;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99999;
+    background-color: #fff;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.bloc_menu ul li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.bloc_menu ul li:last-child{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bloc_menu ul a{
+    padding: 15px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+.bloc_menu ul li a{
+        text-transform: uppercase;
+        color: #000;
+        font-size: 13px;
+        text-decoration:none;
+        margin-right:20px;
+}
+.bloc_menu ul li a:hover{
+    color:#92B929;
+}
+
+
+@media screen and (max-width: 1250px) {
+  #header .bloc_user img {
+  	display: none;
+  }
 }

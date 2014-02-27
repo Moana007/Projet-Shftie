@@ -13,6 +13,9 @@
 			<label for="name" class="nom">Name</label>
 				<input name="name_mail" type="text" id="name_mail" value="<?php echo $name_mail; ?>">
 				<br>
+			<label for="email" class="email">Mail</label>
+				<input name="email_mail" type="text" id="email_mail">
+				<br>
 			<label for="comments" class="message">Your message</label>
 				<textarea name="comments" cols="40" id="comments"rows="3" id="comments" style="width: 350px;"></textarea>
 			<input type="submit" class="submit" value="Submit">

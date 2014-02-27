@@ -1,6 +1,11 @@
 <?php 
 
-
+	if(!isset($_GET['show'])){
+		$show = '';
+	}
+	else {
+		$show = $_GET['show'];
+	}
 
 	include_once('model/home/book.php');
 	
@@ -19,7 +24,14 @@
 		include_once('view/home/book_page.php');
 
 	}
-	
+	else if($show == 'book'){
+
+		include_once('view/home/book_display.php');
+	}
+	else if($show == 'catalogue'){
+
+		include_once('view/home/book_catalogue.php');
+	}
 	else {
 		$show_all_recipe = show_all_recipes();	
 	

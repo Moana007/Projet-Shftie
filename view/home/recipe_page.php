@@ -1,18 +1,14 @@
-
-  <div id="fb-root"></div>
-  <script>
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-   </script>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))
-  {js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
-  }(document,"script","twitter-wjs");
-  </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
 
   <!-- BOUTON DE PARTAGE  -->
     
@@ -77,6 +73,10 @@
   </div>
 </div>
 
+
+
+
+
 <!--FIN SLIDER DEBUT CONTENT -->
 
 
@@ -94,6 +94,12 @@
  -->
 
 <div id="page_recipe">
+    <!-- BOUTON DE PARTAGE  -->
+  <div class="sharing">
+    <div class="fb-share-button fbdown" data-href="http://www.shiftie.org" data-type="button_count"></div>
+    <div class="fbdown"><a href="https://twitter.com/share" class="twitter-share-button"  data-via="Shiftie" data-lang="en">Tweet</a></div>
+    <?php //echo $_SERVER['HTTP_REFERER']; ?>
+  </div>
   <div class="texte_recette">
     <div class="ingredient">
       <div class="titre_recette">Ingredients</div>

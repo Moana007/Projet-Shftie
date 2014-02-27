@@ -107,6 +107,33 @@ function connect_user($login, $pwd, $box){
 		die();
 	}
 }
+function connect_user_first_time($login, $pwd, $box){
+	
+	try{	
+		global $connexion;
+		
+		$validation = 1;
+
+		$pwd = md5($pwd);
+
+		$sql2 = $connexion->prepare("SELECT * FROM USERS WHERE mail = :login AND password = :pwd AND validation = :validation");
+		
+		$sql2->bindParam(':login', $login, PDO::PARAM_STR);
+		$sql2->bindParam(':pwd', $pwd, PDO::PARAM_STR);
+		$sql2->bindParam(':validation', $validation, PDO::PARAM_INT);
+					
+		$sql2->execute();
+		$first_time = $sql2->fetchAll();
+
+		return $first_time;	
+	}
+
+	catch(Exception $e)
+	{
+		echo "La requete n'a pas marché" ,$e->getMessage();
+		die();
+	}
+}
 
 function update_pwd($new_pwd){
 
@@ -148,7 +175,5 @@ function update_user($age, $city, $favorite_plate, $users_desc, $pref, $sex){
 			echo "Connexion SQL impossible; " ,$e->getMessage();
 			die();
 		}
-	}
+}
 
-
-?>
