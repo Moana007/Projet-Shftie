@@ -51,7 +51,13 @@
             <a href="?appli=home&action=recipe&id_rec=<?php echo $fav['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img src="<?php echo $fav['photo'] ?>">
               <div class="views_bloc_recette">
-                
+                <div class="views_title aa<?php echo $var; ?>">
+                  <?php if (strlen(htmlentities($fav['recette_name'])) > 32) {
+                            echo substr(htmlentities($fav['recette_name']),0, 32); ?>..
+                  <?php } else {
+                            echo htmlentities($fav['recette_name']); ?>
+                  <?php } ?>
+                </div>  
                 <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
                   <?php 
                     $fav = fav_recipe($idrecipe);
@@ -95,8 +101,8 @@
               <img src="<?php echo $recipes['photo'] ?>">
               <div class="views_bloc_recette">
                 <div class="views_title bb<?php echo $var; ?>">
-                  <?php if (strlen(htmlentities($recipes['recette_name'])) > 35) {
-                            echo substr(htmlentities($recipes['recette_name']),0, 35); ?>..
+                  <?php if (strlen(htmlentities($recipes['recette_name'])) > 32) {
+                            echo substr(htmlentities($recipes['recette_name']),0, 32); ?>..
                   <?php } else { 
                             echo htmlentities($recipes['recette_name']); ?>
                   <?php } ?>

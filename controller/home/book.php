@@ -24,7 +24,10 @@
 
 		include_once('view/home/book_display.php');
 	}
-	
+	else if($_GET['show'] == 'catalogue'){
+
+		include_once('view/home/book_catalogue.php');
+	}
 	else {
 	
 		if(isset($_POST['book_name'])) {

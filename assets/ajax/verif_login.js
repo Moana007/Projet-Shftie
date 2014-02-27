@@ -29,7 +29,9 @@ function onSubmit(event){
 	var successCallback = function(response){
 		if(response.success){
 			window.location=url_courante;
-
+		}
+		else if(response.first){
+			window.location='?appli=users&action=modif_users';
 		}
 		else{			
 			$('.error-msg').remove();

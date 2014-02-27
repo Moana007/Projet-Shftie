@@ -16,7 +16,7 @@ $(document).ready(function() {
             $('.error-msg').remove();
             $("#message_error2").append("<span class='error-msg' style='color:red;' >Veuillez renseigner tous les champs</span>");
             $('#pwd1, #pwd2').val("");
-        } 
+        }
         else if(pwd1 != pwd2){
             $('.error-msg').remove();
             $("#message_error2").append("<span class='error-msg' style='color:red;' >Passwords don't match</span>");
@@ -42,7 +42,6 @@ $(document).ready(function() {
             window.setTimeout("location=('?appli=users&action=confirm_mail');",1000);
 
         }
-
 
         return false;
     });
