@@ -1031,12 +1031,33 @@ background-color: #FFF;
 	margin: 0 auto;
 
 	padding-left: 20px;
-	margin-top: 30px;
+	margin-top: 7px;
 }
 .titre_recette {
 	text-transform: uppercase;
 	font-size: 28px;
 }
+
+#page_recipe .sharing {
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+	height: 20px;
+	margin-bottom:5px; 
+	margin-left: -20px;
+	display: block;
+}
+
+#page_recipe .sharing .fbdown {
+	position: absolute;
+	right: 20px;
+
+}
+
+#page_recipe .sharing .fbdown+.fbdown{
+	right: 100px;
+}
+
 #page_recipe .texte_recette {
 	width: 710px;
 	margin-right: 17px;

@@ -75,10 +75,7 @@
 
 
 
-  <!-- BOUTON DE PARTAGE  -->
-  <div class="fb-share-button" data-href="http://www.shiftie.org" data-type="button_count"></div>
-  <a href="https://twitter.com/share" class="twitter-share-button"  data-via="Shiftie" data-lang="en">Tweet</a>
-  <?php //echo $_SERVER['HTTP_REFERER']; ?>
+
 
 <!--FIN SLIDER DEBUT CONTENT -->
 
@@ -97,6 +94,12 @@
  -->
 
 <div id="page_recipe">
+    <!-- BOUTON DE PARTAGE  -->
+  <div class="sharing">
+    <div class="fb-share-button fbdown" data-href="http://www.shiftie.org" data-type="button_count"></div>
+    <div class="fbdown"><a href="https://twitter.com/share" class="twitter-share-button"  data-via="Shiftie" data-lang="en">Tweet</a></div>
+    <?php //echo $_SERVER['HTTP_REFERER']; ?>
+  </div>
   <div class="texte_recette">
     <div class="ingredient">
       <div class="titre_recette">Ingredients</div>
