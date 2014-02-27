@@ -12,7 +12,7 @@
                                   echo htmlentities($new['recette_name']); ?> </a>
                               <?php } ?>
 
-                              <?php echo substr(htmlentities($new['description']),0, 230); ?>
+                              <?php echo substr(htmlentities($new['description']),0, 180); ?>
           </div>
           <div class="views_bloc_recette">
               <div class="views"><span class="icon icon-star-empty"></span>

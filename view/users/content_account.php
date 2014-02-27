@@ -6,14 +6,20 @@
         <?php foreach($author as $authors){ ?>
           <div class="pseudo"><?php echo $authors['pseudo']; ?></div>
           <div class="nom"><?php echo $authors['users_name']." ".$authors['users_firstname']; ?></div>
-          <div class="age"><?php echo $authors['age']." ans, ".$authors['sexe']; ?></div>
+          <div class="age">
+            <?php if($authors['age'] == 0 || $authors['age'] == null){
+                      echo $authors['sexe'];
+                  } else {
+                      echo $authors['age']." ans, ".$authors['sexe'];
+                  } ?>
+          </div>
         <?php } ?>
       </div>
       <?php   foreach($author as $authors){
                 if(!isset($_SESSION['users_id']) || $_SESSION['users_id'] == '' || $authors['users_id'] != $_SESSION['users_id'] ){ ?>
                     <!-- RIEN, le visiteur nest pas sur son compte -->
       <?php     }else { ?>
-        <?php echo $authors['users_id']; echo $_SESSION['users_id']; ?>
+              <?php echo "."; ?>
               <a href="?appli=users&action=modif_users" class="icon icon-user"></a>
       <?php     }
               } ?>
@@ -45,7 +51,7 @@
             <a href="?appli=home&action=recipe&id_rec=<?php echo $fav['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img src="<?php echo $fav['photo'] ?>">
               <div class="views_bloc_recette">
-                <div class="views_title aa<?php echo $var; ?>"><?php echo $fav['recette_name'] ?></div>
+                
                 <div class="views aaa<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
                   <?php 
                     $fav = fav_recipe($idrecipe);
@@ -83,12 +89,18 @@
         <div class="bloc_profil">
           <?php if(!empty($recipe)) { ?>
           <?php $var = 0; foreach ($recipe as $recipes):  
-        		$var = $var + 1;  
+            $var = $var + 1;  
             $idrecipe = $recipes['recettes_id'];?>
             <a href="?appli=home&action=recipe&id_rec=<?php echo $recipes['recettes_id']; ?>" class="case_recipe b<?php echo $var; ?>">
               <img src="<?php echo $recipes['photo'] ?>">
               <div class="views_bloc_recette">
-                <div class="views_title bb<?php echo $var; ?>"><?php echo $recipes['recette_name'] ?></div>
+                <div class="views_title bb<?php echo $var; ?>">
+                  <?php if (strlen(htmlentities($recipes['recette_name'])) > 35) {
+                            echo substr(htmlentities($recipes['recette_name']),0, 35); ?>..
+                  <?php } else { 
+                            echo htmlentities($recipes['recette_name']); ?>
+                  <?php } ?>
+                </div>
                 <div class="views bbb<?php echo $var; ?>"><span class="icon icon-star-empty"></span>
                   <?php 
                     $fav = fav_recipe($idrecipe);

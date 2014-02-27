@@ -6,7 +6,13 @@
       <div class="info">
           <div class="pseudo"><?php echo $authors['pseudo']; ?></div>
           <div class="nom"><?php echo $authors['users_name']." ".$authors['users_firstname']; ?></div>
-          <div class="age"><?php echo $authors['age']." ans, ".$authors['sexe']; ?></div>
+          <div class="age">
+            <?php if($authors['age'] == 0 || $authors['age'] == null){
+                        echo $authors['sexe'];
+                  } else {
+                        echo $authors['age']." ans, ".$authors['sexe'];
+                  } ?>
+          </div>
       </div>
       <a href="?appli=users&action=account" class="icon icon-user"></a>
     </div>

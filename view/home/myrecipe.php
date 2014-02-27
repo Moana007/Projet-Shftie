@@ -13,7 +13,7 @@
                                   echo htmlentities($recipe['recette_name']); ?> </a>
                               <?php } ?>
 
-                              <?php echo substr(htmlentities($recipe['description']),0, 230); ?>
+                              <?php echo substr(htmlentities($recipe['description']),0, 180); ?>
 			</div>
 			<?php if($recipe['rec_validation'] == 1){ ?>
 				<!-- Si la recette est VALIDE -->

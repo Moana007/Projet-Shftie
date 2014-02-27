@@ -20,6 +20,10 @@
 		include_once('view/home/book_page.php');
 
 	}
+	else if($_GET['show'] == 'book'){
+
+		include_once('view/home/book_display.php');
+	}
 	
 	else {
 	
