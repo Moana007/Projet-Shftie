@@ -28,11 +28,11 @@
     <div class="books">
       <div class="titre_1">Books</div>
       <div class="row_books">
-      <?php if(!empty($show_book)) { ?>
+     <?php if(!empty($show_book)) { ?>
       <?php foreach($show_book as $show_books) { ?>
         <a href="?appli=home&action=book&id_books=<?php echo $show_books['books_id']; ?>" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
       <?php } ?>
-      <?php } else { echo "<p style='color:#6E902A;'>You have no Book for the moment</p>"; } ?>     
+      <?php } else { echo "<p style='color:#6E902A;'>You have no Book for the moment</p>"; } ?> 
       </div>
       <a href="#" class="bt vert">View More</a>
     </div>
@@ -41,7 +41,7 @@
     <div class="bloc_wide">
        <div class="favorite">
 
-        <div class="titre_1">Favorites</div>
+        <div class="titre_1"><a href="#">Favorites</a></div>
 
          <div class="bloc_profil">
           <?php if(!empty($fav)) { ?>
@@ -85,7 +85,7 @@
   
      
       <div class="favorite">
-        <div class="titre_1">Recipes</div>
+        <div class="titre_1"><a href="#">Recipes</a></div>
         <div class="bloc_profil">
           <?php if(!empty($recipe)) { ?>
           <?php $var = 0; foreach ($recipe as $recipes):  

@@ -36,7 +36,13 @@
    <!-- Bloc menu quand users EST connecté -->
           <ul class="bloc_menu">
             <li><a href="?appli=home&action=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
-            <li><a href="#" class="menu"><span class="icon icon-book"></span>Books</a></li>
+            <li>
+              <a href="#" class="menu"><span class="icon icon-book"></span>Books</a>
+              <ul>
+                <li><a href="?appli=home&action=book">Create</a></li>
+                <li><a href="#">Edit</a></li>
+            </ul>
+            </li>
             <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
       <?php } ?>
@@ -94,7 +100,7 @@
        <div class="search_field search2">
            <form action="" method="post" ng-submit="search()">
               <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
-              <input type="submit" class="btn" value="search">              
+              <input type="submit" class="bt vert" value="Ok">              
            </form>   
        </div>
 
