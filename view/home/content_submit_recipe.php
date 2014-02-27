@@ -50,15 +50,15 @@
             <!-- IMG NORMALE -->
 
 
-        <div id="cover-container">
+        <div class="cover-container">
 
-          <div id="cover-image" style="background-image; background-size: cover; background-position:center"></div>
-          <div class=""><img src="assets/img/uploads/Thief-Clocktower-topview.jpg" class="previews" alt=""></div>
+          <div class="cover-image" style="background-image; background-size: cover; background-position:center"></div>
+          <img src="assets/img/preview_upload.jpg" class="previews" alt="">
           <input type='hidden' name="img_top" id="img_top" value=""> <!-- Recupere la valeur top -->
         </div>
 
-            <div class="text_img">NB: When you upload your photo, make sure you have a minimum resolution of **** x ****. <br/>
-            You can zoom and postion it whatever you like.</div>
+            <div class="text_img">NB: When you upload your photo, make sure you have a minimum width of 1024px. <br/>
+            You can postion it whatever you like.</div>
 
           
         </div>

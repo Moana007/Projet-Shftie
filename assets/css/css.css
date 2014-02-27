@@ -1561,7 +1561,7 @@ background-color: #FFF;
 	margin-top: 30px;
 }
 .step {
-	width: 1280px;
+	width: 1024px;
 	background-image: url(../img/paper_craft_step.png);
 	background-position: center;
 }
@@ -1571,11 +1571,13 @@ background-color: #FFF;
 	width: 1024px;
 	height: 390px;
 	margin: 0 auto;
+	text-align: center;
 	padding: 20px 20px;
 }
 
 .titre_recette {
 	margin-bottom: 30px;
+	text-align: left;
 }
 
 .titre_recette span {
@@ -1592,7 +1594,6 @@ background-color: #FFF;
 	margin-bottom: 20px;
 	width: 700px;
 	height: 30px;
-	display: block;
 	border: 1px solid #89b929;
 }
 
@@ -1651,16 +1652,16 @@ background-color: #FFF;
 #create_recipe2 .step2 .images {
 	margin-top:30px;
 }
-#create_recipe2 .step2 .images #cover-container {
+#create_recipe2 .step2 .images .cover-container {
 	width: 1024px;
 	height:280px;
 	position:relative;
 	margin-left:-20px;
-	overflow:hidden;
+	overflow:hidden;D
 
 }
 
-#create_recipe2 .step2 .images #cover-image {
+#create_recipe2 .step2 .images .cover-image {
 	width: 1024px;
 	position:absolute;
 	margin-left:-20px;
@@ -1672,6 +1673,7 @@ background-color: #FFF;
 	position:absolute;
 	background-size: cover;
 	width: 1024px;
+	margin-bottom: 20px;
 
 }
 
@@ -1683,8 +1685,10 @@ background-color: #FFF;
 #create_recipe2 .step2 .images .text_img {
 	display: inline-block;
 	margin-left: 50px;
-	font-family: 12px;
+	font-size: 16px;
 	vertical-align: top;	
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 #create_recipe3 .step3 {
 	display: block;
@@ -1771,7 +1775,8 @@ background-color: #FFF;
 }
 
 .row_tag .tag_title {
-	width: 100%;
+	width: 600px;
+	margin: 0 auto;
 	font-size: 20px;
 	padding-bottom: 5px;
 	text-align: center;
@@ -1847,4 +1852,179 @@ background-color: #FFF;
 	display: block;
 	font-size: 22px;
 	margin-bottom: 10px;
+}
+#createbooks  {
+	width: 1024px;
+	height: 550px;
+
+	margin: 0 auto;
+}
+
+#createbooks .create_books_step1 {
+	width: 984px;
+	height: 500px;
+	margin: 0 auto;
+
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+	padding:30px;
+}
+#createbooks .create_books_step1 .bloc_name .img_cover_test {
+	width: 235px
+}
+
+#createbooks .create_books_step1 .bloc_name .name {
+	float: right;
+	margin-right: 540px;
+	margin-top: 20px;
+}
+
+#createbooks .create_books_step1 .bloc_name .book_name {
+	float: right;
+	width: 430px;
+	border: 1px solid #89B929;
+	margin-right: 220px;
+}
+#createbooks .create_books_step1 .bloc_name .name_cover {
+	float: left;
+	margin-top: -250px;
+	margin-left: 275px;
+}
+#createbooks .create_books_step1 .bloc_name .row_covers {
+	width: 600px;
+	height: 220px;
+	padding: 20px;
+	border: 1px solid #89B929;
+	border-radius: 10px;
+	float: right;
+	margin-top: -221px;
+	margin-right: 50px; 
+}
+
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover {
+	width: 123px;
+	height: 170px;
+	float: left;
+	text-align: center;
+}
+
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover+.choose_cover {
+	margin-left: 20px;
+}
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover img {
+	width: 123px;
+	height: 161px;
+}
+
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover input {
+	margin-top: 10px;
+}
+#createbooks .create_books_step1 button {
+	float: right;
+	margin-top: 30px;
+	margin-right: 100px;
+}
+
+#editbooks {
+	width: 1024px;
+	height: 300px;
+
+	margin: 0 auto;
+}
+
+#editbooks .edit_book {
+	width: 984px;
+	height: 200px;
+	margin: 0 auto;
+
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+	padding:30px;
+
+	text-align: center;
+}
+
+#editbooks .edit_book .name {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#editbooks .edit_book select {
+	border: 1px solid #89B929;
+	border-radius: 5px;
+	color: #89B929;
+	width: 300px;
+}
+
+#choosefav {
+	width: 1024px;
+	height: 1050px;
+
+	margin: 0 auto;
+}
+
+#choosefav .choose_fav {
+	width: 1004px;
+	height: 900px;
+	margin: 0 auto;
+
+	padding-left: 17px;
+	padding-top: 30px;
+
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+}
+
+#choosefav .choose_fav .row_titre {
+	height: 100px;
+}
+
+#choosefav .choose_fav .row_titre .filter {
+	float: right;
+	margin-right: 20px;
+}
+
+#choosefav .choose_fav .row_titre .filter a {
+	color: #000;
+	margin-left: 10px;
+	text-decoration: underline;
+}
+
+#choosefav .choose_fav .bloc_recette {
+	width: 235px;
+	height: 300px;
+
+	float: left;
+	margin-bottom: 30px;
+}
+#choosefav .choose_fav .bloc_recette input.check {
+display: block;
+margin: 0 auto;
+margin-top: 5px;
+
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette {
+	margin-left: 10px;
+}
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 0px;
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 10px;
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 0px;
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 10px;
+}
+
+#choosefav .choose_fav button {
+	float: right;
+	margin-top:30px;
+	margin-right: 100px;
 }
