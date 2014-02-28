@@ -2160,6 +2160,137 @@ a:hover.tooltips span {
         display: block;
 }
 
+#book_display {
+	width: 1024px;
+	height: 1800px;
+	margin: 0 auto;
+}
+
+#book_display .book_slider {
+	width: 1024px;
+	height: 280px;
+	margin: 0 auto;
+}
+
+#book_display .book_slider img {
+	width: 1024px;
+	height: 280px;
+}
+#book_display .book_pagination {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+}
+#book_display .book_pagination .pag.left{
+	float: left;
+}
+
+#book_display .book_pagination .pag.right{
+	float: right;
+} 
+
+#book_display .book_pagination .pag a.bloc_vert {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: #89B929;
+	border-radius: 10px;
+	color: #FFF;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+}
+
+#book_display .book_pagination .pag .texte_pag {
+	color: #FFF;
+	font-size: 18px;
+}
+
+#book_display .titre_book {
+	color: #FFF;
+	font-size: 30px;
+	text-align: center;
+	font-family: 'new_ciclegordita';
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#book_display .display_full {
+	width: 984px;
+	margin: 0 auto;
+}
+
+#book_display .display_full .left_part {
+	width: 252px;
+	padding-right:30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-right: 2px solid #89B929;
+	float: left;
+}
+#book_display .display_full .left_part .time {
+	width: 252px;
+	padding-right: 30px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFF;
+	position: relative;
+	text-align: right;
+}
+#book_display .display_full .left_part .time .icon {
+	position: absolute;
+	font-size: 18px;
+	left: 50px;
+}
+
+#book_display .display_full .left_part .time span.textleft {
+	display: inline-block;
+	text-transform:uppercase;
+	text-align: left;
+	width: 100px;
+}
+
+#book_display .display_full .left_part .time span.textright {
+	text-align: right;
+	display: inline-block;
+}
+
+#book_display .display_full .left_part .difficulty {
+	width: 252px;
+	padding-right: 30px;
+	margin-top:20px; 
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFF;
+	position: relative;
+	text-align: right;
+}
+
+#book_display .display_full .left_part .ingre {
+	width: 252px;
+	padding-right: 30px;
+	margin-top:20px; 
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFF;
+	position: relative;
+	text-align: right;
+}
+
+#book_display .display_full .right_part {
+	width: 732px;
+	padding-left:30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	float: right;
+	vertical-align: top;
+
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFF;
+}
+
 /* Sous-menu */
 .bloc_menu ul{
     list-style: none;
