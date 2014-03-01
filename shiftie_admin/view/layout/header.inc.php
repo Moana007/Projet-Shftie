@@ -21,7 +21,7 @@ if(!isset($_GET['filter'])){
 <body>
 	<div class="page-header">
 	<h1>Shiftie Administration</h1>
-	<a href='<?php echo "function/logout_admin.php" ?>'>Log Out</a>
+	<a href='<?php echo "?appli=admin&action=logout_admin" ?>'>Log Out</a>
 </div>
 
 		

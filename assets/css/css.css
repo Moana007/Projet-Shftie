@@ -174,6 +174,14 @@ button {
 	text-align: left;
 }
 
+.titre_1 a {
+	font-family: 'new_ciclegordita';
+	font-size: 28px;
+	line-height: 45px;
+	color: #FFF;
+	text-align: left;
+}
+
 .titre_2 {
 	font-family: 'new_ciclegordita';
 	font-size: 32px;
@@ -182,6 +190,9 @@ button {
 	color: #89b929;
 }
 
+.underscore_title {
+	text-decoration: underline;
+}
 .bt {
 	padding: 10px 15px 10px 15px;
 	border-radius: 10px;
@@ -352,7 +363,6 @@ a.bt.gris:hover {
 .search_field{
     position:relative;
     float:right;
-    margin-top:15px;
 }
 
 .search2 {
@@ -360,7 +370,7 @@ a.bt.gris:hover {
 	margin-right: 15px;
 }
 #inp_search{
-    width:190px;
+    width:185px;
     border-radius:7px;
     padding:8px;
     border:none;
@@ -373,7 +383,6 @@ a.bt.gris:hover {
     top:8px;
 }
 #header .bloc_user {
-    width:270px;
 	float: right;
 	padding: 0px 50px 0px 0px;
 }
@@ -399,7 +408,9 @@ a.bt.gris:hover {
 	font-size: 12px;
 	color: #89b929;
 }
-
+.search_field input.bt {
+	border: none;
+}
 #header .bloc_login {
 	float: right;
 	padding: 23px 10px 0px 0px;
@@ -795,7 +806,7 @@ background-color: #FFF;
 }
 
 #page_profil {
-	width: 1280px;
+	width: 1024px;
 	height: 1500px;
 
 	margin: 0 auto;
@@ -806,6 +817,7 @@ background-color: #FFF;
 	height: 207px;
 	padding-left: 50px;
 	padding-top: 16px;
+	position: relative;
 }
 
 #page_profil .profil_header a.icon {
@@ -817,8 +829,9 @@ background-color: #FFF;
 	background-color: #FFF;
 	border-radius: 30px;
 	color: #89b929;
-	margin-right: 10px;
-	margin-top: 150px;
+	right: 10px;
+	top: 150px;
+	position: absolute;
 }
 
 
@@ -862,40 +875,42 @@ background-color: #FFF;
 }
 
 #page_profil .books .row_books {
-	width: 1280px;
-	height: 350px;
+	width: 1024px;
+	height: 320px;
 	padding-top: 15px;
 }
 
 #page_profil .books .row_books .case_book {
-	width: 225px;
-	height: 316px;
+	width: 198px;
+	height: 278px;
 	display: block;
 	float: left;
+
+	background-color: red;
 }
 
 #page_profil .books .row_books .case_book img {
-	width: 225px;
-	height: 316px;
+	width: 198px;
+	height: 278px;
 }
 
 #page_profil .books .row_books .case_book+.case_book {
-	margin-left:38px; 
+	margin-left:8px; 
 }
 
 #page_profil .bloc_wide {
-	width: 1280px;
+	width: 1024px;
 	height: 600px;
 }
 
 #page_profil .bloc_wide .favorite {
-	width: 620px;
+	width: 500px;
 	height: 600px;
 	float: left;
 } 
 
 #page_profil .bloc_wide .favorite+.favorite{
-	margin-left: 40px;
+	margin-left: 24px;
 }
 
 #page_profil .bloc_wide .favorite .titre_1,
@@ -907,8 +922,8 @@ background-color: #FFF;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe {
-	width: 305px;
-	height: 240px;
+	width: 245px;
+	height: 195px;
 
 	margin-bottom: 10px;
 
@@ -916,8 +931,8 @@ background-color: #FFF;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe img {
-	width: 305px;
-	height: 200px;
+	width: 245px;
+	height: 165px;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil a.case_recipe+a.case_recipe {
@@ -931,10 +946,10 @@ background-color: #FFF;
 	margin-left: 10px;
 }
 #page_profil .bloc_wide .favorite .bloc_profil .case_recipe .views_bloc_recette {
-	width: 305px;
-	height: 40px;
+	width: 245px;
+	height: 30px;
 	
-	line-height: 40px;
+	line-height: 30px;
 
 	background-color: #89b929;
 	color: #FFF;
@@ -953,7 +968,7 @@ background-color: #FFF;
 	padding:0px 10px 0px 10px;
 
 	font-family: 'new_ciclegordita';
-	font-size: 18px;
+	font-size: 16px;
 }
 
 #page_profil .bloc_wide .favorite .bloc_profil .case_recipe .views_bloc_recette .views span {
@@ -997,14 +1012,16 @@ background-color: #FFF;
 	padding-left: 10px;
 	font-size: 12px;
 
-	color: #89b929;
-
-	border: 1px solid #89b929;
-	outline: 0px;
+	color: #000;
 }
 
 
+#page_profil .security input.bt {
+	border: none;
+	margin-top: 20px;
 
+	float: right;
+}
 
 
 #page_recipe {
@@ -1014,12 +1031,33 @@ background-color: #FFF;
 	margin: 0 auto;
 
 	padding-left: 20px;
-	margin-top: 30px;
+	margin-top: 7px;
 }
 .titre_recette {
 	text-transform: uppercase;
 	font-size: 28px;
 }
+
+#page_recipe .sharing {
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+	height: 20px;
+	margin-bottom:5px; 
+	margin-left: -20px;
+	display: block;
+}
+
+#page_recipe .sharing .fbdown {
+	position: absolute;
+	right: 20px;
+
+}
+
+#page_recipe .sharing .fbdown+.fbdown{
+	right: 100px;
+}
+
 #page_recipe .texte_recette {
 	width: 710px;
 	margin-right: 17px;
@@ -1524,6 +1562,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
+
 #create_recipe2{
 	width: 1024px;
 	height: 1000px;
@@ -1532,6 +1571,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
+
 #create_recipe3  {
 	width: 1024px;
 	height: 800px;
@@ -1540,6 +1580,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
+
 #create_recipe4{
 	width: 1024px;
 	height: 1000px;
@@ -1548,7 +1589,7 @@ background-color: #FFF;
 
 	margin-top: 30px;
 }
-}
+
 #create_recipe5{
 	width: 1024px;
 	height: 1000px;
@@ -1558,7 +1599,7 @@ background-color: #FFF;
 	margin-top: 30px;
 }
 .step {
-	width: 1280px;
+	width: 1024px;
 	background-image: url(../img/paper_craft_step.png);
 	background-position: center;
 }
@@ -1568,11 +1609,13 @@ background-color: #FFF;
 	width: 1024px;
 	height: 390px;
 	margin: 0 auto;
+	text-align: center;
 	padding: 20px 20px;
 }
 
 .titre_recette {
 	margin-bottom: 30px;
+	text-align: left;
 }
 
 .titre_recette span {
@@ -1588,9 +1631,10 @@ background-color: #FFF;
 #create_recipe .step .case_remplir {
 	margin-bottom: 20px;
 	width: 700px;
-	display: block;
+	height: 30px;
 	border: 1px solid #89b929;
 }
+
 .ligne_bt {
 	width: 100%;
 	text-align: center;
@@ -1646,16 +1690,16 @@ background-color: #FFF;
 #create_recipe2 .step2 .images {
 	margin-top:30px;
 }
-#create_recipe2 .step2 .images #cover-container {
+#create_recipe2 .step2 .images .cover-container {
 	width: 1024px;
 	height:280px;
 	position:relative;
 	margin-left:-20px;
-	overflow:hidden;
+	overflow:hidden;D
 
 }
 
-#create_recipe2 .step2 .images #cover-image {
+#create_recipe2 .step2 .images .cover-image {
 	width: 1024px;
 	position:absolute;
 	margin-left:-20px;
@@ -1667,6 +1711,7 @@ background-color: #FFF;
 	position:absolute;
 	background-size: cover;
 	width: 1024px;
+	margin-bottom: 20px;
 
 }
 
@@ -1678,8 +1723,10 @@ background-color: #FFF;
 #create_recipe2 .step2 .images .text_img {
 	display: inline-block;
 	margin-left: 50px;
-	font-family: 12px;
+	font-size: 16px;
 	vertical-align: top;	
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 #create_recipe3 .step3 {
 	display: block;
@@ -1766,7 +1813,8 @@ background-color: #FFF;
 }
 
 .row_tag .tag_title {
-	width: 100%;
+	width: 600px;
+	margin: 0 auto;
 	font-size: 20px;
 	padding-bottom: 5px;
 	text-align: center;
@@ -1791,12 +1839,506 @@ background-color: #FFF;
 }
 
 #fond_valid {
-	width: 60%;
+	width: 1024px;
+	height: 710px;
 	margin: 0 auto;
 	margin-bottom: 600px;
+	margin-top: 30px;
 	
 	background-image: url(../img/paper_craft_step.png);
 	background-position: center;
 	
 	padding: 20px;
+}
+
+#about {
+	width: 1024px;
+	height: 450px;
+	margin: 0 auto;
+	padding: 20px 20px;
+	background-color: #FFF;
+	margin-bottom: 30px;
+}
+
+#about .titre {
+	text-align: center;
+	font-weight: bold;
+	color: #89B929;
+	font-size:26px;
+	margin-bottom: 50px;
+}
+
+#about .texte {
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+#about .texte span {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+
+#about .texte2 {
+	margin-top: 50px;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+#about .texte2 span {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+#createbooks  {
+	width: 1024px;
+	height: 550px;
+
+	margin: 0 auto;
+}
+
+#createbooks .create_books_step1 {
+	width: 984px;
+	height: 500px;
+	margin: 0 auto;
+
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+	padding:30px;
+}
+#createbooks .create_books_step1 .bloc_name .img_cover_test {
+	width: 235px
+}
+
+#createbooks .create_books_step1 .bloc_name .name {
+	float: right;
+	margin-right: 540px;
+	margin-top: 20px;
+}
+
+#createbooks .create_books_step1 .bloc_name .book_name {
+	float: right;
+	width: 430px;
+	border: 1px solid #89B929;
+	margin-right: 220px;
+}
+#createbooks .create_books_step1 .bloc_name .name_cover {
+	float: left;
+	margin-top: -250px;
+	margin-left: 275px;
+}
+#createbooks .create_books_step1 .bloc_name .row_covers {
+	width: 600px;
+	height: 220px;
+	padding: 20px;
+	border: 1px solid #89B929;
+	border-radius: 10px;
+	float: right;
+	margin-top: -221px;
+	margin-right: 50px; 
+}
+
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover {
+	width: 123px;
+	height: 170px;
+	float: left;
+	text-align: center;
+}
+
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover+.choose_cover {
+	margin-left: 20px;
+}
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover img {
+	width: 123px;
+	height: 161px;
+}
+
+#createbooks .create_books_step1 .bloc_name .row_covers .choose_cover input {
+	margin-top: 10px;
+}
+#createbooks .create_books_step1 button {
+	float: right;
+	margin-top: 30px;
+	margin-right: 100px;
+}
+
+#editbooks {
+	width: 1024px;
+	height: 300px;
+
+	margin: 0 auto;
+}
+
+#editbooks .edit_book {
+	width: 984px;
+	height: 200px;
+	margin: 0 auto;
+
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+	padding:30px;
+
+	text-align: center;
+}
+
+#editbooks .edit_book .name {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#editbooks .edit_book select {
+	border: 1px solid #89B929;
+	border-radius: 5px;
+	color: #89B929;
+	width: 300px;
+}
+
+#choosefav {
+	width: 1024px;
+	height: 1050px;
+
+	margin: 0 auto;
+}
+
+#choosefav .choose_fav {
+	width: 1004px;
+	height: 900px;
+	margin: 0 auto;
+
+	padding-left: 17px;
+	padding-top: 30px;
+
+	background-image: url(../img/paper_craft_step.png);
+	background-position: center;
+}
+
+#choosefav .choose_fav .row_titre {
+	height: 100px;
+}
+
+#choosefav .choose_fav .row_titre .filter {
+	float: right;
+	margin-right: 20px;
+}
+
+#choosefav .choose_fav .row_titre .filter a {
+	color: #000;
+	margin-left: 10px;
+	text-decoration: underline;
+}
+
+#choosefav .choose_fav .bloc_recette {
+	width: 235px;
+	height: 300px;
+
+	float: left;
+	margin-bottom: 30px;
+}
+#choosefav .choose_fav .bloc_recette input.check {
+display: block;
+margin: 0 auto;
+margin-top: 5px;
+
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette {
+	margin-left: 10px;
+}
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 0px;
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 10px;
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 0px;
+}
+
+#choosefav .choose_fav .bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette+.bloc_recette {
+	margin-left: 10px;
+}
+
+#choosefav .choose_fav button {
+	float: right;
+	margin-top:30px;
+	margin-right: 100px;
+}
+#book_catalogue{
+	width: 1024px;
+	height: 800px;
+	margin: 0 auto;
+}
+#book_catalogue .books {
+	height: 400px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+#book_catalogue .books .row_books {
+	width: 1024px;
+	height: 320px;
+	padding-top: 15px;
+}
+
+#book_catalogue .books .row_books .case_book {
+	width: 198px;
+	height: 278px;
+	display: block;
+	float: left;
+
+	margin-bottom: 8px;
+
+	background-color: red;
+}
+
+#book_catalogue .books .row_books .case_book img {
+	width: 198px;
+	height: 278px;
+}
+
+#book_catalogue .books .row_books .case_book+.case_book {
+	margin-left:8px; 
+}
+
+#book_catalogue .books .row_books .case_book+.case_book+.case_book+.case_book+.case_book+.case_book {
+	margin-left: 0px;
+}
+
+#book_catalogue .books .row_books .case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book {
+	margin-left: 8px;
+}
+
+#book_catalogue .books .row_books .case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book {
+	margin-left: 0px;
+}
+
+#book_catalogue .books .row_books .case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book+.case_book {
+	margin-left: 8px;
+}
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  color: #FFFFFF;
+  background: #89B929;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+
+
+  width: 0; height: 0;
+  border-top: 8px solid #89B929;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  z-index: 999;
+}
+
+
+.bloc_menu li:hover > ul{
+        display: block;
+}
+
+#book_display {
+	width: 1024px;
+	height: 1800px;
+	margin: 0 auto;
+}
+
+#book_display .book_slider {
+	width: 1024px;
+	height: 280px;
+	margin: 0 auto;
+}
+
+#book_display .book_slider img {
+	width: 1024px;
+	height: 280px;
+}
+#book_display .book_pagination {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+}
+#book_display .book_pagination .pag.left{
+	float: left;
+}
+
+#book_display .book_pagination .pag.right{
+	float: right;
+} 
+
+#book_display .book_pagination .pag a.bloc_vert {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: #89B929;
+	border-radius: 10px;
+	color: #FFF;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+}
+
+#book_display .book_pagination .pag .texte_pag {
+	color: #FFF;
+	font-size: 18px;
+}
+
+#book_display .titre_book {
+	color: #FFF;
+	font-size: 30px;
+	text-align: center;
+	font-family: 'new_ciclegordita';
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#book_display .display_full {
+	width: 984px;
+	margin: 0 auto;
+}
+
+#book_display .display_full .left_part {
+	width: 252px;
+	padding-right:30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-right: 2px solid #89B929;
+	float: left;
+}
+#book_display .display_full .left_part .time {
+	width: 252px;
+	padding-right: 30px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFF;
+	position: relative;
+	text-align: right;
+}
+#book_display .display_full .left_part .time .icon {
+	position: absolute;
+	font-size: 18px;
+	left: 50px;
+}
+
+#book_display .display_full .left_part .time span.textleft {
+	display: inline-block;
+	text-transform:uppercase;
+	text-align: left;
+	width: 100px;
+}
+
+#book_display .display_full .left_part .time span.textright {
+	text-align: right;
+	display: inline-block;
+}
+
+#book_display .display_full .left_part .difficulty {
+	width: 252px;
+	padding-right: 30px;
+	margin-top:20px; 
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFF;
+	position: relative;
+	text-align: right;
+}
+
+#book_display .display_full .left_part .ingre {
+	width: 252px;
+	padding-right: 30px;
+	margin-top:20px; 
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFF;
+	position: relative;
+	text-align: right;
+}
+
+#book_display .display_full .right_part {
+	width: 732px;
+	padding-left:30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	float: right;
+	vertical-align: top;
+
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFF;
+}
+
+/* Sous-menu */
+.bloc_menu ul{
+    list-style: none;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99999;
+    background-color: #fff;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.bloc_menu ul li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.bloc_menu ul li:last-child{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bloc_menu ul a{
+    padding: 15px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+.bloc_menu ul li a{
+        text-transform: uppercase;
+        color: #000;
+        font-size: 13px;
+        text-decoration:none;
+        margin-right:20px;
+}
+.bloc_menu ul li a:hover{
+    color:#92B929;
+}
+
+
+@media screen and (max-width: 1250px) {
+  #header .bloc_user img {
+  	display: none;
+  }
 }

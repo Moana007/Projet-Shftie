@@ -16,10 +16,13 @@ function show_author($id_aut){
 function show_recipe($id_user){ //users + recettes
 	
 	global $connexion;
-		
-		$req = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id,recette_name FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id ORDER BY RAND() LIMIT 0, 4'); 	
+		$nb = 1;
+
+		$req = $connexion->prepare('SELECT photo,users_id,auteur,recettes_id,recette_name FROM RECETTES,USERS WHERE users_id = :id_user AND auteur = users_id  AND rec_validation = :nb ORDER BY RAND() LIMIT 0, 4'); 	
 		
 		$req->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+		$req->bindParam(':nb', $nb, PDO::PARAM_INT);
+
 		//on execute la requete 
 		$req->execute();	
 		$recipe_more = $req->fetchAll();
@@ -28,7 +31,7 @@ function show_recipe($id_user){ //users + recettes
 }
 function show_fav($id_account){
 	global $connexion;
-	$query = $connexion->prepare('SELECT * FROM FAVORIS A, RECETTES B WHERE A.fav_id_recettes = B.recettes_id AND A.fav_id_users = :user ORDER BY RAND() LIMIT 0, 4');
+	$query = $connexion->prepare('SELECT * FROM FAVORIS A, RECETTES B WHERE A.fav_id_recettes = B.recettes_id AND A.fav_id_users = :user AND B.rec_validation = 1 ORDER BY RAND() LIMIT 0, 4');
 	$query->bindValue(':user', $id_account, PDO::PARAM_INT);
 	$query->execute();
 	$fav = $query->fetchAll();
@@ -86,6 +89,7 @@ function connect_user($login, $pwd, $box){
 		
 		foreach($rows as $row) {
 			$_SESSION['users_id'] = $row['users_id'];
+			$_SESSION['pseudo'] = $row['pseudo'];
 			$_SESSION['users_name'] = $row['users_name'];
 			$_SESSION['users_firstname'] = $row['users_firstname'];
 			$_SESSION['users_photo'] = $row['users_photo'];
@@ -95,6 +99,33 @@ function connect_user($login, $pwd, $box){
 		}
 		//echo $verif;
 		return $verif;	
+	}
+
+	catch(Exception $e)
+	{
+		echo "La requete n'a pas marché" ,$e->getMessage();
+		die();
+	}
+}
+function connect_user_first_time($login, $pwd, $box){
+	
+	try{	
+		global $connexion;
+		
+		$validation = 1;
+
+		$pwd = md5($pwd);
+
+		$sql2 = $connexion->prepare("SELECT * FROM USERS WHERE mail = :login AND password = :pwd AND validation = :validation");
+		
+		$sql2->bindParam(':login', $login, PDO::PARAM_STR);
+		$sql2->bindParam(':pwd', $pwd, PDO::PARAM_STR);
+		$sql2->bindParam(':validation', $validation, PDO::PARAM_INT);
+					
+		$sql2->execute();
+		$first_time = $sql2->fetchAll();
+
+		return $first_time;	
 	}
 
 	catch(Exception $e)
@@ -144,7 +175,5 @@ function update_user($age, $city, $favorite_plate, $users_desc, $pref, $sex){
 			echo "Connexion SQL impossible; " ,$e->getMessage();
 			die();
 		}
-	}
+}
 
-
-?>
