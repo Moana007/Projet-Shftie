@@ -89,4 +89,25 @@ function verif_fav($recipe_id_fav){
 			}
  	}
 
+function unvote($recipe_id_unvote){
+ 		try{
+ 		global $connexion;
+ 		$query = $connexion->prepare('DELETE FROM VOTE WHERE recettes_id_vote = :recette_id AND users_id_vote = :user_id');
+ 		$query->bindValue(':user_id', $_SESSION['users_id'], PDO::PARAM_INT);
+ 		$query->bindValue(':recette_id', $recipe_id_unvote, PDO::PARAM_INT);
+ 		$query->execute();
+ 		}
+
+			catch(Exception $e){
+				echo "Insertion impossible" ,$e->getMessage();
+				die();
+			}
+ 	}
+ 	function unvote_nb($recipe_id_vote){
+		global $connexion;
+		$query = $connexion->prepare('UPDATE RECETTES SET nb_like = nb_like - 1 WHERE recettes_id = :idrecipe ');
+		$query->bindValue(':idrecipe', $recipe_id_vote, PDO::PARAM_INT);
+		$query->execute();
+	}
+
  	

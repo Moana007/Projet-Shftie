@@ -82,7 +82,7 @@
     <div class="search_field">
     
     <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
-        <input type="image" src="assets/img/loupe.png" id="loupe">
+        <input id="search" name="search" type="image" src="assets/img/loupe.png" id="loupe">
     
     </div>
     <?php } ?>
