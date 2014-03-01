@@ -2,7 +2,6 @@
 	session_start();	
 	$_SESSION = array();
 	session_unset();
-	
-	include('view/login/index.php');
+	header("location:../index.php"); 
 	
 ?>

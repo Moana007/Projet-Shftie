@@ -5,7 +5,6 @@
 	</div>
 
 		<script type="text/javascript" src="assets/jquery_/jquery.js"></script>
-		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 		<script type="text/javascript" src="assets/ajax/submit_recipe_ajax.js"></script>
 		<script type="text/javascript" src="assets/ajax/vote.js"></script>
 		<script type="text/javascript" src="assets/ajax/fav.js"></script>
@@ -13,30 +12,7 @@
   		<script type="text/javascript" src="assets/ajax/upload_img.js"></script>
 		<script type="text/javascript" src="assets/ajax/create_step_effect.js"></script>
 		<script type="text/javascript" src="assets/ajax/submit_register_ajax.js"></script>
-		<!-- SCRIPT AUTO IMPLEMENTE-->
-		<script type="text/javascript">
 
-			$(document).ready(function() {
-				
-			    $(function() {
-			        $( "#search" ).autocomplete({
-			            source: function(request, response) {
-			                $.ajax({ url: "model/autocomplete.php",
-			                data: { term: $("#search").val()},
-			                dataType: "json",
-			                type: "POST",
-			                success: function(data){
-			                    response(data);
-			                }
-			            });
-			        },
-			        minLength: 2
-			        });
-			    });
-
-			});
-
-		</script>
 		<!-- verification sur le formulaire de connexion utilisateur -->
 		<script type="text/javascript" src="assets/ajax/verif_login.js"></script>
 		<!-- Page myrecipe -->

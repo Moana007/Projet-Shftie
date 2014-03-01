@@ -67,25 +67,12 @@
 		else if($action == 'book_add'){
 			include_once('controller/home/add_recipe_book.php');
 		}
-		else if($action == 'about'){
-			include_once('controller/home/about.php');
-		}
-		else if($action == 'book_page'){
-			include_once('controller/home/book.php');
-		}
-		else if ($action == 'mail_contact'){ 
-			include_once('controller/home/mail_contact.php');
-		}
-		else if ($action == 'show_recipe'){ 
-			include_once('controller/home/show_recipe.php');
-		}
 		else if($action == 'achievement'){
 			include_once('controller/home/achievement.php');
 		}
 		else if($action == 'achievement2'){
 			include_once('controller/home/achievement2.php');
 		}
-		
 	}
 	else if($appli == 'users'){
 		if ($action == 'account'){
@@ -118,10 +105,10 @@
 		{ 
 			include_once('controller/users/confirm_mail.php');
 		}
-		else if ($action == 'update_user'){ 
+		else if ($action == 'update_user')
+		{ 
 			include_once('controller/users/update_user.php');
 		}
-		
 
 	}
 

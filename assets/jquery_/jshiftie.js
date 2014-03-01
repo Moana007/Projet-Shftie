@@ -127,9 +127,6 @@ $('#sucre').click(function(){
 	$('#ifsucre').show();
 	$('#ifsale').hide();
 	$('#ifvege').hide();
-	$('#ifviande').hide()
-	$('#ifmer1').hide()
-	$('#ifmer2').hide()
 	$('#tag4').hide();
 })
 
@@ -137,9 +134,6 @@ $('#sale').click(function(){
 	$('#ifsale').show();
 	$('#ifsucre').hide();
 	$('#ifvege').hide();
-	$('#ifviande').hide()
-	$('#ifmer1').hide()
-	$('#ifmer2').hide()
 	$('#tag4').show();
 })
 

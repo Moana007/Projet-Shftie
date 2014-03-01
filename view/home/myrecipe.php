@@ -13,16 +13,9 @@
                                   echo htmlentities($recipe['recette_name']); ?> </a>
                               <?php } ?>
 
-                              <?php echo substr(htmlentities($recipe['description']),0, 180); ?>
+                              <?php echo substr(htmlentities($recipe['description']),0, 230); ?>
 			</div>
-			<?php if($recipe['rec_validation'] == 1){ ?>
-				<!-- Si la recette est VALIDE -->
-				<div class="views_bloc_recette" >
-			<?php } else { ?>
-				<!-- Si la recette n'est PAS VALIDE -->	
-				<div class="views_bloc_recette" style="background-color:red;">
-			<?php } ?>
-
+			<div class="views_bloc_recette">
 				<div class="views"><span class="icon icon-star-empty"></span>
 					<?php 
 						$fav = fav_recipe($idrecipe);

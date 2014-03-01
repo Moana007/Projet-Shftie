@@ -1,5 +1,5 @@
 <div id="slider">
-	<div class="image_slider"><img src="<?php echo $top_recipe['recette_name'] ?>">
+	<div class="image_slider"><img src="assets/img/slider.png">
 		<div class="info_slider">
 			<span class="slider_titre"><?php echo $top_recipe['recette_name'] ?></span>
 			<span class="slider_auteur">by <?php echo $top_recipe['users_name'] ?></span>
@@ -16,7 +16,7 @@
 			<div class="home_title bg_white">Chef of the week</div>
 			<div class="content">
 				<img href="#" src="assets/img/img_chef.png">
-				<span><?php echo $week_cooker['users_name'].''.$week_cooker['users_firstname'] ?></span></br>
+				<span>John DoeMorris</span></br>
 				<a href="#" class="view_p">View Profil</a>
 			</div>
 		</div>

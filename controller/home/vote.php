@@ -15,13 +15,8 @@ else{
 			$reponse = 'ok';
 		}
 		else {
-			$reponse = 'Error';
+			$reponse = 'Recipe already liked';
 		}	
-	}
-	else if(isset($_POST['recipe_id_unvote'])){
-		unvote($_POST['recipe_id_unvote']);	
-		unvote_nb($_POST['recipe_id_unvote']);	
-		$reponse = 'ok';
 	}
 
 	else {

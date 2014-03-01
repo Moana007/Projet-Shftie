@@ -7,7 +7,7 @@
 </head>
 <body>
 	<header>
-		<p>Shiftie Administration</p>
+		<p>Shiftie Administraion</p>
 	</header>
 	<form id="formLogin" method="post" action="#"> 
 		<input type="text" class="form-control" name="mail_admin" placeholder="Login"><br/>

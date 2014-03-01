@@ -5,7 +5,7 @@
 		
 		$id_rec = $_GET['id_rec'];
 		
-		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE recettes_id = :id_recette');	
+		$query = $connexion->prepare('SELECT * FROM RECETTES WHERE recettes_id = :id_recette AND rec_validation = 1');	
 		$query->bindParam(':id_recette', $id_rec, PDO::PARAM_INT);
 		//on execute la requete 
 		$query->execute();	
@@ -54,7 +54,7 @@ function show_ingredients(){
 		
 		$id_rec_aut	= $_GET['id_rec'];
 		
-		$query4 = $connexion->prepare('SELECT recettes_id,auteur,users_name,users_firstname,users_photo,photo,users_id FROM USERS,RECETTES WHERE users_id = auteur AND recettes_id = :id_rec_aut');	
+		$query4 = $connexion->prepare('SELECT recettes_id,auteur,users_name,users_firstname,users_photo,photo,users_id FROM USERS,RECETTES WHERE users_id = auteur AND recettes_id = :id_rec_aut AND rec_validation = 1' );	
 		$query4->bindParam(':id_rec_aut', $id_rec_aut, PDO::PARAM_INT); 
 		$query4->execute();	
 		$authors = $query4->fetchAll();
@@ -121,12 +121,9 @@ function show_ingredients(){
 		
 		$id_rec = $_GET['id_rec'];
 		
-		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES, USERS 
-		WHERE com_id_recettes = '.$id_rec.' AND 
-		users_id = com_id_users ORDER BY com_id DESC');
+		$query = $connexion->prepare('SELECT * FROM COMMENTAIRES, USERS WHERE com_id_recettes = '.$id_rec.' AND users_id = com_id_users ORDER BY com_id DESC');
 		$query->execute();
 		$show_comment = $query->fetchAll();
-		
 
 		return $show_comment;
 	}	

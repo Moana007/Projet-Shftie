@@ -90,7 +90,7 @@ $(document).ready(function() {
                         $('#pop_up_js').css( 'background','green');
                         $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Recette ajoutée avec succes<br/></p>");
                         $('#pop_up_js').fadeToggle();
-                        window.setTimeout("location=('?appli=home&action=myrecipe');",2000);
+                        window.setTimeout("location=('?appli=home&action=myrecipe');",1000);
                     } else {
                         $('.error-msg').remove();
                         $('#pop_up_js').css( 'background','red');
