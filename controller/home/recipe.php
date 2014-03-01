@@ -3,10 +3,8 @@
 	include_once('model/home/vote.fav.php');
 	include_once('model/home/count.php');
 	$id_rec = $_GET['id_rec'];
-	if(isset($_SESSION['users_id'])){
 	$bt_vote = button_vote($id_rec); 
     $bt_fav = button_fav($id_rec); 
-	}
 	
 
 	$recipes = show_recipe();

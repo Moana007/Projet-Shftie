@@ -5,8 +5,9 @@ else{
 	
 	include_once('model/home/book.php');
 
-	add_recipe_book($_GET['id_books'], $_POST['books_id_recettes']);
-	update_maj($_GET['id_books']);
+	foreach ($_POST['recipe_book'] as $key => $value) {
+		add_recipe_book($_GET['id_books'], $value);
+	}
 	header('location:?appli=home&action=book&id_books='.$_GET['id_books'].'');
 
 	include_once('view/home/book_content.php');

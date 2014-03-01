@@ -1,11 +1,4 @@
 <?php
-	function week_cooker(){
-		global $connexion;
-		$query = $connexion->prepare('SELECT * FROM USERS WHERE week_cooker = 1');
-		$query->execute();
-		$week_cooker = $query->fetch();
-		return $week_cooker;
-	}
 	function book_ofzemonth(){
 		global $connexion;
 		$query = $connexion->prepare('SELECT * FROM BOOKS, USERS WHERE books_id_users = users_id AND ofzemonth = 1');
@@ -48,7 +41,6 @@
 			
 			$id_recette = $connexion->lastInsertId(); //recupere le derniere ID crée par la requete			
 			return $id_recette;
-			
 			
 	
 		}		

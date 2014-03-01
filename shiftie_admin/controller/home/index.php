@@ -1,7 +1,6 @@
 <?php 
 	include_once('model/recettes/gestion_recette.php');
 	include_once('model/home/index.php');
-	
 	$unvalide = nbr_unvalide();
 	$top = recette_top();
 	$top_actuel = recette_top_actuel();

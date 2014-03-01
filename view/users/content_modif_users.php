@@ -34,12 +34,13 @@
       <!-- FORMULAIRE DE CHANGEMENT DE MDP -->
       <form class="" method="post" id="pwd_udpate" action="?appli=users&action=update_user">
 
-          <p>Actual password <input type="password" name="pwd"></p>
+          <p>Actual password <input type="password" name="pwd" ></p>
           <br/>
-          <p>New password <input type="password" name="new_pwd" ></p>
+          <p>New password <input type="password" name="new_pwd" id="new_pwd" ></p>
           <br/>
-          <p>Confirm new password <input type="password" name="new_pwd2" ></p>
+          <p>Confirm new password <input type="password" name="new_pwd2" id="new_pwd2" ></p>
           <br/>
+          <span id="message_error_pwd" ></span>
           <input type="submit" class="bt vert" name="submit_pwd" value="Save new password">
           
       </form>
@@ -50,7 +51,7 @@
         
           <p class="underscore_title">City<input type="text" name="city" value="<?php echo $authors['city']; ?>" ></p>
           <br/>
-          <p class="underscore_title">Age*<input type="text" name="age" value="<?php echo $authors['age']; ?>" ></p>
+          <p class="underscore_title">Age*<input type="text" name="age" id="age" value="<?php echo $authors['age']; ?>" ></p><span id="message_error_age" ></span>
           <br/>
           <!-- <p class="underscore_title">Favorite plate<input type="text" name="favorite_plate" value="<?php echo $authors['favorite_plate']; ?>" ></p>
           <br/>
@@ -60,20 +61,20 @@
           <br/> -->
 
 
-          <div class="underscore_title">Gender *</div><br/>
+          <div class="underscore_title">Gender *</div><span id="message_error_gender" ></span><br/>
           <!-- Bouton radio pour choix du sexe, affichage en fonction de son état -->
           <?php if ( $authors['sexe'] == '') { ?>
           <!-- Aucun bouton selectionné par defaut -->
-            <p><input type="radio" name="sex" value="Male"> Male</p><br>
-            <p><input type="radio" name="sex" value="Female"> Female</p>
+            <p><input type="radio" name="sex" id="sex_m" value="Male"> Male</p><br>
+            <p><input type="radio" name="sex" id="sex_f" value="Female"> Female</p>
           <?php }  else if ( $authors['sexe'] == 'Male') { ?>
           <!-- Bouton MALE selectionné par defaut -->
-            <p><input type="radio" name="sex" value="Male" checked> Male</p><br>
-            <p><input type="radio" name="sex" value="Female"> Female</p>
+            <p><input type="radio" name="sex" value="Male" id="sex_m"  checked> Male</p><br>
+            <p><input type="radio" name="sex" value="Female" id="sex_f" > Female</p>
           <?php } else if ($authors['sexe'] == 'Female') { ?>
           <!-- Bouton FEMALE selectionné par defaut -->
-            <p><input type="radio" name="sex" value="Male"> Male</p><br>
-            <p><input type="radio" name="sex" value="Female" checked>Female</p>
+            <p><input type="radio" name="sex" value="Male" id="sex_m" > Male</p><br>
+            <p><input type="radio" name="sex" value="Female" id="sex_f"  checked>Female</p>
           <?php } ?>
           <br/><br/><br>
              <p>*You must fill this to continue</p>

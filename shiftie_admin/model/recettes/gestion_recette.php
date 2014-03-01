@@ -48,18 +48,5 @@
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();
     }
-    function day_recipe(){
-        global $connexion;
-        $query = $connexion->prepare('SELECT * FROM RECETTES WHERE recette_top = 1');
-        $query->execute();
-        $day_recipe = $query->fetch();
-        return $day_recipe;
-    }
-    function day_recipe_vote(){
-        global $connexion;
-        $query = $connexion->prepare('SELECT * FROM RECETTES, USERS WHERE users_id = auteur AND rec_validation = 1 AND recette_top !=1 ORDER by nb_like DESC LIMIT 6');
-        $query->execute();
-        $day_recipe_vote = $query->fetchAll();
-        return $day_recipe_vote;
-    }
+
 ?>

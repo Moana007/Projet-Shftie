@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
       <meta charset="utf-8">
       <?php if ($appli == 'home' && $action == 'recipe'  && $_GET['id_rec'] != '' ) { ?>
@@ -28,7 +28,7 @@
    <!-- Bloc menu quand users NON connecté -->
           <ul class="bloc_menu">
             <li><a href="?appli=home&action=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
-            <li><a href="#" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
+            <li><a href="?appli=home&action=book_page" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
             <li><a href="#" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
 
@@ -36,7 +36,13 @@
    <!-- Bloc menu quand users EST connecté -->
           <ul class="bloc_menu">
             <li><a href="?appli=home&action=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
-            <li><a href="#" class="menu"><span class="icon icon-book"></span>Books</a></li>
+            <li>
+              <a href="#" class="menu"><span class="icon icon-book"></span>Books</a>
+              <ul>
+                <li><a href="?appli=home&action=book">Create</a></li>
+                <li><a href="#">Edit</a></li>
+            </ul>
+            </li>
             <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
       <?php } ?>
@@ -49,13 +55,23 @@
         <a href="#" class="bt gris trigger_sign">Sign In</a>
       </div>
 
-       <div class="search_field search2">
-    
-    <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
-        <input type="image" src="assets/img/loupe.png" id="loupe">
-    
-    </div>
+       <div class="search_field" ng-controller="SearchCtrl">
 
+       <div class="search_field search2">
+           <form action="" method="post" ng-submit="search()">
+              <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
+              <input type="submit" class="btn" value="search">              
+           </form>   
+       </div>
+
+       <div class="resultat" style="display: none; background-color: #89B929;">
+            <div>{{result}}</div>
+       </div>
+
+      </div>
+
+      
+  
     <?php } else { ?>
 
       <!--<div class="bloc_user">
@@ -79,23 +95,35 @@
       <a href="?appli=users&action=account" class="image"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
     </div>
     
-    <div class="search_field">
-    
-    <input type="text" name="inp_search" id="inp_search" class="items" placeholder="Search a recipe...">
-        <input id="search" name="search" type="image" src="assets/img/loupe.png" id="loupe">
-    
-    </div>
+    <div class="search_field" ng-controller="SearchCtrl">
+
+       <div class="search_field search2">
+           <form action="" method="post" ng-submit="search()">
+              <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
+              <input type="submit" class="bt vert" value="Ok">              
+           </form>   
+       </div>
+
+       <div class="resultat" style="display: none; background-color: #89B929;">
+            {{result}}
+       </div>
+
+      </div>
+
     <?php } ?>
 
     
 
 <!-- Zone de pop-up connect/register -->
+
+      <!-- CONNECT -->
     <div class="signup" style="display:none;">
         <div class="titre_2">Sign In</div>
         <div class="sous_titre">Log into your account and start sharing!</div>
         <form class="log" id="formu_co" name="login">
           <div class="ligne_log"> Mail <input type="text" name="login" id="login" ></input></div>
           <div class="ligne_log"> Password <input type="password" name="pwd" id="pwd"></input></div>
+          <input type="hidden" name="url_c" id="url_c" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
           <input type="submit" class="bt vert">
           <input type="checkbox" name="box" id="checkbox"> Remember me </input>
           <br/><br/><span id="message_error" ></span>
@@ -103,13 +131,14 @@
         <a href="#" class="icon icon-cancel"></a>
       </div>
 
+ <!-- REGISTER -->
       <div class="register" style="display:none;">
         <div class="titre_2">Register Now</div>
         <div class="sous_titre">Register and start sharing!</div>
         <form class="log" method="post" id="formu_register" action="?appli=users&action=add_user">
-          <div class="ligne_log">Login <input type="text" name="login" id="pseudo"></input></div>
-          <div class="ligne_log">Name <input type="text" name="name" id="name"></input></div>
-          <div class="ligne_log">Firstname <input type="text" name="firstname" id="firstname"></input></div>
+          <div class="ligne_log">Login <input type="text" name="login" id="pseudo" maxlength="20"></input></div>
+          <div class="ligne_log">Name <input type="text" name="name" id="name" maxlength="7"></input></div>
+          <div class="ligne_log">Firstname <input type="text" name="firstname" id="firstname" maxlength="8"></input></div>
           <div class="ligne_log">Email <input type="text" name="mail" id="mail"></input></div>
           <div class="ligne_log">Password <input type="password" name="pwd1" id="pwd1" ></input></div>
           <div class="ligne_log">Confirm password <input type="password" name="pwd2" id="pwd2"></input></div>

@@ -147,15 +147,5 @@
 				die();
 			}
 	}
-	function update_maj($id){
-		global $connexion;
-		$time = date('Y-m');
-		$query = $connexion->prepare('UPDATE BOOKS SET update_maj = :maj WHERE id_books = :id');
-		$query->bindvalue(':maj', $time, PDO::PARAM_STR);
-
-		$query->bindvalue(':id', $id, PDO::PARAM_INT);
-		$query->execute();
-		
-	}
 	
 ?>

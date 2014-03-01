@@ -21,7 +21,7 @@
 				echo "Votre mot de passe est incorrect";
 			}
 			else if ($_POST['new_pwd'] != $_POST['new_pwd2']) {	
-				echo "News MDPs ne sont pas égaux"; // a remplacer par un pregreplace JS
+				//echo "News MDPs ne sont pas égaux"; // a remplacer par un pregreplace JS
 			}
 			else{
 				update_pwd($_POST['new_pwd']);
