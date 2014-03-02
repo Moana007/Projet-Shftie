@@ -28,7 +28,7 @@ $(document).ready(function ()
 
          $('#details').append('<p>name: ' + file.name + ', type: ' + file.type + ', size:' + file.size + errorsDisp + '</p>');
           //$('#input').append('<input type="text" name="photo" id="photo" value="'+ file.name + '">');
-          $('#photo').val('http://shiftie.org/assets/img/uploads/'+ file.name);
+          $('#photo').val('http://shiftiedev:8888/assets/img/uploads/'+ file.name);
         },
         
         success: function (response)

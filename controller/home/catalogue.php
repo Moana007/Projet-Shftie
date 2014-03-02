@@ -14,7 +14,7 @@
 		$page = $_GET['pagin'];
 	}
 
-	if(!isset($_GET['filter']) or $_GET['filter'] == 'rand' ){
+	if(!isset($filter) or $filter == 'rand' ){
 		$rand = catalogue_rand($page, $nb_reponses);
 	}
 	else if($_GET['filter'] == 'new') {

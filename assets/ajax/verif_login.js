@@ -1,5 +1,5 @@
 function postLogin(login, password, box, errorCallback, successCallback) {
-	var url = "?appli=users&action=connect";
+	var url = "/users/connect";
 	var settings = {
 		data: {
 			login: login,
@@ -31,7 +31,7 @@ function onSubmit(event){
 			window.location=url_courante;
 		}
 		else if(response.first){
-			window.location='?appli=users&action=modif_users';
+			window.location='/users/modif_users';
 		}
 		else{			
 			$('.error-msg').remove();

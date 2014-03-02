@@ -20,7 +20,7 @@
                     <!-- RIEN, le visiteur nest pas sur son compte -->
       <?php     }else { ?>
               <?php echo "."; ?>
-              <a href="?appli=users&action=modif_users" class="icon icon-user"></a>
+              <a href="editUser" class="icon icon-user"></a>
       <?php     }
               } ?>
     </div>
@@ -41,14 +41,14 @@
     <div class="bloc_wide">
        <div class="favorite">
         <?php foreach($author as $authors){ ?>
-        <div class="titre_1"><a href="?appli=home&action=show_recipe&showr=fav&user=<?php echo $authors['users_id']; ?>">Favorites</a></div>
+        <div class="titre_1"><a href="/home/recipe/fav/<?php echo $authors['users_id']; ?>">Favorites</a></div>
         <?php } ?>
          <div class="bloc_profil">
           <?php if(!empty($fav)) { ?>
           <?php $var = 0; foreach ($fav as $fav):  
             $var = $var + 1;  
             $idrecipe = $fav['recettes_id']; ?>
-            <a href="?appli=home&action=recipe&id_rec=<?php echo $fav['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
+            <a href="/home/recipe/<?php echo $fav['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img src="<?php echo $fav['photo'] ?>">
               <div class="views_bloc_recette">
                 <div class="views_title aa<?php echo $var; ?>">
@@ -93,16 +93,16 @@
       <div class="favorite">
       <?php   foreach($author as $authors){
                 if(!isset($_SESSION['users_id']) || $_SESSION['users_id'] == '' || $authors['users_id'] != $_SESSION['users_id'] ){ ?>
-                  <div class="titre_1"><a href="?appli=home&action=show_recipe&showr=user&user=<?php echo $authors['users_id']; ?>">Recipes</a></div>
+                  <div class="titre_1"><a href="/home/recipe/user/<?php echo $authors['users_id']; ?>">Recipes</a></div>
       <?php     }else{ ?>
-                  <div class="titre_1"><a href="?appli=home&action=myrecipe">Recipes</a></div>                  
+                  <div class="titre_1"><a href="/home/myrecipe">Recipes</a></div>                  
       <?php     }} ?>
         <div class="bloc_profil">
           <?php if(!empty($recipe)) { ?>
           <?php $var = 0; foreach ($recipe as $recipes):  
             $var = $var + 1;  
             $idrecipe = $recipes['recettes_id'];?>
-            <a href="?appli=home&action=recipe&id_rec=<?php echo $recipes['recettes_id']; ?>" class="case_recipe b<?php echo $var; ?>">
+            <a href="/home/recipe/<?php echo $recipes['recettes_id']; ?>" class="case_recipe b<?php echo $var; ?>">
               <img src="<?php echo $recipes['photo'] ?>">
               <div class="views_bloc_recette">
                 <div class="views_title bb<?php echo $var; ?>">

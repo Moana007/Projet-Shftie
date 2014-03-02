@@ -7,9 +7,7 @@
 
 <div id="contactus">
 		<form method="post" action="?appli=home&action=mail_contact" id="formRecipe_mail">
-
 			<p>You can contact us here</p>
-
 			<label for="name" class="nom">Name</label>
 				<input name="name_mail" type="text" id="name_mail" value="<?php echo $name_mail; ?>">
 				<br>

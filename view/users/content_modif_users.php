@@ -14,7 +14,7 @@
                   } ?>
           </div>
       </div>
-      <a href="?appli=users&action=account" class="icon icon-user"></a>
+      <a href="/users/account" class="icon icon-user"></a>
     </div>
     <div id="fond_valid">
     <div class="notif">

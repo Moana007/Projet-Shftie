@@ -1,9 +1,9 @@
       <?php foreach($popular as $popular): ?>
        <?php $idrecipe = $popular['recettes_id']; ?>
          <div class="bloc_recette">
-          <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><img src="<?php echo $popular['photo']; ?>"></a>
+          <a href="home/recipe/<?php echo $popular['recettes_id']; ?>"><img src="<?php echo $popular['photo']; ?>"></a>
           <div class="info_bloc_recette">
-              <a href="?appli=home&action=recipe&id_rec=<?php echo $popular['recettes_id']; ?>"><?php
+              <a href="home/recipe/<?php echo $popular['recettes_id']; ?>"><?php
                               if (strlen(htmlentities($popular['recette_name'])) > 24) {
                                   echo substr(htmlentities($popular['recette_name']),0, 24); ?>..</a>
                         <?php } else { 

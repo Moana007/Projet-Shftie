@@ -18,10 +18,9 @@
 
 		".$comments;
 		
-		
 		mail($destinataire, $sujet, $message, $entete);
 
-		header('location:?appli=home&action=index');
+		header('location:/home/index');
 		
 	}
 
