@@ -37,6 +37,7 @@
 		</div>
 	</div>
 
+
 	<div id="editbooks">
 		<div class="edit_book">
 			<div class="titre_2">Edit your books</div>
@@ -54,6 +55,7 @@
 			
 		</div>
 	</div>
+
 
 
 	

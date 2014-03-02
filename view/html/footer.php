@@ -4,6 +4,7 @@
 		<div class="footer_right">SHIFTIE.ORG</div>
 	</div>
 
+
 		<script type="text/javascript" src="/assets/jquery_/jquery.js"></script>
 		<script type="text/javascript" src="/assets/ajax/submit_recipe_ajax.js"></script>
 		<script type="text/javascript" src="/assets/ajax/vote.js"></script>
@@ -13,6 +14,9 @@
 		<script type="text/javascript" src="/assets/ajax/create_step_effect.js"></script>
 		<script type="text/javascript" src="/assets/ajax/submit_register_ajax.js"></script>
 		<script type="text/javascript" src="/assets/ajax/submit_mail.js"></script>
+		<script type="text/javascript" src="/assets/ajax/submit_modif_user.js"></script>
+		<script type="text/javascript" src="/assets/ajax/submit_update_user.js"></script>
+
 		<script type="text/javascript" src="https://ajax.googleapis.
 		com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
 		<script type="text/javascript" src="/assets/angularjs/app.js"></script>

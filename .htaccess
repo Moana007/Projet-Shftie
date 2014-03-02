@@ -2,6 +2,7 @@
 RewriteEngine on
 
 RewriteBase /index.php/
+<<<<<<< HEAD
 RewriteRule ^home/recipe/(\d+)$	?appli=home&action=recipe&id_rec=$1 [QSA,L]
 RewriteRule home/([a-zA-Z0-9]+) ?appli=home&action=$1 [L]
 RewriteRule users/([a-zA-Z0-9]+) ?appli=users&action=$1 [L]
@@ -9,6 +10,9 @@ RewriteRule home ?appli=home [L]
 RewriteRule home/catalogue/([a-zA-Z0-9]+) ?appli=home&action=catalogue&filter=$1 [L]
 
 RewriteRule submitRecipe ?appli=home&action=index&page=submit_recipe [L]
+=======
+RewriteRule home/([a-zA-Z0-9]+) index.php?appli=home&action=$1 [L]
+>>>>>>> FETCH_HEAD
 
 
 

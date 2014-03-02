@@ -64,9 +64,6 @@
 		else if($action == 'book'){
 			include_once('controller/home/book.php');
 		}
-		else if($action == 'book_add'){
-			include_once('controller/home/add_recipe_book.php');
-		}
 		else if($action == 'about'){
 			include_once('controller/home/about.php');
 		}
@@ -84,6 +81,9 @@
 		}
 		else if($action == 'achievement2'){
 			include_once('controller/home/achievement2.php');
+		}
+		else if($action == 'book_edit'){
+			include_once('controller/home/book.php');
 		}
 		
 	}
@@ -120,6 +120,7 @@
 		}
 		else if ($action == 'update_user'){ 
 			include_once('controller/users/update_user.php');
+			return;
 		}
 		
 
