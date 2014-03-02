@@ -11,7 +11,7 @@
         <meta name="description" content="Shiftie is a new site who's proposing to users to post their recipes and to vote for others users' recipes, all that to promote the most voted recipe on the homepage for 24h!">
       <?php } ?>
       <meta name="author" content="">
-      <link href="assets/css/css.css" rel="stylesheet">
+      <link href="/assets/css/css.css" rel="stylesheet">
       <!-- <link rel="shortcut icon" href="assets/img/favicon.ico"> -->
 
   </head>
@@ -22,28 +22,28 @@
     </div>
 
     <div id="header">
-      <div class="bloc_logo"><a href="?appli=home&action=index"><img src="assets/img/logo.png"></a></div>
+      <div class="bloc_logo"><a href="/home"><img src="/assets/img/logo.png"></a></div>
 
       <?php if(!isset($_SESSION['users_id']) or $_SESSION['users_id'] == ''){ ?>
    <!-- Bloc menu quand users NON connecté -->
           <ul class="bloc_menu">
-            <li><a href="?appli=home&action=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
-            <li><a href="?appli=home&action=book_page" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
+            <li><a href="/home/catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
+            <li><a href="/home/book_page" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
             <li><a href="#" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
 
       <?php } else { ?>
    <!-- Bloc menu quand users EST connecté -->
           <ul class="bloc_menu">
-            <li><a href="?appli=home&action=catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
+            <li><a href="/home/catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
             <li>
               <a href="#" class="menu"><span class="icon icon-book"></span>Books</a>
               <ul>
-                <li><a href="?appli=home&action=book">Create</a></li>
+                <li><a href="/home/book_page">Create</a></li>
                 <li><a href="#">Edit</a></li>
             </ul>
             </li>
-            <li><a href="?appli=home&action=index&page=submit_recipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
+            <li><a href="/submitRecipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
       <?php } ?>
 
@@ -82,11 +82,11 @@
     <div class="bloc_user">
       <ul class="user_bloc">
           <li>
-            <a href="?appli=users&action=account" class="menu"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></a>         
+            <a href="/users/account" class="menu"><?php echo $_SESSION['users_name'].' '.$_SESSION['users_firstname']; ?></a>         
             <ul>
-              <li><a href="?appli=users&action=account">Profil</a></li>
-              <li><a href="?appli=home&action=myrecipe">My recipes</a></li>
-              <li><a href="?appli=home&action=book">My books</a></li>
+              <li><a href="/users/account">Profil</a></li>
+              <li><a href="/home/myrecipe">My recipes</a></li>
+              <li><a href="/home/book">My books</a></li>
               <li><a href="?appli=users&action=logout">Log Out</a></li>
             </ul>
           </li>   

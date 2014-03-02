@@ -3,9 +3,9 @@
 <?php $idrecipe = $new['recettes_id']; ?>
 
       <div class="bloc_recette">
-          <a href="?appli=home&action=recipe&id_rec=<?php echo $new['recettes_id']; ?>"><img src="<?php echo $new['photo']; ?>"></a>
+          <a href="/home/recipe/<?php echo $new['recettes_id']; ?>"><img src="<?php echo $new['photo']; ?>"></a>
           <div class="info_bloc_recette">
-              <a href="?appli=home&action=recipe&id_rec=<?php echo $new['recettes_id']; ?>"><?php
+              <a href="/home/recipe/<?php echo $new['recettes_id']; ?>"><?php
                               if (strlen(htmlentities($new['recette_name'])) > 24) {
                                   echo substr(htmlentities($new['recette_name']),0, 24); ?>..</a>
                         <?php } else { 
