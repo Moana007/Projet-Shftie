@@ -27,7 +27,7 @@
 	function show_book($id_users){
 		global $connexion;
 
-		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users LIMIT 5');
+		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users');
 		$query2->bindParam(':id_users', $id_users, PDO::PARAM_INT);
 		$query2->execute();
 		
@@ -48,6 +48,21 @@
 		} 
 		catch (Exception $e) {
 			echo "Affichage impossible" ,$e->getMessage();
+				die();
+		}
+	}
+
+	function delete_recipe_book($books_id, $recettes_id){
+		global $connexion;
+
+		try {
+			$query = $connexion->prepare('DELETE FROM RECETTES_BOOKS WHERE books_id = :books_id AND recettes_id = :recettes_id');
+			$query->bindParam(':books_id', $books_id, PDO::PARAM_INT);
+			$query->bindParam(':recettes_id', $recettes_id, PDO::PARAM_INT);
+			$query->execute();
+		} 
+		catch (Exception $e) {
+			echo "Suppression impossible" ,$e->getMessage();
 				die();
 		}
 	}
@@ -93,6 +108,21 @@
 		
 		return ($show_recipe_book);
 	}
+
+	function recipe_book($id_books){
+		global $connexion;
+		
+		$query = $connexion->prepare('SELECT * FROM 
+		RECETTES_BOOKS, RECETTES 
+		WHERE RECETTES_BOOKS.recettes_id = RECETTES.recettes_id 
+		AND RECETTES_BOOKS.books_id = :id_books AND rec_validation = 1');
+		$query->bindParam(':id_books', $id_books, PDO::PARAM_INT);		
+		$query->execute();
+		
+		$recipe_book = $query->fetchAll();
+		
+		return ($recipe_book);
+	}
 	
 	function show_book2($id_books){
 		global $connexion;
@@ -122,6 +152,8 @@
 		
 		return($show_all_recipe);
 	}
+
+
 	
 	function delete_book($books_id){
 		global $connexion;
