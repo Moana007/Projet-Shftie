@@ -120,6 +120,7 @@
 		}
 		else if ($action == 'update_user'){ 
 			include_once('controller/users/update_user.php');
+			return;
 		}
 		
 
