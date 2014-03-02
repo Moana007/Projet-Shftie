@@ -1,5 +1,5 @@
 <div id="slider">
-	<div class="image_slider"><img src="assets/img/slider.png">
+	<div class="image_slider"><img src="<?php echo $top_recipe['photo']; ?>">
 		<div class="info_slider">
 			<span class="slider_titre"><?php echo $top_recipe['recette_name'] ?></span>
 			<span class="slider_auteur">by <?php echo $top_recipe['users_name'] ?></span>

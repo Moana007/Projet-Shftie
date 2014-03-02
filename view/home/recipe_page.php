@@ -10,9 +10,8 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script>
 
-  <!-- BOUTON DE PARTAGE  -->
-    
-  
+<!-- BOUTON DE PARTAGE  -->
+     
 <!--FIN HEADER DEBUT SLIDER -->
 <?php foreach($recipes as $recipe): ?>
   <?php $recipe_id = $recipe['recettes_id'] ?>
@@ -30,7 +29,7 @@
     <?php if(isset($_SESSION['users_id'])){ 
             if($bt_vote == 0){ ?>
               <form method="post" id="formVote" action="?appli=home&action=vote">
-                <input type="hidden" id="url_location" value="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" id="url_location" value="/home/recipe/<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id_vote" id="recipe_id_vote" value="<?php echo $recipe_id; ?>">
                <button type="submit" class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>
               </form>
@@ -40,7 +39,7 @@
             } ?>
       <?php if($bt_fav == 0){ ?>
               <form method="post" id="formFav" action="?appli=home&action=fav">
-                <input type="hidden" id="url_location" value="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" id="url_location" value="/home/recipe/<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id_fav" id="recipe_id_fav" value="<?php echo $recipe_id ?>">
                 <button type="submit" class="bt gris fav"><span class="icon icon-fav-empty"></span>Favoris</button>
               </form>
@@ -48,7 +47,7 @@
             else { ?>
 
                    <form method="post" id="formUnfav" action="?appli=home&action=fav">
-                <input type="hidden" id="url_location" value="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" id="url_location" value="/home/recipe/<?php echo $recipe['recettes_id']; ?>">
                 <input type="hidden" name="recipe_id_unfav" id="recipe_id_fav" value="<?php echo $recipe_id ?>">
                 <button type="submit" class="bt vert fav"><span class="icon icon-fav-empty"></span>Favoris</button>
               </form>
@@ -149,7 +148,7 @@
   <div class="more_author">
   <?php foreach($authors as $author): ?>
     <div class="avatar_author">
-      <a href="?appli=users&action=account&user=<?php echo $author['users_id']; ?>">
+      <a href="/users/account/<?php echo $author['users_id']; ?>">
         <img src="<?php echo $author['users_photo']; ?>">
       </a>
     </div>
@@ -159,7 +158,7 @@
       <?php $var = 0; foreach($recipe_more as $recipe_mores){
           $var = $var + 1;  
           $idrecipe = $recipe_mores['recettes_id'];?>
-        <a href="?appli=home&action=recipe&id_rec=<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
+        <a href="/home/recipe/<?php echo $recipe_mores['recettes_id']; ?>" class="case_recipe a<?php echo $var; ?>">
               <img src="<?php echo $recipe_mores['photo']; ?>">
               <div class="views_bloc_recette">
                   <div class="views_title aa<?php echo $var; ?>"><?php echo $recipe_mores['recette_name']; ?></div>

@@ -2,17 +2,19 @@
 RewriteEngine on
 
 RewriteBase /index.php/
-<<<<<<< HEAD
-RewriteRule ^home/recipe/(\d+)$	?appli=home&action=recipe&id_rec=$1 [QSA,L]
-RewriteRule home/([a-zA-Z0-9]+) ?appli=home&action=$1 [L]
-RewriteRule users/([a-zA-Z0-9]+) ?appli=users&action=$1 [L]
-RewriteRule home ?appli=home [L]
-RewriteRule home/catalogue/([a-zA-Z0-9]+) ?appli=home&action=catalogue&filter=$1 [L]
 
+RewriteRule ^users/([a-zA-Z0-9]+)/(\d+)$ ?appli=users&action=$1&user=$2 [QSA,L]
+RewriteRule ^home/recipe/([a-zA-Z0-9]+)/(\d+)$ ?appli=home&action=show_recipe&showr=$1&user=$2 [QSA,L]
+RewriteRule ^home/recipe/(\d+)$	?appli=home&action=recipe&id_rec=$1 [QSA,L]
+RewriteRule ^home/([a-zA-Z0-9]+) ?appli=home&action=$1 [L]
+RewriteRule ^users/([a-zA-Z0-9]+) ?appli=users&action=$1 [L]
+RewriteRule ^home ?appli=home [L]
+RewriteRule ^home/catalogue/([a-zA-Z0-9]+) ?appli=home&action=catalogue&filter=$1 [L]
+RewriteRule editBook ?appli=home&action=book_edit [L]
 RewriteRule submitRecipe ?appli=home&action=index&page=submit_recipe [L]
-=======
-RewriteRule home/([a-zA-Z0-9]+) index.php?appli=home&action=$1 [L]
->>>>>>> FETCH_HEAD
+RewriteRule editUser ?appli=home&action=index&page=submit_recipe [L]
+RewriteRule ^home/(\d+)$/(\d+)$ ?appli=home&action=show_recipe&showr=$1&pagin=$2
+
 
 
 

@@ -1,12 +1,12 @@
 <div id="my_recipe">
-	<div class="titre_1">My Recipe <a href="?appli=home&action=index&page=submit_recipe" class="add_recipe"><span>+</span> Add a new recipe</a></div>
+	<div class="titre_1">My Recipe <a href="/submitRecipe" class="add_recipe"><span>+</span> Add a new recipe</a></div>
 
 	<?php foreach ($recipes as $recipe): 
 		  $idrecipe = $recipe['recettes_id'] ?>
 		<div class="bloc_recette">
-			<a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><img src="<?php echo $recipe['photo']; ?>"></a>
+			<a href="/home/recipe/<?php echo $recipe['recettes_id']; ?>"><img src="<?php echo $recipe['photo']; ?>"></a>
 			<div class="info_bloc_recette">
-				<a href="?appli=home&action=recipe&id_rec=<?php echo $recipe['recettes_id']; ?>"><?php
+				<a href="/home/recipe/<?php echo $recipe['recettes_id']; ?>"><?php
                               if (strlen(htmlentities($recipe['recette_name'])) > 24) {
                                   echo substr(htmlentities($recipe['recette_name']),0, 24); ?>..</a>
                         <?php } else { 

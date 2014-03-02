@@ -3,16 +3,16 @@
 	    <div class="titre_1">Books catalog</div>
 	    	<div class="row_books">
 	    
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
 	      </div>
 	      <?php 	
 	 		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php

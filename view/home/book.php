@@ -7,7 +7,7 @@
 				<div class="bloc_name">
 					<div class="name">Name of my book</div><br/>
 					<input class="book_name" type="text" name="book_name" maxlength="100">
-					<div class="img_cover_test"><img alt="" src="assets/img/cover_book.png"></div>
+					<div class="img_cover_test"><img alt="" src="/assets/img/cover_book.png"></div>
 					<div class="name_cover">Choose your cover over here:</div>
 					<div class="row_covers">
 
