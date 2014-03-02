@@ -14,11 +14,6 @@
  		$show_all_recipe = show_all_recipes();
 		$show_book2 = show_book2($id_books);
 		$show_recipe_book = show_recipe_book($id_books);		
-		if(isset($_POST['recipe_book'])){			
-			foreach ($_POST['recipe_book'] as $key => $value) {
-				add_recipe_book($id_books, $value);
-			}
-		}	
 		include_once('view/home/book_content.php');		
 
 	}
@@ -37,12 +32,14 @@
 		$show_all_recipe = show_all_recipes();
 		$show_book2 = show_book2($_POST['book']);
 		$show_recipe_book = show_recipe_book($_POST['book']);
-		if(isset($_POST['recipe_book'])){
-			foreach ($_POST['recipe_book'] as $key => $value) {
-				add_recipe_book($_POST['book'], $value);
-			}
-		}
 		include_once('view/home/book_content_edit.php');
+	}
+
+	elseif(isset($_POST['recipe_book'])){
+			foreach ($_POST['recipe_book'] as $key => $value) {
+				add_recipe_book($_POST['books_id'], $value);
+			}
+		include_once('view/home/book_page.php');
 	}
 	
 	

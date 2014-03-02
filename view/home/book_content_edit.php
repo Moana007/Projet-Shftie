@@ -27,7 +27,7 @@
 					<div class="views"><span class="icon icon-comment-empty"></span>30</div>
 				</div>
 				
-				
+				<input type="hidden" name="books_id" value="<?php echo $show_book2['books_id']; ?>">
 				<input type="checkbox" name="recipe_book[]" value="<?php echo $show_all_recipe['recettes_id']; ?>" class="check">				
 				
 			</div>
