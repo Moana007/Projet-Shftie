@@ -19,12 +19,12 @@
 	}
 
 
-	else if($_GET['action'] == 'book_page'){
+	else if($_GET['action'] == 'bookPage'){
 
 		$show_book_all = show_book_all();
 		$show_recipe_book_all = show_recipe_book_all();
 		//fonction pour afficher le contenu d'un book (accessible a tout le monde)
-		include_once('view/home/book_page.php');
+		include_once('view/home/bookPage.php');
 
 	}
 	elseif(isset($_POST['book'])) {
@@ -39,6 +39,8 @@
 			foreach ($_POST['recipe_book'] as $key => $value) {
 				add_recipe_book($_POST['books_id'], $value);
 			}
+		$show_book_all = show_book_all();
+		$show_recipe_book_all = show_recipe_book_all();
 		include_once('view/home/book_page.php');
 	}
 	
@@ -51,7 +53,7 @@
 
 		include_once('view/home/book_catalogue.php');
 	}
-	elseif ($_GET['action'] == 'book_edit') {		
+	elseif ($_GET['action'] == 'bookEdit') {		
 		$show_book_all = show_book_all();
 		$show_book = show_book($_SESSION['users_id']);
 		include_once('view/home/book_edit.php');

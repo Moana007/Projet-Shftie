@@ -28,6 +28,7 @@
 	else {
 		$filter = $_GET['filter'];
 	}
+	
 	if($appli == 'home'){
 		if($action == 'index'){
 			include_once('controller/home/index.php');
@@ -67,7 +68,7 @@
 		else if($action == 'about'){
 			include_once('controller/home/about.php');
 		}
-		else if($action == 'book_page'){
+		else if($action == 'bookPage'){
 			include_once('controller/home/book.php');
 		}
 		else if ($action == 'mail_contact'){ 
@@ -82,8 +83,11 @@
 		else if($action == 'achievement2'){
 			include_once('controller/home/achievement2.php');
 		}
-		else if($action == 'book_edit'){
+		else if($action == 'bookEdit'){
 			include_once('controller/home/book.php');
+		}
+		else if($action == 'search'){
+			include_once('controller/home/search.php');
 		}
 		
 	}
@@ -125,6 +129,7 @@
 		
 
 	}
+	
 
 	else {
 		echo 'vraiment rien';

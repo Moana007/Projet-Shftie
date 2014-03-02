@@ -6,7 +6,7 @@
 				<img src="assets/img/covercookbook1.jpg">
 			
 			    <div class="info_bloc_recette">
-			        <a href="?appli=home&action=book&id_books=<?php echo $show_book_all['books_id']; ?>"><?php echo $show_book_all['books_name']; ?></a>
+			        <a href=""><?php echo $show_book_all['books_name']; ?></a>
 			        <span>Recipes :</span><br/>
 			        <?php foreach ($show_recipe_book_all as $key => $value) : ?>					
 			        <span>

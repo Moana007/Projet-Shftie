@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en">
   <head>
       <meta charset="utf-8">
       <?php if ($appli == 'home' && $action == 'recipe'  && $_GET['id_rec'] != '' ) { ?>
@@ -55,18 +55,16 @@
         <a href="#" class="bt gris trigger_sign">Sign In</a>
       </div>
 
-       <div class="search_field" ng-controller="SearchCtrl">
+       <div class="search_field">
 
        <div class="search_field search2">
-           <form action="" method="post" ng-submit="search()">
-              <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
-              <input type="submit" class="btn" value="search">              
+           <form action="?appli=home&action=search" method="get">
+              <input type="text" name="q" id="inp_search" class="items" placeholder="Search a recipe...">
+              <button class="bt vert" type="submit">Ok</button>   
            </form>   
        </div>
 
-       <div class="resultat" style="display: none; background-color: #89B929;">
-            <div>{{result}}</div>
-       </div>
+      
 
       </div>
 
@@ -95,18 +93,16 @@
       <a href="?appli=users&action=account" class="image"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
     </div>
     
-    <div class="search_field" ng-controller="SearchCtrl">
+    <div class="search_field">
 
        <div class="search_field search2">
-           <form action="" method="post" ng-submit="search()">
-              <input type="text" id="inp_search" ng-model="query" class="items" placeholder="Search a recipe...">
-              <input type="submit" class="bt vert" value="Ok">              
+           <form action="?appli=home&action=search" method="get">
+              <input type="text" name="q" id="inp_search" class="items" placeholder="Search a recipe...">
+              <button class="bt vert" type="submit">Ok</button>
            </form>   
        </div>
 
-       <div class="resultat" style="display: none; background-color: #89B929;">
-            {{result}}
-       </div>
+      
 
       </div>
 
