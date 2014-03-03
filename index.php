@@ -33,7 +33,7 @@
 		if($action == 'index'){
 			include_once('controller/home/index.php');
 		}
-		else if($action == 'submit_recipe'){
+		else if($action == 'submitrecipe'){
 			include_once('controller/home/submit_recipe.php');
 			return;
 		}

@@ -39,11 +39,12 @@
             <li>
               <a href="/home/bookPage" class="menu"><span class="icon icon-book"></span>Books</a>
               <ul>
-                <li><a href="/home/createBook">Create</a></li>
+
+                <li><a href="/home/book">Create</a></li>
                 <li><a href="/home/bookEdit">Edit</a></li>
             </ul>
             </li>
-            <li><a href="/home/index/submit_recipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
+            <li><a href="/submitRecipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
       <?php } ?>
 
@@ -85,7 +86,7 @@
               <li><a href="/users/account">Profil</a></li>
               <li><a href="/home/myrecipe">My recipes</a></li>
               <li><a href="/home/book">My books</a></li>
-              <li><a href="?appli=users&action=logout">Log Out</a></li>
+              <li><a href="/users/logout">Log Out</a></li>
             </ul>
           </li>   
       </ul>

@@ -30,7 +30,7 @@
       <div class="row_books">
      <?php if(!empty($show_book)) { ?>
       <?php foreach($show_book as $show_books) { ?>
-        <a href="?appli=home&action=book&id_books=<?php echo $show_books['books_id']; ?>" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
+        <a href="/home/book/<?php echo $show_books['books_id']; ?>" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
       <?php } ?>
       <?php } else { echo "<p style='color:#6E902A;'>You have no Book for the moment</p>"; } ?> 
       </div>

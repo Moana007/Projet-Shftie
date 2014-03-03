@@ -33,7 +33,7 @@ $(document).ready(function(){
                 success: function(json) {
                     if(json.reponse == 'ok') { 
                         $('.error-msg').remove();
-                        $('#pop_up_js').css( 'background','green');
+                        $('#pop_up_js').css( 'background','red');
                         $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Favoris retiré<br/></p>");
                         $('#pop_up_js').fadeToggle();
                         window.setTimeout("location=('"+url+"');", 2000);

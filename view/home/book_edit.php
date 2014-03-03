@@ -3,7 +3,7 @@
 		<div class="edit_book">
 			<div class="titre_2">Edit your books</div>
 			<div class="name">Choose one of your books in the list below</div>
-				<form action="?appli=home&action=bookEdit" name="editbook" id="editbook" method="post">				
+				<form action="/home/bookEdit" name="editbook" id="editbook" method="post">				
 				<select name="book">
 					<?php foreach($show_book as $show_books) { ?>
 						<option value="<?php echo $show_books['books_id']; ?>">

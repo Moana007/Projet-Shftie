@@ -34,9 +34,13 @@
                <button type="submit" class="bt gris vote"><span class="icon icon-heart-empty"></span>Vote</button>
               </form>
       
-      <?php  } else {
-                  echo' <button class="bt vert vote"><span class="icon icon-heart-empty"></span>Vote</button>';
-            } ?>
+      <?php  } else { ?>
+        <form method="post" id="formUnvote" action="?appli=home&action=vote">
+                <input type="hidden" id="url_location" value="/home/recipe/<?php echo $recipe['recettes_id']; ?>">
+                <input type="hidden" name="recipe_id_unvote" id="recipe_id_unvote" value="<?php echo $recipe_id; ?>">
+                 <button type="submit" class="bt vert vote"><span class="icon icon-heart-empty"></span>UnVote</button>
+                 </form>
+         <?php   } ?>
       <?php if($bt_fav == 0){ ?>
               <form method="post" id="formFav" action="?appli=home&action=fav">
                 <input type="hidden" id="url_location" value="/home/recipe/<?php echo $recipe['recettes_id']; ?>">
