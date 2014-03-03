@@ -1,5 +1,5 @@
 <?php 
-
+	include_once('model/home/count.php');
 	if(!isset($_GET['show'])){
 		$show = '';
 	}
