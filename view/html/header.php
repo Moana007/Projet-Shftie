@@ -28,7 +28,7 @@
    <!-- Bloc menu quand users NON connecté -->
           <ul class="bloc_menu">
             <li><a href="/home/catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
-            <li><a href="/home/book_page" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
+            <li><a href="/home/bookPage" class="menu trigger_sign"><span class="icon icon-book"></span>Books</a></li>
             <li><a href="#" class="menu trigger_sign"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
 
@@ -37,10 +37,10 @@
           <ul class="bloc_menu">
             <li><a href="/home/catalogue" class="menu"><span class="icon icon-th"></span>Recipes</a></li>
             <li>
-              <a href="?appli=home&action=book_page" class="menu"><span class="icon icon-book"></span>Books</a>
+              <a href="/home/bookPage" class="menu"><span class="icon icon-book"></span>Books</a>
               <ul>
-                <li><a href="?appli=home&action=book">Create</a></li>
-                <li><a href="?appli=home&action=book_edit">Edit</a></li>
+                <li><a href="/home/createBook">Create</a></li>
+                <li><a href="/home/bookEdit">Edit</a></li>
             </ul>
             </li>
             <li><a href="/home/index/submit_recipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>

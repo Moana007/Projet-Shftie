@@ -17,6 +17,14 @@
 		include_once('view/home/book_content.php');		
 
 	}
+	
+	if(isset($_GET['id_books'])){
+		
+		$show_book2 = show_book2($_GET['id_books']);
+		$all_recipe = show_all_recipes();	
+		$show_recipe_book = show_recipe_book($_GET['id_books']);	
+		include_once('view/home/book_content.php');		
+	}
 
 
 	else if($_GET['action'] == 'bookPage'){
@@ -24,7 +32,7 @@
 		$show_book_all = show_book_all();
 		$show_recipe_book_all = show_recipe_book_all();
 		//fonction pour afficher le contenu d'un book (accessible a tout le monde)
-		include_once('view/home/bookPage.php');
+		include_once('view/home/book_catalogue.php');
 
 	}
 	elseif(isset($_POST['book'])) {
@@ -41,7 +49,7 @@
 			}
 		$show_book_all = show_book_all();
 		$show_recipe_book_all = show_recipe_book_all();
-		include_once('view/home/book_page.php');
+		include_once('view/home/book_catalogue.php');
 	}
 	
 	
@@ -53,7 +61,7 @@
 
 		include_once('view/home/book_catalogue.php');
 	}
-	elseif ($_GET['action'] == 'bookEdit') {		
+	elseif ($_GET['action'] == 'bookEdit' && isset($_SESSION['users_id'])) {		
 		$show_book_all = show_book_all();
 		$show_book = show_book($_SESSION['users_id']);
 		include_once('view/home/book_edit.php');
@@ -62,12 +70,6 @@
 	else {
 		$show_all_recipe = show_all_recipes();	
 	
-		
-		
-		
-		
-		
-		
 		if(isset($_SESSION['users_id']) && isset($_GET['books_id'])) {
 		delete_book($_GET['books_id']);
 		header('location:?appli=home&action=book&page=book');

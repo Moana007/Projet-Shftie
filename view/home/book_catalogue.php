@@ -2,18 +2,11 @@
 	<div class="books">
 	    <div class="titre_1">Books catalog</div>
 	    	<div class="row_books">
-	    
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
-	        <a href="#" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span>TITRE DU LIVRE</span></a>
+	  		  <?php foreach ($show_book_all as $key => $show_book_all) { ?>
+	        <a href="?appli=home&action=book&id_books=<?php echo $show_book_all['books_id']; ?>" class="case_book tooltips"><img src="/assets/img/covercookbook1.jpg"><span><?php echo $show_book_all['books_name']; ?></span></a>
+	      <?php } ?>
 	      </div>
+
 	      <?php 	
 	 		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php
 	 		echo "<div class='pagination'>";											
@@ -41,3 +34,5 @@
 
 	</div>
 </div>
+
+

@@ -40,7 +40,7 @@
 		global $connexion;
 
 		try {
-			$query = $connexion->prepare('SELECT * FROM BOOKS');
+			$query = $connexion->prepare('SELECT * FROM BOOKS ORDER BY books_id DESC LIMIT 10');
 			$query->execute();
 			$show_book_all = $query->fetchAll();
 
@@ -72,17 +72,10 @@
 
 		try {
 			$query = $connexion->prepare('SELECT * FROM 
-				RECETTES_BOOKS, BOOKS 
-				WHERE RECETTES_BOOKS.books_id = BOOKS.books_id');
+				RECETTES_BOOKS, BOOKS, RECETTES 
+				WHERE RECETTES_BOOKS.books_id = BOOKS.books_id AND RECETTES_BOOKS.recettes_id = RECETTES.recettes_id');
 			$query->execute();
 			
-			if($query->rowCount()) {
-				$query = $connexion->prepare('SELECT * FROM 
-					RECETTES, RECETTES_BOOKS 
-					WHERE RECETTES.recettes_id = RECETTES_BOOKS.recettes_id');
-				$query->execute();
-			}
-
 			$show_recipe_book_all = $query->fetchAll();
 
 			return $show_recipe_book_all;
@@ -145,7 +138,7 @@
 		global $connexion;
 		
 		$query = $connexion->prepare('SELECT * FROM RECETTES, FAVORIS WHERE 
-			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND rec_validation = 1 AND FAVORIS.fav_id_users = '.$_SESSION['users_id'].'');
+			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND rec_validation = 1');
 		$query->execute();
 		
 		$show_all_recipe = $query->fetchAll();
