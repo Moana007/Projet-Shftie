@@ -43,7 +43,7 @@
                 <li><a href="/home/bookEdit">Edit</a></li>
             </ul>
             </li>
-            <li><a href="/home/index/submitRecipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
+            <li><a href="/submitRecipe" class="menu"><span class="icon icon-edit"></span>Submit Recipe</a></li>
           </ul>
       <?php } ?>
 
