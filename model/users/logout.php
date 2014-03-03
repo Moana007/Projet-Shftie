@@ -5,6 +5,6 @@
 	
 	$_SESSION = array();
 	session_unset();
-	header("location:?appli=home&action=index"); 
+	header("location:/home"); 
 	
 ?>

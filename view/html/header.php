@@ -85,7 +85,7 @@
               <li><a href="/users/account">Profil</a></li>
               <li><a href="/home/myrecipe">My recipes</a></li>
               <li><a href="/home/book">My books</a></li>
-              <li><a href="?appli=users&action=logout">Log Out</a></li>
+              <li><a href="/users/logout">Log Out</a></li>
             </ul>
           </li>   
       </ul>
