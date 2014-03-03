@@ -1,4 +1,4 @@
-<form method="post" action="?appli=home&action=submit_recipe" id="formRecipe">
+<form method="post" action="/home/submitrecipe" id="formRecipe">
 <div id="create_recipe" class="create_recipe_trigger">
 
         <!-- - - - - - - - - - - - - -  - - - - - - - - - - -->
