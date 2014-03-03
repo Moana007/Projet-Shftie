@@ -1,5 +1,5 @@
 <?php 
-
+	include_once('model/home/count.php');
 	if(!isset($_GET['show'])){
 		$show = '';
 	}
@@ -24,7 +24,7 @@
 		$show_book_all = show_book_all();
 		$show_recipe_book_all = show_recipe_book_all();
 		//fonction pour afficher le contenu d'un book (accessible a tout le monde)
-		include_once('view/home/bookPage.php');
+		include_once('view/home/book_page.php');
 
 	}
 	elseif(isset($_POST['book'])) {

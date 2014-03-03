@@ -20,11 +20,27 @@
 				<div class="info_bloc_recette">
 					<a href="#"><?php echo $show_all_recipe['recette_name']; ?></a>
 					<?php echo $show_all_recipe['description']; ?>
+					<?php $idrecipe = $show_all_recipe['recettes_id']; ?>
 				</div>
 				<div class="views_bloc_recette">
-					<div class="views"><span class="icon icon-star-empty"></span>30</div>
-					<div class="views"><span class="icon icon-heart-empty"></span>30</div>
-					<div class="views"><span class="icon icon-comment-empty"></span>30</div>
+						<div class="views"><span class="icon icon-star-empty"></span>
+					<?php 
+						$fav = fav_recipe($idrecipe);
+							echo $fav;
+					 ?>
+				</div>
+				<div class="views"><span class="icon icon-heart-empty"></span>
+					<?php 
+						$like = like_recipe($idrecipe);
+							echo $like;
+					?>
+				</div>
+				<div class="views"><span class="icon icon-comment-empty"></span>
+					<?php 
+						$comment = comment_recipe($idrecipe);
+							echo $comment;				
+					?>
+				</div>
 				</div>
 				
 				<input type="hidden" name="books_id" value="<?php echo $show_book2['books_id']; ?>">
