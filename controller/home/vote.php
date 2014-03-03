@@ -18,6 +18,11 @@ else{
 			$reponse = 'Recipe already liked';
 		}	
 	}
+	else if(isset($_POST['recipe_id_unvote'])){
+		unvote($_POST['recipe_id_unvote']);	
+		vote_nb_moins($_POST['recipe_id_unvote']);
+		$reponse = 'ok';	
+	}
 
 	else {
 		$reponse = 'erreur';

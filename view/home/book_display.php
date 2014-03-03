@@ -1,5 +1,5 @@
 <div id="book_display">
-	<div class="book_slider"><img src="assets/img/slider.png" alt="#"></div>
+	<div class="book_slider"><img src="/assets/img/slider.png" alt="#"></div>
 	<div class="book_pagination">
 		<div class="pag left">
 			<a href="#" class="bloc_vert"><span class="icon-left"><span></a>

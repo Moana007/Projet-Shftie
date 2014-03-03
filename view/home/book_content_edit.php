@@ -4,7 +4,7 @@
 	
 
 	<div id="choosefav">
-	<form action="?appli=home&action=book" method="post">
+	<form action="/home/book" method="post">
 		<div class="choose_fav">
 			<h1 align="center" style="color:#89B929;"><?php echo $show_book2['books_name']; ?></h1>
 			<?php if(isset($_SESSION['users_id'])) { ?>

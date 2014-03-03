@@ -3,7 +3,7 @@
 		<?php foreach ($show_book_all as $key => $show_book_all) { ?>
 
 		<div class="bloc_recette">
-				<img src="assets/img/covercookbook1.jpg">
+				<img src="/assets/img/covercookbook1.jpg">
 			
 			    <div class="info_bloc_recette">
 			        <a href=""><?php echo $show_book_all['books_name']; ?></a>
