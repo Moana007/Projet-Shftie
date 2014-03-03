@@ -197,7 +197,7 @@
       </div>
 
         
-        <div class="ligne_bt"><a href="#" class="bt gris go_three">Previous step</a><button type="submit" onClick="_gaq.push(['_trackEvent','create_recipe','step5']);" id="submit" class="bt vert">Upload!</button></div>
+        <div class="ligne_bt"><a href="#" class="bt gris go_three">Previous step</a><button type="submit" onClick="_gaq.push(['_trackEvent','create_recipe','step5']);" id="submit" class="submitrecipe bt vert">Upload!</button></div>
       </div>
     
       

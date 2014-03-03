@@ -79,6 +79,7 @@ $(document).ready(function() {
         // }
 
         else {
+            $('.submitrecipe').fadeToggle();
             $.ajax({
                 url: $(this).attr('action'),
                 type: $(this).attr('method'),
