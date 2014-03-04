@@ -85,6 +85,7 @@
             <div class="case_tag"><input type="checkbox" name="option[]" value="<?php echo $dataj['tags_id']; ?>"> <?php echo $dataj['tags_name']; ?></div>
             <?php endforeach; ?>
           </div>
+          
         <div class="ligne_bt"><a href="#" class="bt gris go_one">Previous step</a><a href="#" onClick="_gaq.push(['_trackEvent','create_recipe','step3']);" class="bt vert go_three">Next step</a></div>
       <div class="etape">
         <span class="undone done go_one">1</span>

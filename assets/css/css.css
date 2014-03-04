@@ -223,6 +223,7 @@ a.bt.gris:hover {
 	margin-top: 20px;
 	display: block;	
 	width: 100%;
+	height: 40px;
 	text-align: center;
 }
 
@@ -673,7 +674,7 @@ background-color: #FFF;
 #my_recipe {
 	width: 1024px;
 	min-width: 1024px;
-	height: 1250px;
+	height: 900px;
 
 	margin: 0 auto;
 	margin-top: 30px;
@@ -704,7 +705,7 @@ background-color: #FFF;
 #catalogue {
 	width: 1024px;
 	min-width: 1024px;
-	height: 1250px;
+	height: 950px;
 
 	margin: 0 auto;
 	margin-top: 30px;
@@ -810,7 +811,6 @@ background-color: #FFF;
 
 #page_profil {
 	width: 1024px;
-	height: 1500px;
 
 	margin: 0 auto;
 }
@@ -1029,7 +1029,6 @@ background-color: #FFF;
 
 #page_recipe {
 	width: 1024px;
-	height: 1600px;
 
 	margin: 0 auto;
 
@@ -1330,7 +1329,6 @@ background-color: #FFF;
 
 #homepage {
 	width: 1024px;
-	height: 850px;
 
 	margin: 0 auto;
 	padding-left: 20px;
@@ -1417,13 +1415,12 @@ background-color: #FFF;
 
 #homepage .col2 .home4 {
 	width: 235px;
-	padding-bottom: 20px;
-	text-align: center;
 }
 
 #homepage .col2 .home4 img {
-	width: 80%;
-	height: 80%;
+	margin-top: -20px;
+	width: 100%;
+	height: 100%;
 }
 
 #homepage .col3{
@@ -1514,6 +1511,16 @@ background-color: #FFF;
 	height: 100%;
 }
 
+#homepage .col4 .home9 {
+	width: 235px;
+}
+
+#homepage .col4 .home9 .social_image {
+	width: 160px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
 .home_title {
 	text-align: center;
 	font-size: 24px;
@@ -1559,7 +1566,7 @@ background-color: #FFF;
 
 #create_recipe  {
 	width: 1024px;
-	height: 800px;
+	height: 900px;
 
 	margin: 0 auto;
 
@@ -1577,7 +1584,7 @@ background-color: #FFF;
 
 #create_recipe3  {
 	width: 1024px;
-	height: 800px;
+	height: 850px;
 
 	margin: 0 auto;
 
@@ -1646,6 +1653,10 @@ background-color: #FFF;
 }
 
 .ligne_bt a+a {
+	margin-left: 20px;
+}
+
+.ligne_bt a+button {
 	margin-left: 20px;
 }
 

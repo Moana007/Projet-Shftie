@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="home2 bg_home bg_black">
-			<div class="home_title bg_green">Find us on Facebook</div>
+			<div class="home_title bg_green"></div>
 			<div class="content">
 				<span></span>
 			</div>
@@ -36,11 +36,9 @@
 				You can also log in to post your first recipe, let's go!
 			</div>
 		</div>
-		<div class="home4 bg_home bg_black">
-			<div class="home_title bg_white">Our Google+ Page</div>
-			<div class="center">
-				<img src="assets/img/like_panel.png">
-			</div>
+		<div class="home4 bg_home">
+			<div class="home_title bg_white">Partners</div>
+			<img src="assets/img/partner2.png" alt=""/>
 		</div>
 	</div>
 	<div class="col3">
@@ -52,7 +50,7 @@
 		</div>
 		<div class="home6 bg_home bg_orange">
 			<div class="home_title bg_orange">Shiftie News</div>
-			<div class="news">This is the place where whe are going to display some of our news, or some random posts. Everyday this news will be changer by another one from our team.</div>
+			<div class="news">Shiftie has been developped throught our third and last year of study at EEMI. This is now our final Beta version, feel free to test everything and give us some feedback on our contact page! <br/>Cheers!</div>
 		</div>
 	
 	</div>
@@ -63,10 +61,21 @@
 			<input class="newsletter" placeholder="Shiftie@shiftie.org"></input>
 			<button class="bt gris"><span class="icon icon-check"></span></button>
 		</div>
+
+		<div class="home9 bg_home bg_black">
+			<div class="home_title bg_white">Social</div>
+			<div class="social_image">
+				<a href="https://www.facebook.com/shiftie.org"><img src="assets/img/fb.png" alt=""/></a>
+				<a href="https://plus.google.com/+ShiftieOrg/"><img src="assets/img/google.png" alt=""/></a>
+				<a href="https://twitter.com/ShiftieCooking"><img src="assets/img/twitter.png" alt=""/></a>
+			</div>
+		</div>
+
 		<div class="home8 bg_home">
 			<div class="home_title bg_white">Partners</div>
 			<img href="#" src='assets/img/partner.png'>
 		</div>
 	</div>
+	<div style='clear:both;'></div>
 
 </div>

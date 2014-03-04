@@ -246,6 +246,6 @@
     
     </div>            
 <!-- - - - - - - - - - - - - FIN COMMENTAIRE  - - - - - - - - - - -  - - - - - - - - -->
-
+<div style='clear:both;'></div>
 </div>
 

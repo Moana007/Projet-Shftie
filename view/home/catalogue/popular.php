@@ -35,9 +35,9 @@
       </div>
 
       <?php endforeach; ?>
-        
-      <div style="clear:both;"></div>
       
+        <div style='clear:both;'></div>
+
       <?php   
   //Reglage du nombre de recette à afficher dans controler/home/catalogue.php
       echo "<div class='pagination'>";                      
