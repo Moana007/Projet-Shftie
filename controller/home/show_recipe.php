@@ -23,7 +23,6 @@
 	{
 		$page = $_GET['pagin'];
 	}
-
 	$users_id = $_GET['user']; 
 
 	if($show == 'fav'){
