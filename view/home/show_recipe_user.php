@@ -64,7 +64,7 @@
 				else{
 					$style = "class='bt gris'";
 				}
-				echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=show_recipe&showr=user&pagin=".$i."'><span>".$i."</span></a>";
+				echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=show_recipe&showr=user&user=".$users_id."&pagin=".$i."'><span>".$i."</span></a>";
 			}
 			if ($_GET['pagin'] != $nb_pages){
 				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=show_recipe&showr=user&pagin=".$suiv."' ><span class='icon icon-right'></span></a>";
