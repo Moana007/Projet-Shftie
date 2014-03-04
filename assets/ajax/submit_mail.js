@@ -8,12 +8,12 @@ $(document).ready(function() {
         // console.log(comments);
         if(name === '' || comments === '' || mail === '' ) {
             $('.error-msg').remove();
-            $("#message_error3").append("<span class='error-msg' style='color:red;' >Veuillez renseigner tous les champs</span>");
+            $("#message_error3").append("<span class='error-msg' style='color:red;' >Please fill in all fields</span>");
             return false;
         }
         else if(isEmail(mail) === false){
             $('.error-msg').remove();
-            $("#message_error3").append("<span class='error-msg' style='color:red;' >Veuillez renseigner un mail valide</span>");
+            $("#message_error3").append("<span class='error-msg' style='color:red;' >Please fill in a valid email</span>");
             return false;
         }
         else {
@@ -23,7 +23,7 @@ $(document).ready(function() {
                 data: $(this).serialize()
             });
 
-            alert('Merci pour votre message, nous vous répondrons dans la mesure du possible');
+            alert('Thank you for your message, we will reply as possible');
 
         }
 

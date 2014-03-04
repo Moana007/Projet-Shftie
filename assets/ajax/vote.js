@@ -10,7 +10,7 @@ $(document).ready(function(){
                     if(json.reponse == 'ok') { 
                             $('.error-msg').remove();
                              $('#pop_up_js').css( 'background','green');
-                            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Vote pris en compte<br/></p>");
+                            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Vote considered<br/></p>");
                             $('#pop_up_js').fadeToggle();
                         window.setTimeout("location=('"+url+"');",2000);
                     } else {
@@ -35,7 +35,7 @@ $(document).ready(function(){
                     if(json.reponse == 'ok') { 
                             $('.error-msg').remove();
                              $('#pop_up_js').css( 'background','red');
-                            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >Vote retiré<br/></p>");
+                            $("#pop_up_js").append("<p class='error-msg' style='color:white;' >vote removed<br/></p>");
                             $('#pop_up_js').fadeToggle();
                         window.setTimeout("location=('"+url+"');",2000);
                     } else {
