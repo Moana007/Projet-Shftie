@@ -14,7 +14,7 @@ $(document).ready(function() {
 
         if(pseudo === '' || name === '' || firstname === '' || mail === '' || pwd1 === '' || pwd2 === '' ) {
             $('.error-msg').remove();
-            $("#message_error2").append("<span class='error-msg' style='color:red;' >Veuillez renseigner tous les champs</span>");
+            $("#message_error2").append("<span class='error-msg' style='color:red;' >Please fill in all fields</span>");
             $('#pwd1, #pwd2').val("");
         }
         else if(pwd1 != pwd2){

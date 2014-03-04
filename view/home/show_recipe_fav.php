@@ -49,28 +49,36 @@
 
  	<div style="clear:both;"></div>	
 	<?php 	
- 		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php
- 		echo "<div class='pagination'>";											
-	 		if ($_GET['pagin'] == 1 or !isset($_GET['pagin'])){
-				//on affiche pas le lien
-			}
-			else{
-				echo "<a class='bt vert' href='/home/recipe/fav/".$users_id."/pagin/".$prec."' ><span class='icon icon-left'></span></a>";
-			}
-			
-			for ($i=1; $i<=$nb_pages; $i++){
-				if ($_GET['pagin'] == $i){
-					$style = "class='bt vert'"; 
+		
+		if(empty($recipes)) {  
+
+			echo "";
+		}
+		else {
+	 		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php
+	 		echo "<div class='pagination'>";											
+		 		if ($_GET['pagin'] == 1 or !isset($_GET['pagin'])){
+					//on affiche pas le lien
 				}
 				else{
-					$style = "class='bt gris'";
+					echo "<a class='bt vert' href='/home/recipe/fav/".$users_id."/pagin/".$prec."' ><span class='icon icon-left'></span></a>";
 				}
-				echo "<a ".$style." href='/home/recipe/fav/".$users_id."/pagin/".$i."'><span>".$i."</span></a>";
-			}
-			if ($_GET['pagin'] != $nb_pages){
-				echo "<a class='bt vert' href='/home/recipe/fav/".$users_id."/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";
-			}			
-		echo "</div>";	
+				
+				for ($i=1; $i<=$nb_pages; $i++){
+					if ($_GET['pagin'] == $i){
+						$style = "class='bt vert'"; 
+					}
+					else{
+						$style = "class='bt gris'";
+					}
+					echo "<a ".$style." href='/home/recipe/fav/".$users_id."/pagin/".$i."'><span>".$i."</span></a>";
+				}
+				if ($_GET['pagin'] != $nb_pages){
+					echo "<a class='bt vert' href='/home/recipe/fav/".$users_id."/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";
+				}			
+			echo "</div>";	
+		}
+	
 	?>
 
 

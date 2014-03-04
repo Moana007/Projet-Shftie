@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         if(pwd1 != pwd2 ) {
             $('.error-msg').remove();
-            $("#message_error_pwd").append("<span class='error-msg' style='color:red;' >Vos Mdps ne correspondent pas.</span>");
+            $("#message_error_pwd").append("<span class='error-msg' style='color:red;' >Your password does not match.</span>");
             return false;
         }
         else {

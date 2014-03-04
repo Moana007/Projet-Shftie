@@ -35,9 +35,8 @@ function onSubmit(event){
 		}
 		else{			
 			$('.error-msg').remove();
-			$("#message_error").append("<span class='error-msg' style='color:red;' >Attention, le mot de passe ou l'email est incorrect<br/>(Ou nous n'avez pas encore validé votre compte)</span>");
+			$("#message_error").append("<span class='error-msg' style='color:red;' >Warning password or email is incorrect<br/>(Or you have not validated your account)</span>");
 			$('#pwd').val("");
-			
 			return false;
 		}
 	};
