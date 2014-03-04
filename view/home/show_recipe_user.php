@@ -1,6 +1,6 @@
 <div id="my_recipe">
 	<div class="titre_1">His Recipes</div>
-
+	<?php echo $users_id ?>
 	<?php foreach ($recipes as $recipe): 
 		  $idrecipe = $recipe['recettes_id'] ?>
 		<div class="bloc_recette">
@@ -54,7 +54,7 @@
 				//on affiche pas le lien
 			}
 			else{
-				echo "<a class='bt vert' href='/home/showRecipe/fav/'".$users_id."'/pagin/".$prec."' ><span class='icon icon-left'></span></a>";
+				echo "<a class='bt vert' href='/home/recipe/user/".$users_id."/pagin/".$prec."' ><span class='icon icon-left'></span></a>";
 			}
 			
 			for ($i=1; $i<=$nb_pages; $i++){
@@ -65,11 +65,11 @@
 					$style = "class='bt gris'";
 				}
 
-				echo "<a ".$style." href='/home/showRecipe/fav/'".$users_id."'/pagin/".$i."'><span>".$i."</span></a>";
+				echo "<a ".$style." href='/home/recipe/user/".$users_id."/pagin/".$i."'><span>".$i."</span></a>";
 
 			}
 			if ($_GET['pagin'] != $nb_pages){
-				echo "<a class='bt vert' href='/home/showRecipe/fav/'".$users_id."'/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";
+				echo "<a class='bt vert' href='/home/recipe/user/".$users_id."/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";
 			}			
 		echo "</div>";	
 	?>
