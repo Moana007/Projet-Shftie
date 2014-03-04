@@ -6,12 +6,34 @@
 	    	<div class="row_books">
 	  		  <?php foreach($show_recipe_book as $show_recipe_books) { ?>
 		 <div class="bloc_recette">
-	          <a href="/home/recipe/<?php echo $show_recipe_books['recettes_id']; ?>"><img src="<?php echo $show_recipe_books['photo']; ?>"></a>
-	          <div class="info_bloc_recette">
-	              <a href="/home/recipe/<?php echo $show_recipe_books['recettes_id']; ?>"><?php echo $show_recipe_books['recette_name']; ?></a>
-	              <?php echo substr(htmlentities($show_recipe_books['description']),0, 230); ?>
-	          </div>
-	      </div>
+				<a href="/home/recipe/<?php echo $show_recipe_books['recettes_id']; ?>"><img src="<?php echo $show_recipe_books['photo']; ?>"></a>
+				<div class="info_bloc_recette">
+					<a href="#"><?php echo $show_recipe_books['recette_name']; ?></a>
+					<?php echo $show_recipe_books['description']; ?>
+					<?php $idrecipe = $show_recipe_books['recettes_id']; ?>
+				</div>
+				<div class="views_bloc_recette">
+						<div class="views"><span class="icon icon-star-empty"></span>
+					<?php 
+						$fav = fav_recipe($idrecipe);
+							echo $fav;
+					 ?>
+				</div>
+				<div class="views"><span class="icon icon-heart-empty"></span>
+					<?php 
+						$like = like_recipe($idrecipe);
+							echo $like;
+					?>
+				</div>
+				<div class="views"><span class="icon icon-comment-empty"></span>
+					<?php 
+						$comment = comment_recipe($idrecipe);
+							echo $comment;				
+					?>
+				</div>
+				</div>				
+				
+			</div>
 		    <?php } ?>	
 	      </div>
 

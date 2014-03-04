@@ -64,6 +64,23 @@
 		}
 	}
 
+	function show($auteur){
+		global $connexion;
+
+		try {
+			$query = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :auteur');
+			$query->bindParam(':auteur', $auteur, PDO::PARAM_STR);
+			$query->execute();
+			$show = $query->fetchAll();
+
+			return($show);
+		} 
+		catch (Exception $e) {
+			echo "Affichage impossible" ,$e->getMessage();
+				die();
+		}
+	}
+
 	function delete_recipe_book($books_id, $recettes_id){
 		global $connexion;
 

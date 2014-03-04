@@ -26,7 +26,7 @@
     </div>
     
     <div class="books">
-      <div class="titre_1">Books</div>
+      <div class="titre_1"><a class="titre_hover" href="/home/bookuser/<?php echo $authors['users_id']; ?>">Books</a></div>
       <div class="row_books">
      <?php if(!empty($show_book)) { ?>
       <?php foreach($show_book as $show_books) { ?>

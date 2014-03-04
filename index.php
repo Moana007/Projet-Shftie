@@ -91,7 +91,9 @@
 		else if($action == 'search'){
 			include_once('controller/home/search.php');
 		}
-		
+		else if($action == 'bookuser'){
+			include_once('controller/home/book.php');
+		}
 	}
 	else if($appli == 'users'){
 		if ($action == 'account'){

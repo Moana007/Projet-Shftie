@@ -24,11 +24,16 @@
 		include_once('view/home/book_display.php');
 	}
 
+	elseif($_GET['action'] == 'bookuser' && isset($_GET['id_books'])){	
+		$show = show($_GET['id_books']);			
+		include_once('view/home/book_content_user.php');		
+	}
+
 	elseif(isset($_GET['id_books'])){
 		
 		$show_book3 = show_book3($_GET['id_books']);
 		$all_recipe = show_all_recipes();	
-		$show_recipe_book = show_recipe_book($_GET['id_books']);	
+		$show_recipe_book = show_recipe_book($_GET['id_books']);			
 		include_once('view/home/book_content.php');		
 	}
 
