@@ -45,6 +45,7 @@
 			</div>
 		</div>
 	<?php endforeach; ?>
+	<div style="clear:both;"></div>
  		
 	<?php 	
  		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php

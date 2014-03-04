@@ -16,7 +16,7 @@
 
 			<?php foreach ($show_all_recipe as $key => $show_all_recipe) { ?>
 			<div class="bloc_recette">
-				<a href="#"><img src="<?php echo $show_all_recipe['photo']; ?>"></a>
+				<a href="/home/recipe/<?php echo $show_all_recipe['recettes_id']; ?>"><img src="<?php echo $show_all_recipe['photo']; ?>"></a>
 				<div class="info_bloc_recette">
 					<a href="#"><?php echo $show_all_recipe['recette_name']; ?></a>
 					<?php echo $show_all_recipe['description']; ?>

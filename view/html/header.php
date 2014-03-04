@@ -85,27 +85,23 @@
             <ul>
               <li><a href="/users/account">Profil</a></li>
               <li><a href="/home/myrecipe">My recipes</a></li>
-              <li><a href="/home/book">My books</a></li>
+              <li><a href="/home/mybook/">My books</a></li>
               <li><a href="/users/logout">Log Out</a></li>
             </ul>
           </li>   
       </ul>
     
-      <a href="?appli=users&action=account" class="image"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
+      <a href="/users/account" class="image"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>
     </div>
     
     <div class="search_field">
-
        <div class="search_field search2">
-           <form action="?appli=home&action=search" method="get">
+           <form action="/home/search" method="post">
               <input type="text" name="q" id="inp_search" class="items" placeholder="Search a recipe...">
               <button class="bt vert" type="submit">Ok</button>
            </form>   
-       </div>
-
-      
-
-      </div>
+        </div>
+    </div>
 
     <?php } ?>
 

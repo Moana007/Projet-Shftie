@@ -46,6 +46,7 @@
 		</div>
 	<?php endforeach; ?>
  		
+ 	<div style="clear:both;"></div>	
 	<?php 	
  		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php
  		echo "<div class='pagination'>";											
@@ -63,7 +64,9 @@
 				else{
 					$style = "class='bt gris'";
 				}
+
 				echo "<a ".$style." href='/home/showRecipe/fav/'".$users_id."'/pagin/".$i."'><span>".$i."</span></a>";
+
 			}
 			if ($_GET['pagin'] != $nb_pages){
 				echo "<a class='bt vert' href='/home/showRecipe/fav/'".$users_id."'/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";

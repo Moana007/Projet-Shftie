@@ -28,7 +28,6 @@
 	else {
 		$filter = $_GET['filter'];
 	}
-	
 	if($appli == 'home'){
 		if($action == 'index'){
 			include_once('controller/home/index.php');
@@ -84,6 +83,9 @@
 			include_once('controller/home/achievement2.php');
 		}
 		else if($action == 'bookEdit'){
+			include_once('controller/home/book.php');
+		}
+		else if($action == 'mybook'){
 			include_once('controller/home/book.php');
 		}
 		else if($action == 'search'){
