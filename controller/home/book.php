@@ -19,9 +19,39 @@
 	}
 	
 	elseif ($_GET['action'] == 'mybook' && isset($_GET['id_books'])) {
+
+		$nb_reponses = 1; //Nombre de recettes que l'on veut afficher
+
+		if (!isset($_GET['pagin']))					
+		{
+			$page = 1;
+			$_GET['pagin'] = 1;
+		}
+		else
+		{
+			$page = $_GET['pagin'];
+		}
 		$show_book3 = show_book3($_GET['id_books']);
-		$show_recipe_book = show_recipe_book($_GET['id_books']);
+		$show_recipe_book = show_recipe_book2($_GET['id_books'], $page, $nb_reponses);
+		$nb_recipes = show_recipe_book2_pagin();
+		$nb_pages = ceil($nb_recipes / $nb_reponses);
+
+		if ($_GET['pagin'] == 1 or !isset($_GET['pagin']))  {
+			$prec = $_GET['pagin'];
+		}
+		else{
+			$prec = $_GET['pagin']-1;
+		}
+		//suivant
+		if ($_GET['pagin'] == $nb_pages) {
+			$suiv = $_GET['pagin'];
+		}
+		else{
+			$suiv = $_GET['pagin']+1;	
+	}	
+
 		include_once('view/home/book_display.php');
+
 	}
 
 	elseif($_GET['action'] == 'bookuser' && isset($_GET['id_books'])){	

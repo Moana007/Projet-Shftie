@@ -131,6 +131,38 @@
 		return ($show_recipe_book);
 	}
 
+	function show_recipe_book2($id_books, $page, $nb_reponses){
+		global $connexion;
+		$debut = ($page-1) * $nb_reponses;
+		
+		$query = $connexion->prepare('SELECT * FROM 
+		RECETTES_BOOKS, RECETTES 
+		WHERE RECETTES_BOOKS.recettes_id = RECETTES.recettes_id 
+		AND RECETTES_BOOKS.books_id = :id_books AND rec_validation = 1 LIMIT '.$debut.', '.$nb_reponses);
+		$query->bindParam(':id_books', $id_books, PDO::PARAM_INT);		
+		$query->execute();
+		
+		$show_recipe_book = $query->fetchAll();
+		
+		return ($show_recipe_book);
+	}
+
+	function show_recipe_book2_pagin(){
+		global $connexion;
+		
+		$query = $connexion->prepare('SELECT COUNT(*) AS contenu FROM 
+		RECETTES_BOOKS, RECETTES 
+		WHERE RECETTES_BOOKS.recettes_id = RECETTES.recettes_id 
+		AND RECETTES_BOOKS.books_id = :id_books AND rec_validation = 1');
+		$query->bindParam(':id_books', $id_books, PDO::PARAM_INT);		
+		$query->execute();
+		
+		$show_recipe_books = $query->fetch();
+		$show_recipe_book = $show_recipe_books['contenu'];
+		
+		return ($show_recipe_book);
+	}
+
 	function recipe_book($id_books){
 		global $connexion;
 		

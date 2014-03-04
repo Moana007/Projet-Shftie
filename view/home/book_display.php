@@ -1,15 +1,27 @@
 <div id="book_display">
 	<div class="book_slider"><img src="/assets/img/slider.png" alt="#"></div>
-	<div class="book_pagination">
-		<div class="pag left">
-			<a href="#" class="bloc_vert"><span class="icon-left"><span></a>
-			<span class="texte_pag">Previous</span>
-		</div>
-		<div class="pag right">
-			<span class="texte_pag">Next</span>
-			<a href="#" class="bloc_vert"><span class="icon-right"><span></a>
-		</div>
-	</div>
+	
+	<?php 	
+ 		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php
+ 		echo "<div class='book_pagination'>";											
+	 		if ($_GET['pagin'] == 1 or !isset($_GET['pagin'])){
+				//on affiche pas le lien
+			}
+			else{ ?>
+				<div class="pag left">
+					<a href='/home/myybook/pagin/<?php echo $prec; ?>' class="bloc_vert"><span class="icon-left"><span></a>
+					<span class="texte_pag">Previous</span>
+				</div>			
+			<?php }
+			if ($_GET['pagin'] != $nb_pages){ ?>
+				<div class="pag right">
+					<span class="texte_pag">Next</span>
+					<a href='/home/myybook/pagin/<?php echo $suiv; ?>' class="bloc_vert"><span class="icon-right"><span></a>
+				</div>
+			<?php }			
+		echo "</div>";	
+	?>
+
 	<?php foreach ($show_book3 as $key => $value) { ?>
 	<div class="titre_book">
 	<?php echo $value['books_name']; ?>

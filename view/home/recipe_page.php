@@ -101,7 +101,7 @@
   <div class="sharing">
     <div class="fb-share-button fbdown" data-href="http://www.shiftie.org" data-type="button_count"></div>
     <div class="fbdown"><a href="https://twitter.com/share" class="twitter-share-button"  data-via="Shiftie" data-lang="en">Tweet</a></div>
-    <?php //echo $_SERVER['HTTP_REFERER']; ?>
+    <?php //echo $_SERVER['SCRIPT_URI']; ?>
   </div>
   <div class="texte_recette">
     <div class="ingredient">

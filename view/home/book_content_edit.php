@@ -18,7 +18,12 @@
 			<div class="bloc_recette">
 				<a href="/home/recipe/<?php echo $show_all_recipe['recettes_id']; ?>"><img src="<?php echo $show_all_recipe['photo']; ?>"></a>
 				<div class="info_bloc_recette">
-					<a href="#"><?php echo $show_all_recipe['recette_name']; ?></a>
+					<a href="#">
+						<?php if (strlen(htmlentities($show_all_recipe['recette_name'])) > 24) {
+                                  echo substr(htmlentities($show_all_recipe['recette_name']),0, 24); ?>..</a>
+                        <?php } else { 
+                                  echo htmlentities($show_all_recipe['recette_name']); ?> </a>
+                        <?php } ?>
 					<?php echo $show_all_recipe['description']; ?>
 					<?php $idrecipe = $show_all_recipe['recettes_id']; ?>
 				</div>
