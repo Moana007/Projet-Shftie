@@ -27,13 +27,25 @@
 	function show_book($id_users){
 		global $connexion;
 
-		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users');
+		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users LIMIT 5');
 		$query2->bindParam(':id_users', $id_users, PDO::PARAM_INT);
 		$query2->execute();
 		
 		$show_book = $query2->fetchAll();
 		
 		return($show_book);
+	}
+
+	function show_book3($id_books){
+		global $connexion;
+
+		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id = :id_books');
+		$query2->bindParam(':id_books', $id_books, PDO::PARAM_INT);
+		$query2->execute();
+		
+		$show_book3 = $query2->fetchAll();
+		
+		return($show_book3);
 	}
 
 	function show_book_all(){

@@ -1,17 +1,22 @@
 <?php 
 	
-	function search() {
+	function search($q) {
 		global $connexion;
 
-		$q = $_GET['q'];
-		$s = explode(' ', $q);
-		$query = $connexion->prepare('SELECT * FROM RECETTES');
-		$query->bindParam(':q', $q, PDO::PARAM_STR);
-		$query->execute();
-		
-		$result = $query->fetchAll();
 
-		return $result;
+		try {
+				$query = $connexion->prepare('SELECT * FROM RECETTES WHERE recette_name LIKE "%:q%"');
+				$query->bindParam(':q', $q, PDO::PARAM_STR);
+				$query->execute();
+		
+				$result = $query->fetchAll();
+				return $result;
+		} 
+
+		catch (Exception $e) {
+			echo "Affichage impossible", $e->getMessage();
+		}
+		
 	}
 
  ?>
