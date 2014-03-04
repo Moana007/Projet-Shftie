@@ -1,5 +1,6 @@
 <?php 
 	include_once('model/recettes/gestion_recette.php');
+	include_once('model/home/index.php');
 
 	if(!isset($_GET['filter'])){
 	 	$filter = 'tocheck';
@@ -20,6 +21,8 @@
     }
 	$show_unvalide = show_unvalide();
 	$show_valide = show_valide();
+	$top = recette_top();
+	$top_actuel = recette_top_actuel();
 	include_once('view/layout/header.inc.php');
 	include_once('view/recettes/recette.php');
 	include_once('view/layout/footer.inc.php');

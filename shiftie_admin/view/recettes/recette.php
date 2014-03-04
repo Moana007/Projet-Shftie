@@ -2,7 +2,8 @@
 
   <ul>
   	<li><a href="?appli=recettes&filter=tocheck">Recettes a regarder</a></li>
-      <li><a href="?appli=recettes&filter=checked">Recettes validées</a></li>
+    <li><a href="?appli=recettes&filter=checked">Recettes validées</a></li>
+    <li><a href="?appli=recettes&filter=ofzeday">Recette du jour</a></li>
   </ul>
   	
 
@@ -14,6 +15,9 @@
           break;
         case "checked": 
           require_once("checked.php");
+          break;
+        case "ofzeday": 
+          require_once("ofzeday.php");
           break;
        case "show": 
           require_once("show_recette.php");

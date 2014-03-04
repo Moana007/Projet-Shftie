@@ -4,7 +4,7 @@ $(document).ready(function ()
       {
         script: 'model/home/upload.php',
         allowedFileTypes: 'image/jpeg,image/png,image/gif',
-        maxSizeInBytes: 250000,
+        maxSizeInBytes: 500000,
         customParams: {
           'custom': 'tester'
         },

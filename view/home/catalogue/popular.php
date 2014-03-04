@@ -43,7 +43,7 @@
           //on affiche pas le lien
         }
         else{
-          echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=catalogue&filter=popular&pagin=".$prec."' ><span class='icon icon-left'></span></a>";
+          echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."/home/catalogue/popular/pagin/".$prec."' ><span class='icon icon-left'></span></a>";
         }
         
         for ($i=1; $i<=$nb_pages; $i++){
@@ -53,10 +53,10 @@
           else{
             $style = "class='bt gris'";
           }
-          echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=catalogue&filter=popular&pagin=".$i."'><span>".$i."</span></a>";
+          echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."/home/catalogue/popular/pagin/".$i."'><span>".$i."</span></a>";
         }
         if ($_GET['pagin'] != $nb_pages){
-          echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=catalogue&filter=popular&pagin=".$suiv."' ><span class='icon icon-right'></span></a>";
+          echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."/home/catalogue/popular/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";
         }     
       echo "</div>";  
     ?>

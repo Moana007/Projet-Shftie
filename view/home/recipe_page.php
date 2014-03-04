@@ -212,7 +212,7 @@
            <?php if($show_comment != false) { ?>
                 <?php foreach($show_comment as $show_comments): ?>
                 <div class="case_comment">                
-                  <a href="?appli=users&action=account&user=<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>               
+                  <a href="/users/account/<?php foreach($authors as $author){ echo $author['users_id'];} ?>"><img src="<?php echo $_SESSION['users_photo']; ?>"></a>               
                     <div class="comment_info">
                       <div class="pseudo"><a href="#"><?php echo $show_comments['users_name']; ?></a></div>
                       <div class="comment"><?php echo $show_comments['com_texte']; ?></div>

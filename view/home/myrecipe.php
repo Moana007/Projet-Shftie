@@ -53,7 +53,7 @@
 				//on affiche pas le lien
 			}
 			else{
-				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=myrecipe&pagin=".$prec."' ><span class='icon icon-left'></span></a>";
+				echo "<a class='bt vert' href='/home/myrecipe/pagin/".$prec."' ><span class='icon icon-left'></span></a>";
 			}
 			
 			for ($i=1; $i<=$nb_pages; $i++){
@@ -63,10 +63,10 @@
 				else{
 					$style = "class='bt gris'";
 				}
-				echo "<a ".$style." href='".$_SERVER["PHP_SELF"]."?appli=home&action=myrecipe&pagin=".$i."'><span>".$i."</span></a>";
+				echo "<a ".$style." href='/home/myrecipe/pagin/".$i."'><span>".$i."</span></a>";
 			}
 			if ($_GET['pagin'] != $nb_pages){
-				echo "<a class='bt vert' href='".$_SERVER["PHP_SELF"]."?appli=home&action=myrecipe&pagin=".$suiv."' ><span class='icon icon-right'></span></a>";
+				echo "<a class='bt vert' href='/home/myrecipe/pagin/".$suiv."' ><span class='icon icon-right'></span></a>";
 			}			
 		echo "</div>";	
 	?>
