@@ -35,9 +35,19 @@
       </div>
 
       <?php endforeach; ?>
+<<<<<<< HEAD
+        <div style='clear:both;'></div>
+=======
         
       <div style="clear:both;"></div>
       
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 3ea4dd298b35f4aeb4d8f3bdf95297c1dfddabf0
+=======
+>>>>>>> 3ea4dd298b35f4aeb4d8f3bdf95297c1dfddabf0
+=======
+>>>>>>> 3ea4dd298b35f4aeb4d8f3bdf95297c1dfddabf0
       <?php   
   //Reglage du nombre de recette à afficher dans controler/home/catalogue.php
       echo "<div class='pagination'>";                      

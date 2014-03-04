@@ -45,8 +45,18 @@
 			</div>
 		</div>
 	<?php endforeach; ?>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+ 		<div style='clear:both;'></div>
+=======
+=======
+>>>>>>> 3ea4dd298b35f4aeb4d8f3bdf95297c1dfddabf0
+=======
+>>>>>>> 3ea4dd298b35f4aeb4d8f3bdf95297c1dfddabf0
 	<div style="clear:both;"></div>
  		
+>>>>>>> 3ea4dd298b35f4aeb4d8f3bdf95297c1dfddabf0
 	<?php 	
  		//Reglage du nombre de recette à afficher dans controler/home/myrecipe.php
  		echo "<div class='pagination'>";											
@@ -71,7 +81,6 @@
 			}			
 		echo "</div>";	
 	?>
-
 
 </div>
    

@@ -36,6 +36,11 @@
           </div>
       </div>
       <?php endforeach; ?>
+      <div style='clear:both;'></div>
+
+        <div style="clear:both;"></div>
+
+        <div style="clear:both;"></div>
 
         <div style="clear:both;"></div>
 
