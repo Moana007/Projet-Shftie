@@ -1,6 +1,6 @@
 <div id="my_recipe">
 	<div class="titre_1">His Recipes</div>
-	<?php echo $users_id ?>
+
 	<?php foreach ($recipes as $recipe): 
 		  $idrecipe = $recipe['recettes_id'] ?>
 		<div class="bloc_recette">
