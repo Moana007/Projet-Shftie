@@ -20,10 +20,15 @@
 				<a href="#" class="view_p">View Profil</a>
 			</div>
 		</div>
-		<div class="home2 bg_home bg_black">
-			<div class="home_title bg_green"></div>
+		<div class="home6 bg_home bg_orange">
+			<div class="home_title bg_orange">Shiftie News</div>
+			<div class="news">Shiftie has been developped throught our third and last year of study at EEMI. This is now our final Beta version, feel free to test everything and give us some feedback on our contact page! <br/>Cheers!</div>
+		</div>
+		<div class="home10 bg_home bg_black">
+			<div class="home_title bg_white">They talk about us</div>
 			<div class="content">
-				<span></span>
+				<img href="#" src="assets/img/tabata.png">
+				<span>Tabata Bonardi</span></br>
 			</div>
 		</div>
 	</div>
@@ -48,11 +53,17 @@
 			<img href="#" src="assets/img/cover_book.png"></br>
 			<span>by <?php echo $ofzemonth['users_name'].''.$ofzemonth['users_firstname']; ?></span>
 		</div>
-		<div class="home6 bg_home bg_orange">
-			<div class="home_title bg_orange">Shiftie News</div>
-			<div class="news">Shiftie has been developped throught our third and last year of study at EEMI. This is now our final Beta version, feel free to test everything and give us some feedback on our contact page! <br/>Cheers!</div>
+		<div class="home11 bg_home bg_black">
+			<div class="home_title bg_white">They talk about us</div>
+			<div class="content">
+				<img href="#" src="assets/img/cyril.png">
+				<span>Cyril Lignac</span></br>
+			</div>
 		</div>
-	
+		<div class="home12 bg_home bg_orange">
+			<div class="home_title bg_orange">Shiftie News</div>
+			<div class="news">Our news features which are coming very soon, are about the Gamification of Shiftie. You'll be able to win badges and achievement to compete between each others.<br/> Don't forget that you'll have a Shiftie application for iOS and Android!</div>
+		</div>
 	</div>
 	<div class="col4">
 		<div class="home7 bg_home bg_grey">
@@ -74,6 +85,10 @@
 		<div class="home8 bg_home">
 			<div class="home_title bg_white">Partners</div>
 			<img href="#" src='assets/img/partner.png'>
+		</div>
+		<div class="home13 bg_home">
+			<div class="home_title bg_white">Partners</div>
+			<img src="assets/img/partner3.png" alt=""/>
 		</div>
 	</div>
 	<div style='clear:both;'></div>
