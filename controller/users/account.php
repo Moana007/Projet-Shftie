@@ -11,7 +11,7 @@ include_once('model/home/book.php');
 		$id_account = $_GET['user'];
 	}
 	
-	$show_book = show_book($id_account);
+	$show_book5 = show_book5($id_account);
 	$fav = show_fav($id_account);
 	$fav_nb = count($fav);
 	$author = show_author($id_account);

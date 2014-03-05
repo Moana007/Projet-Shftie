@@ -16,7 +16,7 @@
 
 			<?php foreach ($show_all_recipe as $key => $show_all_recipe) { ?>
 			<div class="bloc_recette">
-				<a href="/home/recipe/<?php echo $show_all_recipe['recettes_id']; ?>"><img src="<?php echo $show_all_recipe['photo']; ?>"></a>
+				<img src="<?php echo $show_all_recipe['photo']; ?>">
 				<div class="info_bloc_recette">
 					<a href="#">
 						<?php if (strlen(htmlentities($show_all_recipe['recette_name'])) > 24) {
@@ -52,6 +52,7 @@
 				<input type="checkbox" name="recipe_book[]" value="<?php echo $show_all_recipe['recettes_id']; ?>" class="check">				
 				
 			</div>
+			<div style="clear: both;"></div>
 			<?php } ?>
 			<button class="bt vert" type="submit">Add</button>
 		</div>
