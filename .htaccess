@@ -6,7 +6,7 @@ RewriteRule ^users/([a-zA-Z0-9]+)/(\d+)$ ?appli=users&action=$1&user=$2 [QSA,L]
 
 RewriteRule ^home/myrecipe/pagin/(\d+)$ ?appli=home&action=myrecipe&pagin=$1 [QSA,L]
 RewriteRule ^home/([a-zA-Z0-9]+)/(\d+)$ ?appli=home&action=$1&id_books=$2 [QSA,L]
-RewriteRule ^home/mybook/([a-zA-Z0-9]+)/(\d+)$ ?appli=home&action=mybook&id_book=$1&pagin=$2 [QSA,L]
+RewriteRule ^home/mybook/([a-zA-Z0-9]+)/(\d+)$ ?appli=home&action=mybook&id_books=$1&pagin=$2 [QSA,L]
 RewriteRule ^home/recipe/([a-zA-Z0-9]+)/(\d+)$ ?appli=home&action=show_recipe&showr=$1&user=$2 [QSA,L]
 RewriteRule ^home/catalogue/([a-zA-Z0-9]+)/pagin/(\d+)$ ?appli=home&action=catalogue&filter=$1&pagin=$2 [QSA,L]
 RewriteRule ^home/recipe/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/pagin/(\d+)$ ?appli=home&action=show_recipe&showr=$1&user=$2&pagin=$3 [QSA,L]
