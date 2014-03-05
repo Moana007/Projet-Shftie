@@ -52,7 +52,7 @@
 				<input type="checkbox" name="recipe_book[]" value="<?php echo $show_all_recipe['recettes_id']; ?>" class="check">				
 				
 			</div>
-			<div style="clear: both;"></div>
+			
 			<?php } ?>
 			<button class="bt vert" type="submit">Add</button>
 		</div>

@@ -31,6 +31,9 @@
 		<div class="left_part">
 				<div class="time">
 				<?php foreach ($show_recipe_book as $key => $value) { ?>
+					<div class="titre_book">
+					<?php echo $value['recette_name']; ?>
+					</div>
 					<span class="icon icon-clock"></span>
 					<span class="textleft">Preparation</span><span class="textright"><?php echo $value['time_prepa'].' min'; ?></span><br/>
 					<span class="textleft">Cooking</span><span class="textright"><?php echo $value['time_cuisson'].' min'; ?></span><br/>
