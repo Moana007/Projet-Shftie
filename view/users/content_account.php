@@ -28,8 +28,8 @@
     <div class="books">
       <div class="titre_1"><a class="titre_hover" href="/home/bookuser/<?php echo $authors['users_id']; ?>">Books</a></div>
       <div class="row_books">
-     <?php if(!empty($show_book)) { ?>
-      <?php foreach($show_book as $show_books) { ?>
+     <?php if(!empty($show_book5)) { ?>
+      <?php foreach($show_book5 as $show_books) { ?>
         <a href="/home/book/<?php echo $show_books['books_id']; ?>" class="case_book"><img src="assets/img/covercookbook1.jpg"></a>
       <?php } ?>
       <?php } else { echo "<p style='color:#6E902A;'>You have no Book for the moment</p>"; } ?> 

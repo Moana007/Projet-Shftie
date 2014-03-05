@@ -27,13 +27,25 @@
 	function show_book($id_users){
 		global $connexion;
 
-		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users LIMIT 5');
+		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users');
 		$query2->bindParam(':id_users', $id_users, PDO::PARAM_INT);
 		$query2->execute();
 		
 		$show_book = $query2->fetchAll();
 		
 		return($show_book);
+	}
+
+	function show_book5($id_users){
+		global $connexion;
+
+		$query2 = $connexion->prepare('SELECT * FROM BOOKS WHERE books_id_users = :id_users LIMIT 5');
+		$query2->bindParam(':id_users', $id_users, PDO::PARAM_INT);
+		$query2->execute();
+		
+		$show_book5 = $query2->fetchAll();
+		
+		return($show_book5);
 	}
 
 	function show_book3($id_books){
@@ -199,7 +211,7 @@
 		global $connexion;
 		
 		$query = $connexion->prepare('SELECT * FROM RECETTES, FAVORIS WHERE 
-			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND rec_validation = 1');
+			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND RECETTES.rec_validation = 1 AND  FAVORIS.fav_id_users = '.$_SESSION['users_id'].'');
 		$query->execute();
 		
 		$show_all_recipe = $query->fetchAll();
