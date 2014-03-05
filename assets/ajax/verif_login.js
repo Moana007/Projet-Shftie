@@ -31,7 +31,7 @@ function onSubmit(event){
 			window.location=url_courante;
 		}
 		else if(response.first){
-			window.location='/home';
+			window.location='/modifUser';
 		}
 		else{			
 			$('.error-msg').remove();

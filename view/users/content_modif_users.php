@@ -32,7 +32,7 @@
 
       
       <!-- FORMULAIRE DE CHANGEMENT DE MDP -->
-      <form class="" method="post" id="pwd_udpate" action="?appli=users&action=update_user">
+      <form class="" method="post" id="pwd_udpate" action="/updateUser">
 
           <p>Actual password <input type="password" name="pwd" ></p>
           <br/>
@@ -47,7 +47,7 @@
       <br/><br/><br/>
 
       <!-- FORMULAIRE DE CHANGEMENT D'INFORMATION UTILISATEUR -->
-      <form class="" method="post" id="users_udpate" action="?appli=users&action=update_user">
+      <form class="" method="post" id="users_udpate" action="/updateUser">
         
           <p class="underscore_title">City<input type="text" name="city" value="<?php echo $authors['city']; ?>" ></p>
           <br/>

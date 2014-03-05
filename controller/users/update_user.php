@@ -8,7 +8,7 @@
 
 		if(isset($_POST['submit_info'])){
 			update_user($_POST['age'], $_POST['city'],$_POST['favorite_plate'], $_POST['users_desc'], $_POST['pref'], $_POST['sex']);		
-			header('Location:?appli=users&action=modif_users');
+			header('Location:/modifUser');
 		}
 
 		if(isset($_POST['submit_pwd'])){
@@ -25,7 +25,7 @@
 			}
 			else{
 				update_pwd($_POST['new_pwd']);
-				header('Location:?appli=users&action=modif_users');
+				header('Location:/modifUser');
 			}
 		}
 	

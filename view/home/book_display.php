@@ -9,14 +9,14 @@
 			}
 			else{ ?>
 				<div class="pag left">
-					<a href='/home/myybook/pagin/<?php echo $prec; ?>' class="bloc_vert"><span class="icon-left"><span></a>
+					<a href='/home/mybook/<?php echo $_GET['id_books'] ?>/pagin/<?php echo $prec; ?>' class="bloc_vert"><span class="icon-left"><span></a>
 					<span class="texte_pag">Previous</span>
 				</div>			
 			<?php }
 			if ($_GET['pagin'] != $nb_pages){ ?>
 				<div class="pag right">
 					<span class="texte_pag">Next</span>
-					<a href='/home/myybook/pagin/<?php echo $suiv; ?>' class="bloc_vert"><span class="icon-right"><span></a>
+					<a href='/home/mybook/<?php echo $_GET['id_books'] ?>/pagin/<?php echo $suiv; ?>' class="bloc_vert"><span class="icon-right"><span></a>
 				</div>
 			<?php }			
 		echo "</div>";	
