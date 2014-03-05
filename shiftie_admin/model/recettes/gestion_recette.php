@@ -1,8 +1,7 @@
 <?php
     function show_unvalide(){
         global $connexion;
-        $query = $connexion->prepare('SELECT * FROM recettes, users WHERE rec_validation != 1 AND users_id = auteur');
-         $query->bindValue(':zero','0',PDO::PARAM_INT);
+        $query = $connexion->prepare('SELECT * FROM RECETTES WHERE rec_validation != 1 ');
         $query->execute();
         $show_unvalide = $query->fetchAll();
         return $show_unvalide;
