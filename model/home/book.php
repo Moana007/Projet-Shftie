@@ -219,6 +219,19 @@
 		return($show_all_recipe);
 	}
 
+	function show_all_recipes2(){
+		global $connexion;
+		
+		$query = $connexion->prepare('SELECT * FROM RECETTES, FAVORIS WHERE 
+			FAVORIS.fav_id_recettes = RECETTES.recettes_id AND RECETTES.rec_validation = 1');
+		$query->execute();
+		
+		$show_all_recipe2 = $query->fetchAll();
+		
+		return($show_all_recipe2);
+	}
+
+
 
 	
 	function delete_book($books_id){
