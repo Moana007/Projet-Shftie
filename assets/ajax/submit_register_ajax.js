@@ -39,7 +39,7 @@ $(document).ready(function() {
                 data: $(this).serialize()
             });
 
-            window.setTimeout("location=('?appli=users&action=confirm_mail');",1000);
+            window.setTimeout("location=('/mailConfirm');",1000);
 
         }
 

@@ -21,4 +21,5 @@ RewriteRule editBook ?appli=home&action=book_edit [L]
 RewriteRule modifUser ?appli=users&action=modif_users [L]
 RewriteRule updateUser ?appli=users&action=update_user [L]
 RewriteRule submitRecipe ?appli=home&action=index&page=submitRecipe [L]
+RewriteRule mailConfirm ?appli=users&action=confirm_mail [L]
 RewriteRule ^home/(\d+)$/(\d+)$ ?appli=home&action=show_recipe&showr=$1&pagin=$2
